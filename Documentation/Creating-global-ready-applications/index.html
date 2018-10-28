@@ -1,0 +1,3313 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../..">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>创建全球就绪应用程序-Creating Global-Ready Applications - Orchard 中文文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../#localizing-the-orchard-application-and-orchard-modules" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Orchard 中文文档" class="md-header-nav__button md-logo">
+          
+            <img src="../../images/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Orchard 中文文档
+              </span>
+              <span class="md-header-nav__topic">
+                创建全球就绪应用程序-Creating Global-Ready Applications
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/OrchardCMS/OrchardDoc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Orchard 中文文档" class="md-nav__button md-logo">
+      
+        <img src="../../images/logo.png" width="48" height="48">
+      
+    </a>
+    Orchard 中文文档
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/OrchardCMS/OrchardDoc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="主页-Home" class="md-nav__link">
+      主页-Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      入门-Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        入门-Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-Orchard/" title="安装Orchard-Installing Orchard" class="md-nav__link">
+      安装Orchard-Installing Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manually-installing-Orchard-zip-file/" title="手动安装Orchard-Manually Installing Orchard" class="md-nav__link">
+      手动安装Orchard-Manually Installing Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Working-with-Orchard-in-WebMatrix/" title="在WebMatrix中与Orchard合作-Working with Orchard in WebMatrix" class="md-nav__link">
+      在WebMatrix中与Orchard合作-Working with Orchard in WebMatrix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-around-the-dashboard/" title="绕过仪表板-Getting Around the Dashboard" class="md-nav__link">
+      绕过仪表板-Getting Around the Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started/" title="建立你的第一个Orchard网站-Building Your First Orchard Site" class="md-nav__link">
+      建立你的第一个Orchard网站-Building Your First Orchard Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Navigation-and-menus/" title="导航和菜单-Navigation and Menus" class="md-nav__link">
+      导航和菜单-Navigation and Menus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-a-Blog-to-Your-Site/" title="添加博客到您的网站-Adding a Blog to Your Site" class="md-nav__link">
+      添加博客到您的网站-Adding a Blog to Your Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-Pages-to-Your-Site/" title="向您的网站添加页面-Adding Pages to Your Site" class="md-nav__link">
+      向您的网站添加页面-Adding Pages to Your Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-and-managing-media-content/" title="添加和管理媒体内容-Adding and Managing Media Content" class="md-nav__link">
+      添加和管理媒体内容-Adding and Managing Media Content
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Managing-widgets/" title="管理小部件-Managing Widgets" class="md-nav__link">
+      管理小部件-Managing Widgets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Organizing-content-with-tags/" title="使用标签组织内容-Organizing Content Using Tags" class="md-nav__link">
+      使用标签组织内容-Organizing Content Using Tags
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      关于该项目-About the Project
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        关于该项目-About the Project
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic-Orchard-Concepts/" title="Orchard概念定义-Orchard Concept Definitions" class="md-nav__link">
+      Orchard概念定义-Orchard Concept Definitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Builtin-Features/" title="内置模块和功能-Built-in modules and features" class="md-nav__link">
+      内置模块和功能-Built-in modules and features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Feature-roadmap/" title="功能路线图-Feature roadmap" class="md-nav__link">
+      功能路线图-Feature roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Frequently-asked-questions/" title="经常问的问题-Frequently Asked Questions" class="md-nav__link">
+      经常问的问题-Frequently Asked Questions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      创作网站-Authoring Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        创作网站-Authoring Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Blogging-with-LiveWriter/" title="使用LiveWriter进行博客-Blogging with LiveWriter" class="md-nav__link">
+      使用LiveWriter进行博客-Blogging with LiveWriter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="创建全球就绪应用程序-Creating Global-Ready Applications" class="md-nav__link md-nav__link--active">
+      创建全球就绪应用程序-Creating Global-Ready Applications
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Search-and-indexing/" title="搜索和索引-Search and Indexing" class="md-nav__link">
+      搜索和索引-Search and Indexing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Saving-scheduling-and-publishing-drafts/" title="发布草稿-Publishing Drafts" class="md-nav__link">
+      发布草稿-Publishing Drafts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-custom-content-types/" title="创建自定义内容类型-Creating Custom Content Types" class="md-nav__link">
+      创建自定义内容类型-Creating Custom Content Types
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      自定义网站-Customizing Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        自定义网站-Customizing Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Previewing-and-applying-a-theme/" title="预览和应用主题-Previewing and Applying a Theme" class="md-nav__link">
+      预览和应用主题-Previewing and Applying a Theme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-themes/" title="安装主题-Installing Themes" class="md-nav__link">
+      安装主题-Installing Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Customizing-the-default-theme/" title="定制主题-Customizing Themes" class="md-nav__link">
+      定制主题-Customizing Themes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      使用Orchard画廊-Using the Orchard Gallery
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        使用Orchard画廊-Using the Orchard Gallery
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Gallery-overview/" title="图库概述-Gallery Overview" class="md-nav__link">
+      图库概述-Gallery Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-modules-and-themes-from-the-gallery/" title="安装模块和主题-Installing Modules and Themes" class="md-nav__link">
+      安装模块和主题-Installing Modules and Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Browsing-the-gallery-web-site/" title="浏览图库网站-Browsing the Gallery Web Site" class="md-nav__link">
+      浏览图库网站-Browsing the Gallery Web Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-a-module-or-theme-to-the-gallery/" title="贡献到画廊-Contributing to the Gallery" class="md-nav__link">
+      贡献到画廊-Contributing to the Gallery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Module-gallery-feeds/" title="注册其他图库供稿-Registering Additional Gallery Feeds" class="md-nav__link">
+      注册其他图库供稿-Registering Additional Gallery Feeds
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      管理网站-Managing Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        管理网站-Managing Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Enabling-and-disabling-features/" title="启用和禁用功能-Enabling and Disabling Features" class="md-nav__link">
+      启用和禁用功能-Enabling and Disabling Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-the-command-line-interface/" title="使用命令行界面-Using the Command-Line Interface" class="md-nav__link">
+      使用命令行界面-Using the Command-Line Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-and-upgrading-modules/" title="安装和升级模块-Installing and Upgrading Modules" class="md-nav__link">
+      安装和升级模块-Installing and Upgrading Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Modifying-site-settings/" title="修改站点设置-Modifying Site Settings" class="md-nav__link">
+      修改站点设置-Modifying Site Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Moderating-comments/" title="审核评论-Moderating Comments" class="md-nav__link">
+      审核评论-Moderating Comments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Managing-users-and-roles/" title="管理用户和角色-Managing Users and Roles" class="md-nav__link">
+      管理用户和角色-Managing Users and Roles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-permissions/" title="了解权限-Understanding Permissions" class="md-nav__link">
+      了解权限-Understanding Permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Making-a-Web-Site-Recipe/" title="制作网站食谱-Making a Website Recipe" class="md-nav__link">
+      制作网站食谱-Making a Website Recipe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-an-image-gallery/" title="创建图库-Creating an Image Gallery" class="md-nav__link">
+      创建图库-Creating an Image Gallery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Workflows/" title="工作流程-Workflows" class="md-nav__link">
+      工作流程-Workflows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Projection/" title="投影-Projection" class="md-nav__link">
+      投影-Projection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-Custom-Forms/" title="创建自定义表单-Create Custom Forms" class="md-nav__link">
+      创建自定义表单-Create Custom Forms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-Dynamic-Forms/" title="创建动态表单-Create Dynamic Forms" class="md-nav__link">
+      创建动态表单-Create Dynamic Forms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Rules-to-conditionally-display-content/" title="使用规则有条件地显示内容-Using Rules to conditionally display content" class="md-nav__link">
+      使用规则有条件地显示内容-Using Rules to conditionally display content
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      托管和部署网站-Hosting and Deploying Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        托管和部署网站-Hosting and Deploying Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Upgrading-a-site-to-a-new-version-of-Orchard/" title="将站点升级到新版本-Upgrading a Site to a New Version" class="md-nav__link">
+      将站点升级到新版本-Upgrading a Site to a New Version
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/" title="优化服务器性能-Optimizing Server Performance" class="md-nav__link">
+      优化服务器性能-Optimizing Server Performance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/" title="Orchard 1.7.1中Windows Azure的新增功能-What's New for Windows Azure in Orchard 1.7.1" class="md-nav__link">
+      Orchard 1.7.1中Windows Azure的新增功能-What's New for Windows Azure in Orchard 1.7.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploying-Orchard-to-Windows-Azure/" title="将Orchard部署到Windows Azure-Deploying Orchard to Windows Azure" class="md-nav__link">
+      将Orchard部署到Windows Azure-Deploying Orchard to Windows Azure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Windows-Azure-Blob-Storage/" title="使用Windows Azure Blob存储-Using Windows Azure Blob Storage" class="md-nav__link">
+      使用Windows Azure Blob存储-Using Windows Azure Blob Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Windows-Azure-Cache/" title="使用Windows Azure缓存-Using Windows Azure Cache" class="md-nav__link">
+      使用Windows Azure缓存-Using Windows Azure Cache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Running-Orchard-on-Mono/" title="在单声道上运行Orchard-Running Orchard on Mono" class="md-nav__link">
+      在单声道上运行Orchard-Running Orchard on Mono
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-a-multi-tenant-Orchard-site/" title="建立多租户Orchard网站-Setting Up a Multi-Tenant Orchard Site" class="md-nav__link">
+      建立多租户Orchard网站-Setting Up a Multi-Tenant Orchard Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-a-machine-key/" title="设置机器密钥-Setting Up a Machine Key" class="md-nav__link">
+      设置机器密钥-Setting Up a Machine Key
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      扩展Orchard-Extending Orchard
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        扩展Orchard-Extending Orchard
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../First-steps-into-Orchard/" title="进入Orchard的第一步-First Steps into Orchard" class="md-nav__link">
+      进入Orchard的第一步-First Steps into Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../How-Orchard-works/" title="Orchard如何运作-How Orchard Works" class="md-nav__link">
+      Orchard如何运作-How Orchard Works
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-the-localization-helpers/" title="使用本地化提供程序-Using the Localization Providers" class="md-nav__link">
+      使用本地化提供程序-Using the Localization Providers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Command-line-scaffolding/" title="命令行代码生成-Command-Line Code Generation" class="md-nav__link">
+      命令行代码生成-Command-Line Code Generation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Walkthrough-Writing-An-Orchard-Module/" title="编写Orchard模块-Writing an Orchard Module" class="md-nav__link">
+      编写Orchard模块-Writing an Orchard Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Building-a-hello-world-module/" title="构建Hello World模块-Building a Hello World Module" class="md-nav__link">
+      构建Hello World模块-Building a Hello World Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-a-module-with-a-simple-text-editor/" title="使用简单文本编辑器创建模块-Creating a Module with a Simple Text Editor" class="md-nav__link">
+      使用简单文本编辑器创建模块-Creating a Module with a Simple Text Editor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Writing-a-content-part/" title="编写内容部分-Writing a Content Part" class="md-nav__link">
+      编写内容部分-Writing a Content Part
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-a-custom-field-type/" title="编写内容字段-Writing a Content Field" class="md-nav__link">
+      编写内容字段-Writing a Content Field
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Packaging-and-sharing-a-module/" title="打包和共享模块-Packaging and Sharing a Module" class="md-nav__link">
+      打包和共享模块-Packaging and Sharing a Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Writing-a-widget/" title="写一个小工具-Writing a Widget" class="md-nav__link">
+      写一个小工具-Writing a Widget
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-types-from-code/" title="从代码创建类型-Creating Types from code" class="md-nav__link">
+      从代码创建类型-Creating Types from code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-1-n-and-n-n-relations/" title="创建1-N和N-N关系-Creating 1-N and N-N Relations" class="md-nav__link">
+      创建1-N和N-N关系-Creating 1-N and N-N Relations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manifest-files/" title="模块和主题的清单文件-Manifest Files for Modules and Themes" class="md-nav__link">
+      模块和主题的清单文件-Manifest Files for Modules and Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Processing-client-side-assets/" title="处理客户端资产-Processing Client-Side Assets" class="md-nav__link">
+      处理客户端资产-Processing Client-Side Assets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Caching/" title="高速缓存-Caching" class="md-nav__link">
+      高速缓存-Caching
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-custom-settings/" title="自定义网站设置-Custom Site Settings" class="md-nav__link">
+      自定义网站设置-Custom Site Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../WebApi-In-Orchard/" title="在Orchard的Web Api-Web Api in Orchard" class="md-nav__link">
+      在Orchard的Web Api-Web Api in Orchard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      模块入门课程-Getting Started with Modules Course
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        模块入门课程-Getting Started with Modules Course
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules/" title="模块入门-Getting Started with Modules" class="md-nav__link">
+      模块入门-Getting Started with Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-for-a-lesson/" title="设置课程-Setting up for a lesson" class="md-nav__link">
+      设置课程-Setting up for a lesson
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-1/" title="第1部分：构建静态小部件-Part 1: Build a Static Widget" class="md-nav__link">
+      第1部分：构建静态小部件-Part 1: Build a Static Widget
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-2/" title="第2部分：让小工具动态化-Part 2: Make the Widget Dynamic" class="md-nav__link">
+      第2部分：让小工具动态化-Part 2: Make the Widget Dynamic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-3/" title="第3部分：使用Orchard API-Part 3: Using the Orchard API" class="md-nav__link">
+      第3部分：使用Orchard API-Part 3: Using the Orchard API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-4/" title="第4部分：应用最佳实践-Part 4: Applying Best Practices" class="md-nav__link">
+      第4部分：应用最佳实践-Part 4: Applying Best Practices
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      使用数据-Working with Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        使用数据-Working with Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-data-access/" title="了解数据访问-Understanding Data Access" class="md-nav__link">
+      了解数据访问-Understanding Data Access
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-content-handlers/" title="了解内容处理程序-Understanding Content Handlers" class="md-nav__link">
+      了解内容处理程序-Understanding Content Handlers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      创造主题-Creating Themes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        创造主题-Creating Themes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Writing-a-new-theme/" title="写一个新主题 Writing a New Theme-" class="md-nav__link">
+      写一个新主题 Writing a New Theme-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Anatomy-of-a-theme/" title="主题剖析 The Anatomy of a Theme-" class="md-nav__link">
+      主题剖析 The Anatomy of a Theme-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-placement-info/" title="了解placement.info文件 Understanding the placement.info File-" class="md-nav__link">
+      了解placement.info文件 Understanding the placement.info File-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Accessing-and-rendering-shapes/" title="访问和渲染形状 Accessing and Rendering Shapes-" class="md-nav__link">
+      访问和渲染形状 Accessing and Rendering Shapes-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Alternates/" title="候补 Alternates-" class="md-nav__link">
+      候补 Alternates-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Template-file-syntax-guide/" title="模板文件语法指南- Template File Syntax Guide" class="md-nav__link">
+      模板文件语法指南- Template File Syntax Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Processing-client-side-assets/" title="处理客户端资产- Processing Client-Side Assets" class="md-nav__link">
+      处理客户端资产- Processing Client-Side Assets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Packaging-and-sharing-themes/" title="包装和共享主题- Packaging and Sharing Themes" class="md-nav__link">
+      包装和共享主题- Packaging and Sharing Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../UI-guidelines-for-theme-authors/" title="主题作者的UI指南- UI Guidelines for Theme Authors" class="md-nav__link">
+      主题作者的UI指南- UI Guidelines for Theme Authors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Customizing-Orchard-using-Designer-Helper-Tools/" title="使用Designer Helper工具自定义Orchard- Customizing Orchard Using Designer Helper Tools" class="md-nav__link">
+      使用Designer Helper工具自定义Orchard- Customizing Orchard Using Designer Helper Tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      开发人员工具和指南- Developer Tools and Guidelines
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        开发人员工具和指南- Developer Tools and Guidelines
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Common-Issues/" title="常见问题- Common Issues" class="md-nav__link">
+      常见问题- Common Issues
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Developer-FAQ/" title="开发常见问题- Developer FAQ" class="md-nav__link">
+      开发常见问题- Developer FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-a-source-enlistment/" title="设置源登记- Setting Up a Source Enlistment" class="md-nav__link">
+      设置源登记- Setting Up a Source Enlistment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Building-and-deploying-Orchard-from-a-source-code-drop/" title="构建和部署Orchard -Building and deploying Orchard" class="md-nav__link">
+      构建和部署Orchard -Building and deploying Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Source-code-organization/" title="源代码组织- Source Code Organization" class="md-nav__link">
+      源代码组织- Source Code Organization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-dependencies-and-libraries/" title="依赖关系和图书馆- Dependencies and Libraries" class="md-nav__link">
+      依赖关系和图书馆- Dependencies and Libraries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Code-conventions/" title="代码约定- Code Conventions" class="md-nav__link">
+      代码约定- Code Conventions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Visual-Studio-extensions-and-snippets/" title="Visual Studio扩展和片段- Visual Studio Extensions and Snippets" class="md-nav__link">
+      Visual Studio扩展和片段- Visual Studio Extensions and Snippets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Continuous-integration/" title="持续集成- Continuous Integration" class="md-nav__link">
+      持续集成- Continuous Integration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Merging-Pull-Requests/" title="合并拉请求- Merging Pull Requests" class="md-nav__link">
+      合并拉请求- Merging Pull Requests
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      其他主题 Additional Topics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        其他主题 Additional Topics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-module-loader-and-dynamic-compilation/" title="Orchard动态编译 Orchard Dynamic Compilation" class="md-nav__link">
+      Orchard动态编译 Orchard Dynamic Compilation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Configuring-email/" title="配置Email Configuring Email" class="md-nav__link">
+      配置Email Configuring Email
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      参与进来-Getting Involved
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        参与进来-Getting Involved
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-documentation/" title="贡献文档-Contributing Documentation" class="md-nav__link">
+      贡献文档-Contributing Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Documentation-Style-Guidelines/" title="文档样式指南-Documentation Style Guidelines" class="md-nav__link">
+      文档样式指南-Documentation Style Guidelines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-patches/" title="贡献补丁-Contributing Patches" class="md-nav__link">
+      贡献补丁-Contributing Patches
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Contributors/" title="贡献者-Contributors" class="md-nav__link">
+      贡献者-Contributors
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+    
+    <label class="md-nav__link" for="nav-16">
+      发行说明-Release Notes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-16">
+        发行说明-Release Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-10-2.Release-Notes/" title="Orchard 1.10.2" class="md-nav__link">
+      Orchard 1.10.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-10-1.Release-Notes/" title="Orchard 1.10.1" class="md-nav__link">
+      Orchard 1.10.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-10.Release-Notes/" title="Orchard 1.10" class="md-nav__link">
+      Orchard 1.10
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9-3.Release-Notes/" title="Orchard 1.9.3" class="md-nav__link">
+      Orchard 1.9.3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9-2.Release-Notes/" title="Orchard 1.9.2" class="md-nav__link">
+      Orchard 1.9.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9-1.Release-Notes/" title="Orchard 1.9.1" class="md-nav__link">
+      Orchard 1.9.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9.Release-Notes/" title="Orchard 1.9" class="md-nav__link">
+      Orchard 1.9
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-8-2.release-notes/" title="Orchard 1.8.2" class="md-nav__link">
+      Orchard 1.8.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-8-1.Release-Notes/" title="Orchard 1.8.1" class="md-nav__link">
+      Orchard 1.8.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-8-Release-Notes/" title="Orchard 1.8" class="md-nav__link">
+      Orchard 1.8
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-7-2-Release-Notes/" title="Orchard 1.7.2" class="md-nav__link">
+      Orchard 1.7.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-7-1-Release-Notes/" title="Orchard 1.7.1" class="md-nav__link">
+      Orchard 1.7.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-7-Release-Notes/" title="Orchard 1.7" class="md-nav__link">
+      Orchard 1.7
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-6-Release-Notes/" title="Orchard 1.6" class="md-nav__link">
+      Orchard 1.6
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-5-Release-Notes/" title="Orchard 1.5" class="md-nav__link">
+      Orchard 1.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-4-Release-Notes/" title="Orchard 1.4" class="md-nav__link">
+      Orchard 1.4
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+    
+    <label class="md-nav__link" for="nav-17">
+      待办事项- Todos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-17">
+        待办事项- Todos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Documentation-plan/" title="文件计划- Documentation plan" class="md-nav__link">
+      文件计划- Documentation plan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Suggestions-for-New-Topics/" title="对新主题的建议- Suggestions for New Topics" class="md-nav__link">
+      对新主题的建议- Suggestions for New Topics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploying-to-production/" title="将Orchard从开发部署到生产服务器- Deploying Orchard from Development to Production Servers" class="md-nav__link">
+      将Orchard从开发部署到生产服务器- Deploying Orchard from Development to Production Servers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Configuring-shared-hosting/" title="在共享主机环境中配置Orchard- Configuring Orchard in Shared Hosting Environments" class="md-nav__link">
+      在共享主机环境中配置Orchard- Configuring Orchard in Shared Hosting Environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-custom-admin-pages/" title="添加自定义管理面板页面- Adding Custom Admin Panel Pages" class="md-nav__link">
+      添加自定义管理面板页面- Adding Custom Admin Panel Pages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../UI-guidelines-for-module-authors/" title="模块作者的UI指南-UI Guidelines for Module Authors" class="md-nav__link">
+      模块作者的UI指南-UI Guidelines for Module Authors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Exposing-and-handling-events/" title="揭露和处理事件-Exposing and Handling Events" class="md-nav__link">
+      揭露和处理事件-Exposing and Handling Events
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Localizing-modules/" title="本地化模块-Localizing Modules" class="md-nav__link">
+      本地化模块-Localizing Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-different-view-engines/" title="在主题中使用不同的视图引擎-Using Different View Engines in Themes" class="md-nav__link">
+      在主题中使用不同的视图引擎-Using Different View Engines in Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-code-to-themes/" title="将代码添加到主题-Adding Code to a Theme" class="md-nav__link">
+      将代码添加到主题-Adding Code to a Theme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Troubleshooting/" title="排除常见问题-Troubleshooting Common Issues" class="md-nav__link">
+      排除常见问题-Troubleshooting Common Issues
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Filing-bugs/" title="归档错误-Filing Bugs" class="md-nav__link">
+      归档错误-Filing Bugs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Community-resources/" title="Orchard社区资源-Orchard Community Resources" class="md-nav__link">
+      Orchard社区资源-Orchard Community Resources
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-involved-in-forums/" title="参与论坛-Getting Involved in Forums" class="md-nav__link">
+      参与论坛-Getting Involved in Forums
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../module-startup-code/" title="在哪里放置模块的启动代码-Where to put Startup Code for Module" class="md-nav__link">
+      在哪里放置模块的启动代码-Where to put Startup Code for Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Template-files-and-their-locations/" title="模板文件-Template files" class="md-nav__link">
+      模板文件-Template files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Testplan/" title="测试计划-Test plan" class="md-nav__link">
+      测试计划-Test plan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../test/" title="测试-Test" class="md-nav__link">
+      测试-Test
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-18" type="checkbox" id="nav-18">
+    
+    <label class="md-nav__link" for="nav-18">
+      补丁-Patches
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-18">
+        补丁-Patches
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Security-Researcher-Acknowledgments/" title="安全研究员致谢-Security Researcher Acknowledgments" class="md-nav__link">
+      安全研究员致谢-Security Researcher Acknowledgments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Patch-20150630/" title="补丁20150630-Patch 20150630" class="md-nav__link">
+      补丁20150630-Patch 20150630
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Patch-20150519/" title="补丁20150519-Patch 20150519" class="md-nav__link">
+      补丁20150519-Patch 20150519
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Patch-4-30-2013/" title="补丁20130430-Patch 20130430" class="md-nav__link">
+      补丁20130430-Patch 20130430
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-TV/" title="教程视频-Tutorial Videos" class="md-nav__link">
+      教程视频-Tutorial Videos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-20" type="checkbox" id="nav-20">
+    
+    <label class="md-nav__link" for="nav-20">
+      档案-Archives
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-20">
+        档案-Archives
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Walkthroughs/" title="演练和UI样机-Walkthroughs and UI Mockups" class="md-nav__link">
+      演练和UI样机-Walkthroughs and UI Mockups
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Archived-specs/" title="存档的规格-Archived Specs" class="md-nav__link">
+      存档的规格-Archived Specs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setup/" title="建立-Setup" class="md-nav__link">
+      建立-Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Blogs/" title="博客-Blogs" class="md-nav__link">
+      博客-Blogs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Comments/" title="评论-Comments" class="md-nav__link">
+      评论-Comments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Content-types/" title="内容类型-Content types" class="md-nav__link">
+      内容类型-Content types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Definitions/" title="定义-Definitions" class="md-nav__link">
+      定义-Definitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Fundamentals-doctype/" title="HTML doctype-HTML doctype" class="md-nav__link">
+      HTML doctype-HTML doctype
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Linkback/" title="Linkbacks：Pingbacks，Refbacks和Trackbacks-Linkbacks: Pingbacks, Refbacks and Trackbacks" class="md-nav__link">
+      Linkbacks：Pingbacks，Refbacks和Trackbacks-Linkbacks: Pingbacks, Refbacks and Trackbacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Media-management/" title="媒体管理-Media management" class="md-nav__link">
+      媒体管理-Media management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Navigation/" title="导航-Navigation" class="md-nav__link">
+      导航-Navigation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pages-editing/" title="页面编辑-Page editing" class="md-nav__link">
+      页面编辑-Page editing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pages/" title="页面管理和发布-Page management and publishing" class="md-nav__link">
+      页面管理和发布-Page management and publishing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pages-publishing/" title="页面发布工作流程-Page publishing workflow" class="md-nav__link">
+      页面发布工作流程-Page publishing workflow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Rss-atom/" title="RSS和Atom提要-RSS and Atom feeds" class="md-nav__link">
+      RSS和Atom提要-RSS and Atom feeds
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Slugs/" title="蛞蝓-Slugs" class="md-nav__link">
+      蛞蝓-Slugs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Templates/" title="页面模板和语法-Page templates and syntax" class="md-nav__link">
+      页面模板和语法-Page templates and syntax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tags/" title="标签-Tags" class="md-nav__link">
+      标签-Tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Themes/" title="主题-Themes" class="md-nav__link">
+      主题-Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Themes-includes/" title="主题包括-Theme includes" class="md-nav__link">
+      主题包括-Theme includes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Users/" title="用户，角色和权限-Users, roles and permissions" class="md-nav__link">
+      用户，角色和权限-Users, roles and permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Widgets/" title="小工具-Widgets" class="md-nav__link">
+      小工具-Widgets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Xml-Rpc/" title="XML-RPC和Live Writer-XML-RPC and Live Writer" class="md-nav__link">
+      XML-RPC和Live Writer-XML-RPC and Live Writer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-lists/" title="创建内容项列表-Creating lists of content items" class="md-nav__link">
+      创建内容项列表-Creating lists of content items
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A-few-interesting-extensibility-points/" title="可扩展性点-Extensibility points" class="md-nav__link">
+      可扩展性点-Extensibility points
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Add-Custom-Settings-to-your-Theme/" title="将自定义设置添加到主题-Add Custom Settings to your Theme" class="md-nav__link">
+      将自定义设置添加到主题-Add Custom Settings to your Theme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-Custom-Settings-pre-1.8/" title="1.8之前添加自定义设置-Add Custom Settings pre 1.8" class="md-nav__link">
+      1.8之前添加自定义设置-Add Custom Settings pre 1.8
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-admin-menu-items/" title="添加管理菜单项-Adding admin menu items" class="md-nav__link">
+      添加管理菜单项-Adding admin menu items
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Automation-test-guidance/" title="自动化测试指导-Automation test guidance" class="md-nav__link">
+      自动化测试指导-Automation test guidance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Bug-bash-1-18-2010/" title="Bug bash 1-18-2010-Bug bash 1-18-2010" class="md-nav__link">
+      Bug bash 1-18-2010-Bug bash 1-18-2010
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Content-Picker/" title="内容选择器-Content Picker" class="md-nav__link">
+      内容选择器-Content Picker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Custom-permissions/" title="自定义权限-Custom permissions" class="md-nav__link">
+      自定义权限-Custom permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Import-Export/" title="进出口-Import Export" class="md-nav__link">
+      进出口-Import Export
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-Orchard-Using-Web-PI/" title="使用Web PI安装Orchard-Installing Orchard Using Web PI" class="md-nav__link">
+      使用Web PI安装Orchard-Installing Orchard Using Web PI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-Markup-Guidelines/" title="Orchard标记指南-Orchard Markup Guidelines" class="md-nav__link">
+      Orchard标记指南-Orchard Markup Guidelines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/OrchardCMS/OrchardDoc/edit/master/docs/Documentation/Creating-global-ready-applications.markdown" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <p>Orchard's localization management is hosted on an external service <a href="https://crowdin.net/">(Crowdin)</a>, <a href="https://crowdin.net/project/orchard-cms">the project is available for the public</a> and contributions are welcome!</p>
+<p><font color=#0099ff size=4 face="黑体">Orchard的本地化管理托管在外部服务[（Crowdin）]（https://crowdin.net/），[该项目可供公众使用]（https://crowdin.net/project/orchard-cms）和欢迎捐款！</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Orchard supports two kinds of localization: </p>
+<p><font color=#0099ff size=4 face="黑体">Orchard支持两种本地化：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p>Localization of text strings in the Orchard application and in installed modules.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">Orchard应用程序和已安装模块中文本字符串的本地化。</font> </p>
+</li>
+<li>
+<p>Localization of database-driven content items.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">数据库驱动的内容项的本地化。</font> </p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>This topic describes both of these features. </p>
+<p><font color=#0099ff size=4 face="黑体">本主题描述了这两个功能。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h1 id="localizing-the-orchard-application-and-orchard-modules">Localizing the Orchard Application and Orchard Modules</h1>
+<h1 id="_1"><font color=#0099ff size=4 face="黑体">本地化果园应用程序和果园模块</font></h1>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>All strings in the Orchard application are output through a single <code>T()</code> method that can look up a translated string based on the default site culture. By default, Orchard includes strings for  English (en-US), but you can add support for additional cultures. Translations for the dashboard UI and all static strings in the front end can also be added to the application through translation files in <em>.po</em> format. To localize a site for a culture, you download and install the appropriate set of <em>.po</em> files, and then you update your site settings as shown in this section.</p>
+<p><font color=#0099ff size=4 face="黑体">Orchard应用程序中的所有字符串都通过单个<code>T（）</code>方法输出，该方法可以根据默认的站点文化查找已翻译的字符串。默认情况下，Orchard包含英语字符串（en-US），但您可以添加对其他文化的支持。仪表板UI的翻译和前端的所有静态字符串也可以通过_.po_格式的翻译文件添加到应用程序中。要本地化文化的站点，请下载并安装适当的_.po_文件集，然后更新站点设置，如本节所示。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<blockquote>
+<p><strong>Note</strong> In .NET Framework applications, localization is usually done using <em>.resx</em> files and satellite assemblies. Orchard takes a more lightweight approach that uses <em>.po</em> files. In Orchard, the number of translation files is the number of modules multiplied by the number of supported cultures. That number could rapidly grow, and the satellite-assembly design wasn't built for that kind of usage. On the other hand, <em>.po</em> files can be loaded and unloaded on demand. Like <em>.resx</em> files, <em>.po</em> files are a standard format for which many tools exist.</p>
+<p><font color=#0099ff size=4 face="黑体"><strong>注意</strong>在.NET Framework应用程序中，本地化通常使用_.resx_文件和附属程序集完成。 Orchard采用更轻量级的方法，使用_.po_文件。在Orchard中，翻译文件的数量是模块的数量乘以支持的文化的数量。这个数字可能会迅速增长，并且卫星组装设计不是为这种用途而建造的。另一方面，可以根据需要加载和卸载_.po_文件。与_.resx_文件一样，_. po_文件是存在许多工具的标准格式。</font> </p>
+</blockquote>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="installing-translation-files">Installing translation files</h2>
+<h2 id="_2"><font color=#0099ff size=4 face="黑体">安装翻译文件</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>As an example, download a set of <em>.po</em> translation files for French (fr-FR). Browse to the page for the files at the following URL:</p>
+<p><font color=#0099ff size=4 face="黑体">例如，下载一组法语（fr-FR）的_.po_翻译文件。浏览到以下URL的文件页面：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><a href="https://crowdin.net/download/project/orchard-cms/fr.zip">https://crowdin.net/download/project/orchard-cms/fr.zip</a>. </p>
+<p><font color=#0099ff size=4 face="黑体"><a href="https://crowdin.net/download/project/orchard-cms/fr.zip">https://crowdin.net/download/project/orchard-cms/fr.zip</a>。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Click the link to download the <em>.po</em> files and save the <em>.zip</em> file to your computer.</p>
+<p><font color=#0099ff size=4 face="黑体">单击链接以下载_.po_文件并将_.zip_文件保存到您的计算机。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="method-1-extracting-the-zip">Method 1: Extracting the zip</h3>
+<h2 id="1zip"><font color=#0099ff size=4 face="黑体">方法1：提取zip</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Extract the downloaded <em>.zip</em> file into the root folder of your website. Make sure you extract the contents to the actual Orchard root folder, and not to a subfolder named for the <em>.zip</em> file. When Windows opens a <strong>Confirm Folder Replace</strong> window and asks whether you want to merge the extracted contents into the Orchard folders of the same names in your website, select <strong>Do this for all current items</strong> and then click <strong>Yes</strong> to merge in the translation files.</p>
+<p><font color=#0099ff size=4 face="黑体">将下载的_.zip_文件解压缩到您网站的根文件夹中。确保将内容提取到实际的Orchard根文件夹，而不是提取到为_.zip_文件命名的子文件夹。当Windows打开<strong>确认文件夹替换</strong>窗口并询问您是否要将提取的内容合并到网站中相同名称的Orchard文件夹中时，请选择<strong>对所有当前项目执行此操作</strong>然后单击<strong>是</strong>以合并翻译文件。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>This method of extracting the po files by expanding the zip file into your site's directory is very simple but if your site does not have all the translated modules that are in the file, you may end up with some additional directories that you don't need. In order to avoid that, you can use the following alternative method.</p>
+<p><font color=#0099ff size=4 face="黑体">这种通过将zip文件扩展到您的站点目录来提取po文件的方法非常简单，但如果您的站点没有文件中的所有已翻译模块，您最终可能会得到一些您不需要的其他目录。为避免这种情况，您可以使用以下替代方法。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="method-2-using-translation-manager">Method 2: Using Translation Manager</h3>
+<h2 id="2"><font color=#0099ff size=4 face="黑体">方法2：使用翻译管理器</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The Translation Manager Feature in <a href="http://gallery.orchardproject.net/List/Modules/Orchard.Module.Vandelay.Industries">Vandelay Industries</a> module, available from the gallery, adds commands to install translation files more parsimoniously.</p>
+<p><font color=#0099ff size=4 face="黑体">[Vandelay Industries]（http://gallery.orchardproject.net/List/Modules/Orchard.Module.Vandelay.Industries）模块中的翻译管理器功能（可从库中获得）添加命令以更加简洁地安装翻译文件。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Once you have the module installed and the po file that you want to install downloaded, enter the following command, replacing the path to the po file as necessary:</p>
+<p><font color=#0099ff size=4 face="黑体">安装模块并下载要安装的po文件后，输入以下命令，根据需要替换po文件的路径：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>install translation c:\temp\fr.zip
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>This should have only extracted those resources for the modules that are actually installed that it has translations for. If a module is not found, running the command won't create unnecessary directories and your Orchard site will remain clean.</p>
+<p><font color=#0099ff size=4 face="黑体">这应该只为已翻译的实际安装的模块提取这些资源。如果找不到模块，则运行该命令不会创建不必要的目录，并且您的Orchard站点将保持干净。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>If you later install additional modules for which a translation exists, it is possible to re-run the command.</p>
+<p><font color=#0099ff size=4 face="黑体">如果稍后安装了存在转换的其他模块，则可以重新运行该命令。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="switching-the-site-to-another-culture">Switching the site to another culture</h2>
+<h2 id="_3"><font color=#0099ff size=4 face="黑体">将网站切换到另一种文化</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>To change the default culture for the application, go to the <strong>Settings =&gt; General</strong> screen in the Orchard dashboard. Under <strong>Default Site Culture</strong>, click <strong>Add or remove supported cultures for the site</strong>. </p>
+<p><font color=#0099ff size=4 face="黑体">要更改应用程序的默认区域性，请转到Orchard仪表板中的<strong> Settings =&gt; General </strong>屏幕。在<strong>默认站点文化</strong>下，单击<strong>添加或删除站点支持的文化</strong>。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Upload/screenshots/add_cultures_settings.png" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>In the <strong>Cultures</strong> screen, select a culture from the <strong>Add a culture</strong> list (for example, <strong>fr-FR</strong>) and then click <strong>Add</strong>. The culture code is added under <strong>Cultures this site supports</strong>. To remove a culture, click the <strong>x</strong> button next to it. </p>
+<p><font color=#0099ff size=4 face="黑体">在<strong> Cultures </strong>屏幕中，从<strong>添加文化</strong>列表中选择一种文化（例如，<strong> fr-FR </strong>），然后单击<strong>添加</strong>。文化代码添加在<strong>此网站支持的文化</strong>下。要删除文化，请单击旁边的<strong> x </strong>按钮。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Upload/screenshots/Culture_available_fr.png" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>After you've added one or more cultures, click <strong>General</strong> on the dashboard to return to the <strong>Manage Settings</strong> screen.</p>
+<p><font color=#0099ff size=4 face="黑体">添加一个或多个文化后，单击仪表板上的<strong>常规</strong>以返回<strong>管理设置</strong>屏幕。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>In the <strong>Default Site Culture</strong> list, select the culture to set as the default. When you're done, click <strong>Save</strong>.</p>
+<p><font color=#0099ff size=4 face="黑体">在<strong>默认站点文化</strong>列表中，选择要设置为默认值的区域性。完成后，单击<strong>保存</strong>。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Upload/screenshots/Culture_newdefault_fr.png" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Assuming that you have the appropriate set of <em>.po</em> files installed, applying a new culture has the effect of translating the text in the dashboard menu and UI text. The following illustration shows the effect of changing the culture to <strong>fr-FR</strong>.  </p>
+<p><font color=#0099ff size=4 face="黑体">假设您安装了适当的_.po_文件集，则应用新文化可以翻译仪表板菜单和UI文本中的文本。下图显示了将文化更改为<strong> fr-FR </strong>的效果。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p><font color=#0099ff size=4 face="黑体">！注意</font> </p>
+<pre><code>The translation files might not be complete.
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Upload/screenshots_675/default_site_culture_fr_675.png" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Setting the default site culture to a specific culture won't have any effect unless you have a corresponding translation file installed.  Orchard searches the following paths to find translation files, from most to least specific:</p>
+<p><font color=#0099ff size=4 face="黑体">除非您安装了相应的翻译文件，否则将默认站点区域性设置为特定区域性将不会产生任何影响。 Orchard搜索以下路径以查找翻译文件，从大多数到最不具体：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p><strong>Core localization file path</strong> <em>~/Core/App_Data/Localization/&lt;culture-code&gt;/orchard.core.po</em></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><strong>核心本地化文件路径</strong> <em>~ / Core / App \ _Data / Localization /＆lt; culture-code＆gt; /orchard.core.po</em></font> </p>
+</li>
+<li>
+<p><strong>Modules localization file path</strong> <em>~/Modules/&lt;module-name&gt;/App_Data/Localization/&lt;culture-code&gt;/orchard.module.po</em></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><strong>模块本地化文件路径</strong> <em>~ / Modules /＆lt; module-name＆gt; / App \ _Data / Localization /＆lt; culture-code＆gt; /orchard.module.po</em></font> </p>
+</li>
+<li>
+<p><strong>Theme localization file path</strong> <em>~/Themes/&lt;theme-name&gt;/App_Data/Localization/&lt;culture-code&gt;/orchard.theme.po</em></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><strong>主题本地化文件路径</strong> <em>~ /主题/＆lt; theme-name＆gt; / App \ _Data / Localization /＆lt; culture-code＆gt; /orchard.theme.po</em></font> </p>
+</li>
+<li>
+<p><strong>Root localization file path</strong> <em>~/App_Data/Localization/&lt;culture-code&gt;/orchard.root.po</em></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><strong>根本地化文件路径</strong> <em>~ / App \ _Data / Localization /＆lt; culture-code＆gt; /orchard.root.po</em></font> </p>
+</li>
+<li>
+<p><strong>Tenant localization file path</strong> <em>~/App_Data/Sites/&lt;tenant name&gt;/Localization/&lt;culture-code&gt;/orchard.po</em></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><strong>租户本地化文件路径</strong> <em>~ / App \ _Data / Sites /＆lt;租户名称＆gt; /本地化/＆lt; culture-code＆gt; /orchard.po</em></font> </p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="translation-availability">Translation availability</h2>
+<h2 id="_4"><font color=#0099ff size=4 face="黑体">翻译可用性</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>You can download additional <em>.po</em> files for other cultures from <a href="http://orchardproject.net/localization">http://orchardproject.net/localization</a>. Translations are provided by the community. If you don't find the culture you're looking for, please consider contributing it. It's a few hours of work and it will benefit the whole community.</p>
+<p><font color=#0099ff size=4 face="黑体">您可以从[http://orchardproject.net/localization](http://orchardproject.net/localization）下载其他文化的其他_.po_文件。翻译由社区提供。如果您没有找到您正在寻找的文化，请考虑贡献它。这是几个小时的工作，它将使整个社区受益。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="contributing-new-translations">Contributing new translations</h2>
+<h2 id="_5"><font color=#0099ff size=4 face="黑体">贡献新的翻译</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="working-with-a-plain-text-editor">Working with a plain text editor</h3>
+<h2 id="_6"><font color=#0099ff size=4 face="黑体">使用纯文本编辑器</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The localization tool available at <a href="https://crowdin.net/project/orchard-cms">https://crowdin.net/project/orchard-cms</a> can prepare stub files for a specific language. Orchard's translations are stored in the form of PO-files in packages, that you can add to your own Orchard instance. These packages are regenerated at the beginning of every hour (the process takes 2-3 minutes). Please visit the project home page on Crowdin to see the progress of the translations for each language.</p>
+<p><font color=#0099ff size=4 face="黑体">[https://crowdin.net/project/orchard-cms](https://crowdin.net/project/orchard-cms）上提供的本地化工具可以为特定语言准备存根文件。 Orchard的翻译以包中的PO文件的形式存储，您可以将其添加到您自己的Orchard实例中。这些包在每小时开始时重新生成（该过程需要2-3分钟）。请访问Crowdin上的项目主页，查看每种语言的翻译进度。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>You can download all the translations for each language for both projects: <a href="https://crowdin.net/download/project/orchard-cms.zip">Orchard CMS</a>, <a href="https://crowdin.net/download/project/orchard-cms-gallery.zip">Orchard CMS Gallery</a>.</p>
+<p><font color=#0099ff size=4 face="黑体">您可以下载这两个项目的每种语言的所有翻译：[Orchard CMS]（https://crowdin.net/download/project/orchard-cms.zip），[Orchard CMS Gallery]（https://crowdin.net /download/project/orchard-cms-gallery.zip）。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The downloaded <em>.zip</em> file contains the set of <em>.po</em> files that you can edit using a text editor. When you're done, please subscribe to our localization mailing list by sending email to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;">&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;</a>, and then <a href="join-orchard-localization@lists.outercurve.org">send the zipped package of <em>.po</em> files to the list</a>.</p>
+<p><font color=#0099ff size=4 face="黑体">下载的_.zip_文件包含可以使用文本编辑器编辑的_.po_文件集。完成后，请通过发送电子邮件至<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;">&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;</a>订阅我们的本地化邮件列表，然后[将压缩的_.po_文件包发送到列表]（加入 - orchard-localization@lists.outercurve.org）。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Please make sure when working with <em>.po</em> files that the files are saved in UTF-8 with Byte Order Mark. This is usually a setting in your text editor (in Notepad it is under the Encoding drop-down in the "Save As" dialog).</p>
+<p><font color=#0099ff size=4 face="黑体">使用_.po_文件时请确保文件以带字节顺序标记的UTF-8保存。这通常是文本编辑器中的设置（在记事本中，它位于“另存为”对话框中的“编码”下拉列表下）。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h4 id="translation-file-format">Translation File Format</h4>
+<h2 id="_7"><font color=#0099ff size=4 face="黑体">翻译文件格式</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The following illustration shows the format of a translation file. Each text string is represented by elements listed in the following table.</p>
+<p><font color=#0099ff size=4 face="黑体">下图显示了翻译文件的格式。每个文本字符串由下表中列出的元素表示。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>A reference (see below) | <code>#: reference-string</code></p>
+<p><font color=#0099ff size=4 face="黑体">参考（见下文）| <code>＃：reference-string</code></font> </p>
+<p>----------------------- | ---------------------</p>
+<ul>
+<li><font color=#0099ff size=4 face="黑体">| ---------------------</font> </li>
+</ul>
+<p>An ID, which is often the original (untranslated) string. After the ID is set, this string should not be changed even if the English string changes, so that existing translations continue to work even if they're not immediately updated. | <code>#| msgid "id-string"</code></p>
+<p><font color=#0099ff size=4 face="黑体">ID，通常是原始（未翻译）字符串。设置ID后，即使英语字符串发生更改，也不应更改此字符串，以便现有翻译即使不立即更新也能继续工作。 | <code>＃| msgstr“id-string”</code></font> </p>
+<p>The current English string for reference. This helps the translator. | <code>msgid "English-string"</code></p>
+<p><font color=#0099ff size=4 face="黑体">目前的英文字符串供参考。这有助于翻译。 | <code>msgstr“英文字符串”</code></font> </p>
+<p>The translated string.  | <code>msgstr "translated-string"</code></p>
+<p><font color=#0099ff size=4 face="黑体">翻译后的字符串。 | <code>msgstr“translated-string”</code></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Upload/screenshots_675/fr_po_file.png" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="how-to-contribute">How to contribute</h3>
+<h2 id="_8"><font color=#0099ff size=4 face="黑体">如何贡献</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p>Register on <a href="https://crowdin.com/">Crowdin</a>.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">在[Crowdin]（https://crowdin.com/）上注册。</font> </p>
+</li>
+<li>
+<p>Go to the project page of <a href="https://crowdin.net/project/orchard-cms">Orchard CMS</a> and <a href="https://crowdin.net/download/project/orchard-cms-gallery.zip">Orchard CMS Gallery</a> and apply to join the project.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">转到[Orchard CMS]（https://crowdin.net/project/orchard-cms）和[Orchard CMS Gallery]（https://crowdin.net/download/project/orchard-cms-gallery）的项目页面。 zip）并申请加入该项目。</font> </p>
+</li>
+<li>
+<p>Your application will be accepted shortly and you'll be added to the project as "Proofreader" for the selected languages. This means that you'll be able to edit and approve translations (which is necessary for the translated strings to be included in the downloadable packages).</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">您的申请将很快被接受，您将被添加到项目中作为所选语言的“校对员”。这意味着您将能够编辑和批准翻译（这是翻译的字符串包含在可下载软件包中所必需的）。</font> </p>
+</li>
+<li>
+<p>If you are new to the Orchard translations, please consult with other translators of the same language and make sure you follow the same conventions.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">如果您不熟悉Orchard的翻译，请咨询其他相同语言的译员，并确保遵循相同的惯例。</font> </p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h4 id="resource-string-reference">Resource String Reference</h4>
+<h2 id="_9"><font color=#0099ff size=4 face="黑体">资源字符串参考</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The reference for a resource string in a <em>.po</em> file (the <code>reference-string</code> value described in the previous section) is optional. If no reference is specified, the resource string will be used as a fallback whenever a resource with the same ID is queried with a reference that can't be found. This is a useful way to create generic resource strings that are used in multiple places in the application and are not context-sensitive. You can always override a generic fallback like this as needed.</p>
+<p><font color=#0099ff size=4 face="黑体">_.po_文件中的资源字符串的引用（上一节中描述的<code>reference-string</code>值）是可选的。如果未指定引用，则只要使用无法找到的引用查询具有相同ID的资源，资源字符串将用作回退。这是创建在应用程序中的多个位置使用且不是上下文相关的通用资源字符串的有用方法。您始终可以根据需要覆盖此类通用回退。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The reference strings can be stored in different locations, depending on how the string is used in the application:</p>
+<p><font color=#0099ff size=4 face="黑体">引用字符串可以存储在不同的位置，具体取决于应用程序中字符串的使用方式：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p><strong>Strings from views</strong>:  Use the virtual path of the view from the root of the application (for example, <em>~/Themes/TheThemeMachine/Views/User.cshtml</em>).</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><strong>来自视图的字符串</strong>：使用应用程序根目录中的视图的虚拟路径（例如，<em>~ / Themes / TheThemeMachine / Views / User.cshtml</em>）。</font> </p>
+</li>
+<li>
+<p><strong>Strings from <em>.cs</em> files</strong>:  Use the fully qualified type name of the class where the string is being used (for example, <code>Orchard.Packaging.AdminMenu</code>).</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><strong> _.cs_文件中的字符串</strong>：使用正在使用字符串的类的完全限定类型名称（例如，<code>Orchard.Packaging.AdminMenu</code>）。</font> </p>
+</li>
+<li>
+<p><strong>Strings from module manifests or theme manifests</strong>:  Use the virtual path of the manifest from the root of the application (for example, <em>~Themes/TheThemeMachine/Theme.txt</em>). Note that module and theme manifest localization uses a path for fields as the key. For example, the Author field uses the key "Author" and the Description field of the Gallery feature would be under the key "Gallery Description".</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><strong>来自模块清单或主题清单的字符串</strong>：使用应用程序根目录中的清单的虚拟路径（例如，<em>~Themes /TheThemeMachine / Theme.txt</em>）。请注意，模块和主题清单本地化使用字段路径作为键。例如，“作者”字段使用“作者”键，而“图库”功能的“描述”字段将位于“图库描述”键下。</font> </p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="contributing-files-for-third-party-modules">Contributing files for third party modules</h3>
+<h2 id="_10"><font color=#0099ff size=4 face="黑体">为第三方模块贡献文件</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Our localization infrastructure is built to host translations for third party modules. If you are the author of a module or want to contribute translations for a module, you can generate po files for it using the <a href="http://gallery.orchardproject.net/List/Modules/Orchard.Module.Vandelay.Industries">Translation Manager</a> module.</p>
+<p><font color=#0099ff size=4 face="黑体">我们的本地化基础架构可用于托管第三方模块的翻译。如果您是模块的作者或想要为模块提供翻译，您可以使用[翻译管理器]为其生成po文件（http://gallery.orchardproject.net/List/Modules/Orchard.Module.Vandelay .Industries）模块。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>From an Orchard command line, type the following command (for the example of the Bing.Maps module):</p>
+<p><font color=#0099ff size=4 face="黑体">从Orchard命令行，键入以下命令（对于Bing.Maps模块的示例）：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>extract default translation /Extensions:Bing.Maps /Output:\temp
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>This will create a new Orchard.en-us.po.zip file with the strings for the module. The command looks at the source code for the module and creates entries for T-wrapped strings, manifest strings and everything that should be localizable.</p>
+<p><font color=#0099ff size=4 face="黑体">这将创建一个带有模块字符串的新Orchard.en-us.po.zip文件。该命令查看模块的源代码，并为T-wrapped字符串，清单字符串和应该可本地化的所有内容创建条目。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Please send this file to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;">&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;</a> so that we can add it to the online localization database.</p>
+<p><font color=#0099ff size=4 face="黑体">请将此文件发送到<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;">&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;</a>，以便我们将其添加到在线本地化数据库中。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h1 id="localizing-database-driven-content-items">Localizing Database-Driven Content Items</h1>
+<h1 id="_11"><font color=#0099ff size=4 face="黑体">本地化数据库驱动的内容项</font></h1>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>In addition to application and module localization, Orchard provides the ability to translate content items that are stored in the database. To localize content items, you must enable the <strong>Localization</strong> feature. In the dashboard, click <strong>Modules</strong>, and then on the <strong>Features</strong> tab you will see <strong>Localization</strong>. Click the <strong>Enable</strong> link. </p>
+<p><font color=#0099ff size=4 face="黑体">除了应用程序和模块本地化之外，Orchard还提供翻译存储在数据库中的内容项的功能。要本地化内容项，您必须启用<strong>本地化</strong>功能。在仪表板中，单击<strong> Modules </strong>，然后在<strong> Features </strong>选项卡上，您将看到<strong> Localization </strong>。单击<strong>启用</strong>链接。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Upload/screenshots_675/Localize_enable_675.png" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>By default, both the <strong>Page</strong> and <strong>Blog Post</strong> content types are localizable, because they both contain the <strong>Localization</strong> part. You can add the <strong>Localization</strong> part to other content types that need translation. Click <strong>Content</strong> on the dashboard, and then view the items in the <strong>Manage Content</strong> screen. Notice the <strong>+ New Translation</strong> link for each content item.</p>
+<p><font color=#0099ff size=4 face="黑体">默认情况下，<strong> Page </strong>和<strong> Blog Post </strong>内容类型都是可本地化的，因为它们都包含<strong> Localization </strong>部分。您可以将<strong> Localization </strong>部分添加到需要翻译的其他内容类型。单击仪表板上的<strong>内容</strong>，然后在<strong>管理内容</strong>屏幕中查看项目。请注意每个内容项的<strong> +新翻译</strong>链接。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Upload/screenshots_675/new_translation_675.png" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<blockquote>
+<p><strong>Note</strong> This link appears only if you have more than one culture enabled on the site (see previous section), and if you have enabled the <strong>Localization</strong> feature.</p>
+<p><font color=#0099ff size=4 face="黑体"><strong>注意</strong>此链接仅在您在网站上启用了多个区域性时显示（请参阅上一节），并且您已启用<strong>本地化</strong>功能。</font> </p>
+</blockquote>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Clicking the <strong>+ New Translation</strong> link allows you to define a translated version of the content item to be associated with the "parent" content item (in the site's default culture). Each translated content item is treated as a unique content item in the system. On the <strong>Translate Content</strong> editor screen, you can define the culture code for the content item.  The permalink will change accordingly in order to ensure that URLs are unqiue for each translation. You can then translate the content item from the default site culture to the selected culture.</p>
+<p><font color=#0099ff size=4 face="黑体">单击<strong> +新翻译</strong>链接可以定义要与“父”内容项关联的内容项的翻译版本（在站点的默认文化中）。每个翻译的内容项都被视为系统中的唯一内容项。在<strong> Translate Content </strong>编辑器屏幕上，您可以定义内容项的区域性代码。永久链接将相应更改，以确保每个翻译的URL都是唯一的。然后，您可以将内容项从默认站点文化转换为选定的区域性。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Upload/screenshots_675/Localize_content_675.png" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Add some translation text in the body of the page, and then click <strong>Save</strong>. After the content item is saved, the current culture code is indicated, along with links to any related content items in different cultures.</p>
+<p><font color=#0099ff size=4 face="黑体">在页面正文中添加一些翻译文本，然后单击<strong>保存</strong>。保存内容项后，将显示当前文化代码，以及指向不同文化中任何相关内容项的链接。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>When you browse content items on the site, if there are translations available for a content item, links to those content items will be displayed. This makes it easy for your site visitors to switch between translations of the item.  This is what the site looks like when you view the English (en-US) item:</p>
+<p><font color=#0099ff size=4 face="黑体">当您浏览网站上的内容项时，如果有可用于内容项的翻译，则将显示指向这些内容项的链接。这使您的网站访问者可以轻松地在项目的翻译之间切换。这是查看英语（en-US）项目时网站的样子：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Upload/screenshots_675/Localize_en_downloadpg_675.png" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Click the culture code link to see translated version of the page. When you do, the original cultural code (en-US) appears as a link to the original page.</p>
+<p><font color=#0099ff size=4 face="黑体">单击文化代码链接以查看页面的翻译版本。执行此操作时，原始文化代码（en-US）将显示为原始页面的链接。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Upload/screenshots_675/Localize_fr_downloadpg_675.png" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>To enable localization for custom content types, add the <strong>Localization</strong> part to the content type. For example, to add localization to a custom content type named <strong>MyEvent</strong>, click <strong>Content</strong> on the dashboard, and then click the <strong>Content Types</strong> tab.  Click <strong>Edit</strong> on the <strong>MyEvent</strong> type (this example assumes the custom type already exists).  Click <strong>Add</strong> in the <strong>Parts</strong> section of the type.  The <strong>Add</strong> screen is displayed, and you can select <strong>Localization</strong> or other parts to add.</p>
+<p><font color=#0099ff size=4 face="黑体">要为自定义内容类型启用本地化，请将<strong> Localization </strong>部分添加到内容类型。例如，要将本地化添加到名为<strong> MyEvent </strong>的自定义内容类型，请单击仪表板上的<strong>内容</strong>，然后单击<strong>内容类型</strong>选项卡。单击<strong> MyEvent </strong>类型上的<strong>编辑</strong>（此示例假定自定义类型已存在）。单击类型的<strong>部分</strong>部分中的<strong>添加</strong>。将显示<strong>添加</strong>屏幕，您可以选择<strong>本地化</strong>或要添加的其他部分。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Upload/screenshots/add_localization_part_MyEvent.png" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>For more information about creating and working with custom content types, refer to the <a href="Creating-custom-content-types">Creating Custom Content Types</a> topic.</p>
+<p><font color=#0099ff size=4 face="黑体">有关创建和使用自定义内容类型的更多信息，请参阅[创建自定义内容类型]（创建自定义内容类型）主题。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<blockquote>
+<p><strong>Note</strong> The localization feature is a work in progress, and not all parts of the Orchard application are yet localizable. For example, Orchard does not yet provide an automatic way to filter and display only content items in a given culture (one instance of this is the browser's default culture). We will address this in a future release. In the meantime you can provide your own implementation of <code>ICultureSelector</code> in a module. If you want to give us feedback on localization support in Orchard (for example, to help us understand the scenarios that are important for your site), please contact at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;">&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;</a> and drop us a line!</p>
+<p><font color=#0099ff size=4 face="黑体"><strong>注意</strong>本地化功能正在进行中，并非Orchard应用程序的所有部分都可以进行本地化。例如，Orchard尚未提供一种自动方式来过滤和显示给定文化中的内容项（其中一个实例是浏览器的默认文化）。我们将在以后的版本中解决这个问题。在此期间，您可以在模块中提供自己的<code>ICultureSelector</code>实现。如果您想向我们提供有关Orchard本地化支持的反馈（例如，为了帮助我们了解对您的站点非常重要的场景），请联系<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;">&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;</a>并告诉我们线！</font> </p>
+</blockquote>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h1 id="translating-an-html-widget">Translating an Html Widget</h1>
+<h1 id="html"><font color=#0099ff size=4 face="黑体">翻译Html小部件</font></h1>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<blockquote>
+<p><strong>Note</strong> these steps apply to a clean installation using the default theme 'The Theme Machine'</p>
+<p><font color=#0099ff size=4 face="黑体"><strong>注意</strong>这些步骤适用于使用默认主题'The Theme Machine'的全新安装</font> </p>
+</blockquote>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>In the admin panel, navigate to <strong>Modules</strong> and verify that you have the <strong>Localization</strong> module installed and enabled. The next step is to navigate to <strong>Content</strong> in the admin panel. Select the <strong>Content Types</strong> tab page on top and click <strong>Edit</strong> to adjust the <strong>Html Widget</strong>. Our goal is to translate a Html Widget. Click <strong>Add Parts</strong> in the Parts section. Here we select the <strong>Localization</strong> part and click <strong>Save</strong> to add this part. At the bottom of the page click <strong>Save</strong> again to save your Content Item adjustments.</p>
+<p><font color=#0099ff size=4 face="黑体">在管理面板中，导航到<strong> Modules </strong>并验证是否已安装并启用了<strong> Localization </strong>模块。下一步是导航到管理面板中的<strong>内容</strong>。选择顶部的<strong>内容类型</strong>标签页，然后单击<strong>编辑</strong>以调整<strong> Html小组件</strong>。我们的目标是翻译Html Widget。单击零件部分中的<strong>添加零件</strong>。在这里，我们选择<strong> Localization </strong>部分，然后单击<strong> Save </strong>添加此部分。在页面底部再次单击<strong>保存</strong>以保存内容项调整。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Now we need to navigate to the <strong>Settings</strong> menu item in the admin panel. Under the section <strong>Default Site Culture</strong> you can add the cultures that you want to support. In our case we have nl-BE and en-US. Click <strong>Save</strong> to apply your culture settings.</p>
+<p><font color=#0099ff size=4 face="黑体">现在我们需要导航到管理面板中的<strong> Settings </strong>菜单项。在<strong>默认站点文化</strong>部分下，您可以添加要支持的文化。在我们的例子中，我们有nl-BE和en-US。单击<strong>保存</strong>以应用您的文化设置。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Navigate to the <strong>Widgets</strong> menu item.</p>
+<p><font color=#0099ff size=4 face="黑体">导航到<strong> Widgets </strong>菜单项。</font> </p>
+<p>On the <strong>Default</strong> layer find for example the <strong>FooterQuadThrid</strong> section and click <strong>Add</strong> to add a Widget.</p>
+<p><font color=#0099ff size=4 face="黑体">在<strong> Default </strong>图层上找到<strong> FooterQuadThrid </strong>部分，然后单击<strong> Add </strong>添加一个Widget。</font> </p>
+<p>Now you need to <strong>Choose A Widget</strong>, select the <strong>Html Widget</strong>, because this is the one that we adjust.</p>
+<p><font color=#0099ff size=4 face="黑体">现在你需要<strong>选择一个小工具</strong>，选择<strong> Html Widget </strong>，因为这是我们调整的那个。</font> </p>
+<p>Now fill in the needed information (Title and Content) and click <strong>Save</strong>. </p>
+<p><font color=#0099ff size=4 face="黑体">现在填写所需信息（标题和内容），然后单击<strong>保存</strong>。</font> </p>
+<p>Your Html Widget is now added to the FooterQuadThird section.</p>
+<p><font color=#0099ff size=4 face="黑体">您的Html小部件现已添加到FooterQuadThird部分。</font> </p>
+<p>Now we are ready to translate the item. Select you newly added widget to edit it. On top of the <strong>Edit Widget</strong> page you will find the following text: <strong>+ New translation</strong>. Click this to add the translation for another culture.</p>
+<p><font color=#0099ff size=4 face="黑体">现在我们准备翻译该项目了。选择新添加的小部件进行编辑。在<strong>编辑小部件</strong>页面的顶部，您将找到以下文本：<strong> +新翻译</strong>。单击此按钮可为其他区域性添加翻译。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="change-history">Change History</h3>
+<h2 id="_12"><font color=#0099ff size=4 face="黑体">改变历史</font></h2>
+<ul>
+<li>
+<p>Updates for Orchard 1.8</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">Orchard 1.8的更新</font> *</p>
+<ul>
+<li>11-03-14: Updated Localization steps and procedure (aka Crowdin)</li>
+</ul>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">11-03-14：更新了本地化步骤和程序（又名Crowdin）</font> *</p>
+<ul>
+<li>
+<p>3-17-11:  Updated for references to dashboard.</p>
+</li>
+<li>
+<p>3-17-11:  Updated screens and procedures in section on localizing database-driven content items.</p>
+</li>
+<li>
+<p>3-18-11:  Updated screens and procedures in section on localizing the Orchard application and modules.</p>
+</li>
+<li>
+<p>4-12-11:  Structure of the document modified. Added online tool tutorial.</p>
+</li>
+</ul>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Blogging-with-LiveWriter/" title="使用LiveWriter进行博客-Blogging with LiveWriter" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                使用LiveWriter进行博客-Blogging with LiveWriter
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Search-and-indexing/" title="搜索和索引-Search and Indexing" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                搜索和索引-Search and Indexing
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright <a href="http://orchardproject.net">Orchard Project</a>.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.e72fd936.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../search/main.js"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-20757794-1","orchardproject.net"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>

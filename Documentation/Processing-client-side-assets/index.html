@@ -1,0 +1,5154 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../..">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>处理客户端资产- Processing Client-Side Assets - Orchard 中文文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../#overview" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Orchard 中文文档" class="md-header-nav__button md-logo">
+          
+            <img src="../../images/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Orchard 中文文档
+              </span>
+              <span class="md-header-nav__topic">
+                处理客户端资产- Processing Client-Side Assets
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/OrchardCMS/OrchardDoc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Orchard 中文文档" class="md-nav__button md-logo">
+      
+        <img src="../../images/logo.png" width="48" height="48">
+      
+    </a>
+    Orchard 中文文档
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/OrchardCMS/OrchardDoc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="主页-Home" class="md-nav__link">
+      主页-Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      入门-Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        入门-Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-Orchard/" title="安装Orchard-Installing Orchard" class="md-nav__link">
+      安装Orchard-Installing Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manually-installing-Orchard-zip-file/" title="手动安装Orchard-Manually Installing Orchard" class="md-nav__link">
+      手动安装Orchard-Manually Installing Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Working-with-Orchard-in-WebMatrix/" title="在WebMatrix中与Orchard合作-Working with Orchard in WebMatrix" class="md-nav__link">
+      在WebMatrix中与Orchard合作-Working with Orchard in WebMatrix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-around-the-dashboard/" title="绕过仪表板-Getting Around the Dashboard" class="md-nav__link">
+      绕过仪表板-Getting Around the Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started/" title="建立你的第一个Orchard网站-Building Your First Orchard Site" class="md-nav__link">
+      建立你的第一个Orchard网站-Building Your First Orchard Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Navigation-and-menus/" title="导航和菜单-Navigation and Menus" class="md-nav__link">
+      导航和菜单-Navigation and Menus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-a-Blog-to-Your-Site/" title="添加博客到您的网站-Adding a Blog to Your Site" class="md-nav__link">
+      添加博客到您的网站-Adding a Blog to Your Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-Pages-to-Your-Site/" title="向您的网站添加页面-Adding Pages to Your Site" class="md-nav__link">
+      向您的网站添加页面-Adding Pages to Your Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-and-managing-media-content/" title="添加和管理媒体内容-Adding and Managing Media Content" class="md-nav__link">
+      添加和管理媒体内容-Adding and Managing Media Content
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Managing-widgets/" title="管理小部件-Managing Widgets" class="md-nav__link">
+      管理小部件-Managing Widgets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Organizing-content-with-tags/" title="使用标签组织内容-Organizing Content Using Tags" class="md-nav__link">
+      使用标签组织内容-Organizing Content Using Tags
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      关于该项目-About the Project
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        关于该项目-About the Project
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic-Orchard-Concepts/" title="Orchard概念定义-Orchard Concept Definitions" class="md-nav__link">
+      Orchard概念定义-Orchard Concept Definitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Builtin-Features/" title="内置模块和功能-Built-in modules and features" class="md-nav__link">
+      内置模块和功能-Built-in modules and features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Feature-roadmap/" title="功能路线图-Feature roadmap" class="md-nav__link">
+      功能路线图-Feature roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Frequently-asked-questions/" title="经常问的问题-Frequently Asked Questions" class="md-nav__link">
+      经常问的问题-Frequently Asked Questions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      创作网站-Authoring Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        创作网站-Authoring Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Blogging-with-LiveWriter/" title="使用LiveWriter进行博客-Blogging with LiveWriter" class="md-nav__link">
+      使用LiveWriter进行博客-Blogging with LiveWriter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-global-ready-applications/" title="创建全球就绪应用程序-Creating Global-Ready Applications" class="md-nav__link">
+      创建全球就绪应用程序-Creating Global-Ready Applications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Search-and-indexing/" title="搜索和索引-Search and Indexing" class="md-nav__link">
+      搜索和索引-Search and Indexing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Saving-scheduling-and-publishing-drafts/" title="发布草稿-Publishing Drafts" class="md-nav__link">
+      发布草稿-Publishing Drafts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-custom-content-types/" title="创建自定义内容类型-Creating Custom Content Types" class="md-nav__link">
+      创建自定义内容类型-Creating Custom Content Types
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      自定义网站-Customizing Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        自定义网站-Customizing Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Previewing-and-applying-a-theme/" title="预览和应用主题-Previewing and Applying a Theme" class="md-nav__link">
+      预览和应用主题-Previewing and Applying a Theme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-themes/" title="安装主题-Installing Themes" class="md-nav__link">
+      安装主题-Installing Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Customizing-the-default-theme/" title="定制主题-Customizing Themes" class="md-nav__link">
+      定制主题-Customizing Themes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      使用Orchard画廊-Using the Orchard Gallery
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        使用Orchard画廊-Using the Orchard Gallery
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Gallery-overview/" title="图库概述-Gallery Overview" class="md-nav__link">
+      图库概述-Gallery Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-modules-and-themes-from-the-gallery/" title="安装模块和主题-Installing Modules and Themes" class="md-nav__link">
+      安装模块和主题-Installing Modules and Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Browsing-the-gallery-web-site/" title="浏览图库网站-Browsing the Gallery Web Site" class="md-nav__link">
+      浏览图库网站-Browsing the Gallery Web Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-a-module-or-theme-to-the-gallery/" title="贡献到画廊-Contributing to the Gallery" class="md-nav__link">
+      贡献到画廊-Contributing to the Gallery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Module-gallery-feeds/" title="注册其他图库供稿-Registering Additional Gallery Feeds" class="md-nav__link">
+      注册其他图库供稿-Registering Additional Gallery Feeds
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      管理网站-Managing Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        管理网站-Managing Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Enabling-and-disabling-features/" title="启用和禁用功能-Enabling and Disabling Features" class="md-nav__link">
+      启用和禁用功能-Enabling and Disabling Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-the-command-line-interface/" title="使用命令行界面-Using the Command-Line Interface" class="md-nav__link">
+      使用命令行界面-Using the Command-Line Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-and-upgrading-modules/" title="安装和升级模块-Installing and Upgrading Modules" class="md-nav__link">
+      安装和升级模块-Installing and Upgrading Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Modifying-site-settings/" title="修改站点设置-Modifying Site Settings" class="md-nav__link">
+      修改站点设置-Modifying Site Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Moderating-comments/" title="审核评论-Moderating Comments" class="md-nav__link">
+      审核评论-Moderating Comments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Managing-users-and-roles/" title="管理用户和角色-Managing Users and Roles" class="md-nav__link">
+      管理用户和角色-Managing Users and Roles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-permissions/" title="了解权限-Understanding Permissions" class="md-nav__link">
+      了解权限-Understanding Permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Making-a-Web-Site-Recipe/" title="制作网站食谱-Making a Website Recipe" class="md-nav__link">
+      制作网站食谱-Making a Website Recipe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-an-image-gallery/" title="创建图库-Creating an Image Gallery" class="md-nav__link">
+      创建图库-Creating an Image Gallery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Workflows/" title="工作流程-Workflows" class="md-nav__link">
+      工作流程-Workflows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Projection/" title="投影-Projection" class="md-nav__link">
+      投影-Projection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-Custom-Forms/" title="创建自定义表单-Create Custom Forms" class="md-nav__link">
+      创建自定义表单-Create Custom Forms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-Dynamic-Forms/" title="创建动态表单-Create Dynamic Forms" class="md-nav__link">
+      创建动态表单-Create Dynamic Forms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Rules-to-conditionally-display-content/" title="使用规则有条件地显示内容-Using Rules to conditionally display content" class="md-nav__link">
+      使用规则有条件地显示内容-Using Rules to conditionally display content
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      托管和部署网站-Hosting and Deploying Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        托管和部署网站-Hosting and Deploying Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Upgrading-a-site-to-a-new-version-of-Orchard/" title="将站点升级到新版本-Upgrading a Site to a New Version" class="md-nav__link">
+      将站点升级到新版本-Upgrading a Site to a New Version
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/" title="优化服务器性能-Optimizing Server Performance" class="md-nav__link">
+      优化服务器性能-Optimizing Server Performance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/" title="Orchard 1.7.1中Windows Azure的新增功能-What's New for Windows Azure in Orchard 1.7.1" class="md-nav__link">
+      Orchard 1.7.1中Windows Azure的新增功能-What's New for Windows Azure in Orchard 1.7.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploying-Orchard-to-Windows-Azure/" title="将Orchard部署到Windows Azure-Deploying Orchard to Windows Azure" class="md-nav__link">
+      将Orchard部署到Windows Azure-Deploying Orchard to Windows Azure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Windows-Azure-Blob-Storage/" title="使用Windows Azure Blob存储-Using Windows Azure Blob Storage" class="md-nav__link">
+      使用Windows Azure Blob存储-Using Windows Azure Blob Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Windows-Azure-Cache/" title="使用Windows Azure缓存-Using Windows Azure Cache" class="md-nav__link">
+      使用Windows Azure缓存-Using Windows Azure Cache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Running-Orchard-on-Mono/" title="在单声道上运行Orchard-Running Orchard on Mono" class="md-nav__link">
+      在单声道上运行Orchard-Running Orchard on Mono
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-a-multi-tenant-Orchard-site/" title="建立多租户Orchard网站-Setting Up a Multi-Tenant Orchard Site" class="md-nav__link">
+      建立多租户Orchard网站-Setting Up a Multi-Tenant Orchard Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-a-machine-key/" title="设置机器密钥-Setting Up a Machine Key" class="md-nav__link">
+      设置机器密钥-Setting Up a Machine Key
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      扩展Orchard-Extending Orchard
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        扩展Orchard-Extending Orchard
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../First-steps-into-Orchard/" title="进入Orchard的第一步-First Steps into Orchard" class="md-nav__link">
+      进入Orchard的第一步-First Steps into Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../How-Orchard-works/" title="Orchard如何运作-How Orchard Works" class="md-nav__link">
+      Orchard如何运作-How Orchard Works
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-the-localization-helpers/" title="使用本地化提供程序-Using the Localization Providers" class="md-nav__link">
+      使用本地化提供程序-Using the Localization Providers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Command-line-scaffolding/" title="命令行代码生成-Command-Line Code Generation" class="md-nav__link">
+      命令行代码生成-Command-Line Code Generation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Walkthrough-Writing-An-Orchard-Module/" title="编写Orchard模块-Writing an Orchard Module" class="md-nav__link">
+      编写Orchard模块-Writing an Orchard Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Building-a-hello-world-module/" title="构建Hello World模块-Building a Hello World Module" class="md-nav__link">
+      构建Hello World模块-Building a Hello World Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-a-module-with-a-simple-text-editor/" title="使用简单文本编辑器创建模块-Creating a Module with a Simple Text Editor" class="md-nav__link">
+      使用简单文本编辑器创建模块-Creating a Module with a Simple Text Editor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Writing-a-content-part/" title="编写内容部分-Writing a Content Part" class="md-nav__link">
+      编写内容部分-Writing a Content Part
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-a-custom-field-type/" title="编写内容字段-Writing a Content Field" class="md-nav__link">
+      编写内容字段-Writing a Content Field
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Packaging-and-sharing-a-module/" title="打包和共享模块-Packaging and Sharing a Module" class="md-nav__link">
+      打包和共享模块-Packaging and Sharing a Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Writing-a-widget/" title="写一个小工具-Writing a Widget" class="md-nav__link">
+      写一个小工具-Writing a Widget
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-types-from-code/" title="从代码创建类型-Creating Types from code" class="md-nav__link">
+      从代码创建类型-Creating Types from code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-1-n-and-n-n-relations/" title="创建1-N和N-N关系-Creating 1-N and N-N Relations" class="md-nav__link">
+      创建1-N和N-N关系-Creating 1-N and N-N Relations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manifest-files/" title="模块和主题的清单文件-Manifest Files for Modules and Themes" class="md-nav__link">
+      模块和主题的清单文件-Manifest Files for Modules and Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="./" title="处理客户端资产-Processing Client-Side Assets" class="md-nav__link">
+      处理客户端资产-Processing Client-Side Assets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Caching/" title="高速缓存-Caching" class="md-nav__link">
+      高速缓存-Caching
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-custom-settings/" title="自定义网站设置-Custom Site Settings" class="md-nav__link">
+      自定义网站设置-Custom Site Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../WebApi-In-Orchard/" title="在Orchard的Web Api-Web Api in Orchard" class="md-nav__link">
+      在Orchard的Web Api-Web Api in Orchard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      模块入门课程-Getting Started with Modules Course
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        模块入门课程-Getting Started with Modules Course
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules/" title="模块入门-Getting Started with Modules" class="md-nav__link">
+      模块入门-Getting Started with Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-for-a-lesson/" title="设置课程-Setting up for a lesson" class="md-nav__link">
+      设置课程-Setting up for a lesson
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-1/" title="第1部分：构建静态小部件-Part 1: Build a Static Widget" class="md-nav__link">
+      第1部分：构建静态小部件-Part 1: Build a Static Widget
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-2/" title="第2部分：让小工具动态化-Part 2: Make the Widget Dynamic" class="md-nav__link">
+      第2部分：让小工具动态化-Part 2: Make the Widget Dynamic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-3/" title="第3部分：使用Orchard API-Part 3: Using the Orchard API" class="md-nav__link">
+      第3部分：使用Orchard API-Part 3: Using the Orchard API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-4/" title="第4部分：应用最佳实践-Part 4: Applying Best Practices" class="md-nav__link">
+      第4部分：应用最佳实践-Part 4: Applying Best Practices
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      使用数据-Working with Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        使用数据-Working with Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-data-access/" title="了解数据访问-Understanding Data Access" class="md-nav__link">
+      了解数据访问-Understanding Data Access
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-content-handlers/" title="了解内容处理程序-Understanding Content Handlers" class="md-nav__link">
+      了解内容处理程序-Understanding Content Handlers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12" checked>
+    
+    <label class="md-nav__link" for="nav-12">
+      创造主题-Creating Themes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        创造主题-Creating Themes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Writing-a-new-theme/" title="写一个新主题 Writing a New Theme-" class="md-nav__link">
+      写一个新主题 Writing a New Theme-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Anatomy-of-a-theme/" title="主题剖析 The Anatomy of a Theme-" class="md-nav__link">
+      主题剖析 The Anatomy of a Theme-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-placement-info/" title="了解placement.info文件 Understanding the placement.info File-" class="md-nav__link">
+      了解placement.info文件 Understanding the placement.info File-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Accessing-and-rendering-shapes/" title="访问和渲染形状 Accessing and Rendering Shapes-" class="md-nav__link">
+      访问和渲染形状 Accessing and Rendering Shapes-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Alternates/" title="候补 Alternates-" class="md-nav__link">
+      候补 Alternates-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Template-file-syntax-guide/" title="模板文件语法指南- Template File Syntax Guide" class="md-nav__link">
+      模板文件语法指南- Template File Syntax Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        处理客户端资产- Processing Client-Side Assets
+      </label>
+    
+    <a href="./" title="处理客户端资产- Processing Client-Side Assets" class="md-nav__link md-nav__link--active">
+      处理客户端资产- Processing Client-Side Assets
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="概观" class="md-nav__link">
+    概观
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" title="Getting started" class="md-nav__link">
+    Getting started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="入门" class="md-nav__link">
+    入门
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-prerequisites" title="Installing prerequisites" class="md-nav__link">
+    Installing prerequisites
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="安装先决条件" class="md-nav__link">
+    安装先决条件
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#executing-tasks" title="Executing tasks" class="md-nav__link">
+    Executing tasks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="执行任务" class="md-nav__link">
+    执行任务
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-command-line" title="Using the command line" class="md-nav__link">
+    Using the command line
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="使用命令行" class="md-nav__link">
+    使用命令行
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-visual-studio" title="Using Visual Studio" class="md-nav__link">
+    Using Visual Studio
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-studio" title="使用Visual Studio" class="md-nav__link">
+    使用Visual Studio
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binding-tasks-to-visual-studio-events" title="Binding tasks to Visual Studio events" class="md-nav__link">
+    Binding tasks to Visual Studio events
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-studio_1" title="将任务绑定到Visual Studio事件" class="md-nav__link">
+    将任务绑定到Visual Studio事件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-pipeline-for-your-own-module-or-theme" title="Using the pipeline for your own module or theme" class="md-nav__link">
+    Using the pipeline for your own module or theme
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="将管道用于您自己的模块或主题" class="md-nav__link">
+    将管道用于您自己的模块或主题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-an-asset-manifest-file" title="Adding an asset manifest file" class="md-nav__link">
+    Adding an asset manifest file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="添加资产清单文件" class="md-nav__link">
+    添加资产清单文件
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-example-single-input-file" title="Basic example (single input file)" class="md-nav__link">
+    Basic example (single input file)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="基本示例（单输入文件）" class="md-nav__link">
+    基本示例（单输入文件）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-input-files" title="Multiple input files" class="md-nav__link">
+    Multiple input files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" title="多个输入文件" class="md-nav__link">
+    多个输入文件
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#globs-wildcards" title="Globs (wildcards)" class="md-nav__link">
+    Globs (wildcards)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#globs" title="Globs（通配符）" class="md-nav__link">
+    Globs（通配符）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#separate-output-files-for-each-input-file" title="Separate output files for each input file" class="md-nav__link">
+    Separate output files for each input file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" title="为每个输入文件分隔输出文件" class="md-nav__link">
+    为每个输入文件分隔输出文件
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-asset-groups" title="Multiple asset groups" class="md-nav__link">
+    Multiple asset groups
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" title="多个资产组" class="md-nav__link">
+    多个资产组
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-additional-files-to-be-watched" title="Adding additional files to be watched" class="md-nav__link">
+    Adding additional files to be watched
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" title="添加要监视的其他文件" class="md-nav__link">
+    添加要监视的其他文件
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-asset-file-formats" title="Supported asset file formats" class="md-nav__link">
+    Supported asset file formats
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" title="支持的资产文件格式" class="md-nav__link">
+    支持的资产文件格式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stylesheet-assets" title="Stylesheet assets" class="md-nav__link">
+    Stylesheet assets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" title="样式表资产" class="md-nav__link">
+    样式表资产
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#script-assets" title="Script assets" class="md-nav__link">
+    Script assets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" title="脚本资产" class="md-nav__link">
+    脚本资产
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-options" title="Supported options" class="md-nav__link">
+    Supported options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" title="支持的选项" class="md-nav__link">
+    支持的选项
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inputs-required" title="inputs (required)" class="md-nav__link">
+    inputs (required)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" title="输入（必填）" class="md-nav__link">
+    输入（必填）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output-required" title="output (required)" class="md-nav__link">
+    output (required)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" title="output（必填）" class="md-nav__link">
+    output（必填）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#watch" title="watch" class="md-nav__link">
+    watch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#watch_1" title="watch" class="md-nav__link">
+    watch
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generatesourcemaps" title="generateSourceMaps" class="md-nav__link">
+    generateSourceMaps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generatesourcemaps_1" title="generateSourceMaps" class="md-nav__link">
+    generateSourceMaps
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flatten" title="flatten" class="md-nav__link">
+    flatten
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flatten_1" title="flatten" class="md-nav__link">
+    flatten
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#separateminified" title="separateMinified" class="md-nav__link">
+    separateMinified
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#separateminified_1" title="separateMinified" class="md-nav__link">
+    separateMinified
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typescriptoptions" title="typeScriptOptions" class="md-nav__link">
+    typeScriptOptions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typescriptoptions_1" title="typeScriptOptions" class="md-nav__link">
+    typeScriptOptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-scenarios" title="Advanced scenarios" class="md-nav__link">
+    Advanced scenarios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" title="高级方案" class="md-nav__link">
+    高级方案
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#excluding-output-files-from-source-control" title="Excluding output files from source control" class="md-nav__link">
+    Excluding output files from source control
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" title="从源代码管理中排除输出文件" class="md-nav__link">
+    从源代码管理中排除输出文件
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#including-custom-extension-folders" title="Including custom extension folders" class="md-nav__link">
+    Including custom extension folders
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" title="包括自定义扩展文件夹" class="md-nav__link">
+    包括自定义扩展文件夹
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evolution-of-the-client-side-asset-pipeline" title="Evolution of the client-side asset pipeline" class="md-nav__link">
+    Evolution of the client-side asset pipeline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" title="客户端资产管道的演变" class="md-nav__link">
+    客户端资产管道的演变
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Packaging-and-sharing-themes/" title="包装和共享主题- Packaging and Sharing Themes" class="md-nav__link">
+      包装和共享主题- Packaging and Sharing Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../UI-guidelines-for-theme-authors/" title="主题作者的UI指南- UI Guidelines for Theme Authors" class="md-nav__link">
+      主题作者的UI指南- UI Guidelines for Theme Authors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Customizing-Orchard-using-Designer-Helper-Tools/" title="使用Designer Helper工具自定义Orchard- Customizing Orchard Using Designer Helper Tools" class="md-nav__link">
+      使用Designer Helper工具自定义Orchard- Customizing Orchard Using Designer Helper Tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      开发人员工具和指南- Developer Tools and Guidelines
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        开发人员工具和指南- Developer Tools and Guidelines
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Common-Issues/" title="常见问题- Common Issues" class="md-nav__link">
+      常见问题- Common Issues
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Developer-FAQ/" title="开发常见问题- Developer FAQ" class="md-nav__link">
+      开发常见问题- Developer FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-a-source-enlistment/" title="设置源登记- Setting Up a Source Enlistment" class="md-nav__link">
+      设置源登记- Setting Up a Source Enlistment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Building-and-deploying-Orchard-from-a-source-code-drop/" title="构建和部署Orchard -Building and deploying Orchard" class="md-nav__link">
+      构建和部署Orchard -Building and deploying Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Source-code-organization/" title="源代码组织- Source Code Organization" class="md-nav__link">
+      源代码组织- Source Code Organization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-dependencies-and-libraries/" title="依赖关系和图书馆- Dependencies and Libraries" class="md-nav__link">
+      依赖关系和图书馆- Dependencies and Libraries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Code-conventions/" title="代码约定- Code Conventions" class="md-nav__link">
+      代码约定- Code Conventions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Visual-Studio-extensions-and-snippets/" title="Visual Studio扩展和片段- Visual Studio Extensions and Snippets" class="md-nav__link">
+      Visual Studio扩展和片段- Visual Studio Extensions and Snippets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Continuous-integration/" title="持续集成- Continuous Integration" class="md-nav__link">
+      持续集成- Continuous Integration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Merging-Pull-Requests/" title="合并拉请求- Merging Pull Requests" class="md-nav__link">
+      合并拉请求- Merging Pull Requests
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      其他主题 Additional Topics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        其他主题 Additional Topics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-module-loader-and-dynamic-compilation/" title="Orchard动态编译 Orchard Dynamic Compilation" class="md-nav__link">
+      Orchard动态编译 Orchard Dynamic Compilation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Configuring-email/" title="配置Email Configuring Email" class="md-nav__link">
+      配置Email Configuring Email
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      参与进来-Getting Involved
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        参与进来-Getting Involved
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-documentation/" title="贡献文档-Contributing Documentation" class="md-nav__link">
+      贡献文档-Contributing Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Documentation-Style-Guidelines/" title="文档样式指南-Documentation Style Guidelines" class="md-nav__link">
+      文档样式指南-Documentation Style Guidelines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-patches/" title="贡献补丁-Contributing Patches" class="md-nav__link">
+      贡献补丁-Contributing Patches
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Contributors/" title="贡献者-Contributors" class="md-nav__link">
+      贡献者-Contributors
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+    
+    <label class="md-nav__link" for="nav-16">
+      发行说明-Release Notes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-16">
+        发行说明-Release Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-10-2.Release-Notes/" title="Orchard 1.10.2" class="md-nav__link">
+      Orchard 1.10.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-10-1.Release-Notes/" title="Orchard 1.10.1" class="md-nav__link">
+      Orchard 1.10.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-10.Release-Notes/" title="Orchard 1.10" class="md-nav__link">
+      Orchard 1.10
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9-3.Release-Notes/" title="Orchard 1.9.3" class="md-nav__link">
+      Orchard 1.9.3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9-2.Release-Notes/" title="Orchard 1.9.2" class="md-nav__link">
+      Orchard 1.9.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9-1.Release-Notes/" title="Orchard 1.9.1" class="md-nav__link">
+      Orchard 1.9.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9.Release-Notes/" title="Orchard 1.9" class="md-nav__link">
+      Orchard 1.9
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-8-2.release-notes/" title="Orchard 1.8.2" class="md-nav__link">
+      Orchard 1.8.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-8-1.Release-Notes/" title="Orchard 1.8.1" class="md-nav__link">
+      Orchard 1.8.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-8-Release-Notes/" title="Orchard 1.8" class="md-nav__link">
+      Orchard 1.8
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-7-2-Release-Notes/" title="Orchard 1.7.2" class="md-nav__link">
+      Orchard 1.7.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-7-1-Release-Notes/" title="Orchard 1.7.1" class="md-nav__link">
+      Orchard 1.7.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-7-Release-Notes/" title="Orchard 1.7" class="md-nav__link">
+      Orchard 1.7
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-6-Release-Notes/" title="Orchard 1.6" class="md-nav__link">
+      Orchard 1.6
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-5-Release-Notes/" title="Orchard 1.5" class="md-nav__link">
+      Orchard 1.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-4-Release-Notes/" title="Orchard 1.4" class="md-nav__link">
+      Orchard 1.4
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+    
+    <label class="md-nav__link" for="nav-17">
+      待办事项- Todos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-17">
+        待办事项- Todos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Documentation-plan/" title="文件计划- Documentation plan" class="md-nav__link">
+      文件计划- Documentation plan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Suggestions-for-New-Topics/" title="对新主题的建议- Suggestions for New Topics" class="md-nav__link">
+      对新主题的建议- Suggestions for New Topics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploying-to-production/" title="将Orchard从开发部署到生产服务器- Deploying Orchard from Development to Production Servers" class="md-nav__link">
+      将Orchard从开发部署到生产服务器- Deploying Orchard from Development to Production Servers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Configuring-shared-hosting/" title="在共享主机环境中配置Orchard- Configuring Orchard in Shared Hosting Environments" class="md-nav__link">
+      在共享主机环境中配置Orchard- Configuring Orchard in Shared Hosting Environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-custom-admin-pages/" title="添加自定义管理面板页面- Adding Custom Admin Panel Pages" class="md-nav__link">
+      添加自定义管理面板页面- Adding Custom Admin Panel Pages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../UI-guidelines-for-module-authors/" title="模块作者的UI指南-UI Guidelines for Module Authors" class="md-nav__link">
+      模块作者的UI指南-UI Guidelines for Module Authors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Exposing-and-handling-events/" title="揭露和处理事件-Exposing and Handling Events" class="md-nav__link">
+      揭露和处理事件-Exposing and Handling Events
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Localizing-modules/" title="本地化模块-Localizing Modules" class="md-nav__link">
+      本地化模块-Localizing Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-different-view-engines/" title="在主题中使用不同的视图引擎-Using Different View Engines in Themes" class="md-nav__link">
+      在主题中使用不同的视图引擎-Using Different View Engines in Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-code-to-themes/" title="将代码添加到主题-Adding Code to a Theme" class="md-nav__link">
+      将代码添加到主题-Adding Code to a Theme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Troubleshooting/" title="排除常见问题-Troubleshooting Common Issues" class="md-nav__link">
+      排除常见问题-Troubleshooting Common Issues
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Filing-bugs/" title="归档错误-Filing Bugs" class="md-nav__link">
+      归档错误-Filing Bugs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Community-resources/" title="Orchard社区资源-Orchard Community Resources" class="md-nav__link">
+      Orchard社区资源-Orchard Community Resources
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-involved-in-forums/" title="参与论坛-Getting Involved in Forums" class="md-nav__link">
+      参与论坛-Getting Involved in Forums
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../module-startup-code/" title="在哪里放置模块的启动代码-Where to put Startup Code for Module" class="md-nav__link">
+      在哪里放置模块的启动代码-Where to put Startup Code for Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Template-files-and-their-locations/" title="模板文件-Template files" class="md-nav__link">
+      模板文件-Template files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Testplan/" title="测试计划-Test plan" class="md-nav__link">
+      测试计划-Test plan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../test/" title="测试-Test" class="md-nav__link">
+      测试-Test
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-18" type="checkbox" id="nav-18">
+    
+    <label class="md-nav__link" for="nav-18">
+      补丁-Patches
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-18">
+        补丁-Patches
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Security-Researcher-Acknowledgments/" title="安全研究员致谢-Security Researcher Acknowledgments" class="md-nav__link">
+      安全研究员致谢-Security Researcher Acknowledgments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Patch-20150630/" title="补丁20150630-Patch 20150630" class="md-nav__link">
+      补丁20150630-Patch 20150630
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Patch-20150519/" title="补丁20150519-Patch 20150519" class="md-nav__link">
+      补丁20150519-Patch 20150519
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Patch-4-30-2013/" title="补丁20130430-Patch 20130430" class="md-nav__link">
+      补丁20130430-Patch 20130430
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-TV/" title="教程视频-Tutorial Videos" class="md-nav__link">
+      教程视频-Tutorial Videos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-20" type="checkbox" id="nav-20">
+    
+    <label class="md-nav__link" for="nav-20">
+      档案-Archives
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-20">
+        档案-Archives
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Walkthroughs/" title="演练和UI样机-Walkthroughs and UI Mockups" class="md-nav__link">
+      演练和UI样机-Walkthroughs and UI Mockups
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Archived-specs/" title="存档的规格-Archived Specs" class="md-nav__link">
+      存档的规格-Archived Specs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setup/" title="建立-Setup" class="md-nav__link">
+      建立-Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Blogs/" title="博客-Blogs" class="md-nav__link">
+      博客-Blogs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Comments/" title="评论-Comments" class="md-nav__link">
+      评论-Comments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Content-types/" title="内容类型-Content types" class="md-nav__link">
+      内容类型-Content types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Definitions/" title="定义-Definitions" class="md-nav__link">
+      定义-Definitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Fundamentals-doctype/" title="HTML doctype-HTML doctype" class="md-nav__link">
+      HTML doctype-HTML doctype
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Linkback/" title="Linkbacks：Pingbacks，Refbacks和Trackbacks-Linkbacks: Pingbacks, Refbacks and Trackbacks" class="md-nav__link">
+      Linkbacks：Pingbacks，Refbacks和Trackbacks-Linkbacks: Pingbacks, Refbacks and Trackbacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Media-management/" title="媒体管理-Media management" class="md-nav__link">
+      媒体管理-Media management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Navigation/" title="导航-Navigation" class="md-nav__link">
+      导航-Navigation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pages-editing/" title="页面编辑-Page editing" class="md-nav__link">
+      页面编辑-Page editing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pages/" title="页面管理和发布-Page management and publishing" class="md-nav__link">
+      页面管理和发布-Page management and publishing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pages-publishing/" title="页面发布工作流程-Page publishing workflow" class="md-nav__link">
+      页面发布工作流程-Page publishing workflow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Rss-atom/" title="RSS和Atom提要-RSS and Atom feeds" class="md-nav__link">
+      RSS和Atom提要-RSS and Atom feeds
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Slugs/" title="蛞蝓-Slugs" class="md-nav__link">
+      蛞蝓-Slugs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Templates/" title="页面模板和语法-Page templates and syntax" class="md-nav__link">
+      页面模板和语法-Page templates and syntax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tags/" title="标签-Tags" class="md-nav__link">
+      标签-Tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Themes/" title="主题-Themes" class="md-nav__link">
+      主题-Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Themes-includes/" title="主题包括-Theme includes" class="md-nav__link">
+      主题包括-Theme includes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Users/" title="用户，角色和权限-Users, roles and permissions" class="md-nav__link">
+      用户，角色和权限-Users, roles and permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Widgets/" title="小工具-Widgets" class="md-nav__link">
+      小工具-Widgets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Xml-Rpc/" title="XML-RPC和Live Writer-XML-RPC and Live Writer" class="md-nav__link">
+      XML-RPC和Live Writer-XML-RPC and Live Writer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-lists/" title="创建内容项列表-Creating lists of content items" class="md-nav__link">
+      创建内容项列表-Creating lists of content items
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A-few-interesting-extensibility-points/" title="可扩展性点-Extensibility points" class="md-nav__link">
+      可扩展性点-Extensibility points
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Add-Custom-Settings-to-your-Theme/" title="将自定义设置添加到主题-Add Custom Settings to your Theme" class="md-nav__link">
+      将自定义设置添加到主题-Add Custom Settings to your Theme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-Custom-Settings-pre-1.8/" title="1.8之前添加自定义设置-Add Custom Settings pre 1.8" class="md-nav__link">
+      1.8之前添加自定义设置-Add Custom Settings pre 1.8
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-admin-menu-items/" title="添加管理菜单项-Adding admin menu items" class="md-nav__link">
+      添加管理菜单项-Adding admin menu items
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Automation-test-guidance/" title="自动化测试指导-Automation test guidance" class="md-nav__link">
+      自动化测试指导-Automation test guidance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Bug-bash-1-18-2010/" title="Bug bash 1-18-2010-Bug bash 1-18-2010" class="md-nav__link">
+      Bug bash 1-18-2010-Bug bash 1-18-2010
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Content-Picker/" title="内容选择器-Content Picker" class="md-nav__link">
+      内容选择器-Content Picker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Custom-permissions/" title="自定义权限-Custom permissions" class="md-nav__link">
+      自定义权限-Custom permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Import-Export/" title="进出口-Import Export" class="md-nav__link">
+      进出口-Import Export
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-Orchard-Using-Web-PI/" title="使用Web PI安装Orchard-Installing Orchard Using Web PI" class="md-nav__link">
+      使用Web PI安装Orchard-Installing Orchard Using Web PI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-Markup-Guidelines/" title="Orchard标记指南-Orchard Markup Guidelines" class="md-nav__link">
+      Orchard标记指南-Orchard Markup Guidelines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="概观" class="md-nav__link">
+    概观
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" title="Getting started" class="md-nav__link">
+    Getting started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="入门" class="md-nav__link">
+    入门
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-prerequisites" title="Installing prerequisites" class="md-nav__link">
+    Installing prerequisites
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="安装先决条件" class="md-nav__link">
+    安装先决条件
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#executing-tasks" title="Executing tasks" class="md-nav__link">
+    Executing tasks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="执行任务" class="md-nav__link">
+    执行任务
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-command-line" title="Using the command line" class="md-nav__link">
+    Using the command line
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="使用命令行" class="md-nav__link">
+    使用命令行
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-visual-studio" title="Using Visual Studio" class="md-nav__link">
+    Using Visual Studio
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-studio" title="使用Visual Studio" class="md-nav__link">
+    使用Visual Studio
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binding-tasks-to-visual-studio-events" title="Binding tasks to Visual Studio events" class="md-nav__link">
+    Binding tasks to Visual Studio events
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-studio_1" title="将任务绑定到Visual Studio事件" class="md-nav__link">
+    将任务绑定到Visual Studio事件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-pipeline-for-your-own-module-or-theme" title="Using the pipeline for your own module or theme" class="md-nav__link">
+    Using the pipeline for your own module or theme
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="将管道用于您自己的模块或主题" class="md-nav__link">
+    将管道用于您自己的模块或主题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-an-asset-manifest-file" title="Adding an asset manifest file" class="md-nav__link">
+    Adding an asset manifest file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="添加资产清单文件" class="md-nav__link">
+    添加资产清单文件
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-example-single-input-file" title="Basic example (single input file)" class="md-nav__link">
+    Basic example (single input file)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="基本示例（单输入文件）" class="md-nav__link">
+    基本示例（单输入文件）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-input-files" title="Multiple input files" class="md-nav__link">
+    Multiple input files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" title="多个输入文件" class="md-nav__link">
+    多个输入文件
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#globs-wildcards" title="Globs (wildcards)" class="md-nav__link">
+    Globs (wildcards)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#globs" title="Globs（通配符）" class="md-nav__link">
+    Globs（通配符）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#separate-output-files-for-each-input-file" title="Separate output files for each input file" class="md-nav__link">
+    Separate output files for each input file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" title="为每个输入文件分隔输出文件" class="md-nav__link">
+    为每个输入文件分隔输出文件
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-asset-groups" title="Multiple asset groups" class="md-nav__link">
+    Multiple asset groups
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" title="多个资产组" class="md-nav__link">
+    多个资产组
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-additional-files-to-be-watched" title="Adding additional files to be watched" class="md-nav__link">
+    Adding additional files to be watched
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" title="添加要监视的其他文件" class="md-nav__link">
+    添加要监视的其他文件
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-asset-file-formats" title="Supported asset file formats" class="md-nav__link">
+    Supported asset file formats
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" title="支持的资产文件格式" class="md-nav__link">
+    支持的资产文件格式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stylesheet-assets" title="Stylesheet assets" class="md-nav__link">
+    Stylesheet assets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" title="样式表资产" class="md-nav__link">
+    样式表资产
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#script-assets" title="Script assets" class="md-nav__link">
+    Script assets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" title="脚本资产" class="md-nav__link">
+    脚本资产
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-options" title="Supported options" class="md-nav__link">
+    Supported options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" title="支持的选项" class="md-nav__link">
+    支持的选项
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inputs-required" title="inputs (required)" class="md-nav__link">
+    inputs (required)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" title="输入（必填）" class="md-nav__link">
+    输入（必填）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output-required" title="output (required)" class="md-nav__link">
+    output (required)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" title="output（必填）" class="md-nav__link">
+    output（必填）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#watch" title="watch" class="md-nav__link">
+    watch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#watch_1" title="watch" class="md-nav__link">
+    watch
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generatesourcemaps" title="generateSourceMaps" class="md-nav__link">
+    generateSourceMaps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generatesourcemaps_1" title="generateSourceMaps" class="md-nav__link">
+    generateSourceMaps
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flatten" title="flatten" class="md-nav__link">
+    flatten
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flatten_1" title="flatten" class="md-nav__link">
+    flatten
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#separateminified" title="separateMinified" class="md-nav__link">
+    separateMinified
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#separateminified_1" title="separateMinified" class="md-nav__link">
+    separateMinified
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typescriptoptions" title="typeScriptOptions" class="md-nav__link">
+    typeScriptOptions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typescriptoptions_1" title="typeScriptOptions" class="md-nav__link">
+    typeScriptOptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-scenarios" title="Advanced scenarios" class="md-nav__link">
+    Advanced scenarios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" title="高级方案" class="md-nav__link">
+    高级方案
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#excluding-output-files-from-source-control" title="Excluding output files from source control" class="md-nav__link">
+    Excluding output files from source control
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" title="从源代码管理中排除输出文件" class="md-nav__link">
+    从源代码管理中排除输出文件
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#including-custom-extension-folders" title="Including custom extension folders" class="md-nav__link">
+    Including custom extension folders
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" title="包括自定义扩展文件夹" class="md-nav__link">
+    包括自定义扩展文件夹
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evolution-of-the-client-side-asset-pipeline" title="Evolution of the client-side asset pipeline" class="md-nav__link">
+    Evolution of the client-side asset pipeline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" title="客户端资产管道的演变" class="md-nav__link">
+    客户端资产管道的演变
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/OrchardCMS/OrchardDoc/edit/master/docs/Documentation/Processing-client-side-assets.markdown" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>处理客户端资产- Processing Client-Side Assets</h1>
+                
+                <p>Orchard includes a processing pipeline for client-side assets (typically scripts and stylesheets) which is used to perform front-end development workflow tasks such as transpilation, minification and bundling of client-side assets in both core projects and extensions (i.e. modules and themes). Many of the built-in modules and themes in Orchard use this pipeline to process client-side assets, and you can enable your own extensions to use it as well.</p>
+<p><font color=#0099ff size=4 face="黑体">Orchard包含用于客户端资产（通常是脚本和样式表）的处理管道，用于执行前端开发工作流任务，例如核心项目和扩展（即模块和主题）中的客户端资产的转换，缩小和捆绑）。 Orchard中的许多内置模块和主题使用此管道来处理客户端资产，您也可以启用自己的扩展来使用它。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="overview">Overview</h2>
+<h2 id="_1"><font color=#0099ff size=4 face="黑体">概观</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The client-side asset pipeline is powered by <a href="http://gulpjs.com">Gulp</a>, a popular open-source task runner based on <a href="https://nodejs.org">Node.js</a> that can be used to automate a wide variety of tasks in a development workflow. The pipeline defines a set of Gulp <em>tasks</em> that can be executed by Gulp using either the command line or using the <strong>Task Runner Explorer</strong> tool window in Visual Studio 2015 or later.</p>
+<p><font color=#0099ff size=4 face="黑体">客户端资产管道由[Gulp]（http://gulpjs.com）提供支持，这是一个基于[Node.js]（https://nodejs.org）的流行开源任务运行器，可用于在开发工作流程中自动执行各种任务。管道定义了一组Gulp <em>任务</em>，可以使用命令行或使用Visual Studio 2015或更高版本中的<strong> Task Runner Explorer </strong>工具窗口由Gulp执行。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Physically, the client-side asset pipeline consists of two files in the Orchard solution folder:</p>
+<p><font color=#0099ff size=4 face="黑体">物理上，客户端资产管道包含Orchard解决方案文件夹中的两个文件：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p><code>src/Package.json</code> contains information about the Node packages required by the pipeline. This file tells the Node package manager (NPM) which packages it needs to download and install for the pipeline to function.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>src / Package.json</code>包含有关管道所需的Node包的信息。该文件告诉Node包管理器（NPM）它需要下载和安装哪些包以使管道正常运行。</font> </p>
+</li>
+<li>
+<p><code>src/Gulpfile.js</code> contains JavaScript code that defines a set of Gulp tasks and their implementation logic.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>src / Gulpfile.js</code>包含定义一组Gulp任务及其实现逻辑的JavaScript代码。</font> </p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>In Visual Studio you will find these files in <strong>Solution Explorer</strong> in a solution folder named <code>Solution Items/Gulp</code>:</p>
+<p><font color=#0099ff size=4 face="黑体">在Visual Studio中，您将在名为“Solution Items / Gulp”的解决方案文件夹中的<strong> Solution Explorer </strong>中找到这些文件：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Attachments/assets-pipeline/solution-items.png" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>There are several reasons why the pipeline has been implemented at the solution level rather than in each extension that needs to process client-side assets.</p>
+<p><font color=#0099ff size=4 face="黑体">管道已在解决方案级别实施，而不是在需要处理客户端资产的每个扩展中，有几个原因。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p>Current and future can share the existing pipeline logic instead of having to reinvent it.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">当前和未来可以共享现有的管道逻辑，而不必重新发明它。</font> *</p>
+</li>
+<li>
+<p>Only one copy of the necessary Node.js packages needs to be downloaded and stored alongside the codebase.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">只需要下载一个必需的Node.js软件包副本并将其存储在代码库旁边。</font> *</p>
+</li>
+<li>
+<p>Keeping Node package folders (<code>node_modules</code>) anywhere inside the <code>Orchard.Web</code> project causes their contents to be included when publishing Orchard for deployment which would increase the size of the deployment package by orders of magnitude even though these files are only useful at development time.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">在Orchard.Web<code>项目中的任何位置保留节点包文件夹（</code>node_modules`）会导致在发布Orchard进行部署时包含其内容，这会使部署包的大小增加几个数量级，即使这些文件仅在开发时间。</font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The client-side asset pipeline is not configured by default to be invoked automatically when opening or building Orchard. To minimize build time and make it as easy as possible to get started with Orchard, all built-in modules and themes in Orchard are kept in source control with their processed output files included. This means you don't have to activate and run the client-side asset pipeline to build or run Orchard out of the box. You only need to run the client-side asset pipeline if you make changes to these assets, or wish to use it to process assets in your own extensions.</p>
+<p><font color=#0099ff size=4 face="黑体">默认情况下，客户端资产管道未配置为在打开或构建Orchard时自动调用。为了最大限度地缩短构建时间并使Orchard开始变得简单，Orchard中的所有内置模块和主题都保存在源代码管理中，其中包含已处理的输出文件。这意味着您不必激活并运行客户端资产管道即可构建或运行Orchard。如果您对这些资产进行了更改，或者希望使用它来处理您自己的扩展中的资产，则只需运行客户端资产管道。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="getting-started">Getting started</h2>
+<h2 id="_2"><font color=#0099ff size=4 face="黑体">入门</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="installing-prerequisites">Installing prerequisites</h3>
+<h2 id="_3"><font color=#0099ff size=4 face="黑体">安装先决条件</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The client-side asset pipeline requires Node.js to be installed. If you are using Visual Studio 2015 or later, Node.js is typically already installed as part of Visual Studio. If you are not using Visual Studio, or if you selected not to include Node.js when installing Visual Studio, you will need to install Node.js manually from https://nodejs.org.</p>
+<p><font color=#0099ff size=4 face="黑体">客户端资产管道需要安装Node.js.如果您使用的是Visual Studio 2015或更高版本，则Node.js通常已作为Visual Studio的一部分安装。如果您没有使用Visual Studio，或者在安装Visual Studio时选择不包含Node.js，则需要从https://nodejs.org手动安装Node.js.</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Next you will need to use NPM to install all the packages the client-side asset pipeline needs, including Gulp itself. Using the command line, navigate to the Orchard solution folder and execute the command <code>npm install</code>, which will install all dependencies referenced in the <code>Package.json</code>file. In Visual Studio 2015 or later, you can instead simply open the <code>Package.json</code> file and save it without making any changes - this will trigger an automatic <code>npm install</code> behind the scenes.</p>
+<p><font color=#0099ff size=4 face="黑体">接下来，您将需要使用NPM来安装客户端资产管道所需的所有软件包，包括Gulp本身。使用命令行，导航到Orchard解决方案文件夹并执行命令<code>npm install</code>，它将安装<code>Package.json</code>文件中引用的所有依赖项。在Visual Studio 2015或更高版本中，您只需打开<code>Package.json</code>文件并保存它而不进行任何更改 - 这将在后台触发自动<code>npm install</code>。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="executing-tasks">Executing tasks</h3>
+<h2 id="_4"><font color=#0099ff size=4 face="黑体">执行任务</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>There are three different Gulp tasks that you can invoke to execute the pipeline in different ways.</p>
+<p><font color=#0099ff size=4 face="黑体">您可以调用三种不同的Gulp任务以不同方式执行管道。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p><strong>build</strong> performs an incremental build of all asset groups in the solution; asset groups whose outputs are already newer than all their inputs are not processed.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><strong> build </strong>执行解决方案中所有资产组的增量构建;不处理其输出已经比其所有输入更新的资产组。</font> </p>
+</li>
+<li>
+<p><strong>rebuild</strong> performs an unconditional full build of all asset groups in the solution, even if their outputs are already newer than their inputs.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><strong> rebuild </strong>在解决方案中执行所有资产组的无条件完整构建，即使它们的输出已经比输入更新。</font> </p>
+</li>
+<li>
+<p><strong>watch</strong> monitors all asset groups in the solution for changes to their inputs, and rebuilds an asset group if one or more of its inputs are modified.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><strong> watch </strong>监控解决方案中的所有资产组以更改其输入，并在修改其一个或多个输入时重建资产组。</font> </p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Note: These tasks also take the asset manifest files themselves into consideration when evaluating changes; a modification to the asset manifest file (<code>Assets.json</code>) is treated the same as a modification to one of the input asset files declared in the manifest.</p>
+<p><font color=#0099ff size=4 face="黑体">注意：在评估更改时，这些任务还会考虑资产清单文件本身;对资产清单文件（<code>Assets.json</code>）的修改与对清单中声明的​​输入资产文件之一的修改相同。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The way you typically execute the Gulp tasks depends on whether you are using Visual Studio or not.</p>
+<p><font color=#0099ff size=4 face="黑体">通常执行Gulp任务的方式取决于您是否使用Visual Studio。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h4 id="using-the-command-line">Using the command line</h4>
+<h2 id="_5"><font color=#0099ff size=4 face="黑体">使用命令行</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ol>
+<li>Make sure you have Node.js installed and added to your <code>PATH</code> varable.</li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">1.确保安装了Node.js并将其添加到<code>PATH</code> varable中。</font> </p>
+<ol>
+<li>Make sure you have installed all the required Node.js packages using the <code>npm install</code> command as described above.</li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">2.确保已使用<code>npm install</code>命令安装了所有必需的Node.js软件包，如上所述。</font> </p>
+<ol>
+<li>Navigate to the Orchard solution folder where the file <code>Gulpfile.js</code> is located.</li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">3.导航到文件“Gulpfile.js”所在的Orchard解决方案文件夹。</font> </p>
+<ol>
+<li>Execute one of the commands <code>gulp build</code>, <code>gulp rebuild</code> and <code>gulp watch</code> to execute the corresponding Gulp task.</li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">4.执行一个命令<code>gulp build</code>，<code>gulp rebuild</code>和<code>gulp watch</code>来执行相应的Gulp任务。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h4 id="using-visual-studio">Using Visual Studio</h4>
+<h2 id="visual-studio"><font color=#0099ff size=4 face="黑体">使用Visual Studio</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Visual Studio 2015 and later comes with a built-in tool window named <strong>Task Runner Explorer</strong> that can be used to execute NPM tasks as well as tasks from different task runners such as Gulp and Grunt among others.</p>
+<p><font color=#0099ff size=4 face="黑体">Visual Studio 2015及更高版本附带了一个名为<strong> Task Runner Explorer </strong>的内置工具窗口，可用于执行NPM任务以及来自不同任务运行程序（如Gulp和Grunt等）的任务。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>To open Task Runner Explorer, select <strong>View -&gt; Other Windows -&gt; Task Runner Explorer</strong> from the menu. Alternatively, you can right-click on the file <code>Gulpfile.js</code> in Solution Explorer and select <strong>Task Runner Explorer</strong> from there.</p>
+<p><font color=#0099ff size=4 face="黑体">要打开Task Runner Explorer，请从菜单中选择<strong> View  - &gt; Other Windows  - &gt; Task Runner Explorer </strong>。或者，您可以在解决方案资源管理器中右键单击文件<code>Gulpfile.js</code>，然后从那里选择<strong> Task Runner Explorer </strong>。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Initially you may see an error message in Task Runner Explorer:</p>
+<p><font color=#0099ff size=4 face="黑体">最初，您可能会在Task Runner Explorer中看到错误消息：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Attachments/assets-pipeline/gulpfile-failed-to-load.png" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>This can happen if you have not installed the necessary dependency packages (see the section on installing prerequisites above) or if you have recently installed dependency packages and Task Runner Explorer has not yet retried the parsing of the Gulp file after that. Once you have installed all the dependency packages, just click the refresh icon and wait for it to reload:</p>
+<p><font color=#0099ff size=4 face="黑体">如果您尚未安装必要的依赖包（请参阅上面有关安装先决条件的部分），或者您最近安装了依赖包，并且任务运行器资源管理器尚未在此之后重试解析Gulp文件，则会发生这种情况。安装完所有依赖包后，只需单击刷新图标并等待它重新加载：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Attachments/assets-pipeline/task-runner-explorer-refresh.png" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>When Task Runner Explorer has correctly parsed the Gulp file you will see the list of tasks contained inside it:</p>
+<p><font color=#0099ff size=4 face="黑体">当Task Runner Explorer正确解析Gulp文件时，您将看到其中包含的任务列表：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Attachments/assets-pipeline/gulpfile-loaded.png" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>You can now double-click one of the tasks to execute it.</p>
+<p><font color=#0099ff size=4 face="黑体">您现在可以双击其中一个任务来执行它。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h4 id="binding-tasks-to-visual-studio-events">Binding tasks to Visual Studio events</h4>
+<h2 id="visual-studio_1"><font color=#0099ff size=4 face="黑体">将任务绑定到Visual Studio事件</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Task Runner Explorer also has the ability to "bind" tasks to be executed automatically in response to Visual Studio solution events. Orchard is not preconfigured with any such bindings because all assets in the original code base are already processed and their outputs are included in source control, but it can be useful to configure these bindings temporarily while developing your own client-side assets or while working on modifications to the ones in Orchard.</p>
+<p><font color=#0099ff size=4 face="黑体">Task Runner Explorer还能够“绑定”要自动执行的任务以响应Visual Studio解决方案事件。 Orchard没有预先配置任何此类绑定，因为原始代码库中的所有资产都已处理，其输出包含在源代码管理中，但在开发自己的客户端资产或处理时，临时配置这些绑定会很有用修改乌节的那些。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The most common scenario is to bind the <strong>build</strong> task to the <strong>After Build</strong> solution event. This way, each time you build Orchard (for example, by hitting <code>F5</code> or <code>Ctrl+F5</code> or selecting <strong>Build -&gt; Build Solution</strong> from the menu) the asset pipeline's <strong>build</strong> task will be executed at the end of the build process. Any asset groups whose input files have changed since the last build will be refreshed.</p>
+<p><font color=#0099ff size=4 face="黑体">最常见的情况是将<strong> build </strong>任务绑定到<strong> After Build </strong>解决方案事件。这样，每次构建Orchard时（例如，通过点击<code>F5</code>或<code>Ctrl + F5</code>或从菜单中选择<strong> Build  - &gt; Build Solution </strong>），将执行资产管道的<strong> build </strong>任务在构建过程结束时。自上次构建以来输入文件已更改的任何资产组都将刷新。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>To configure this binding, follow these steps:</p>
+<p><font color=#0099ff size=4 face="黑体">要配置此绑定，请按照下列步骤操作：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ol>
+<li>Right click on the <code>build</code> task</li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">1.右键单击<code>build</code>任务</font> </p>
+<ol>
+<li>Select <strong>Bindings</strong></li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">2.选择<strong> Bindings </strong></font> </p>
+<ol>
+<li>Select <strong>After Build</strong></li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">3.选择<strong> After Build </strong></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Another common scenario is binding the <strong>watch</strong> task to the <strong>Project Open</strong> solution event, which will start the <strong>watch</strong> task when the solution is loaded and keep it running until you terminate it.</p>
+<p><font color=#0099ff size=4 face="黑体">另一个常见的情况是将<strong> watch </strong>任务绑定到<strong> Project Open </strong>解决方案事件，该事件将在加载解决方案时启动<strong> watch </strong>任务并保持运行直到您终止它。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Note: It's important to be aware that task bindings are stored in a specially formatted comment in the beginning of the Gulp file, so when you configure task bindings you are effectively making a change to one of the core files belonging to the Orchard code base which may be overwritten if you later choose to update your code base to a newer version of Orchard.</p>
+<p><font color=#0099ff size=4 face="黑体">注意：重要的是要注意任务绑定存储在Gulp文件开头的特殊格式的注释中，因此当您配置任务绑定时，您实际上是对属于Orchard代码库的核心文件之一进行更改。如果您稍后选择将代码库更新为较新版本的Orchard，则可能会被覆盖。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="using-the-pipeline-for-your-own-module-or-theme">Using the pipeline for your own module or theme</h2>
+<h2 id="_6"><font color=#0099ff size=4 face="黑体">将管道用于您自己的模块或主题</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>You typically don't have to execute any of the tasks in the client-side asset pipeline unless you are either making changes to Orchard itself or creating your own custom extensions and wish to utilize the pipeline to process your own client-side assets. This section explains how to enable the pipeline for your own extension.</p>
+<p><font color=#0099ff size=4 face="黑体">您通常不必执行客户端资产管道中的任何任务，除非您要么对Orchard本身进行更改，要么创建自己的自定义扩展并希望利用管道来处理您自己的客户端资产。本节介绍如何为您自己的扩展启用管道。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="adding-an-asset-manifest-file">Adding an asset manifest file</h3>
+<h2 id="_7"><font color=#0099ff size=4 face="黑体">添加资产清单文件</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The first step is to add an <em>asset manifest file</em> to your extension. This asset manifest file is a simple JSON document that declares one or more <em>asset groups</em> to be processed by the pipeline. Each asset group specifies a set of <em>input files</em> in your extension (such as <code>.less</code>, <code>.scss</code>, <code>.css</code>, <code>.ts</code> or <code>.js</code> files) along with an <em>output file</em> and (optionally) one or more options to influence the processing.</p>
+<p><font color=#0099ff size=4 face="黑体">第一步是向您的扩展程序添加<em>资产清单文件</em>。此资产清单文件是一个简单的JSON文档，它声明要由管道处理的一个或多个<em>资产组</em>。每个资产组在您的扩展中指定一组<em>输入文件</em>（例如<code>.less</code>，<code>.scss</code>，<code>。。css</code>，<code>.ts</code>或<code>.js</code>文件）以及<em>输出文件</em>和（可选地）影响处理的一个或多个选项。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>To add an asset manifest, add a new JSON file named <code>Assets.json</code> to the root folder of your extension (both the name and location of the file are mandatory. The client-side asset pipeline will detect and parse this file, and add the asset groups declared inside it for processing when of the pipeline tasks are executed.</p>
+<p><font color=#0099ff size=4 face="黑体">要添加资产清单，请将名为<code>Assets.json</code>的新JSON文件添加到扩展的根文件夹中（文件的名称和位置都是必需的。客户端资产管道将检测并解析此文件，并且添加在其中声明的资产组，以便在执行管道任务时进行处理。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The basic structure of the asset manifest looks like this:</p>
+<p><font color=#0099ff size=4 face="黑体">资产清单的基本结构如下所示：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code class="js">
+[
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;[&lt;/font&gt; 
+
+
+    {
+
+        // First asset group
+
+        &quot;inputs&quot;: [
+
+            &quot;some/input/file.less&quot;,
+
+            &quot;some/input/file2.less&quot;
+
+        ],
+
+        &quot;output&quot;: &quot;some/output/file.css&quot;
+
+        // Options can be added here
+
+    },
+
+    {
+
+        // Repeat for more asset groups
+
+    }
+
+]
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;]&lt;/font&gt; 
+
+
+</code></pre>
+
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>All input and output paths are relative to the extension root folder. However they do not have to reside within the extension folder; using <code>../</code> to resolve paths outside of the extension folder is fully supported. It is a common convention in Orchard to use a folder named <code>Assets</code> to contain input asset files and to keep those separate from the output asset files, but this is not required.</p>
+<p><font color=#0099ff size=4 face="黑体">所有输入和输出路径都相对于扩展根文件夹。但是，它们不必位于扩展文件夹中;完全支持使用<code>../</code>来解析扩展文件夹之外的路径。在Orchard中，使用名为“Assets”的文件夹来包含输入资产文件并将它们与输出资产文件分开是一种常见的约定，但这不是必需的。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Using the asset pipeline is completely optional. If you don't add an <code>Asset.json</code> manifest file in the root folder of your extension, the client-side asset pipeline will simply ignore your extension.</p>
+<p><font color=#0099ff size=4 face="黑体">使用资产管道是完全可选的。如果您没有在扩展的根文件夹中添加<code>Asset.json</code>清单文件，则客户端资产管道将忽略您的扩展名。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="basic-example-single-input-file">Basic example (single input file)</h3>
+<h2 id="_8"><font color=#0099ff size=4 face="黑体">基本示例（单输入文件）</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The following example takes the LESS stylesheet <code>Assets/Styles.less</code> in your extension and transpiles it into the output file <code>Styles/Styles.css</code>:</p>
+<p><font color=#0099ff size=4 face="黑体">下面的示例在您的扩展中使用LESS样式表<code>Assets / Styles.less</code>并将其转换为输出文件<code>Styles / Styles.css</code>：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code class="js">
+[
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;[&lt;/font&gt; 
+
+
+    {
+
+        &quot;inputs&quot;: [
+
+            &quot;Assets/Styles.less&quot;
+
+        ],
+
+        &quot;output&quot;: &quot;Styles/Styles.css&quot;
+
+    }
+
+]
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;]&lt;/font&gt; 
+
+
+</code></pre>
+
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>When executing the <strong>build</strong> or <strong>rebuild</strong> task, the asset pipeline will perform the following tasks on <code>Styles.less</code>:</p>
+<p><font color=#0099ff size=4 face="黑体">执行<strong> build </strong>或<strong> rebuild </strong>任务时，资产管道将在<code>Styles.less</code>上执行以下任务：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p>Transpile LESS to plain CSS</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">透明少到纯CSS</font> </p>
+</li>
+<li>
+<p>Add/remove vendor prefixes as necessary</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">根据需要添加/删除供应商前缀</font> </p>
+</li>
+<li>
+<p>Add source maps (non-minified output only)</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">添加源地图（仅限非缩小输出）</font> </p>
+</li>
+<li>
+<p>Add a static informational header (non-minified output only)</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">添加静态信息标头（仅限非缩小输出）</font> </p>
+</li>
+<li>
+<p>Normalize line ending characters</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">规范化行结束字符</font> </p>
+</li>
+<li>
+<p>Minify</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">缩小</font> </p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>After the <strong>build</strong> task has executed your extension's <code>Styles</code> folder will contain two files:</p>
+<p><font color=#0099ff size=4 face="黑体"><strong> build </strong>任务执行完后，你的扩展名<code>Styles</code>文件夹将包含两个文件：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p><code>Styles.css</code> (non-minified with inline source maps)</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>Styles.css</code>（未使用内联源映射缩小）</font> *</p>
+</li>
+<li>
+<p><code>Styles.min.css</code> (minified)</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>Styles.min.css</code>（缩小）</font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Once these output asset files have been generated you can reference them from Razor views just as you normally wolud using the Orchard resource manager, either by declaring them in a resource manifest class and requiring them using one of the <code>Require()</code> methods or by including them by path using one of the <code>Include()</code> methods.</p>
+<p><font color=#0099ff size=4 face="黑体">一旦生成了这些输出资产文件，就可以像使用Orchard资源管理器那样通过Razor视图引用它们，方法是在资源清单类中声明它们并要求它们使用<code>Require（）</code>方法之一或者通过使用<code>Include（）</code>方法之一通过路径包含它们。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Note: The generated output asset files will not be automatically added to your extension project (<code>.csproj</code>) file. If you wish to keep the output asset files in source control, you will need to manually include them in your project using Solution Explorer after they have been generated for the first time. See the section on advanced scenarios below for some pointers on when you may or may not want to do this.</p>
+<p><font color=#0099ff size=4 face="黑体">注意：生成的输出资产文件不会自动添加到扩展项目（<code>.csproj</code>）文件中。如果您希望将输出资产文件保留在源代码管理中，则需要在首次生成它们之后使用解决方案资源管理器将它们手动包含在项目中。请参阅下面有关高级方案的部分，以获取有关何时可能或可能不想执行此操作的一些指示。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="multiple-input-files">Multiple input files</h3>
+<h2 id="_9"><font color=#0099ff size=4 face="黑体">多个输入文件</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>You can also specify multiple inputs in the same asset group:</p>
+<p><font color=#0099ff size=4 face="黑体">您还可以在同一资产组中指定多个输入：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code class="js">
+[
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;[&lt;/font&gt; 
+
+
+    {
+
+        &quot;inputs&quot;: [
+
+            &quot;Assets/Grid.less&quot;,
+
+            &quot;Assets/Forms.less&quot;,
+
+            &quot;Assets/Type.less&quot;,
+
+        ],
+
+        &quot;output&quot;: &quot;Styles/Styles.css&quot;
+
+    }
+
+]
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;]&lt;/font&gt; 
+
+
+</code></pre>
+
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>This works exactly like the basic example above with the single input, with the addition that all three inputs will be bundled into the output files <code>Styles.css</code> and <code>Styles.min.css</code>.</p>
+<p><font color=#0099ff size=4 face="黑体">这与上面的单个输入的基本示例完全相同，另外所有三个输入都将捆绑到输出文件<code>Styles.css</code>和<code>Styles.min.css</code>中。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="globs-wildcards">Globs (wildcards)</h3>
+<h2 id="globs"><font color=#0099ff size=4 face="黑体">Globs（通配符）</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The client-side asset pipeline also supports using <a href="https://www.npmjs.com/package/glob#glob-primer">glob wildcard patterns</a> to include multiple input assets without having to specify each one individually.</p>
+<p><font color=#0099ff size=4 face="黑体">客户端资产管道还支持使用[glob通配符模式]（https://www.npmjs.com/package/glob#glob-primer）来包含多个输入资产，而无需单独指定每个输入资产。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The following example processes all files with a <code>.js</code> extension in the <code>Assets</code> folder and all its subfolders, and bundles them into a single <code>Scripts/Scripts.js</code> output file:</p>
+<p><font color=#0099ff size=4 face="黑体">下面的示例处理<code>Assets</code>文件夹及其所有子文件夹中带有<code>.js</code>扩展名的所有文件，并将它们捆绑到一个<code>Scripts / Scripts.js</code>输出文件中：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code class="js">
+[
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;[&lt;/font&gt; 
+
+
+    {
+
+        &quot;inputs&quot;: [
+
+            &quot;Assets/**/*.js&quot; // Include all .js files anywhere in or underneath the Assets folder
+
+        ],
+
+        &quot;output&quot;: &quot;Scripts/Scripts.js&quot;
+
+    }
+
+]
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;]&lt;/font&gt; 
+
+
+</code></pre>
+
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="separate-output-files-for-each-input-file">Separate output files for each input file</h3>
+<h2 id="_10"><font color=#0099ff size=4 face="黑体">为每个输入文件分隔输出文件</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>In many cases you will want to process many input files in the exact same way but keep them in separate output files. You could do this by declaring a separate asset group for each pair of input/output files. However this can be extremely tedious and error prone to write, and even more so to maintain over time as you add or remove assets to your extention, especially if you have a large number of asset files.</p>
+<p><font color=#0099ff size=4 face="黑体">在许多情况下，您将希望以完全相同的方式处理许多输入文件，但将它们保存在单独的输出文件中。您可以通过为每对输入/输出文件声明一个单独的资产组来完成此操作。但是，这可能非常繁琐且易于编写，甚至在您为扩展添加或删除资产时保持更长时间，尤其是在您拥有大量资产文件时。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The pipeline makes this easier by allowing you to use the <code>@</code> characted instead of a file name the output file path of your asset group. The <code>@</code> character disables the bundling step and basically translates to "the same filename as whatever input asset file is currently being processed". When combined with glob wildcards this can make it a lot easier to manage your assets:</p>
+<p><font color=#0099ff size=4 face="黑体">通过允许您使用<code>@</code> characted而不是文件名作为资产组的输出文件路径，管道使这变得更容易。 <code>@</code>字符禁用捆绑步骤，基本上转换为“与当前正在处理的任何输入资产文件相同的文件名”。与glob通配符结合使用时，可以更轻松地管理资产：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code class="js">
+[
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;[&lt;/font&gt; 
+
+
+    {
+
+        &quot;inputs&quot;: [
+
+            &quot;Assets/Moment/Localizations/*.ts&quot;
+
+        ],
+
+        &quot;output&quot;: &quot;Scripts/Localizations/@.js&quot;
+
+    }
+
+]
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;]&lt;/font&gt; 
+
+
+</code></pre>
+
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>In this example, all TypeScript files in the <code>Assets/Moment/Localizations</code> are processed and each generated into a separate <code>.js</code> file with the same name in the <code>Scripts/Localizations</code> folder. For example, assuming the <code>Assets/Moment/Localizations</code> folder contains <code>en-GB.ts</code>, <code>fr-FR.ts</code> and <code>sv-SE.ts</code>, then the output <code>Scripts/Localizations</code> folder would contain the resulting files <code>en-GB.js</code>, <code>en-GB.min.js</code>, <code>fr-FR.js</code>, <code>fr-FR.min.js</code>, <code>sv-SE.js</code> and <code>sv-SE.min.js</code>. If localization files are added or removed over time, the asset group is implicitly redefined accordingly.</p>
+<p><font color=#0099ff size=4 face="黑体">在此示例中，处理“Assets / Moment / Localizations”中的所有TypeScript文件，并将每个文件生成为<code>Scripts / Localizations</code>文件夹中具有相同名称的单独<code>.js</code>文件。例如，假设<code>Assets / Moment / Localizations</code>文件夹包含<code>en-GB.ts</code>，<code>fr-FR.ts</code>和<code>sv-SE.ts</code>，那么输出<code>Scripts / Localizations</code>文件夹将包含生成的文件<code>en-GB.js</code>，<code>en-GB.min.js</code>，<code>fr-FR.js</code>，<code>fr-FR.min.js</code>，<code>sv-SE.js</code>和<code>sv-SE .min.js</code>。如果随时间添加或删除本地化文件，则会相应地隐式重新定义资产组。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="multiple-asset-groups">Multiple asset groups</h3>
+<h2 id="_11"><font color=#0099ff size=4 face="黑体">多个资产组</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>You can define multiple asset groups in the same asset manifest, as in the following example:</p>
+<p><font color=#0099ff size=4 face="黑体">您可以在同一资产清单中定义多个资产组，如以下示例所示：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code class="js">
+[
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;[&lt;/font&gt; 
+
+
+    { // First asset group
+
+        &quot;inputs&quot;: [
+
+            &quot;Assets/Bootstrap/Bootstrap.less&quot;,
+
+            &quot;Assets/Bootstrap/Theme.less&quot;
+
+        ],
+
+        &quot;output&quot;: &quot;Styles/Bootstrap.css&quot;
+
+    },
+
+    { // Second asset group
+
+        &quot;inputs&quot;: [
+
+            &quot;Assets/Styles.less&quot;
+
+        ],
+
+        &quot;output&quot;: &quot;Styles/Styles.css&quot;
+
+    },
+
+    { // Third asset group
+
+        &quot;inputs&quot;: [
+
+            &quot;Assets/JavaScript/Lib/**/*.js&quot;,
+
+            &quot;Assets/JavaScript/Admin/Admin.js&quot;
+
+        ],
+
+        &quot;output&quot;: &quot;Scripts/Lib.js&quot;
+
+    }
+
+]
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;]&lt;/font&gt; 
+
+
+</code></pre>
+
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="adding-additional-files-to-be-watched">Adding additional files to be watched</h3>
+<h2 id="_12"><font color=#0099ff size=4 face="黑体">添加要监视的其他文件</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>As described above, the <strong>watch</strong> task can be used to continuously monitor input asset files for changes and rebuild affected asset groups automatically for a smooth and efficient local dev/test workflow.</p>
+<p><font color=#0099ff size=4 face="黑体">如上所述，<strong> watch </strong>任务可用于连续监视输入资产文件的变化并自动重建受影响的资产组，以实现平稳有效的本地开发/测试工作流程。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>In some cases you may want the <strong>watch</strong> task to monitor additional files besides those specified as input assets. In particular, this is commonly needed when using LESS/SASS imports or the TypeScript <code>&lt;reference&gt;</code> or <code>import</code> keywords to indirectly include files into the pipeline which were not part of the initial input specification.</p>
+<p><font color=#0099ff size=4 face="黑体">在某些情况下，您可能希望<strong> watch </strong>任务监视除指定为输入资产的文件之外的其他文件。特别是，当使用LESS / SASS导入或TypeScript“<reference>”或“import”关键字间接地将文件包含到管道中而不是初始输入规范的一部分时，通常需要这样做。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Let's say you have a main SCSS stylesheet that looks something like this:</p>
+<p><font color=#0099ff size=4 face="黑体">假设您有一个主要的SCSS样式表，如下所示：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code class="less">
+@import &quot;Utils/Mixins.scss&quot;;
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;@import“Utils / Mixins.scss”;&lt;/font&gt; 
+
+
+@import &quot;Utils/Variables.scss&quot;;
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;@import“Utils / Variables.scss”;&lt;/font&gt; 
+
+
+@import &quot;Utils/Type.scss&quot;
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;@import“Utils / Type.scss”&lt;/font&gt; 
+
+
+</code></pre>
+
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>In these cases you can use the <code>watch</code> property in an asset group to specify an additional set of files to monitor for changes:</p>
+<p><font color=#0099ff size=4 face="黑体">在这些情况下，您可以使用资产组中的<code>watch</code>属性来指定要监视更改的其他文件集：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code class="js">
+[
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;[&lt;/font&gt; 
+
+
+    {
+
+        &quot;inputs&quot;: [
+
+            &quot;Assets/Main.scss&quot; // This one imports additional .scss files
+
+        ],
+
+        &quot;output&quot;: &quot;Styles/Styles.css&quot;,
+
+        &quot;watch&quot;: [
+
+            &quot;Assets/Utils/*.scss&quot; // Also watch these two files for changes
+
+        ]
+
+    }
+
+]
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;]&lt;/font&gt; 
+
+
+</code></pre>
+
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Note that glob wildcards are supported.</p>
+<p><font color=#0099ff size=4 face="黑体">请注意，支持glob通配符。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="supported-asset-file-formats">Supported asset file formats</h3>
+<h2 id="_13"><font color=#0099ff size=4 face="黑体">支持的资产文件格式</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The client-side asset pipelines can process either <em>stylesheet assets</em> or <em>script assets</em>.</p>
+<p><font color=#0099ff size=4 face="黑体">客户端资产管道可以处理<em>样式表资产</em>或<em>脚本资产</em>。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>An asset group can only be used to process one of these categories, and must have a matching output asset file extension. Asset groups dealing with stylesheet assets must specify a <code>.css</code> output file, while asset groups dealing with script assets must specify a <code>.js</code> output file. An asset group can contain mixed types of input assets as long as they can be processed into the same output file type (i.e. as long as they all belong to either the stylesheet or the script family).</p>
+<p><font color=#0099ff size=4 face="黑体">资产组只能用于处理其中一个类别，并且必须具有匹配的输出资产文件扩展名。处理样式表资产的资产组必须指定<code>.css</code>输出文件，而处理脚本资产的资产组必须指定<code>.js</code>输出文件。资产组可以包含混合类型的输入资产，只要它们可以处理为相同的输出文件类型（即，只要它们都属于样式表或脚本系列）。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>For example you can specify both <code>.less</code> and <code>.css</code> input assets in a group targeted for a <code>.css</code> output file and you can specify both <code>.ts</code> and <code>.js</code> input assets in a group targeted for a <code>.js</code> output file, but you cannot mix and match; if you try the asset pipeline will throw an error.</p>
+<p><font color=#0099ff size=4 face="黑体">例如，您可以在针对<code>.css</code>输出文件的组中指定<code>.less</code>和<code>.css</code>输入资产，并且可以在目标组中指定<code>.ts</code>和<code>.js</code>输入资产一个<code>.js</code>输出文件，但你不能混合搭配;如果您尝试资产管道将抛出错误。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h4 id="stylesheet-assets">Stylesheet assets</h4>
+<h2 id="_14"><font color=#0099ff size=4 face="黑体">样式表资产</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The following file types are supported as stylesheet input assets:</p>
+<p><font color=#0099ff size=4 face="黑体">样式表输入资产支持以下文件类型：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p>LESS (<code>.less</code>)</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">少（<code>.less</code>）</font> *</p>
+</li>
+<li>
+<p>SASS (<code>.sass</code>)</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">SASS（<code>.sass</code>）</font> *</p>
+</li>
+<li>
+<p>SCSS (<code>.scss</code>)</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">SCSS（<code>.scss</code>）</font> *</p>
+</li>
+<li>
+<p>Plain CSS (<code>.css</code>)</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">纯CSS（<code>.css</code>）</font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The following tasks are performed on stylesheet assets:</p>
+<p><font color=#0099ff size=4 face="黑体">在样式表资产上执行以下任务：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p>LESS/SASS transpilation</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">少/ SASS翻译</font> *</p>
+</li>
+<li>
+<p>Vendor prefix normalization</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">供应商前缀规范化</font> *</p>
+</li>
+<li>
+<p>Inline source map generation (unless disabled)</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">内联源映射生成（除非禁用）</font> *</p>
+</li>
+<li>
+<p>File header generation</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">文件头生成</font> *</p>
+</li>
+<li>
+<p>Line ending normalization</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">行结束规范化</font> *</p>
+</li>
+<li>
+<p>Bundling (unless disabled)</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">捆绑（除非禁用）</font> *</p>
+</li>
+<li>
+<p>Minification</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">缩小</font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h4 id="script-assets">Script assets</h4>
+<h2 id="_15"><font color=#0099ff size=4 face="黑体">脚本资产</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The following file types are supported as script input assets:</p>
+<p><font color=#0099ff size=4 face="黑体">脚本输入资产支持以下文件类型：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p>TypeScript (<code>*.ts</code>, <code>*.jsx</code>)</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">TypeScript（<code>* .ts</code>，<code>* .jsx</code>）</font> </p>
+</li>
+<li>
+<p>Plain JavaScript (<code>*.js</code>)</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">普通JavaScript（<code>* .js</code>）</font> </p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The following tasks are performed on script assets:</p>
+<p><font color=#0099ff size=4 face="黑体">对脚本资产执行以下任务：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p>TypeScript transpilation</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">TypeScript转换</font> *</p>
+</li>
+<li>
+<p>Inline source map generation (unless disabled)</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">内联源映射生成（除非禁用）</font> *</p>
+</li>
+<li>
+<p>File header generation</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">文件头生成</font> *</p>
+</li>
+<li>
+<p>Line ending normalization</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">行结束规范化</font> *</p>
+</li>
+<li>
+<p>Bundling (unless disabled)</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">捆绑（除非禁用）</font> *</p>
+</li>
+<li>
+<p>Minification</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">缩小</font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Note: All input script assets are processed through the TypeScript transpiler, also plain JavaScript <code>.js</code> files. This means the asset pipeline will throw errors for obvious syntactical errors in plain JavaScript files. This should generally be considered an advantage as JavaScript errors can be caught at build time rather than at runtime.</p>
+<p><font color=#0099ff size=4 face="黑体">注意：所有输入脚本资产都通过TypeScript转换器处理，也可以是纯JavaScript<code>.js</code>文件。这意味着资产管道将为普通JavaScript文件中的明显语法错误抛出错误。这通常应被视为一个优点，因为JavaScript错误可以在构建时而不是在运行时捕获。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="supported-options">Supported options</h3>
+<h2 id="_16"><font color=#0099ff size=4 face="黑体">支持的选项</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The following is an exhaustive list of all possible properties that can be specified in an asset group in the asset manifest file.</p>
+<p><font color=#0099ff size=4 face="黑体">以下是可以在资产清单文件中的资产组中指定的所有可能属性的详尽列表。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h4 id="inputs-required"><code>inputs</code> (required)</h4>
+<h2 id="_17"><font color=#0099ff size=4 face="黑体"><code>输入</code>（必填）</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>An array of input files to include in the asset group. Paths are relative to the asset manifest file. Glob wildcards are supported. Single entries must be wrapped in an array.</p>
+<p><font color=#0099ff size=4 face="黑体">要包含在资产组中的输入文件数组。路径相对于资产清单文件。支持Glob通配符。单个条目必须包装在一个数组中。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h4 id="output-required"><code>output</code> (required)</h4>
+<h2 id="output"><font color=#0099ff size=4 face="黑体"><code>output</code>（必填）</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The output file to be generated by the asset group. The path is relative to the asset manifest file. All inputs will be bundled into the specified output file unless <code>@</code> is specified as the base filename, eg <code>Scripts/@.css</code>, to skip bundling. A minified version with a <code>.min</code> suffix will be automatically generated also.</p>
+<p><font color=#0099ff size=4 face="黑体">资产组生成的输出文件。该路径相对于资产清单文件。所有输入都将捆绑到指定的输出文件中，除非将<code>@</code>指定为基本文件名，例如<code>Scripts / @。css</code>，以跳过捆绑。还会自动生成带有.min`后缀的缩小版本。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h4 id="watch"><code>watch</code></h4>
+<h2 id="watch_1"><font color=#0099ff size=4 face="黑体"><code>watch</code></font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>An array of additional files to be monitored for changes. Paths are relative to the asset manifest file. Glob wildcards are supported. Single entries must be wrapped in an array.</p>
+<p><font color=#0099ff size=4 face="黑体">要监视更改的一组其他文件。路径相对于资产清单文件。支持Glob通配符。单个条目必须包装在一个数组中。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h4 id="generatesourcemaps"><code>generateSourceMaps</code></h4>
+<h2 id="generatesourcemaps_1"><font color=#0099ff size=4 face="黑体"><code>generateSourceMaps</code></font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><code>true</code> to emit inline source maps into non-minified output files, <code>false</code> to disable source maps. Default is <code>true</code>.</p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h4 id="flatten"><code>flatten</code></h4>
+<h2 id="flatten_1"><font color=#0099ff size=4 face="黑体"><code>flatten</code></font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>By default, when using a glob to specify input assets and using the <code>@</code> character in the output file path to bypass bundling, output files are generated in the same relative location as their corresponding input assets relative to the first glob in the input pattern. For example, assuming you have the following input assets:</p>
+<p><font color=#0099ff size=4 face="黑体">默认情况下，当使用glob指定输入资源并使用输出文件路径中的<code>@</code>字符绕过捆绑时，输出文件生成的输出文件位于相对于输入模式中第一个glob的相应输入资源的相同位置。例如，假设您有以下输入资产：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p><code>Assets/Pages/PageStyles.less</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>资产/页/ PageStyles.less</code></font> *</p>
+</li>
+<li>
+<p><code>Assets/Widgets/LoginWidget/Login.less</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>资产/小工具/ LoginWidget / Login.less</code></font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Given the following asset group definition:</p>
+<p><font color=#0099ff size=4 face="黑体">给定以下资产组定义：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code class="js">
+[
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;[&lt;/font&gt; 
+
+
+    {
+
+        &quot;inputs&quot;: [ &quot;Assets/**/*.less&quot; ],
+
+        &quot;output&quot;: &quot;Styles/@.css&quot;
+
+    }
+
+]
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;]&lt;/font&gt; 
+
+
+</code></pre>
+
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The default behavior of the asset pipeline would generate the following output files:</p>
+<p><font color=#0099ff size=4 face="黑体">资产管道的默认行为将生成以下输出文件：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p><code>Styles/Pages/PageStyles.css</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>风格/页/ PageStyles.css</code></font> *</p>
+</li>
+<li>
+<p><code>Styles/Pages/PageStyles.min.css</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>风格/页/ PageStyles.min.css</code></font> *</p>
+</li>
+<li>
+<p><code>Styles/Widgets/LoginWidget/Login.css</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>风格/小工具/ LoginWidget / Login.css</code></font> *</p>
+</li>
+<li>
+<p><code>Styles/Widgets/LoginWidget/Login.min.css</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>风格/小工具/ LoginWidget / Login.min.css</code></font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>This may not always be the desired behavior. The <code>flatten</code> property can be set to <code>true</code> to have the asset pipeline flatten the output folder structure and disregard the relative locations of the input asset files. In this case, setting <code>flatten</code> to <code>true</code> would instead produce the following two output files:</p>
+<p><font color=#0099ff size=4 face="黑体">这可能并不总是理想的行为。可以将<code>flatten</code>属性设置为<code>true</code>，以使资产管道展平输出文件夹结构，并忽略输入资产文件的相对位置。在这种情况下，将<code>flatten</code>设置为<code>true</code>会产生以下两个输出文件：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p><code>Styles/PageStyles.css</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>风格/ PageStyles.css</code></font> *</p>
+</li>
+<li>
+<p><code>Styles/PageStyles.min.css</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>风格/ PageStyles.min.css</code></font> *</p>
+</li>
+<li>
+<p><code>Styles/Login.css</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>风格/ Login.css</code></font> *</p>
+</li>
+<li>
+<p><code>Styles/Login.min.css</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>风格/ Login.min.css</code></font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h4 id="separateminified"><code>separateMinified</code></h4>
+<h2 id="separateminified_1"><font color=#0099ff size=4 face="黑体"><code>separateMinified</code></font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>By default, minified output files are generated alongside their non-minified siblings with a <code>.min</code> filename extension:</p>
+<p><font color=#0099ff size=4 face="黑体">默认情况下，缩小的输出文件与非缩小的兄弟姐妹一起生成，文件扩展名为<code>.min</code>：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p><code>Styles/SomeStyles.css</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>风格/ SomeStyles.css</code></font> *</p>
+</li>
+<li>
+<p><code>Styles/SomeStyles.min.css</code>    </p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>风格/ SomeStyles.min.css</code></font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>In some cases, such as when using a runtime module loader, it can be useful to place minified output files in a subfolder instead of suffixing their filenames. This allows you to simply configure a different base path for the module loader depending on execution mode (i.e. debug vs. release) rather than having to declare every resource differently. Setting the <code>separateMinified</code> option property to <code>true</code> will result in the following alternative output structure:</p>
+<p><font color=#0099ff size=4 face="黑体">在某些情况下，例如使用运行时模块加载器时，将缩小的输出文件放在子文件夹中而不是为其文件名添加后缀可能很有用。这允许您根据执行模式（即调试与发布）简单地为模块加载器配置不同的基本路径，而不必以不同方式声明每个资源。将<code>separateMinified</code>选项属性设置为<code>true</code>将导致以下替代输出结构：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p><code>Styles/SomeStyles.css</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>风格/ SomeStyles.css</code></font> *</p>
+</li>
+<li>
+<p><code>Styles/min/SomeStyles.css</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>样式/分钟/ SomeStyles.css</code></font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h4 id="typescriptoptions"><code>typeScriptOptions</code></h4>
+<h2 id="typescriptoptions_1"><font color=#0099ff size=4 face="黑体"><code>typeScriptOptions</code></font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Any options you wish to pass through to the TypeScript transpiler (only applicable for script asset groups). The following default values are specified by the asset pipeline unless overridden in this property:</p>
+<p><font color=#0099ff size=4 face="黑体">您希望传递给TypeScript转换器的任何选项（仅适用于脚本资产组）。除非在此属性中覆盖，否则资产管道指定以下默认值：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code class="js">
+{
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;{&lt;/font&gt; 
+
+
+    allowJs: true,
+
+    noImplicitAny: true,
+
+    noEmitOnError: true
+
+}
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;}&lt;/font&gt; 
+
+
+</code></pre>
+
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="advanced-scenarios">Advanced scenarios</h2>
+<h2 id="_18"><font color=#0099ff size=4 face="黑体">高级方案</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="excluding-output-files-from-source-control">Excluding output files from source control</h3>
+<h2 id="_19"><font color=#0099ff size=4 face="黑体">从源代码管理中排除输出文件</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>When developing an extension intended for redistribution and used by third parties, it is recommended that generated output files be added to <code>.csproj</code> files of the containing extension and included in source control. All the built-in projects in the Orchard code base employ this methods. This is so that consumers can use your extension without having to install Node.js and execute the Gulp tasks in the client-side asset pipeline to generate the needed output asset files first.</p>
+<p><font color=#0099ff size=4 face="黑体">在开发用于重新分发并由第三方使用的扩展时，建议将生成的输出文件添加到包含扩展名的“.csproj”文件中，并包含在源代码管理中。 Orchard代码库中的所有内置项目都采用这种方法。这样消费者可以使用您的扩展，而无需安装Node.js并在客户端资产管道中执行Gulp任务，以首先生成所需的输出资产文件。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>However, when developing an extension for internal use you may also consider the alternative approach of leaving generated output files out of both <code>.csproj</code> files and source control and rely on them being rebuilt by the client-side asset pipeline whenever needed. This is similar to how you often assume that the NuGet package manager will be used to restore NuGet package references before a project is built.</p>
+<p><font color=#0099ff size=4 face="黑体">但是，在开发内部使用的扩展时，您还可以考虑将生成的输出文件从<code>.csproj</code>文件和源代码控制中分离出来的替代方法，并依赖它们在需要时由客户端资产管道重建。这类似于您经常假设NuGet包管理器将用于在构建项目之前恢复NuGet包引用。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>This approach has a couple of advantages:</p>
+<p><font color=#0099ff size=4 face="黑体">这种方法有几个优点：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p>Smaller version control footprint</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">较小的版本控制足迹</font> *</p>
+</li>
+<li>
+<p>No risk of inconsistent/stale output assets due to forgetting to rebuild them or commit their changes to version control</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">由于忘记重建或将更改提交到版本控制而没有不一致/陈旧输出资产的风险</font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>When using this approach, the <code>Styles</code> and <code>Scripts</code> folders in your extension will always remain empty in Solution Explorer although they will contain the output files on disk, and you will typically configure a Gulp task binding to ensure that client-side assets are always built when the solution is built in Visual Studio. If using an automated build system you will also typically add a step to your build script to ensure the <strong>build</strong> or <strong>rebuild</strong> task is executed as part of the build.</p>
+<p><font color=#0099ff size=4 face="黑体">使用此方法时，扩展中的“样式”和“脚本”文件夹在解决方案资源管理器中始终保持为空，尽管它们将包含磁盘上的输出文件，您通常会配置Gulp任务绑定以确保客户端资产在Visual Studio中构建解决方案时始终构建。如果使用自动构建系统，您通常还会在构建脚本中添加一个步骤，以确保<strong> build </strong>或<strong> rebuild </strong>任务作为构建的一部分执行。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="including-custom-extension-folders">Including custom extension folders</h3>
+<h2 id="_20"><font color=#0099ff size=4 face="黑体">包括自定义扩展文件夹</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Version 1.10 of Orchard introduced the ability to load extensions from other folders besides the <code>Orchard.Web/Modules</code> and <code>Orchard.Web/Themes</code> folders. If your extension is stored and loaded from such a custom location, the client-side asset pipeline will not automatically detect your asset manifest. This is because, by default, it only looks for <code>Assets.json</code> files in folders under these locations:</p>
+<p><font color=#0099ff size=4 face="黑体">Orchard 1.10版引入了从“Orchard.Web / Modules”和“Orchard.Web / Themes”文件夹之外的其他文件夹加载扩展的功能。如果您的扩展程序是从这样的自定义位置存储和加载的，则客户端资产管道将不会自动检测您的资产清单。这是因为，默认情况下，它只在这些位置下的文件夹中查找<code>Assets.json</code>文件：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p><code>Orchard.Web/Core/</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>Orchard.Web /核心/</code></font> *</p>
+</li>
+<li>
+<p><code>Orchard.Web/Modules/</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>Orchard.Web /模块/</code></font> *</p>
+</li>
+<li>
+<p><code>Orchard.Web/Themes/</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>Orchard.Web /主题/</code></font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>To add your custom location to be scanned for asset manifests, follow these steps:</p>
+<p><font color=#0099ff size=4 face="黑体">要添加要扫描资产清单的自定义位置，请按以下步骤操作：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ol>
+<li>Open the file <code>src/Gulpfile.js</code> in Visual Studio or any other text editor.</li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">1.在Visual Studio或任何其他文本编辑器中打开文件<code>src / Gulpfile.js</code>。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ol>
+<li>Find the <code>getAssetGroups()</code> function.</li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">2.找到<code>getAssetGroups（）</code>函数。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ol>
+<li>This function declares an <code>assetManifestPaths</code> array variable. You can add your own glob here and merge the resulting arrays. For example:</li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">这个函数声明了一个<code>assetManifestPaths</code>数组变量。您可以在此处添加自己的glob并合并生成的数组。例如：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code class="js">
+var assetManifestPaths = glob.sync(&quot;Orchard.Web/{Core,Modules,Themes}/*/Assets.json&quot;);
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;var assetManifestPaths = glob.sync（“Orchard.Web / {Core，Modules，Themes} / * / Assets.json”）;&lt;/font&gt; 
+
+
+var customThemePaths = glob.sync(&quot;AnotherLocation/MyCompanyThemes/*/Assets.json&quot;); // Custom location!
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;var customThemePaths = glob.sync（“AnotherLocation / MyCompanyThemes / * / Assets.json”）; //自定义位置！&lt;/font&gt; 
+
+
+assetManifestPaths = assetManifestPaths.concat(customThemePaths);
+
+ &lt;font color=#0099ff size=4 face=&quot;黑体&quot;&gt;assetManifestPaths = assetManifestPaths.concat（customThemePaths）;&lt;/font&gt; 
+
+
+</code></pre>
+
+<ol>
+<li>Save and close the file.</li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">4.保存并关闭文件。</font> </p>
+<pre><code>&lt;font color=#0099ff size=4 face="黑体"&gt;&lt;/font&gt;
+</code></pre>
+<p>The Orchard development team is investigating ways to automate this process.</p>
+<p><font color=#0099ff size=4 face="黑体">Orchard开发团队正在研究自动化此过程的方法。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="evolution-of-the-client-side-asset-pipeline">Evolution of the client-side asset pipeline</h2>
+<h2 id="_21"><font color=#0099ff size=4 face="黑体">客户端资产管道的演变</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>For those interested in the history behind the client-side asset pipeline, you can find the initial discussion with reasons for its development and proposed solutions in <a href="https://github.com/OrchardCMS/Orchard/issues/5450">issue #5450</a>.</p>
+<p><font color=#0099ff size=4 face="黑体">对于那些对客户端资产管道背后的历史感兴趣的人，您可以在[问题＃5450]（https://github.com/OrchardCMS/Orchard/issues/5450）中找到有关其开发原因和建议解决方案的初步讨论。 ）。</font> </p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Template-file-syntax-guide/" title="模板文件语法指南- Template File Syntax Guide" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                模板文件语法指南- Template File Syntax Guide
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Packaging-and-sharing-themes/" title="包装和共享主题- Packaging and Sharing Themes" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                包装和共享主题- Packaging and Sharing Themes
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright <a href="http://orchardproject.net">Orchard Project</a>.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.e72fd936.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../search/main.js"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-20757794-1","orchardproject.net"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>

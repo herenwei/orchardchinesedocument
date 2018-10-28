@@ -1,0 +1,5245 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../..">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>创建1-N和N-N关系-Creating 1-N and N-N Relations - Orchard 中文文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../#building-a-1-n-relationship" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Orchard 中文文档" class="md-header-nav__button md-logo">
+          
+            <img src="../../images/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Orchard 中文文档
+              </span>
+              <span class="md-header-nav__topic">
+                创建1-N和N-N关系-Creating 1-N and N-N Relations
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/OrchardCMS/OrchardDoc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Orchard 中文文档" class="md-nav__button md-logo">
+      
+        <img src="../../images/logo.png" width="48" height="48">
+      
+    </a>
+    Orchard 中文文档
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/OrchardCMS/OrchardDoc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="主页-Home" class="md-nav__link">
+      主页-Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      入门-Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        入门-Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-Orchard/" title="安装Orchard-Installing Orchard" class="md-nav__link">
+      安装Orchard-Installing Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manually-installing-Orchard-zip-file/" title="手动安装Orchard-Manually Installing Orchard" class="md-nav__link">
+      手动安装Orchard-Manually Installing Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Working-with-Orchard-in-WebMatrix/" title="在WebMatrix中与Orchard合作-Working with Orchard in WebMatrix" class="md-nav__link">
+      在WebMatrix中与Orchard合作-Working with Orchard in WebMatrix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-around-the-dashboard/" title="绕过仪表板-Getting Around the Dashboard" class="md-nav__link">
+      绕过仪表板-Getting Around the Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started/" title="建立你的第一个Orchard网站-Building Your First Orchard Site" class="md-nav__link">
+      建立你的第一个Orchard网站-Building Your First Orchard Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Navigation-and-menus/" title="导航和菜单-Navigation and Menus" class="md-nav__link">
+      导航和菜单-Navigation and Menus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-a-Blog-to-Your-Site/" title="添加博客到您的网站-Adding a Blog to Your Site" class="md-nav__link">
+      添加博客到您的网站-Adding a Blog to Your Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-Pages-to-Your-Site/" title="向您的网站添加页面-Adding Pages to Your Site" class="md-nav__link">
+      向您的网站添加页面-Adding Pages to Your Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-and-managing-media-content/" title="添加和管理媒体内容-Adding and Managing Media Content" class="md-nav__link">
+      添加和管理媒体内容-Adding and Managing Media Content
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Managing-widgets/" title="管理小部件-Managing Widgets" class="md-nav__link">
+      管理小部件-Managing Widgets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Organizing-content-with-tags/" title="使用标签组织内容-Organizing Content Using Tags" class="md-nav__link">
+      使用标签组织内容-Organizing Content Using Tags
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      关于该项目-About the Project
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        关于该项目-About the Project
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic-Orchard-Concepts/" title="Orchard概念定义-Orchard Concept Definitions" class="md-nav__link">
+      Orchard概念定义-Orchard Concept Definitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Builtin-Features/" title="内置模块和功能-Built-in modules and features" class="md-nav__link">
+      内置模块和功能-Built-in modules and features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Feature-roadmap/" title="功能路线图-Feature roadmap" class="md-nav__link">
+      功能路线图-Feature roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Frequently-asked-questions/" title="经常问的问题-Frequently Asked Questions" class="md-nav__link">
+      经常问的问题-Frequently Asked Questions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      创作网站-Authoring Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        创作网站-Authoring Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Blogging-with-LiveWriter/" title="使用LiveWriter进行博客-Blogging with LiveWriter" class="md-nav__link">
+      使用LiveWriter进行博客-Blogging with LiveWriter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-global-ready-applications/" title="创建全球就绪应用程序-Creating Global-Ready Applications" class="md-nav__link">
+      创建全球就绪应用程序-Creating Global-Ready Applications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Search-and-indexing/" title="搜索和索引-Search and Indexing" class="md-nav__link">
+      搜索和索引-Search and Indexing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Saving-scheduling-and-publishing-drafts/" title="发布草稿-Publishing Drafts" class="md-nav__link">
+      发布草稿-Publishing Drafts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-custom-content-types/" title="创建自定义内容类型-Creating Custom Content Types" class="md-nav__link">
+      创建自定义内容类型-Creating Custom Content Types
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      自定义网站-Customizing Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        自定义网站-Customizing Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Previewing-and-applying-a-theme/" title="预览和应用主题-Previewing and Applying a Theme" class="md-nav__link">
+      预览和应用主题-Previewing and Applying a Theme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-themes/" title="安装主题-Installing Themes" class="md-nav__link">
+      安装主题-Installing Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Customizing-the-default-theme/" title="定制主题-Customizing Themes" class="md-nav__link">
+      定制主题-Customizing Themes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      使用Orchard画廊-Using the Orchard Gallery
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        使用Orchard画廊-Using the Orchard Gallery
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Gallery-overview/" title="图库概述-Gallery Overview" class="md-nav__link">
+      图库概述-Gallery Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-modules-and-themes-from-the-gallery/" title="安装模块和主题-Installing Modules and Themes" class="md-nav__link">
+      安装模块和主题-Installing Modules and Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Browsing-the-gallery-web-site/" title="浏览图库网站-Browsing the Gallery Web Site" class="md-nav__link">
+      浏览图库网站-Browsing the Gallery Web Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-a-module-or-theme-to-the-gallery/" title="贡献到画廊-Contributing to the Gallery" class="md-nav__link">
+      贡献到画廊-Contributing to the Gallery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Module-gallery-feeds/" title="注册其他图库供稿-Registering Additional Gallery Feeds" class="md-nav__link">
+      注册其他图库供稿-Registering Additional Gallery Feeds
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      管理网站-Managing Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        管理网站-Managing Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Enabling-and-disabling-features/" title="启用和禁用功能-Enabling and Disabling Features" class="md-nav__link">
+      启用和禁用功能-Enabling and Disabling Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-the-command-line-interface/" title="使用命令行界面-Using the Command-Line Interface" class="md-nav__link">
+      使用命令行界面-Using the Command-Line Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-and-upgrading-modules/" title="安装和升级模块-Installing and Upgrading Modules" class="md-nav__link">
+      安装和升级模块-Installing and Upgrading Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Modifying-site-settings/" title="修改站点设置-Modifying Site Settings" class="md-nav__link">
+      修改站点设置-Modifying Site Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Moderating-comments/" title="审核评论-Moderating Comments" class="md-nav__link">
+      审核评论-Moderating Comments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Managing-users-and-roles/" title="管理用户和角色-Managing Users and Roles" class="md-nav__link">
+      管理用户和角色-Managing Users and Roles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-permissions/" title="了解权限-Understanding Permissions" class="md-nav__link">
+      了解权限-Understanding Permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Making-a-Web-Site-Recipe/" title="制作网站食谱-Making a Website Recipe" class="md-nav__link">
+      制作网站食谱-Making a Website Recipe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-an-image-gallery/" title="创建图库-Creating an Image Gallery" class="md-nav__link">
+      创建图库-Creating an Image Gallery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Workflows/" title="工作流程-Workflows" class="md-nav__link">
+      工作流程-Workflows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Projection/" title="投影-Projection" class="md-nav__link">
+      投影-Projection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-Custom-Forms/" title="创建自定义表单-Create Custom Forms" class="md-nav__link">
+      创建自定义表单-Create Custom Forms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-Dynamic-Forms/" title="创建动态表单-Create Dynamic Forms" class="md-nav__link">
+      创建动态表单-Create Dynamic Forms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Rules-to-conditionally-display-content/" title="使用规则有条件地显示内容-Using Rules to conditionally display content" class="md-nav__link">
+      使用规则有条件地显示内容-Using Rules to conditionally display content
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      托管和部署网站-Hosting and Deploying Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        托管和部署网站-Hosting and Deploying Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Upgrading-a-site-to-a-new-version-of-Orchard/" title="将站点升级到新版本-Upgrading a Site to a New Version" class="md-nav__link">
+      将站点升级到新版本-Upgrading a Site to a New Version
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/" title="优化服务器性能-Optimizing Server Performance" class="md-nav__link">
+      优化服务器性能-Optimizing Server Performance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/" title="Orchard 1.7.1中Windows Azure的新增功能-What's New for Windows Azure in Orchard 1.7.1" class="md-nav__link">
+      Orchard 1.7.1中Windows Azure的新增功能-What's New for Windows Azure in Orchard 1.7.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploying-Orchard-to-Windows-Azure/" title="将Orchard部署到Windows Azure-Deploying Orchard to Windows Azure" class="md-nav__link">
+      将Orchard部署到Windows Azure-Deploying Orchard to Windows Azure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Windows-Azure-Blob-Storage/" title="使用Windows Azure Blob存储-Using Windows Azure Blob Storage" class="md-nav__link">
+      使用Windows Azure Blob存储-Using Windows Azure Blob Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Windows-Azure-Cache/" title="使用Windows Azure缓存-Using Windows Azure Cache" class="md-nav__link">
+      使用Windows Azure缓存-Using Windows Azure Cache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Running-Orchard-on-Mono/" title="在单声道上运行Orchard-Running Orchard on Mono" class="md-nav__link">
+      在单声道上运行Orchard-Running Orchard on Mono
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-a-multi-tenant-Orchard-site/" title="建立多租户Orchard网站-Setting Up a Multi-Tenant Orchard Site" class="md-nav__link">
+      建立多租户Orchard网站-Setting Up a Multi-Tenant Orchard Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-a-machine-key/" title="设置机器密钥-Setting Up a Machine Key" class="md-nav__link">
+      设置机器密钥-Setting Up a Machine Key
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+    
+    <label class="md-nav__link" for="nav-9">
+      扩展Orchard-Extending Orchard
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        扩展Orchard-Extending Orchard
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../First-steps-into-Orchard/" title="进入Orchard的第一步-First Steps into Orchard" class="md-nav__link">
+      进入Orchard的第一步-First Steps into Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../How-Orchard-works/" title="Orchard如何运作-How Orchard Works" class="md-nav__link">
+      Orchard如何运作-How Orchard Works
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-the-localization-helpers/" title="使用本地化提供程序-Using the Localization Providers" class="md-nav__link">
+      使用本地化提供程序-Using the Localization Providers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Command-line-scaffolding/" title="命令行代码生成-Command-Line Code Generation" class="md-nav__link">
+      命令行代码生成-Command-Line Code Generation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Walkthrough-Writing-An-Orchard-Module/" title="编写Orchard模块-Writing an Orchard Module" class="md-nav__link">
+      编写Orchard模块-Writing an Orchard Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Building-a-hello-world-module/" title="构建Hello World模块-Building a Hello World Module" class="md-nav__link">
+      构建Hello World模块-Building a Hello World Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-a-module-with-a-simple-text-editor/" title="使用简单文本编辑器创建模块-Creating a Module with a Simple Text Editor" class="md-nav__link">
+      使用简单文本编辑器创建模块-Creating a Module with a Simple Text Editor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Writing-a-content-part/" title="编写内容部分-Writing a Content Part" class="md-nav__link">
+      编写内容部分-Writing a Content Part
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-a-custom-field-type/" title="编写内容字段-Writing a Content Field" class="md-nav__link">
+      编写内容字段-Writing a Content Field
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Packaging-and-sharing-a-module/" title="打包和共享模块-Packaging and Sharing a Module" class="md-nav__link">
+      打包和共享模块-Packaging and Sharing a Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Writing-a-widget/" title="写一个小工具-Writing a Widget" class="md-nav__link">
+      写一个小工具-Writing a Widget
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-types-from-code/" title="从代码创建类型-Creating Types from code" class="md-nav__link">
+      从代码创建类型-Creating Types from code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="创建1-N和N-N关系-Creating 1-N and N-N Relations" class="md-nav__link md-nav__link--active">
+      创建1-N和N-N关系-Creating 1-N and N-N Relations
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manifest-files/" title="模块和主题的清单文件-Manifest Files for Modules and Themes" class="md-nav__link">
+      模块和主题的清单文件-Manifest Files for Modules and Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Processing-client-side-assets/" title="处理客户端资产-Processing Client-Side Assets" class="md-nav__link">
+      处理客户端资产-Processing Client-Side Assets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Caching/" title="高速缓存-Caching" class="md-nav__link">
+      高速缓存-Caching
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-custom-settings/" title="自定义网站设置-Custom Site Settings" class="md-nav__link">
+      自定义网站设置-Custom Site Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../WebApi-In-Orchard/" title="在Orchard的Web Api-Web Api in Orchard" class="md-nav__link">
+      在Orchard的Web Api-Web Api in Orchard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      模块入门课程-Getting Started with Modules Course
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        模块入门课程-Getting Started with Modules Course
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules/" title="模块入门-Getting Started with Modules" class="md-nav__link">
+      模块入门-Getting Started with Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-for-a-lesson/" title="设置课程-Setting up for a lesson" class="md-nav__link">
+      设置课程-Setting up for a lesson
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-1/" title="第1部分：构建静态小部件-Part 1: Build a Static Widget" class="md-nav__link">
+      第1部分：构建静态小部件-Part 1: Build a Static Widget
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-2/" title="第2部分：让小工具动态化-Part 2: Make the Widget Dynamic" class="md-nav__link">
+      第2部分：让小工具动态化-Part 2: Make the Widget Dynamic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-3/" title="第3部分：使用Orchard API-Part 3: Using the Orchard API" class="md-nav__link">
+      第3部分：使用Orchard API-Part 3: Using the Orchard API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-4/" title="第4部分：应用最佳实践-Part 4: Applying Best Practices" class="md-nav__link">
+      第4部分：应用最佳实践-Part 4: Applying Best Practices
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      使用数据-Working with Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        使用数据-Working with Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-data-access/" title="了解数据访问-Understanding Data Access" class="md-nav__link">
+      了解数据访问-Understanding Data Access
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-content-handlers/" title="了解内容处理程序-Understanding Content Handlers" class="md-nav__link">
+      了解内容处理程序-Understanding Content Handlers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      创造主题-Creating Themes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        创造主题-Creating Themes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Writing-a-new-theme/" title="写一个新主题 Writing a New Theme-" class="md-nav__link">
+      写一个新主题 Writing a New Theme-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Anatomy-of-a-theme/" title="主题剖析 The Anatomy of a Theme-" class="md-nav__link">
+      主题剖析 The Anatomy of a Theme-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-placement-info/" title="了解placement.info文件 Understanding the placement.info File-" class="md-nav__link">
+      了解placement.info文件 Understanding the placement.info File-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Accessing-and-rendering-shapes/" title="访问和渲染形状 Accessing and Rendering Shapes-" class="md-nav__link">
+      访问和渲染形状 Accessing and Rendering Shapes-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Alternates/" title="候补 Alternates-" class="md-nav__link">
+      候补 Alternates-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Template-file-syntax-guide/" title="模板文件语法指南- Template File Syntax Guide" class="md-nav__link">
+      模板文件语法指南- Template File Syntax Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Processing-client-side-assets/" title="处理客户端资产- Processing Client-Side Assets" class="md-nav__link">
+      处理客户端资产- Processing Client-Side Assets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Packaging-and-sharing-themes/" title="包装和共享主题- Packaging and Sharing Themes" class="md-nav__link">
+      包装和共享主题- Packaging and Sharing Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../UI-guidelines-for-theme-authors/" title="主题作者的UI指南- UI Guidelines for Theme Authors" class="md-nav__link">
+      主题作者的UI指南- UI Guidelines for Theme Authors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Customizing-Orchard-using-Designer-Helper-Tools/" title="使用Designer Helper工具自定义Orchard- Customizing Orchard Using Designer Helper Tools" class="md-nav__link">
+      使用Designer Helper工具自定义Orchard- Customizing Orchard Using Designer Helper Tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      开发人员工具和指南- Developer Tools and Guidelines
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        开发人员工具和指南- Developer Tools and Guidelines
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Common-Issues/" title="常见问题- Common Issues" class="md-nav__link">
+      常见问题- Common Issues
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Developer-FAQ/" title="开发常见问题- Developer FAQ" class="md-nav__link">
+      开发常见问题- Developer FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-a-source-enlistment/" title="设置源登记- Setting Up a Source Enlistment" class="md-nav__link">
+      设置源登记- Setting Up a Source Enlistment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Building-and-deploying-Orchard-from-a-source-code-drop/" title="构建和部署Orchard -Building and deploying Orchard" class="md-nav__link">
+      构建和部署Orchard -Building and deploying Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Source-code-organization/" title="源代码组织- Source Code Organization" class="md-nav__link">
+      源代码组织- Source Code Organization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-dependencies-and-libraries/" title="依赖关系和图书馆- Dependencies and Libraries" class="md-nav__link">
+      依赖关系和图书馆- Dependencies and Libraries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Code-conventions/" title="代码约定- Code Conventions" class="md-nav__link">
+      代码约定- Code Conventions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Visual-Studio-extensions-and-snippets/" title="Visual Studio扩展和片段- Visual Studio Extensions and Snippets" class="md-nav__link">
+      Visual Studio扩展和片段- Visual Studio Extensions and Snippets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Continuous-integration/" title="持续集成- Continuous Integration" class="md-nav__link">
+      持续集成- Continuous Integration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Merging-Pull-Requests/" title="合并拉请求- Merging Pull Requests" class="md-nav__link">
+      合并拉请求- Merging Pull Requests
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      其他主题 Additional Topics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        其他主题 Additional Topics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-module-loader-and-dynamic-compilation/" title="Orchard动态编译 Orchard Dynamic Compilation" class="md-nav__link">
+      Orchard动态编译 Orchard Dynamic Compilation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Configuring-email/" title="配置Email Configuring Email" class="md-nav__link">
+      配置Email Configuring Email
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      参与进来-Getting Involved
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        参与进来-Getting Involved
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-documentation/" title="贡献文档-Contributing Documentation" class="md-nav__link">
+      贡献文档-Contributing Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Documentation-Style-Guidelines/" title="文档样式指南-Documentation Style Guidelines" class="md-nav__link">
+      文档样式指南-Documentation Style Guidelines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-patches/" title="贡献补丁-Contributing Patches" class="md-nav__link">
+      贡献补丁-Contributing Patches
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Contributors/" title="贡献者-Contributors" class="md-nav__link">
+      贡献者-Contributors
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+    
+    <label class="md-nav__link" for="nav-16">
+      发行说明-Release Notes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-16">
+        发行说明-Release Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-10-2.Release-Notes/" title="Orchard 1.10.2" class="md-nav__link">
+      Orchard 1.10.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-10-1.Release-Notes/" title="Orchard 1.10.1" class="md-nav__link">
+      Orchard 1.10.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-10.Release-Notes/" title="Orchard 1.10" class="md-nav__link">
+      Orchard 1.10
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9-3.Release-Notes/" title="Orchard 1.9.3" class="md-nav__link">
+      Orchard 1.9.3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9-2.Release-Notes/" title="Orchard 1.9.2" class="md-nav__link">
+      Orchard 1.9.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9-1.Release-Notes/" title="Orchard 1.9.1" class="md-nav__link">
+      Orchard 1.9.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9.Release-Notes/" title="Orchard 1.9" class="md-nav__link">
+      Orchard 1.9
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-8-2.release-notes/" title="Orchard 1.8.2" class="md-nav__link">
+      Orchard 1.8.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-8-1.Release-Notes/" title="Orchard 1.8.1" class="md-nav__link">
+      Orchard 1.8.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-8-Release-Notes/" title="Orchard 1.8" class="md-nav__link">
+      Orchard 1.8
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-7-2-Release-Notes/" title="Orchard 1.7.2" class="md-nav__link">
+      Orchard 1.7.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-7-1-Release-Notes/" title="Orchard 1.7.1" class="md-nav__link">
+      Orchard 1.7.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-7-Release-Notes/" title="Orchard 1.7" class="md-nav__link">
+      Orchard 1.7
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-6-Release-Notes/" title="Orchard 1.6" class="md-nav__link">
+      Orchard 1.6
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-5-Release-Notes/" title="Orchard 1.5" class="md-nav__link">
+      Orchard 1.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-4-Release-Notes/" title="Orchard 1.4" class="md-nav__link">
+      Orchard 1.4
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+    
+    <label class="md-nav__link" for="nav-17">
+      待办事项- Todos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-17">
+        待办事项- Todos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Documentation-plan/" title="文件计划- Documentation plan" class="md-nav__link">
+      文件计划- Documentation plan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Suggestions-for-New-Topics/" title="对新主题的建议- Suggestions for New Topics" class="md-nav__link">
+      对新主题的建议- Suggestions for New Topics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploying-to-production/" title="将Orchard从开发部署到生产服务器- Deploying Orchard from Development to Production Servers" class="md-nav__link">
+      将Orchard从开发部署到生产服务器- Deploying Orchard from Development to Production Servers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Configuring-shared-hosting/" title="在共享主机环境中配置Orchard- Configuring Orchard in Shared Hosting Environments" class="md-nav__link">
+      在共享主机环境中配置Orchard- Configuring Orchard in Shared Hosting Environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-custom-admin-pages/" title="添加自定义管理面板页面- Adding Custom Admin Panel Pages" class="md-nav__link">
+      添加自定义管理面板页面- Adding Custom Admin Panel Pages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../UI-guidelines-for-module-authors/" title="模块作者的UI指南-UI Guidelines for Module Authors" class="md-nav__link">
+      模块作者的UI指南-UI Guidelines for Module Authors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Exposing-and-handling-events/" title="揭露和处理事件-Exposing and Handling Events" class="md-nav__link">
+      揭露和处理事件-Exposing and Handling Events
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Localizing-modules/" title="本地化模块-Localizing Modules" class="md-nav__link">
+      本地化模块-Localizing Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-different-view-engines/" title="在主题中使用不同的视图引擎-Using Different View Engines in Themes" class="md-nav__link">
+      在主题中使用不同的视图引擎-Using Different View Engines in Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-code-to-themes/" title="将代码添加到主题-Adding Code to a Theme" class="md-nav__link">
+      将代码添加到主题-Adding Code to a Theme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Troubleshooting/" title="排除常见问题-Troubleshooting Common Issues" class="md-nav__link">
+      排除常见问题-Troubleshooting Common Issues
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Filing-bugs/" title="归档错误-Filing Bugs" class="md-nav__link">
+      归档错误-Filing Bugs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Community-resources/" title="Orchard社区资源-Orchard Community Resources" class="md-nav__link">
+      Orchard社区资源-Orchard Community Resources
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-involved-in-forums/" title="参与论坛-Getting Involved in Forums" class="md-nav__link">
+      参与论坛-Getting Involved in Forums
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../module-startup-code/" title="在哪里放置模块的启动代码-Where to put Startup Code for Module" class="md-nav__link">
+      在哪里放置模块的启动代码-Where to put Startup Code for Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Template-files-and-their-locations/" title="模板文件-Template files" class="md-nav__link">
+      模板文件-Template files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Testplan/" title="测试计划-Test plan" class="md-nav__link">
+      测试计划-Test plan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../test/" title="测试-Test" class="md-nav__link">
+      测试-Test
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-18" type="checkbox" id="nav-18">
+    
+    <label class="md-nav__link" for="nav-18">
+      补丁-Patches
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-18">
+        补丁-Patches
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Security-Researcher-Acknowledgments/" title="安全研究员致谢-Security Researcher Acknowledgments" class="md-nav__link">
+      安全研究员致谢-Security Researcher Acknowledgments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Patch-20150630/" title="补丁20150630-Patch 20150630" class="md-nav__link">
+      补丁20150630-Patch 20150630
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Patch-20150519/" title="补丁20150519-Patch 20150519" class="md-nav__link">
+      补丁20150519-Patch 20150519
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Patch-4-30-2013/" title="补丁20130430-Patch 20130430" class="md-nav__link">
+      补丁20130430-Patch 20130430
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-TV/" title="教程视频-Tutorial Videos" class="md-nav__link">
+      教程视频-Tutorial Videos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-20" type="checkbox" id="nav-20">
+    
+    <label class="md-nav__link" for="nav-20">
+      档案-Archives
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-20">
+        档案-Archives
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Walkthroughs/" title="演练和UI样机-Walkthroughs and UI Mockups" class="md-nav__link">
+      演练和UI样机-Walkthroughs and UI Mockups
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Archived-specs/" title="存档的规格-Archived Specs" class="md-nav__link">
+      存档的规格-Archived Specs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setup/" title="建立-Setup" class="md-nav__link">
+      建立-Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Blogs/" title="博客-Blogs" class="md-nav__link">
+      博客-Blogs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Comments/" title="评论-Comments" class="md-nav__link">
+      评论-Comments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Content-types/" title="内容类型-Content types" class="md-nav__link">
+      内容类型-Content types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Definitions/" title="定义-Definitions" class="md-nav__link">
+      定义-Definitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Fundamentals-doctype/" title="HTML doctype-HTML doctype" class="md-nav__link">
+      HTML doctype-HTML doctype
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Linkback/" title="Linkbacks：Pingbacks，Refbacks和Trackbacks-Linkbacks: Pingbacks, Refbacks and Trackbacks" class="md-nav__link">
+      Linkbacks：Pingbacks，Refbacks和Trackbacks-Linkbacks: Pingbacks, Refbacks and Trackbacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Media-management/" title="媒体管理-Media management" class="md-nav__link">
+      媒体管理-Media management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Navigation/" title="导航-Navigation" class="md-nav__link">
+      导航-Navigation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pages-editing/" title="页面编辑-Page editing" class="md-nav__link">
+      页面编辑-Page editing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pages/" title="页面管理和发布-Page management and publishing" class="md-nav__link">
+      页面管理和发布-Page management and publishing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pages-publishing/" title="页面发布工作流程-Page publishing workflow" class="md-nav__link">
+      页面发布工作流程-Page publishing workflow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Rss-atom/" title="RSS和Atom提要-RSS and Atom feeds" class="md-nav__link">
+      RSS和Atom提要-RSS and Atom feeds
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Slugs/" title="蛞蝓-Slugs" class="md-nav__link">
+      蛞蝓-Slugs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Templates/" title="页面模板和语法-Page templates and syntax" class="md-nav__link">
+      页面模板和语法-Page templates and syntax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tags/" title="标签-Tags" class="md-nav__link">
+      标签-Tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Themes/" title="主题-Themes" class="md-nav__link">
+      主题-Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Themes-includes/" title="主题包括-Theme includes" class="md-nav__link">
+      主题包括-Theme includes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Users/" title="用户，角色和权限-Users, roles and permissions" class="md-nav__link">
+      用户，角色和权限-Users, roles and permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Widgets/" title="小工具-Widgets" class="md-nav__link">
+      小工具-Widgets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Xml-Rpc/" title="XML-RPC和Live Writer-XML-RPC and Live Writer" class="md-nav__link">
+      XML-RPC和Live Writer-XML-RPC and Live Writer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-lists/" title="创建内容项列表-Creating lists of content items" class="md-nav__link">
+      创建内容项列表-Creating lists of content items
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A-few-interesting-extensibility-points/" title="可扩展性点-Extensibility points" class="md-nav__link">
+      可扩展性点-Extensibility points
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Add-Custom-Settings-to-your-Theme/" title="将自定义设置添加到主题-Add Custom Settings to your Theme" class="md-nav__link">
+      将自定义设置添加到主题-Add Custom Settings to your Theme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-Custom-Settings-pre-1.8/" title="1.8之前添加自定义设置-Add Custom Settings pre 1.8" class="md-nav__link">
+      1.8之前添加自定义设置-Add Custom Settings pre 1.8
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-admin-menu-items/" title="添加管理菜单项-Adding admin menu items" class="md-nav__link">
+      添加管理菜单项-Adding admin menu items
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Automation-test-guidance/" title="自动化测试指导-Automation test guidance" class="md-nav__link">
+      自动化测试指导-Automation test guidance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Bug-bash-1-18-2010/" title="Bug bash 1-18-2010-Bug bash 1-18-2010" class="md-nav__link">
+      Bug bash 1-18-2010-Bug bash 1-18-2010
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Content-Picker/" title="内容选择器-Content Picker" class="md-nav__link">
+      内容选择器-Content Picker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Custom-permissions/" title="自定义权限-Custom permissions" class="md-nav__link">
+      自定义权限-Custom permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Import-Export/" title="进出口-Import Export" class="md-nav__link">
+      进出口-Import Export
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-Orchard-Using-Web-PI/" title="使用Web PI安装Orchard-Installing Orchard Using Web PI" class="md-nav__link">
+      使用Web PI安装Orchard-Installing Orchard Using Web PI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-Markup-Guidelines/" title="Orchard标记指南-Orchard Markup Guidelines" class="md-nav__link">
+      Orchard标记指南-Orchard Markup Guidelines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/OrchardCMS/OrchardDoc/edit/master/docs/Documentation/Creating-1-n-and-n-n-relations.markdown" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <div class="admonition warning">
+<p class="admonition-title">Deprecation note</p>
+</div>
+<p><font color=#0099ff size=4 face="黑体">！警告“弃用票据”</font> </p>
+<pre><code>Bertrand LeRoy writes [in his blog on Wednesday, June 10, 2015](https://weblogs.asp.net/bleroy/many-ways-to-relate-orchard-things-part-1-database-relations):
+
+&gt; A long time ago, I wrote [this chapter] on how to implement 1-n and n-n
+
+&gt; relationships in Orchard using database relations. It was much needed at
+
+&gt; the time, as this was still a difficult topic. Between spotty mapping
+
+&gt; mechanisms for relationships, and specific Orchard conventions, it wasn’t
+
+&gt; something you could expect just anybody to figure out on their own. It is
+
+&gt; still the way to go under some conditions, but those conditions are
+
+&gt; arguably very uncommon, and there are now much better solutions for more
+
+&gt; common cases.
+
+&gt;
+
+&gt; [...]
+
+&gt;
+
+&gt; I’m tempted to limit my recommendation to use this technique to cases
+
+&gt; where no other technique is applicable. As you’ll see by reading the other
+
+&gt; posts in this series, that leaves very few situations.
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>It is very common for contents to consist in part of lists or choices in lists.</p>
+<p><font color=#0099ff size=4 face="黑体">内容通常包含列表中的部分列表或选项。</font> </p>
+<p>For example, an <em>address</em> can have a <em>state</em> or <em>region</em> property where the value is one in a predefined list of choices.</p>
+<p><font color=#0099ff size=4 face="黑体">例如，_address_可以具有_state_或_region_属性，其中值在预定义的选项列表中为1。</font> </p>
+<p>That is a <em>1-n</em> relationship. A <em>n-n</em> relationship could be for example a list of commercial rewards that a customer can benefit from.</p>
+<p><font color=#0099ff size=4 face="黑体">这是一个_1-n_的关系。例如，_n-n_关系可以是客户可以从中受益的商业奖励列表。</font> </p>
+<p>Orchard does of course provide support for those scenarios. This topic is going to walk you through the creation of such contents.</p>
+<p><font color=#0099ff size=4 face="黑体">Orchard当然会为这些场景提供支持。本主题将引导您完成此类内容的创建。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h1 id="building-a-1-n-relationship">Building a <em>1-N</em> Relationship</h1>
+<h1 id="_1-n_"><font color=#0099ff size=4 face="黑体">建立_1-N_关系</font></h1>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The model that we're going to build here consists of an <code>Address</code> part that can be attached for example to a <code>Customer</code> content type.</p>
+<p><font color=#0099ff size=4 face="黑体">我们将在这里构建的模型包含一个<code>Address</code>部分，可以附加到例如<code>Customer</code>内容类型。</font> </p>
+<p>The address part has a street address, a zip code, a city name and a state.</p>
+<p><font color=#0099ff size=4 face="黑体">地址部分有街道地址，邮政编码，城市名称和州。</font> </p>
+<p>The state is what we are going to model as a <code>1-n</code> relationship to a table of states.</p>
+<p><font color=#0099ff size=4 face="黑体">状态是我们将要建模为与州表的“1-n”关系。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p><font color=#0099ff size=4 face="黑体">！注意</font> </p>
+<pre><code>This is clearly over-normalized, as a state in an address would usually be sufficiently well represented by a simple two-letter state code.
+
+The UI can then take care of representing the choice of that code as a constrained choice in a list of states.
+
+We are not claiming what we are building here is the correct way to represent a state in an address, but that the process exposed here is representative of what you'd follow to build a real-world 1-n association in Orchard.
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="modeling-the-address-part">Modeling the <code>Address</code> Part</h2>
+<h2 id="_1"><font color=#0099ff size=4 face="黑体">建模<code>地址</code>部分</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Here is the code for the <code>Address</code> part:</p>
+<p><font color=#0099ff size=4 face="黑体">这是“地址”部分的代码：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using Orchard.ContentManagement;
+
+
+
+namespace RelationSample.Models {
+
+    public class AddressPart : ContentPart&lt;AddressPartRecord&gt; {
+
+        public string Address {
+
+            get { return Retrieve(r =&gt; r.Address); }
+
+            set { Store(r =&gt; r.Address, value); }
+
+        }
+
+
+
+        public string City {
+
+            get { return Retrieve(r =&gt; r.City); }
+
+            set { Store(r =&gt; r.City, value); }
+
+        }
+
+
+
+        public StateRecord State {
+
+            get {
+
+                var rawStateRecord = Retrieve&lt;string&gt;("StateRecord");
+
+                return StateRecord.DeserializeStateRecord(rawStateRecord);
+
+            }
+
+            set {
+
+                var serializedStateRecord = StateRecord.SerializeStateRecord(value);
+
+                Store("StateRecord", serializedStateRecord);
+
+            }
+
+        }
+
+
+
+        public string Zip {
+
+            get { return Retrieve(r =&gt; r.Zip); }
+
+            set { Store(r =&gt; r.Zip, value); }
+
+        }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>This stores the data in both the infoset and in a database record.</p>
+<p><font color=#0099ff size=4 face="黑体">这将数据存储在信息集和数据​​库记录中。</font> </p>
+<p>However you can only store simple datatypes in the infoset so you can see that <code>State</code> field runs some extra code to encode the class into a string. </p>
+<p><font color=#0099ff size=4 face="黑体">但是，您只能在信息集中存储简单的数据类型，这样您就可以看到<code>State</code>字段运行一些额外的代码来将类编码为字符串。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>All properties in the <code>AddressPart</code> are proxies to the record properties:</p>
+<p><font color=#0099ff size=4 face="黑体"><code>AddressPart</code>中的所有属性都是记录属性的代理：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using Orchard.ContentManagement.Records;
+
+
+
+namespace RelationSample.Models {
+
+    public class AddressPartRecord : ContentPartRecord {
+
+        public virtual string Address { get; set; }
+
+        public virtual string City { get; set; }
+
+        public virtual StateRecord StateRecord { get; set; }
+
+        public virtual string Zip { get; set; }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The state record class itself has a two-letter code and a name.</p>
+<p><font color=#0099ff size=4 face="黑体">状态记录类本身具有两个字母的代码和名称。</font> </p>
+<p>It also has methods to serialize and deserialize its data into a string so that the <code>AddressPart</code> above can store its data in the infoset.</p>
+<p><font color=#0099ff size=4 face="黑体">它还有将序列化和反序列化为字符串的方法，以便上面的<code>AddressPart</code>可以将其数据存储在信息集中。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>namespace RelationSample.Models {
+
+    public class StateRecord {
+
+        public virtual int Id { get; set; }
+
+        public virtual string Code { get; set; }
+
+        public virtual string Name { get; set; }
+
+
+
+        public static StateRecord DeserializeStateRecord(string rawStateRecord) {
+
+            if (rawStateRecord == null) {
+
+                return new StateRecord();
+
+            }
+
+
+
+            var stateRecordArray = rawStateRecord.Split(new[] { ',' });
+
+
+
+            return new StateRecord() {
+
+                Id = String.IsNullOrEmpty(stateRecordArray[0]) ? 0 : Int32.Parse(stateRecordArray[0]),
+
+                Code = stateRecordArray[1],
+
+                Name = stateRecordArray[2]
+
+            };
+
+        }
+
+
+
+        public static string SerializeStateRecord(StateRecord stateRecord) {
+
+            if(stateRecord == null) {
+
+                return "";
+
+            }
+
+
+
+            return String.Join(",", stateRecord.Id, stateRecord.Code, stateRecord.Name);
+
+        }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Here is a representation of what we just showed in code:</p>
+<p><font color=#0099ff size=4 face="黑体">这是我们在代码中展示的内容的表示：</font> </p>
+<p><img alt="Modeling the address part" src="../../Attachments/Creating-1-n-and-n-n-relations/AddressDiagram.PNG" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="creating-the-database-tables-and-part">Creating the Database Tables and Part</h2>
+<h2 id="_2"><font color=#0099ff size=4 face="黑体">创建数据库表和部件</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The database structure for the model we just built can be created from a migration:</p>
+<p><font color=#0099ff size=4 face="黑体">我们刚刚构建的模型的数据库结构可以通过迁移创建：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>public int Create() {
+
+    SchemaBuilder.CreateTable("AddressPartRecord",
+
+        table =&gt; table
+
+            .ContentPartRecord()
+
+            .Column&lt;string&gt;("Address")
+
+            .Column&lt;string&gt;("City")
+
+            .Column&lt;int&gt;("StateRecord_Id")
+
+            .Column&lt;string&gt;("Zip")
+
+        );
+
+
+
+    SchemaBuilder.CreateTable("StateRecord",
+
+        table =&gt; table
+
+            .Column&lt;int&gt;("Id", column =&gt; column.PrimaryKey().Identity())
+
+            .Column&lt;string&gt;("Code", column =&gt; column.WithLength(2))
+
+            .Column&lt;string&gt;("Name")
+
+        );
+
+
+
+    ContentDefinitionManager.AlterPartDefinition("AddressPart",
+
+        builder =&gt; builder.Attachable());
+
+
+
+    return 1;
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>This migration creates an <code>AddressPartRecord</code> table that is a content part record (this gets us the default fields that a content part needs).</p>
+<p><font color=#0099ff size=4 face="黑体">此迁移创建一个<code>AddressPartRecord</code>表，它是一个内容部分记录（这将获取内容部分需要的默认字段）。</font> </p>
+<p>It adds columns for address, city and zip that are going to be auto-mapped to our record's properties.</p>
+<p><font color=#0099ff size=4 face="黑体">它添加了地址，城市和zip的列，这些列将自动映射到我们的记录属性。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The interesting column here is <code>StateRecord_Id</code>.</p>
+<p><font color=#0099ff size=4 face="黑体">这里有趣的专栏是<code>StateRecord_Id</code>。</font> </p>
+<p>As you can see, its type is the same as the type of the <code>Id</code> column of the <code>StateRecord</code> class, because the system will be able to recognize this as a foreign key and to map that integer value to a <code>StateRecord</code> property by just following the relation.</p>
+<p><font color=#0099ff size=4 face="黑体">如您所见，它的类型与<code>StateRecord</code>类的<code>Id</code>列的类型相同，因为系统将能够将其识别为外键并将该整数值映射到<code>StateRecord</code>只关注这种关系的财产。</font> </p>
+<p>It is important here that the name of the column that will represent the relation is the name of the column on the "1" end of the relation, followed by an underscore and the name of the column of the "n" end of the relation.</p>
+<p><font color=#0099ff size=4 face="黑体">这里重要的是，代表关系的列的名称是关系“1”端的列名，后跟下划线和关系“n”端列的名称。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>There is nothing remarkable on the <code>StateRecord</code> table: it's just mapping <code>Id</code> to be the primary key and constraining the <code>Code</code> column to be 2 characters long.</p>
+<p><font color=#0099ff size=4 face="黑体">在<code>StateRecord</code>表中没有什么值得注意的：它只是将<code>Id</code>映射为主键，并将<code>Code</code>列限制为2个字符长。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The last statement before the return in the migration is declaring the <code>AddressPart</code> and making it attachable. That will enable us to attach it to any content type.</p>
+<p><font color=#0099ff size=4 face="黑体">迁移返回之前的最后一个语句是声明<code>AddressPart</code>并使其可连接。这将使我们能够将其附加到任何内容类型。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="populating-the-state-table">Populating the State Table</h2>
+<h2 id="_3"><font color=#0099ff size=4 face="黑体">填充状态表</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p><font color=#0099ff size=4 face="黑体">！注意</font> </p>
+<pre><code>This section is included for completeness of the sample code but is far from essential to understanding how to implement relationships in Orchard.
+
+Please consider it as sample data generation.
+
+If you're following along and want to import this data you can find code in the `migrations.cs` file.
+
+This is included in the downloadable source code example link at the end of this guide.
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Because the list of states is going to be relatively stable, I did not make them content items (although that would be entirely possible with just a little more work).</p>
+<p><font color=#0099ff size=4 face="黑体">因为状态列表将相对稳定，所以我没有将它们作为内容项（尽管只需要更多的工作就可以完全实现）。</font> </p>
+<p>Instead, I'm populating the table with a list of states right in the migration code.</p>
+<p><font color=#0099ff size=4 face="黑体">相反，我正在使用迁移代码中的状态列表填充表。</font> </p>
+<p>The migration class has a reference to the state repository:</p>
+<p><font color=#0099ff size=4 face="黑体">迁移类具有对状态存储库的引用：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>private readonly IRepository&lt;StateRecord&gt; _stateRepository;
+
+[...]
+
+public RelationSampleDataMigration(IRepository&lt;StateRecord&gt; stateRepository) {
+
+    _stateRepository = stateRepository;
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>It also has the list of states to add to the database:</p>
+<p><font color=#0099ff size=4 face="黑体">它还具有要添加到数据库的状态列表：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>private readonly IEnumerable&lt;StateRecord&gt; _states =
+
+new List&lt;StateRecord&gt; {
+
+    new StateRecord {Code = "AL", Name = "Alabama"},
+
+    new StateRecord {Code = "AK", Name = "Alaska"},
+
+[...]
+
+    new StateRecord {Code = "WS", Name = "Western Australia"},
+
+};
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The population of the table is done by the following code:</p>
+<p><font color=#0099ff size=4 face="黑体">表的填充由以下代码完成：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>public int UpdateFrom1() {
+
+    if (_stateRepository == null)
+
+        throw new InvalidOperationException("Couldn't find state repository.");
+
+    foreach (var state in _states) {
+
+        _stateRepository.Create(state);
+
+    }
+
+    return 2;
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="the-address-part-handler">The Address Part Handler</h2>
+<h2 id="_4"><font color=#0099ff size=4 face="黑体">地址部分处理程序</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The handler for the address part is rather uninteresting and just wires up the repository:</p>
+<p><font color=#0099ff size=4 face="黑体">地址部分的处理程序相当无趣，只是连接存储库：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using Orchard.Data;
+
+using Orchard.ContentManagement.Handlers;
+
+using RelationSample.Models;
+
+
+
+namespace RelationSample.Handlers {
+
+    public class AddressPartHandler : ContentHandler {
+
+        public AddressPartHandler(IRepository&lt;AddressPartRecord&gt; repository) {
+
+            Filters.Add(StorageFilter.For(repository));
+
+        }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="the-address-part-driver">The Address Part Driver</h2>
+<h2 id="_5"><font color=#0099ff size=4 face="黑体">地址部分驱动程序</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The driver is more interesting as it prepares the shapes for rendering and handles posted-back admin forms.</p>
+<p><font color=#0099ff size=4 face="黑体">驱动程序更有趣，因为它准备渲染的形状和处理回发的管理表单。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using JetBrains.Annotations;
+
+using Orchard.ContentManagement;
+
+using Orchard.ContentManagement.Drivers;
+
+using RelationSample.Models;
+
+using RelationSample.Services;
+
+using RelationSample.ViewModels;
+
+
+
+namespace RelationSample.Drivers {
+
+    [UsedImplicitly]
+
+    public class AddressPartDriver : ContentPartDriver&lt;AddressPart&gt; {
+
+        private readonly IAddressService _addressService;
+
+
+
+        private const string TemplateName = "Parts/Address";
+
+
+
+        public AddressPartDriver(IAddressService addressService) {
+
+            _addressService = addressService;
+
+        }
+
+
+
+        protected override string Prefix {
+
+            get { return "Address"; }
+
+        }
+
+
+
+        protected override DriverResult Display(
+
+            AddressPart part,
+
+            string displayType,
+
+            dynamic shapeHelper) {
+
+
+
+            return ContentShape("Parts_Address",
+
+                            () =&gt; shapeHelper.Parts_Address(
+
+                                ContentPart: part,
+
+                                Address: part.Address,
+
+                                City: part.City,
+
+                                Zip: part.Zip,
+
+                                StateCode: part.State.Code,
+
+                                StateName: part.State.Name));
+
+        }
+
+
+
+        protected override DriverResult Editor(
+
+            AddressPart part,
+
+            dynamic shapeHelper) {
+
+
+
+            return ContentShape("Parts_Address_Edit",
+
+                    () =&gt; shapeHelper.EditorTemplate(
+
+                        TemplateName: TemplateName,
+
+                        Model: BuildEditorViewModel(part),
+
+                        Prefix: Prefix));
+
+        }
+
+
+
+        protected override DriverResult Editor(
+
+            AddressPart part,
+
+            IUpdateModel updater,
+
+            dynamic shapeHelper) {
+
+
+
+            var model = new EditAddressViewModel();
+
+            if (updater.TryUpdateModel(model, Prefix, null, null))
+
+            {
+
+                if (part.ContentItem.Id != 0)
+
+                {
+
+                    _addressService.UpdateAddressForContentItem(
+
+                        part.ContentItem, model);
+
+                }
+
+            }
+
+
+
+            return Editor(part, shapeHelper);
+
+        }
+
+
+
+        private EditAddressViewModel BuildEditorViewModel(AddressPart part) {
+
+            var avm = new EditAddressViewModel {
+
+                Address = part.Address,
+
+                City = part.City,
+
+                Zip = part.Zip,
+
+                States = _addressService.GetStates()
+
+            };
+
+            if (part.State != null) {
+
+                avm.StateCode = part.State.Code;
+
+                avm.StateName = part.State.Name;
+
+            }
+
+            return avm;
+
+        }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>When displaying on the front-end, we prepare a <code>Parts_Address</code> shape that has a reference to the original part (although that is not necessary), all the part properties flattened out and the state is available as both a code and a name.</p>
+<p><font color=#0099ff size=4 face="黑体">当在前端显示时，我们准备一个<code>Parts_Address</code>形状，其中包含对原始部件的引用（尽管这不是必需的），所有部件属性都被展平，状态既可以作为代码也可以作为名称使用。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>When in the admin UI, we build shapes with a statically-typed view model because these are still easier to use when using form fields and MVC model binding.</p>
+<p><font color=#0099ff size=4 face="黑体">在管理UI中，我们使用静态类型的视图模型构建形状，因为在使用表单字段和MVC模型绑定时，这些仍然更容易使用。</font> </p>
+<p>That view model, like the shape used on the front-end, has a flattened view of the data that we need to display, but it also has a full list of all the available states, that the view will use to render the state drop-down list:</p>
+<p><font color=#0099ff size=4 face="黑体">该视图模型与前端使用的形状一样，具有我们需要显示的数据的平面视图，但它还具有所有可用状态的完整列表，视图将用于呈现状态下降下拉列表：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using System.Collections.Generic;
+
+using RelationSample.Models;
+
+
+
+namespace RelationSample.ViewModels {
+
+    public class EditAddressViewModel {
+
+        public string Address { get; set; }
+
+        public string City { get; set; }
+
+        public string StateCode { get; set; }
+
+        public string StateName { get; set; }
+
+        public string Zip { get; set; }
+
+        public IEnumerable&lt;StateRecord&gt; States { get; set; }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The last thing to notice in the driver is that the <code>Editor</code> override that handles postbacks is just using <code>updater.TryUpdateModel()</code>, which is enough to incorporate the submitted form values onto the view model.</p>
+<p><font color=#0099ff size=4 face="黑体">驱动程序中最后要注意的是处理回发的<code>Editor</code>覆盖只是使用<code>updater.TryUpdateModel（）</code>，这足以将提交的表单值合并到视图模型上。</font> </p>
+<p>This is followed by a call into the address service class which will update the actual content part data with the updated model.</p>
+<p><font color=#0099ff size=4 face="黑体">然后调用地址服务类，该类将使用更新的模型更新实际内容部分数据。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="the-address-service-class">The Address Service Class</h2>
+<h2 id="_6"><font color=#0099ff size=4 face="黑体">地址服务类</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The address service class takes a dependency on the state repository in order to be able to query for the full list of states. Its other method, <code>UpdateAddressForContentItem</code>, copies an <code>EditAddressViewModel</code> onto the address content part of a content item.</p>
+<p><font color=#0099ff size=4 face="黑体">地址服务类依赖于状态存储库，以便能够查询完整的状态列表。它的另一个方法<code>UpdateAddressForContentItem</code>将<code>EditAddressViewModel</code>复制到内容项的地址内容部分。</font> </p>
+<p>It does so by looking up a state record from the state repository using the state code from the model.</p>
+<p><font color=#0099ff size=4 face="黑体">它通过使用模型中的状态代码从状态存储库中查找状态记录来实现。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using System.Collections.Generic;
+
+using System.Linq;
+
+using Orchard;
+
+using Orchard.ContentManagement;
+
+using Orchard.Data;
+
+using RelationSample.Models;
+
+using RelationSample.ViewModels;
+
+
+
+namespace RelationSample.Services {
+
+    public interface IAddressService : IDependency {
+
+        void UpdateAddressForContentItem(
+
+            ContentItem item, EditAddressViewModel model);
+
+        IEnumerable&lt;StateRecord&gt; GetStates();
+
+    }
+
+
+
+    public class AddressService : IAddressService {
+
+        private readonly IRepository&lt;StateRecord&gt; _stateRepository;
+
+
+
+        public AddressService(IRepository&lt;StateRecord&gt; stateRepository) {
+
+            _stateRepository = stateRepository;
+
+        }
+
+
+
+        public void UpdateAddressForContentItem(
+
+            ContentItem item,
+
+            EditAddressViewModel model) {
+
+
+
+            var addressPart = item.As&lt;AddressPart&gt;();
+
+            addressPart.Address = model.Address;
+
+            addressPart.City = model.City;
+
+            addressPart.Zip = model.Zip;
+
+            addressPart.State = _stateRepository.Get(
+
+                s =&gt; s.Code == model.StateCode);
+
+        }
+
+
+
+        public IEnumerable&lt;StateRecord&gt; GetStates() {
+
+            return _stateRepository.Table.ToList();
+
+        }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="building-the-views">Building the Views</h2>
+<h2 id="_7"><font color=#0099ff size=4 face="黑体">构建视图</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="the-front-end-view">The Front-End View</h3>
+<h2 id="_8"><font color=#0099ff size=4 face="黑体">前端视图</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The front-end view for the part is straightforward as it's just displaying the properties of the shape:</p>
+<p><font color=#0099ff size=4 face="黑体">该部件的前端视图很简单，因为它只显示形状的属性：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>&lt;p class="adr"&gt;
+
+    &lt;div class="street-address"&gt;@Model.Address&lt;/div&gt;
+
+    &lt;span class="locality"&gt;@Model.City&lt;/span&gt;,
+
+    &lt;span class="region"&gt;@Model.StateCode&lt;/span&gt;
+
+    &lt;span class="postal-code"&gt;@Model.Zip&lt;/span&gt;
+
+&lt;/p&gt;
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>We are using the <a href="http://microformats.org/wiki/vCard">vCard microformat</a> in this template so the address can get picked up by consumers that understand this format.</p>
+<p><font color=#0099ff size=4 face="黑体">我们在此模板中使用[vCard微格式]（http://microformats.org/wiki/vCard），因此了解此格式的消费者可以获取该地址。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="the-editor-view">The Editor View</h3>
+<h2 id="_9"><font color=#0099ff size=4 face="黑体">编辑视图</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The editor view is also relatively straightforward, with just the editor for the state being of a little more interest:</p>
+<p><font color=#0099ff size=4 face="黑体">编辑器视图也相对简单，只需要对该州的编辑器感兴趣：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>@model RelationSample.ViewModels.EditAddressViewModel
+
+&lt;fieldset&gt;
+
+  &lt;legend&gt;Address&lt;/legend&gt;
+
+
+
+  &lt;div class="editor-label"&gt;
+
+    @Html.LabelFor(model =&gt; model.Address, T("Street Address"))
+
+  &lt;/div&gt;
+
+  &lt;div class="editor-field"&gt;
+
+    @Html.TextAreaFor(model =&gt; model.Address)
+
+    @Html.ValidationMessageFor(model =&gt; model.Address)
+
+  &lt;/div&gt;
+
+
+
+  &lt;div class="editor-label"&gt;
+
+    @Html.LabelFor(model =&gt; model.City, T("City"))
+
+  &lt;/div&gt;
+
+  &lt;div class="editor-field"&gt;
+
+    @Html.TextBoxFor(model =&gt; model.City)
+
+    @Html.ValidationMessageFor(model =&gt; model.City)
+
+  &lt;/div&gt;
+
+
+
+  &lt;div class="editor-label"&gt;
+
+    @Html.LabelFor(model =&gt; model.StateCode, T("State"))
+
+  &lt;/div&gt;
+
+  &lt;div class="editor-field"&gt;
+
+    @Html.DropDownListFor(model =&gt; model.StateCode,
+
+                      Model.States.Select(s =&gt; new SelectListItem {
+
+                          Selected = s.Code == Model.StateCode,
+
+                          Text = s.Code + " " + s.Name,
+
+                          Value = s.Code
+
+                      }),
+
+                      "Choose a state...")
+
+    @Html.ValidationMessageFor(model =&gt; model.StateCode)
+
+  &lt;/div&gt;
+
+
+
+  &lt;div class="editor-label"&gt;
+
+    @Html.LabelFor(model =&gt; model.Zip, T("Zip"))
+
+  &lt;/div&gt;
+
+  &lt;div class="editor-field"&gt;
+
+    @Html.TextBoxFor(model =&gt; model.Zip)
+
+    @Html.ValidationMessageFor(model =&gt; model.Zip)
+
+  &lt;/div&gt;
+
+&lt;/fieldset&gt;
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The <code>DropDownListFor</code> method takes an expression for the property to represent, and a list of <code>SelectListItems</code> that we build on the fly from the complete list of states and what we know of the current state for that address (notice the expression for <code>Selected</code>).</p>
+<p><font color=#0099ff size=4 face="黑体"><code>DropDownListFor</code>方法获取要表示的属性的表达式，以及我们从完整状态列表中动态构建的<code>SelectListItems'列表以及我们对该地址当前状态的了解（注意表达式为</code> Selected`）。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="the-placement-file">The Placement File</h2>
+<h2 id="_10"><font color=#0099ff size=4 face="黑体">展示位置文件</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Finally, we need a placement file to determine the default position of our part within a larger content type:</p>
+<p><font color=#0099ff size=4 face="黑体">最后，我们需要一个展示位置文件来确定我们的部分在更大的内容类型中的默认位置：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>&lt;Placement&gt;
+
+    &lt;Place Parts_Address_Edit="Content:10"/&gt;
+
+    &lt;Place Parts_Address="Content:10"/&gt;
+
+&lt;/Placement&gt;
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="using-the-address-part">Using the Address Part</h2>
+<h2 id="_11"><font color=#0099ff size=4 face="黑体">使用地址部分</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>We can now go into the <strong>Features</strong> admin page and enable the <strong>RelationSample</strong> feature under the <strong>Sample</strong> category. Once this is done we can go to <strong>Content Types</strong> and create a new <strong>Customer</strong> content type. Add the <strong>Common</strong> and <strong>Address</strong> parts, as well as a text field named <strong>Name</strong>.</p>
+<p><font color=#0099ff size=4 face="黑体">我们现在可以进入<strong> Features </strong>管理页面，并在<strong> Sample </strong>类别下启用<strong> RelationSample </strong>功能。完成此操作后，我们可以转到<strong>内容类型</strong>并创建新的<strong> Customer </strong>内容类型。添加<strong> Common </strong>和<strong> Address </strong>部分，以及名为<strong> Name </strong>的文本字段。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Attachments/Creating-1-n-and-n-n-relations/CustomerTypeAddress.PNG" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>We now have a new <strong>Customer</strong> menu entry under <strong>New</strong>, enabling us to create a new customer:</p>
+<p><font color=#0099ff size=4 face="黑体">我们现在在<strong> New </strong>下有一个新的<strong> Customer </strong>菜单条目，使我们能够创建一个新客户：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Attachments/Creating-1-n-and-n-n-relations/CreateCustomer.PNG" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The customer can be displayed on the front-end as well.</p>
+<p><font color=#0099ff size=4 face="黑体">客户也可以显示在前端。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Attachments/Creating-1-n-and-n-n-relations/CustomerFrontEnd.PNG" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h1 id="building-an-n-n-relationship">Building an <em>N-N</em> Relationship</h1>
+<h1 id="_n-n_"><font color=#0099ff size=4 face="黑体">建立_N-N_关系</font></h1>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Building a n-n relationship in Orchard relies on the same principles as what we did for the 1-n relationship.</p>
+<p><font color=#0099ff size=4 face="黑体">在Orchard建立一个n-n关系依赖于我们对1-n关系所做的相同的原则。</font> </p>
+<p>The main difference is that, instead of having one foreign key on the part record, we have an intermediary object for the relationship that has two foreign keys to the records.</p>
+<p><font color=#0099ff size=4 face="黑体">主要区别在于，不是在部件记录上有一个外键，我们有一个中间对象用于具有两个记录的外键的关系。</font> </p>
+<p>This is of course close to the way this is done in relational databases.</p>
+<p><font color=#0099ff size=4 face="黑体">这当然接近于在关系数据库中完成此操作的方式。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>In this section, we are going to build a part that can record an arbitrary number of associations with reward programs for our customers.</p>
+<p><font color=#0099ff size=4 face="黑体">在本节中，我们将构建一个部件，可以为客户记录与奖励计划的任意数量的关联。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="modeling-the-rewards-part">Modeling the Rewards Part</h2>
+<h2 id="_12"><font color=#0099ff size=4 face="黑体">对奖励部分进行建模</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The rewards part and its association with reward programs are modeled as follows:</p>
+<p><font color=#0099ff size=4 face="黑体">奖励部分及其与奖励计划的关联建模如下：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Attachments/Creating-1-n-and-n-n-relations/RewardDiagram.PNG" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="the-rewards-part-record">The Rewards Part Record</h3>
+<h2 id="_13"><font color=#0099ff size=4 face="黑体">奖励部分记录</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The part record has just one property, the collection of rewards:</p>
+<p><font color=#0099ff size=4 face="黑体">零件记录只有一个属性，即奖励集合：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using System.Collections.Generic;
+
+using Orchard.ContentManagement.Records;
+
+
+
+namespace RelationSample.Models {
+
+    public class RewardsPartRecord : ContentPartRecord {
+
+        public RewardsPartRecord() {
+
+            Rewards = new List&lt;ContentRewardProgramsRecord&gt;();
+
+        }
+
+        public virtual IList&lt;ContentRewardProgramsRecord&gt; Rewards { get; set; }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="the-rewards-part">The Rewards Part</h3>
+<h2 id="_14"><font color=#0099ff size=4 face="黑体">奖励部分</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The rewards part itself proxies the <code>Rewards</code> property to the record:</p>
+<p><font color=#0099ff size=4 face="黑体">奖励部分本身代表<code>Rewards</code>属性到记录：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using System.Collections.Generic;
+
+using System.Linq;
+
+using Orchard.ContentManagement;
+
+
+
+namespace RelationSample.Models {
+
+    public class RewardsPart : ContentPart&lt;RewardsPartRecord&gt; {
+
+        public IEnumerable&lt;RewardProgramRecord&gt; Rewards {
+
+            get {
+
+                return Record.Rewards.Select(r =&gt; r.RewardProgramRecord);
+
+            }
+
+        }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="the-reward-program-record">The Reward Program Record</h3>
+<h2 id="_15"><font color=#0099ff size=4 face="黑体">奖励计划记录</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Reward programs have a name and a discount rate:</p>
+<p><font color=#0099ff size=4 face="黑体">奖励计划有名称和折扣率：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>namespace RelationSample.Models {
+
+    public class RewardProgramRecord {
+
+        public virtual int Id { get; set; }
+
+        public virtual string Name { get; set; }
+
+        public virtual double Discount { get; set; }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="the-association-record">The Association Record</h3>
+<h2 id="_16"><font color=#0099ff size=4 face="黑体">协会记录</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Finally, the association record has a reference to a reward part record and a reference to a reward program:</p>
+<p><font color=#0099ff size=4 face="黑体">最后，关联记录可以参考奖励部分记录和奖励计划的参考：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>namespace RelationSample.Models {
+
+    public class ContentRewardProgramsRecord {
+
+        public virtual int Id { get; set; }
+
+        public virtual RewardsPartRecord RewardsPartRecord { get; set; }
+
+        public virtual RewardProgramRecord RewardProgramRecord { get; set; }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="creating-the-database-tables-and-record">Creating the Database Tables and Record</h2>
+<h2 id="_17"><font color=#0099ff size=4 face="黑体">创建数据库表和记录</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Here is the migration:</p>
+<p><font color=#0099ff size=4 face="黑体">这是迁移：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>public int UpdateFrom2() {
+
+    SchemaBuilder.CreateTable("RewardsPartRecord",
+
+        table =&gt; table
+
+            .ContentPartRecord()
+
+        );
+
+
+
+    SchemaBuilder.CreateTable("RewardProgramRecord",
+
+        table =&gt; table
+
+            .Column&lt;int&gt;("Id", column =&gt; column.PrimaryKey().Identity())
+
+            .Column&lt;string&gt;("Name")
+
+            .Column&lt;double&gt;("Discount")
+
+        );
+
+
+
+    SchemaBuilder.CreateTable("ContentRewardProgramsRecord",
+
+        table =&gt; table
+
+            .Column&lt;int&gt;("Id", column =&gt; column.PrimaryKey().Identity())
+
+            .Column&lt;int&gt;("RewardsPartRecord_Id")
+
+            .Column&lt;int&gt;("RewardProgramRecord_Id")
+
+        );
+
+
+
+    ContentDefinitionManager.AlterPartDefinition(
+
+        "RewardsPart",
+
+        builder =&gt; builder.Attachable());
+
+
+
+    return 3;
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>This code creates the three tables we need to persist the three records that we just modeled.</p>
+<p><font color=#0099ff size=4 face="黑体">这段代码创建了我们需要的三个表来保存我们刚刚建模的三个记录。</font> </p>
+<p>It also declares the <code>RewardsPart</code> and makes it attachable.</p>
+<p><font color=#0099ff size=4 face="黑体">它还声明了“RewardsPart”并使其可连接。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>As with addresses and states, you can see the convention for relations in action here: the columns for the association record table are of type integer (the type of the id of each of the associated tables) and bears the name of the linked table, an underscore and the name of the key column of the associated table.</p>
+<p><font color=#0099ff size=4 face="黑体">与地址和状态一样，您可以在此处查看关系的约定：关联记录表的列的类型为整数（每个关联表的id的类型），并带有链接表的名称，下划线和关联表的键列的名称。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="populating-the-reward-program-table">Populating the Reward Program Table</h2>
+<h2 id="_18"><font color=#0099ff size=4 face="黑体">填写奖励计划表</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Like we did with states, we pre-populate the reward program table from the migration class.</p>
+<p><font color=#0099ff size=4 face="黑体">就像我们对状态所做的那样，我们预先填充了迁移类中的奖励计划表。</font> </p>
+<p>In a real-world scenario, the rewards could be content items and you could have a specific management screen for them.</p>
+<p><font color=#0099ff size=4 face="黑体">在真实场景中，奖励可以是内容项，您可以为他们设置特定的管理屏幕。</font> </p>
+<p>There would be nothing specific about that coming from the fact that these items happen to be at one end of a n-n relation.</p>
+<p><font color=#0099ff size=4 face="黑体">这些项目恰好位于n-n关系的一端，这一点并不具体。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>private readonly IRepository&lt;RewardProgramRecord&gt; _rewardProgramRepository;
+
+[...]
+
+private readonly IEnumerable&lt;RewardProgramRecord&gt; _rewardPrograms =
+
+    new List&lt;RewardProgramRecord&gt; {
+
+        new RewardProgramRecord {Name = "Senior", Discount = 0.05},
+
+        new RewardProgramRecord {Name = "Family", Discount = 0.10},
+
+        new RewardProgramRecord {Name = "Member", Discount = 0.15},
+
+    };
+
+[...]
+
+public int UpdateFrom3() {
+
+    if (_rewardProgramRepository == null)
+
+        throw new InvalidOperationException(
+
+            "Couldn't find reward program repository.");
+
+    foreach (var rewardProgram in _rewardPrograms) {
+
+        _rewardProgramRepository.Create(rewardProgram);
+
+    }
+
+    return 4;
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="the-reward-handler">The Reward Handler</h2>
+<h2 id="_19"><font color=#0099ff size=4 face="黑体">奖励处理程序</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>There is nothing remarkable with the driver for this part, which is just wiring the repository:</p>
+<p><font color=#0099ff size=4 face="黑体">这部分的驱动程序没什么了不起的，它只是连接存储库：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using Orchard.Data;
+
+using Orchard.ContentManagement.Handlers;
+
+using RelationSample.Models;
+
+
+
+namespace RelationSample.Handlers {
+
+    public class RewardsPartHandler : ContentHandler {
+
+        public RewardsPartHandler(IRepository&lt;RewardsPartRecord&gt; repository) {
+
+            Filters.Add(StorageFilter.For(repository));
+
+        }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="the-reward-driver">The Reward Driver</h2>
+<h2 id="_20"><font color=#0099ff size=4 face="黑体">奖励司机</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The driver is also surprisingly unsurprising given the requirement to persist the n-n relationship:</p>
+<p><font color=#0099ff size=4 face="黑体">鉴于要求坚持n-n关系，驱动程序也出乎意料地不足为奇：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using System.Linq;
+
+using JetBrains.Annotations;
+
+using Orchard.ContentManagement;
+
+using Orchard.ContentManagement.Drivers;
+
+using RelationSample.Models;
+
+using RelationSample.Services;
+
+using RelationSample.ViewModels;
+
+
+
+namespace RelationSample.Drivers {
+
+    [UsedImplicitly]
+
+    public class RewardsPartDriver : ContentPartDriver&lt;RewardsPart&gt; {
+
+        private readonly IRewardService _rewardService;
+
+
+
+        private const string TemplateName = "Parts/Rewards";
+
+
+
+        public RewardsPartDriver(IRewardService rewardService) {
+
+            _rewardService = rewardService;
+
+        }
+
+
+
+        protected override string Prefix {
+
+            get { return "Rewards"; }
+
+        }
+
+
+
+        protected override DriverResult Display(
+
+            RewardsPart part,
+
+            string displayType,
+
+            dynamic shapeHelper) {
+
+
+
+            return ContentShape("Parts_Rewards",
+
+                            () =&gt; shapeHelper.Parts_Rewards(
+
+                                ContentPart: part,
+
+                                Rewards: part.Rewards));
+
+        }
+
+
+
+        protected override DriverResult Editor(
+
+            RewardsPart part,
+
+            dynamic shapeHelper) {
+
+
+
+            return ContentShape("Parts_Rewards_Edit",
+
+                    () =&gt; shapeHelper.EditorTemplate(
+
+                        TemplateName: TemplateName,
+
+                        Model: BuildEditorViewModel(part),
+
+                        Prefix: Prefix));
+
+        }
+
+
+
+        protected override DriverResult Editor(
+
+            RewardsPart part,
+
+            IUpdateModel updater,
+
+            dynamic shapeHelper) {
+
+
+
+            var model = new EditRewardsViewModel();
+
+            updater.TryUpdateModel(model, Prefix, null, null);
+
+
+
+            if (part.ContentItem.Id != 0) {
+
+                _rewardService.UpdateRewardsForContentItem(
+
+                    part.ContentItem, model.Rewards);
+
+            }
+
+
+
+            return Editor(part, shapeHelper);
+
+        }
+
+
+
+        private EditRewardsViewModel BuildEditorViewModel(RewardsPart part) {
+
+            var itemRewards = part.Rewards.ToLookup(r =&gt; r.Id);
+
+            return new EditRewardsViewModel {
+
+                Rewards = _rewardService.GetRewards().Select(
+
+                    r =&gt; new RewardProgramEntry {
+
+                        RewardProgram = r,
+
+                        IsChecked = itemRewards.Contains(r.Id)
+
+                    }).ToList()
+
+            };
+
+        }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Like with the address part, we are fetching all the reward programs and putting them on the editor view model for the template to display as checkboxes.</p>
+<p><font color=#0099ff size=4 face="黑体">与地址部分一样，我们正在获取所有奖励程序并将它们放在编辑器视图模型上，以便模板显示为复选框。</font> </p>
+<p>In <code>BuildEditorViewModel</code>, you can see that we build the current rewards as a lookup and then use that to determine the checked state of each reward program.</p>
+<p><font color=#0099ff size=4 face="黑体">在<code>BuildEditorViewModel</code>中，您可以看到我们将当前奖励构建为查找，然后使用它来确定每个奖励计划的已检查状态。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Here is the editor view model:</p>
+<p><font color=#0099ff size=4 face="黑体">这是编辑器视图模型：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using System.Collections.Generic;
+
+using RelationSample.Models;
+
+
+
+namespace RelationSample.ViewModels {
+
+    public class EditRewardsViewModel {
+
+        public IList&lt;RewardProgramEntry&gt; Rewards { get; set; }
+
+    }
+
+
+
+    public class RewardProgramEntry {
+
+        public RewardProgramRecord RewardProgram { get; set; }
+
+        public bool IsChecked { get; set; }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p><font color=#0099ff size=4 face="黑体">！注意</font> </p>
+<pre><code>We are making the assumption here that there are only a few reward programs.
+
+If you are modeling a relationship with a large number of records on both sides of the relationship, the basic principles and models exposed here still stand but you'll have to adapt and optimize the code.
+
+In particular, using checkboxes to select the associated records is the best UI solution for small numbers of records but it won't scale well to more than a few dozens of records.
+
+Instead, you'd probably need to use a search UI of sorts and an Add/Remove pattern.
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="the-rewards-service">The Rewards Service</h2>
+<h2 id="_21"><font color=#0099ff size=4 face="黑体">奖励服务</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The rewards service is responsible for driving the relatively complex task of updating the database for the new values for the relation:</p>
+<p><font color=#0099ff size=4 face="黑体">奖励服务负责推动相对复杂的更新数据库任务，以获取关系的新值：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using System.Collections.Generic;
+
+using System.Linq;
+
+using Orchard;
+
+using Orchard.ContentManagement;
+
+using Orchard.Data;
+
+using RelationSample.Models;
+
+using RelationSample.ViewModels;
+
+
+
+namespace RelationSample.Services {
+
+    public interface IRewardService : IDependency {
+
+        void UpdateRewardsForContentItem(
+
+            ContentItem item,
+
+            IEnumerable&lt;RewardProgramEntry&gt; rewards);
+
+        IEnumerable&lt;RewardProgramRecord&gt; GetRewards();
+
+    }
+
+
+
+    public class RewardService : IRewardService {
+
+        private readonly IRepository&lt;RewardProgramRecord&gt;
+
+            _rewardProgramRepository;
+
+        private readonly IRepository&lt;ContentRewardProgramsRecord&gt;
+
+            _contentRewardRepository;
+
+
+
+        public RewardService(
+
+            IRepository&lt;RewardProgramRecord&gt; rewardProgramRepository,
+
+            IRepository&lt;ContentRewardProgramsRecord&gt; contentRewardRepository) {
+
+
+
+            _rewardProgramRepository = rewardProgramRepository;
+
+            _contentRewardRepository = contentRewardRepository;
+
+        }
+
+
+
+        public void UpdateRewardsForContentItem(
+
+            ContentItem item,
+
+            IEnumerable&lt;RewardProgramEntry&gt; rewards) {
+
+
+
+            var record = item.As&lt;RewardsPart&gt;().Record;
+
+            var oldRewards = _contentRewardRepository.Fetch(
+
+                r =&gt; r.RewardsPartRecord == record);
+
+            var lookupNew = rewards
+
+                .Where(e =&gt; e.IsChecked)
+
+                .Select(e =&gt; e.RewardProgram)
+
+                .ToDictionary(r =&gt; r, r =&gt; false);
+
+            // Delete the rewards that are no longer there
+
+            // and mark the ones that should stay
+
+            foreach(var contentRewardProgramsRecord in oldRewards) {
+
+                if (lookupNew.ContainsKey(
+
+                    contentRewardProgramsRecord.RewardProgramRecord)) {
+
+
+
+                    lookupNew[contentRewardProgramsRecord.RewardProgramRecord]
+
+                        = true;
+
+                }
+
+                else {
+
+                    _contentRewardRepository.Delete(contentRewardProgramsRecord);
+
+                }
+
+            }
+
+            // Add the new rewards
+
+            foreach(var reward in lookupNew.Where(kvp =&gt; !kvp.Value)
+
+                                           .Select(kvp =&gt; kvp.Key)) {
+
+                _contentRewardRepository.Create(new ContentRewardProgramsRecord {
+
+                    RewardsPartRecord = record,
+
+                    RewardProgramRecord = reward
+
+                });
+
+            }
+
+        }
+
+
+
+        public IEnumerable&lt;RewardProgramRecord&gt; GetRewards() {
+
+            return _rewardProgramRepository.Table.ToList();
+
+        }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p><font color=#0099ff size=4 face="黑体">！注意</font> </p>
+<pre><code>Again, this is designed for small numbers of reward programs.
+
+If you have larger models and have adopted an Add/Remove pattern talked about in the previous note, the code for the service actually becomes simpler as it executes lower-level operations that affect one program at a time rather than try to synchronize the whole collection at once.
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="building-the-views_1">Building the Views</h2>
+<h2 id="_22"><font color=#0099ff size=4 face="黑体">构建视图</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="the-front-end-view_1">The Front-End View</h3>
+<h2 id="_23"><font color=#0099ff size=4 face="黑体">前端视图</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The front-end view is just displaying the list of rewards as an unordered list:</p>
+<p><font color=#0099ff size=4 face="黑体">前端视图只显示奖励列表作为无序列表：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>&lt;h4&gt;@T("Rewards"):&lt;/h4&gt;
+
+&lt;ul&gt;
+
+@foreach (var reward in Model.Rewards) {
+
+    &lt;li&gt;@string.Format("{0} ({1:P1})", reward.Name,  -reward.Discount)&lt;/li&gt;
+
+}
+
+&lt;/ul&gt;
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h3 id="the-editor-view_1">The Editor View</h3>
+<h2 id="_24"><font color=#0099ff size=4 face="黑体">编辑视图</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The editor view is a little more remarkable:</p>
+<p><font color=#0099ff size=4 face="黑体">编辑器视图更加引人注目：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>@model RelationSample.ViewModels.EditRewardsViewModel
+
+&lt;fieldset&gt;&lt;legend&gt;@T("Rewards")&lt;/legend&gt;
+
+&lt;ul&gt;
+
+@{
+
+ var rewardIndex = 0;
+
+}
+
+@foreach (var reward in Model.Rewards) {
+
+    &lt;li&gt;&lt;input type="hidden" value="@reward.RewardProgram.Id"
+
+        name="@Html.FieldNameFor(m =&gt; m.Rewards[rewardIndex].RewardProgram.Id)"/&gt;
+
+        &lt;label for="@Html.FieldNameFor(m =&gt; m.Rewards[rewardIndex].IsChecked)"&gt;
+
+            &lt;input type="checkbox" value="true"
+
+                name="@Html.FieldNameFor(m =&gt; m.Rewards[rewardIndex].IsChecked)"
+
+                id="@Html.FieldNameFor(m =&gt; m.Rewards[rewardIndex].IsChecked)"
+
+                @if (reward.IsChecked) {&lt;text&gt;checked="checked"&lt;/text&gt;}/&gt;
+
+            @string.Format("{0} ({1:P1})",
+
+                reward.RewardProgram.Name,
+
+                -reward.RewardProgram.Discount))
+
+        &lt;/label&gt;
+
+        @{rewardIndex++;}
+
+    &lt;/li&gt;
+
+}
+
+&lt;/ul&gt;
+
+&lt;/fieldset&gt;
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Notice how the check-boxes use <code>Html.FieldNameFor</code>.</p>
+<p><font color=#0099ff size=4 face="黑体">注意复选框如何使用<code>Html.FieldNameFor</code>。</font> </p>
+<p>This will ensure that they will have a name that the model binder will be able to understand and correctly bind when it is posted back.</p>
+<p><font color=#0099ff size=4 face="黑体">这将确保它们具有模型绑定器能够理解的名称，并在发回时正确绑定。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Also noticeable is the hidden input, which is a standard workaround for the peculiar way in which HTML check-boxes don't post anything when not checked.</p>
+<p><font color=#0099ff size=4 face="黑体">另外值得注意的是隐藏输入，这是一种标准的解决方法，用于HTML检查框在未检查时不发布任何内容的特殊方式。</font> </p>
+<p>The model binder knows how to use the information for both the hidden input and the check-box to determine the Boolean values to set.</p>
+<p><font color=#0099ff size=4 face="黑体">模型绑定器知道如何使用隐藏输入和复选框的信息来确定要设置的布尔值。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Of course, any variation from that naming scheme would make the binding fail.</p>
+<p><font color=#0099ff size=4 face="黑体">当然，该命名方案的任何变化都会使绑定失败。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="the-placement-file_1">The Placement File</h2>
+<h2 id="_25"><font color=#0099ff size=4 face="黑体">展示位置文件</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>For the parts to appear at all in the UI, we need to update our <code>Placement.info</code> file:</p>
+<p><font color=#0099ff size=4 face="黑体">为了在UI中显示所有部分，我们需要更新我们的<code>Placement.info</code>文件：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>&lt;Placement&gt;
+
+    &lt;Place Parts_Address_Edit="Content:10"/&gt;
+
+    &lt;Place Parts_Address="Content:10"/&gt;
+
+    &lt;Place Parts_Rewards_Edit="Content:11"/&gt;
+
+    &lt;Place Parts_Rewards="Content:11"/&gt;
+
+&lt;/Placement&gt;
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="using-the-rewards-part">Using the Rewards Part</h2>
+<h2 id="_26"><font color=#0099ff size=4 face="黑体">使用奖励部分</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>If you haven't used the application's admin UI since you wrote the migration, it should now warn you that a feature needs to be upgraded.</p>
+<p><font color=#0099ff size=4 face="黑体">如果您在编写迁移后未使用应用程序的管理UI，则应立即警告您需要升级某个功能。</font> </p>
+<p>That is our sample feature, as the system noticed the latest executed migration does not match the highest available.</p>
+<p><font color=#0099ff size=4 face="黑体">这是我们的示例功能，因为系统注意到最新执行的迁移与最高可用迁移不匹配。</font> </p>
+<p>Go to the features screen, locate the <strong>RelationSample</strong> and click <strong>Update</strong>.</p>
+<p><font color=#0099ff size=4 face="黑体">转到功能屏幕，找到<strong> RelationSample </strong>并单击<strong> Update </strong>。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>In order to use the new part on our customer content items, we need to add it to the type. Go to the <strong>Content Types</strong> screen and click <strong>Edit</strong> next to <strong>Customer</strong>. Click <strong>Add</strong> next to <strong>Parts</strong>, check the <strong>Rewards</strong> part and save.</p>
+<p><font color=#0099ff size=4 face="黑体">为了在我们的客户内容项目中使用新部分，我们需要将其添加到该类型中。转到<strong>内容类型</strong>屏幕，然后单击<strong>客户</strong>旁边的<strong>编辑</strong>。点击<strong>部件</strong>旁边的<strong>添加</strong>，查看<strong>奖励</strong>部分并保存。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="The customer type with the address and rewards parts." src="../../Attachments/Creating-1-n-and-n-n-relations/CustomerType.PNG" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>If you go back to an existing customer's edit screen or create a new one, you'll see a screen such as this:</p>
+<p><font color=#0099ff size=4 face="黑体">如果您返回现有客户的编辑屏幕或创建新屏幕，您将看到如下屏幕：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Attachments/Creating-1-n-and-n-n-relations/EditCustomerRewards.PNG" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>On the front-end, the customer now looks like this:</p>
+<p><font color=#0099ff size=4 face="黑体">在前端，客户现在看起来像这样：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Attachments/Creating-1-n-and-n-n-relations/CustomerWithRewards.PNG" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h1 id="building-a-relation-between-content-items">Building a Relation Between Content Items</h1>
+<h1 id="_27"><font color=#0099ff size=4 face="黑体">构建内容项之间的关系</font></h1>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Our third example will establish a relation between content items, which is a step up from our previous examples which were establishing relations between records.</p>
+<p><font color=#0099ff size=4 face="黑体">我们的第三个例子将建立内容项之间的关系，这是我们之前的例子中的一个步骤，这些例子建立了记录之间的关系。</font> </p>
+<p>Doing the same thing with items is not fundamentally very different, but there are a couple of caveats that justify a specific example.</p>
+<p><font color=#0099ff size=4 face="黑体">对项目做同样的事情并没有根本的不同，但有一些警告可以证明一个具体的例子。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The example that we will build is a <code>Sponsor</code> part that records that a specific customer was sponsored by another.</p>
+<p><font color=#0099ff size=4 face="黑体">我们将构建的示例是一个“赞助商”部分，用于记录特定客户是由另一个客户赞助的。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="modeling-the-sponsor-part">Modeling the <code>Sponsor</code> Part</h2>
+<h2 id="_28"><font color=#0099ff size=4 face="黑体">建模“赞助商”部分</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The <code>Sponsor</code> part will consist of a single <code>Sponsor</code> property.</p>
+<p><font color=#0099ff size=4 face="黑体">“赞助商”部分将由一个“赞助商”属性组成。</font> </p>
+<p>This time, we will use a lazy field so that its content only gets fetched when it is needed.</p>
+<p><font color=#0099ff size=4 face="黑体">这一次，我们将使用一个惰性字段，以便仅在需要时才获取其内容。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using Orchard.ContentManagement;
+
+using Orchard.Core.Common.Utilities;
+
+
+
+namespace RelationSample.Models {
+
+    public class SponsorPart : ContentPart&lt;SponsorPartRecord&gt; {
+
+        private readonly LazyField&lt;IContent&gt; _sponsor = new LazyField&lt;IContent&gt;();
+
+
+
+        public LazyField&lt;IContent&gt; SponsorField { get { return _sponsor; } }
+
+
+
+        public IContent Sponsor {
+
+            get { return _sponsor.Value; }
+
+            set { _sponsor.Value = value; }
+
+        }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>We will see how the lazy field gets set and populated when we look at the code for the handler.</p>
+<p><font color=#0099ff size=4 face="黑体">我们将看到在查看处理程序的代码时如何设置和填充惰性字段。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The corresponding record is extremely simple:</p>
+<p><font color=#0099ff size=4 face="黑体">相应的记录非常简单：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using Orchard.ContentManagement;
+
+using Orchard.ContentManagement.Records;
+
+
+
+namespace RelationSample.Models {
+
+    public class SponsorPartRecord : ContentPartRecord {
+
+        public virtual ContentItemRecord Sponsor { get; set; }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="building-the-database-table-and-part">Building the Database Table and Part</h2>
+<h2 id="_29"><font color=#0099ff size=4 face="黑体">构建数据库表和部分</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The migration for this part is as follows:</p>
+<p><font color=#0099ff size=4 face="黑体">此部分的迁移如下：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>public int UpdateFrom4() {
+
+
+
+    SchemaBuilder.CreateTable("SponsorPartRecord",
+
+        table =&gt; table
+
+            .ContentPartRecord()
+
+            .Column&lt;int&gt;("Sponsor_Id")
+
+        );
+
+
+
+    ContentDefinitionManager.AlterPartDefinition(
+
+        "SponsorPart", builder =&gt; builder.Attachable());
+
+
+
+    return 5;
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>We are in known territory here: the table uses the convention that we have already applied twice in the previous examples, where the name of the column establishing the relation is the concatenation of the column names in both records.</p>
+<p><font color=#0099ff size=4 face="黑体">我们在这里处于已知区域：该表使用我们在前面的示例中已经应用了两次的约定，其中建立关系的列的名称是两个记录中列名的串联。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>We also make the new <code>SponsorPart</code> attachable, as usual.</p>
+<p><font color=#0099ff size=4 face="黑体">像往常一样，我们也可以将新的“SponsorPart”连接起来。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="the-sponsor-handler">The Sponsor Handler</h2>
+<h2 id="_30"><font color=#0099ff size=4 face="黑体">赞助商处理程序</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The handler is going to be a little more elaborate than usual, because of the use of lazy fields:</p>
+<p><font color=#0099ff size=4 face="黑体">由于使用了惰性字段，处理程序将比平时更精细：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using Orchard.ContentManagement;
+
+using Orchard.Data;
+
+using Orchard.ContentManagement.Handlers;
+
+using RelationSample.Models;
+
+
+
+namespace RelationSample.Handlers {
+
+    public class SponsorPartHandler : ContentHandler {
+
+        private readonly IContentManager _contentManager;
+
+
+
+        public SponsorPartHandler(
+
+            IRepository&lt;SponsorPartRecord&gt; repository,
+
+            IContentManager contentManager) {
+
+
+
+            Filters.Add(StorageFilter.For(repository));
+
+            _contentManager = contentManager;
+
+
+
+            OnInitializing&lt;SponsorPart&gt;(PropertySetHandlers);
+
+            OnLoaded&lt;SponsorPart&gt;(LazyLoadHandlers);
+
+        }
+
+
+
+        void LazyLoadHandlers(LoadContentContext context, SponsorPart part) {
+
+            // add handlers that will load content just-in-time
+
+            part.SponsorField.Loader(() =&gt;
+
+                part.Record.Sponsor == null ?
+
+                null : _contentManager.Get(part.Record.Sponsor.Id));
+
+        }
+
+
+
+        static void PropertySetHandlers(
+
+            InitializingContentContext context, SponsorPart part) {
+
+            // add handlers that will update records when part properties are set
+
+            part.SponsorField.Setter(sponsor =&gt; {
+
+                part.Record.Sponsor = sponsor == null
+
+                    ? null
+
+                    : sponsor.ContentItem.Record;
+
+                return sponsor;
+
+            });
+
+
+
+            // Force call to setter if we had already set a value
+
+            if (part.SponsorField.Value != null)
+
+                part.SponsorField.Value = part.SponsorField.Value;
+
+        }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The storage filter is as usual setting up the repository of sponsor part records, but we also have <code>OnInitializing</code> and <code>OnLoaded</code> event handlers that will respectively set-up the setter for the lazy field and the loader of the value that will be executed the first time the field is accessed.</p>
+<p><font color=#0099ff size=4 face="黑体">存储过滤器像往常一样设置赞助商部分记录的存储库，但是我们还有“OnInitializing”和“OnLoaded”事件处理程序，它们将分别设置惰性字段的setter和将要执行的值的加载器第一次访问该字段。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>At loading time, we look at the record, and if there is a sponsor we get the full content item from the content manager using the record's id.</p>
+<p><font color=#0099ff size=4 face="黑体">在加载时，我们查看记录，如果有赞助商，我们使用记录的ID从内容管理器获取完整的内容项。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The lazy field setter just sets the underlying record's <code>Sponsor</code> property.</p>
+<p><font color=#0099ff size=4 face="黑体">惰性字段设置器只设置基础记录的“Sponsor”属性。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="the-driver">The Driver</h2>
+<h2 id="_31"><font color=#0099ff size=4 face="黑体">司机</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The driver is relying on the following view model:</p>
+<p><font color=#0099ff size=4 face="黑体">驱动程序依赖于以下视图模型：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using System.Collections.Generic;
+
+using Orchard.ContentManagement;
+
+using RelationSample.Models;
+
+
+
+namespace RelationSample.ViewModels {
+
+    public class EditSponsorViewModel {
+
+        public int CustomerId { get; set; }
+
+        public int SponsorId { get; set; }
+
+        public IEnumerable&lt;CustomerViewModel&gt; Customers { get; set; }
+
+    }
+
+
+
+    public class CustomerViewModel {
+
+        public int Id { get; set;}
+
+        public string Name { get; set;}
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Here is the code for the driver itself, which should by now seem very familiar:</p>
+<p><font color=#0099ff size=4 face="黑体">这是驱动程序本身的代码，现在看来应该非常熟悉：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using System.Linq;
+
+using JetBrains.Annotations;
+
+using Orchard.ContentManagement;
+
+using Orchard.ContentManagement.Drivers;
+
+using RelationSample.Models;
+
+using RelationSample.Services;
+
+using RelationSample.ViewModels;
+
+
+
+namespace RelationSample.Drivers {
+
+    [UsedImplicitly]
+
+    public class SponsorPartDriver : ContentPartDriver&lt;SponsorPart&gt; {
+
+        private readonly ICustomerService _customerService;
+
+
+
+        private const string TemplateName = "Parts/Sponsor";
+
+
+
+        public SponsorPartDriver(ICustomerService customerService) {
+
+            _customerService = customerService;
+
+        }
+
+
+
+        protected override string Prefix {
+
+            get { return "Sponsor"; }
+
+        }
+
+
+
+        protected override DriverResult Display(
+
+            SponsorPart part, string displayType, dynamic shapeHelper) {
+
+
+
+            return ContentShape("Parts_Sponsor",
+
+                () =&gt; shapeHelper.Parts_Sponsor(
+
+                    ContentPart: part,
+
+                    Sponsor: part.Sponsor,
+
+                    SponsorName: _customerService.GetCustomerName(part.Sponsor)
+
+                    ));
+
+        }
+
+
+
+        protected override DriverResult Editor(
+
+            SponsorPart part, dynamic shapeHelper) {
+
+
+
+            return ContentShape("Parts_Sponsor_Edit",
+
+                    () =&gt; shapeHelper.EditorTemplate(
+
+                        TemplateName: TemplateName,
+
+                        Model: BuildEditorViewModel(part),
+
+                        Prefix: Prefix));
+
+        }
+
+
+
+        protected override DriverResult Editor(
+
+            SponsorPart part, IUpdateModel updater, dynamic shapeHelper) {
+
+
+
+            var model = new EditSponsorViewModel();
+
+            updater.TryUpdateModel(model, Prefix, null, null);
+
+
+
+            if (part.ContentItem.Id != 0) {
+
+                _customerService.UpdateSponsorForContentItem(
+
+                    part.ContentItem, model);
+
+            }
+
+
+
+            return Editor(part, shapeHelper);
+
+        }
+
+
+
+        private EditSponsorViewModel BuildEditorViewModel(SponsorPart part) {
+
+            var itemSponsor = new EditSponsorViewModel {
+
+                CustomerId = part.ContentItem.Id,
+
+                Customers = _customerService.GetCustomers()
+
+            };
+
+            if (part.Sponsor != null) {
+
+                itemSponsor.SponsorId = part.Sponsor.Id;
+
+            }
+
+            return itemSponsor;
+
+        }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="the-service-class">The Service Class</h2>
+<h2 id="_32"><font color=#0099ff size=4 face="黑体">服务类</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The driver is also using the following helper service:</p>
+<p><font color=#0099ff size=4 face="黑体">驱动程序还使用以下帮助程序服务：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using Orchard;
+
+using Orchard.ContentManagement;
+
+using Orchard.Data;
+
+using RelationSample.Models;
+
+using RelationSample.ViewModels;
+
+
+
+namespace RelationSample.Services {
+
+    public interface ICustomerService : IDependency {
+
+        void UpdateSponsorForContentItem(
+
+            ContentItem item, EditSponsorViewModel model);
+
+        string GetCustomerName(IContent customer);
+
+        IEnumerable&lt;CustomerViewModel&gt; GetCustomers();
+
+    }
+
+
+
+    public class CustomerService : ICustomerService {
+
+        private readonly IContentManager _contentManager;
+
+
+
+        public CustomerService(IContentManager contentManager) {
+
+            _contentManager = contentManager;
+
+        }
+
+
+
+        public void UpdateSponsorForContentItem(
+
+            ContentItem item, EditSponsorViewModel model) {
+
+
+
+            var sponsorPart = item.As&lt;SponsorPart&gt;();
+
+            sponsorPart.Sponsor = _contentManager.Get(model.SponsorId);
+
+        }
+
+
+
+        public string GetCustomerName(IContent customer) {
+
+            return customer.ContentItem.Parts
+
+                .SelectMany(p =&gt; p.Fields)
+
+                .Where(f =&gt; f.Name == "Name")
+
+                .First()
+
+                .Storage.Get&lt;string&gt;(null);
+
+        }
+
+
+
+        public IEnumerable&lt;CustomerViewModel&gt; GetCustomers() {
+
+            return _contentManager
+
+                .Query("Customer")
+
+                .List()
+
+                .Select(ci =&gt; new CustomerViewModel {
+
+                    Id = ci.Id,
+
+                    Name = GetCustomerName(ci)
+
+                });
+
+        }
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The only notable thing here is the way we are assuming the content type has a <code>Name</code> field that we'll use to build the list of customers that will be used to build the UI to select the sponsor.</p>
+<p><font color=#0099ff size=4 face="黑体">这里唯一值得注意的是我们假设内容类型有一个“Name”字段，我们将用它来构建将用于构建UI以选择赞助商的客户列表。</font> </p>
+<p>The <code>GetCustomerName</code> method is implementing this assumption.</p>
+<p><font color=#0099ff size=4 face="黑体"><code>GetCustomerName</code>方法正在实现这个假设。</font> </p>
+<p>Of course, you could also have a <code>Customer</code> part that has a <code>Name</code> property, or you could use <code>Routable</code> and its <code>Title</code>.</p>
+<p><font color=#0099ff size=4 face="黑体">当然，您也可以拥有一个具有<code>Name</code>属性的<code>Customer</code>部分，或者您可以使用<code>Routable</code>及其<code>Title</code>。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="building-the-views_2">Building the Views</h2>
+<h2 id="_33"><font color=#0099ff size=4 face="黑体">构建视图</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The editor and front-end views should by now look fairly familiar:</p>
+<p><font color=#0099ff size=4 face="黑体">编辑器和前端视图现在应该看起来相当熟悉：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>@model RelationSample.ViewModels.EditSponsorViewModel
+
+&lt;fieldset&gt;
+
+  &lt;legend&gt;Sponsor&lt;/legend&gt;
+
+  &lt;div class="editor-field"&gt;
+
+    @Html.DropDownListFor(model =&gt; model.SponsorId,
+
+        Model.Customers
+
+            .Where(c =&gt; c.Id != Model.CustomerId)
+
+            .Select(c =&gt; new SelectListItem {
+
+                Selected = c.Id == Model.SponsorId,
+
+                Text = c.Name,
+
+                Value = c.Id.ToString()
+
+            }),
+
+        "Choose a customer...")
+
+    @Html.ValidationMessageFor(model =&gt; model.SponsorId)
+
+  &lt;/div&gt;
+
+&lt;/fieldset&gt;
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<blockquote>
+<p><strong>Note:</strong> Again, we are assuming a small number of customers.</p>
+<p><font color=#0099ff size=4 face="黑体"><strong>注意：</strong>同样，我们假设少数客户。</font> </p>
+</blockquote>
+<p>In a real scenario where there are too many customers to be handled in a drop-down-list, it would be possible to adapt the code in this sample by changing among other things the kind of UI that is used to select the sponsor customer.</p>
+<p><font color=#0099ff size=4 face="黑体">在真实场景中，在下拉列表中处理的客户太多，可以通过更改用于选择赞助商客户的UI类型来调整此示例中的代码。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The front-end view is as follows:</p>
+<p><font color=#0099ff size=4 face="黑体">前端视图如下：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>@if (Model.Sponsor != null) {
+
+  &lt;text&gt;Customer sponsored by @Model.SponsorName.&lt;/text&gt;
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Of course, the placement file also needs to be updated:</p>
+<p><font color=#0099ff size=4 face="黑体">当然，展示位置文件也需要更新：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>&lt;Placement&gt;
+
+    &lt;Place Parts_Address_Edit="Content:10"/&gt;
+
+    &lt;Place Parts_Address="Content:10"/&gt;
+
+    &lt;Place Parts_Rewards_Edit="Content:11"/&gt;
+
+    &lt;Place Parts_Rewards="Content:11"/&gt;
+
+    &lt;Place Parts_Sponsor_Edit="Content:12"/&gt;
+
+    &lt;Place Parts_Sponsor="Content:12"/&gt;
+
+&lt;/Placement&gt;
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="using-the-sponsor-part">Using the <code>Sponsor</code> Part</h2>
+<h2 id="_34"><font color=#0099ff size=4 face="黑体">使用“赞助商”部分</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>We can now go back to the <code>Customer</code> type definition and add our new part.</p>
+<p><font color=#0099ff size=4 face="黑体">我们现在可以回到<code>Customer</code>类型定义并添加我们的新部分。</font> </p>
+<p>Now when we create a new customer, we can choose his sponsor:</p>
+<p><font color=#0099ff size=4 face="黑体">现在，当我们创建新客户时，我们可以选择他的赞助商：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Attachments/Creating-1-n-and-n-n-relations/EditCustomerWithSponsor.PNG" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>On the front-end, the sponsor now also appears:</p>
+<p><font color=#0099ff size=4 face="黑体">在前端，赞助商现在也出现：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><img alt="" src="../../Attachments/Creating-1-n-and-n-n-relations/CustomerWithSponsor.PNG" /></p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h1 id="accessing-nhibernate-configuration-directly">Accessing NHibernate Configuration directly</h1>
+<h1 id="nhibernate"><font color=#0099ff size=4 face="黑体">直接访问NHibernate配置</font></h1>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>For most relationships these conventions should create and auto-map your data model appropriately.</p>
+<p><font color=#0099ff size=4 face="黑体">对于大多数关系，这些约定应适当地创建和自动映射数据模型。</font> </p>
+<p>However, for more complex data models you may find that it's necessary to access the NHibernate configuration directly in order to appropriately map classes.</p>
+<p><font color=#0099ff size=4 face="黑体">但是，对于更复杂的数据模型，您可能会发现必须直接访问NHibernate配置才能正确映射类。</font> </p>
+<p>You can do this by implementing the <code>ISessionConfigurationEvents</code> interface like so:</p>
+<p><font color=#0099ff size=4 face="黑体">你可以通过实现<code>ISessionConfigurationEvents</code>接口来实现这一点：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>using FluentNHibernate.Automapping;
+
+using FluentNHibernate.Cfg;
+
+using NHibernate.Cfg;
+
+using Orchard.Data;
+
+using Orchard.Utility;
+
+
+
+namespace DataMapping.Example {
+
+    public class Mappings : ISessionConfigurationEvents {
+
+        public void Created(FluentConfiguration cfg, AutoPersistenceModel defaultModel) {
+
+            //Many-to-many mapping example
+
+            defaultModel.Override&lt;ClassA&gt;(x =&gt; x.HasManyToMany(y =&gt; y.ClassB).Cascade.All()
+
+                .Table("DataMapping_Example_ClassAClassBCrossReferenceTable"));
+
+
+
+            //One-to-One example
+
+            defaultModel.Override&lt;ClassA&gt;(x =&gt; x.HasOne(y =&gt; y.ClassB));
+
+        }
+
+        public void Prepared(FluentConfiguration cfg) {}
+
+        public void Building(Configuration cfg) {}
+
+        public void Finished(Configuration cfg) {}
+
+        public void ComputingHash(Hash hash) {}
+
+    }
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h1 id="conclusion">Conclusion</h1>
+<h1 id="_35"><font color=#0099ff size=4 face="黑体">结论</font></h1>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>This topic should show the way for the creation of complex content parts involving arbitrary data relations.</p>
+<p><font color=#0099ff size=4 face="黑体">本主题应说明创建涉及任意数据关系的复杂内容部分的方法。</font> </p>
+<p>There is actually not much to it, as the system already knows how to persist and bind such complex objects.</p>
+<p><font color=#0099ff size=4 face="黑体">实际上没有多少，因为系统已经知道如何持久化并绑定这些复杂的对象。</font> </p>
+<p>Rather, it's a matter of building the model according to the conventions in place.</p>
+<p><font color=#0099ff size=4 face="黑体">相反，它是根据现有惯例建立模型的问题。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>You may download the code for this topic from this link: <a href="../../Attachments/Creating-1-n-and-n-n-relations/Orchard.Module.RelationSample.0.5.0.zip">Orchard.Module.RelationSample.0.5.0.zip</a></p>
+<p><font color=#0099ff size=4 face="黑体">您可以从以下链接下载此主题的代码：[Orchard.Module.RelationSample.0.5.0.zip]（../ Attachments / Creating-1-n-and -nn-relations / Orchard.Module.RelationSample.0.5 .0.zip）</font> </p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Creating-types-from-code/" title="从代码创建类型-Creating Types from code" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                从代码创建类型-Creating Types from code
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Manifest-files/" title="模块和主题的清单文件-Manifest Files for Modules and Themes" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                模块和主题的清单文件-Manifest Files for Modules and Themes
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright <a href="http://orchardproject.net">Orchard Project</a>.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.e72fd936.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../search/main.js"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-20757794-1","orchardproject.net"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,4303 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../..">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>Orchard如何运作-How Orchard Works - Orchard 中文文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../#architecture" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Orchard 中文文档" class="md-header-nav__button md-logo">
+          
+            <img src="../../images/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Orchard 中文文档
+              </span>
+              <span class="md-header-nav__topic">
+                Orchard如何运作-How Orchard Works
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/OrchardCMS/OrchardDoc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Orchard 中文文档" class="md-nav__button md-logo">
+      
+        <img src="../../images/logo.png" width="48" height="48">
+      
+    </a>
+    Orchard 中文文档
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/OrchardCMS/OrchardDoc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="主页-Home" class="md-nav__link">
+      主页-Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      入门-Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        入门-Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-Orchard/" title="安装Orchard-Installing Orchard" class="md-nav__link">
+      安装Orchard-Installing Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manually-installing-Orchard-zip-file/" title="手动安装Orchard-Manually Installing Orchard" class="md-nav__link">
+      手动安装Orchard-Manually Installing Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Working-with-Orchard-in-WebMatrix/" title="在WebMatrix中与Orchard合作-Working with Orchard in WebMatrix" class="md-nav__link">
+      在WebMatrix中与Orchard合作-Working with Orchard in WebMatrix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-around-the-dashboard/" title="绕过仪表板-Getting Around the Dashboard" class="md-nav__link">
+      绕过仪表板-Getting Around the Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started/" title="建立你的第一个Orchard网站-Building Your First Orchard Site" class="md-nav__link">
+      建立你的第一个Orchard网站-Building Your First Orchard Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Navigation-and-menus/" title="导航和菜单-Navigation and Menus" class="md-nav__link">
+      导航和菜单-Navigation and Menus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-a-Blog-to-Your-Site/" title="添加博客到您的网站-Adding a Blog to Your Site" class="md-nav__link">
+      添加博客到您的网站-Adding a Blog to Your Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-Pages-to-Your-Site/" title="向您的网站添加页面-Adding Pages to Your Site" class="md-nav__link">
+      向您的网站添加页面-Adding Pages to Your Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-and-managing-media-content/" title="添加和管理媒体内容-Adding and Managing Media Content" class="md-nav__link">
+      添加和管理媒体内容-Adding and Managing Media Content
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Managing-widgets/" title="管理小部件-Managing Widgets" class="md-nav__link">
+      管理小部件-Managing Widgets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Organizing-content-with-tags/" title="使用标签组织内容-Organizing Content Using Tags" class="md-nav__link">
+      使用标签组织内容-Organizing Content Using Tags
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      关于该项目-About the Project
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        关于该项目-About the Project
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic-Orchard-Concepts/" title="Orchard概念定义-Orchard Concept Definitions" class="md-nav__link">
+      Orchard概念定义-Orchard Concept Definitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Builtin-Features/" title="内置模块和功能-Built-in modules and features" class="md-nav__link">
+      内置模块和功能-Built-in modules and features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Feature-roadmap/" title="功能路线图-Feature roadmap" class="md-nav__link">
+      功能路线图-Feature roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Frequently-asked-questions/" title="经常问的问题-Frequently Asked Questions" class="md-nav__link">
+      经常问的问题-Frequently Asked Questions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      创作网站-Authoring Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        创作网站-Authoring Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Blogging-with-LiveWriter/" title="使用LiveWriter进行博客-Blogging with LiveWriter" class="md-nav__link">
+      使用LiveWriter进行博客-Blogging with LiveWriter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-global-ready-applications/" title="创建全球就绪应用程序-Creating Global-Ready Applications" class="md-nav__link">
+      创建全球就绪应用程序-Creating Global-Ready Applications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Search-and-indexing/" title="搜索和索引-Search and Indexing" class="md-nav__link">
+      搜索和索引-Search and Indexing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Saving-scheduling-and-publishing-drafts/" title="发布草稿-Publishing Drafts" class="md-nav__link">
+      发布草稿-Publishing Drafts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-custom-content-types/" title="创建自定义内容类型-Creating Custom Content Types" class="md-nav__link">
+      创建自定义内容类型-Creating Custom Content Types
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      自定义网站-Customizing Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        自定义网站-Customizing Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Previewing-and-applying-a-theme/" title="预览和应用主题-Previewing and Applying a Theme" class="md-nav__link">
+      预览和应用主题-Previewing and Applying a Theme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-themes/" title="安装主题-Installing Themes" class="md-nav__link">
+      安装主题-Installing Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Customizing-the-default-theme/" title="定制主题-Customizing Themes" class="md-nav__link">
+      定制主题-Customizing Themes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      使用Orchard画廊-Using the Orchard Gallery
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        使用Orchard画廊-Using the Orchard Gallery
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Gallery-overview/" title="图库概述-Gallery Overview" class="md-nav__link">
+      图库概述-Gallery Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-modules-and-themes-from-the-gallery/" title="安装模块和主题-Installing Modules and Themes" class="md-nav__link">
+      安装模块和主题-Installing Modules and Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Browsing-the-gallery-web-site/" title="浏览图库网站-Browsing the Gallery Web Site" class="md-nav__link">
+      浏览图库网站-Browsing the Gallery Web Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-a-module-or-theme-to-the-gallery/" title="贡献到画廊-Contributing to the Gallery" class="md-nav__link">
+      贡献到画廊-Contributing to the Gallery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Module-gallery-feeds/" title="注册其他图库供稿-Registering Additional Gallery Feeds" class="md-nav__link">
+      注册其他图库供稿-Registering Additional Gallery Feeds
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      管理网站-Managing Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        管理网站-Managing Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Enabling-and-disabling-features/" title="启用和禁用功能-Enabling and Disabling Features" class="md-nav__link">
+      启用和禁用功能-Enabling and Disabling Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-the-command-line-interface/" title="使用命令行界面-Using the Command-Line Interface" class="md-nav__link">
+      使用命令行界面-Using the Command-Line Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-and-upgrading-modules/" title="安装和升级模块-Installing and Upgrading Modules" class="md-nav__link">
+      安装和升级模块-Installing and Upgrading Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Modifying-site-settings/" title="修改站点设置-Modifying Site Settings" class="md-nav__link">
+      修改站点设置-Modifying Site Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Moderating-comments/" title="审核评论-Moderating Comments" class="md-nav__link">
+      审核评论-Moderating Comments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Managing-users-and-roles/" title="管理用户和角色-Managing Users and Roles" class="md-nav__link">
+      管理用户和角色-Managing Users and Roles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-permissions/" title="了解权限-Understanding Permissions" class="md-nav__link">
+      了解权限-Understanding Permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Making-a-Web-Site-Recipe/" title="制作网站食谱-Making a Website Recipe" class="md-nav__link">
+      制作网站食谱-Making a Website Recipe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-an-image-gallery/" title="创建图库-Creating an Image Gallery" class="md-nav__link">
+      创建图库-Creating an Image Gallery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Workflows/" title="工作流程-Workflows" class="md-nav__link">
+      工作流程-Workflows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Projection/" title="投影-Projection" class="md-nav__link">
+      投影-Projection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-Custom-Forms/" title="创建自定义表单-Create Custom Forms" class="md-nav__link">
+      创建自定义表单-Create Custom Forms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-Dynamic-Forms/" title="创建动态表单-Create Dynamic Forms" class="md-nav__link">
+      创建动态表单-Create Dynamic Forms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Rules-to-conditionally-display-content/" title="使用规则有条件地显示内容-Using Rules to conditionally display content" class="md-nav__link">
+      使用规则有条件地显示内容-Using Rules to conditionally display content
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      托管和部署网站-Hosting and Deploying Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        托管和部署网站-Hosting and Deploying Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Upgrading-a-site-to-a-new-version-of-Orchard/" title="将站点升级到新版本-Upgrading a Site to a New Version" class="md-nav__link">
+      将站点升级到新版本-Upgrading a Site to a New Version
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/" title="优化服务器性能-Optimizing Server Performance" class="md-nav__link">
+      优化服务器性能-Optimizing Server Performance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/" title="Orchard 1.7.1中Windows Azure的新增功能-What's New for Windows Azure in Orchard 1.7.1" class="md-nav__link">
+      Orchard 1.7.1中Windows Azure的新增功能-What's New for Windows Azure in Orchard 1.7.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploying-Orchard-to-Windows-Azure/" title="将Orchard部署到Windows Azure-Deploying Orchard to Windows Azure" class="md-nav__link">
+      将Orchard部署到Windows Azure-Deploying Orchard to Windows Azure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Windows-Azure-Blob-Storage/" title="使用Windows Azure Blob存储-Using Windows Azure Blob Storage" class="md-nav__link">
+      使用Windows Azure Blob存储-Using Windows Azure Blob Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Windows-Azure-Cache/" title="使用Windows Azure缓存-Using Windows Azure Cache" class="md-nav__link">
+      使用Windows Azure缓存-Using Windows Azure Cache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Running-Orchard-on-Mono/" title="在单声道上运行Orchard-Running Orchard on Mono" class="md-nav__link">
+      在单声道上运行Orchard-Running Orchard on Mono
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-a-multi-tenant-Orchard-site/" title="建立多租户Orchard网站-Setting Up a Multi-Tenant Orchard Site" class="md-nav__link">
+      建立多租户Orchard网站-Setting Up a Multi-Tenant Orchard Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-a-machine-key/" title="设置机器密钥-Setting Up a Machine Key" class="md-nav__link">
+      设置机器密钥-Setting Up a Machine Key
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+    
+    <label class="md-nav__link" for="nav-9">
+      扩展Orchard-Extending Orchard
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        扩展Orchard-Extending Orchard
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../First-steps-into-Orchard/" title="进入Orchard的第一步-First Steps into Orchard" class="md-nav__link">
+      进入Orchard的第一步-First Steps into Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Orchard如何运作-How Orchard Works" class="md-nav__link md-nav__link--active">
+      Orchard如何运作-How Orchard Works
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-the-localization-helpers/" title="使用本地化提供程序-Using the Localization Providers" class="md-nav__link">
+      使用本地化提供程序-Using the Localization Providers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Command-line-scaffolding/" title="命令行代码生成-Command-Line Code Generation" class="md-nav__link">
+      命令行代码生成-Command-Line Code Generation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Walkthrough-Writing-An-Orchard-Module/" title="编写Orchard模块-Writing an Orchard Module" class="md-nav__link">
+      编写Orchard模块-Writing an Orchard Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Building-a-hello-world-module/" title="构建Hello World模块-Building a Hello World Module" class="md-nav__link">
+      构建Hello World模块-Building a Hello World Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-a-module-with-a-simple-text-editor/" title="使用简单文本编辑器创建模块-Creating a Module with a Simple Text Editor" class="md-nav__link">
+      使用简单文本编辑器创建模块-Creating a Module with a Simple Text Editor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Writing-a-content-part/" title="编写内容部分-Writing a Content Part" class="md-nav__link">
+      编写内容部分-Writing a Content Part
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-a-custom-field-type/" title="编写内容字段-Writing a Content Field" class="md-nav__link">
+      编写内容字段-Writing a Content Field
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Packaging-and-sharing-a-module/" title="打包和共享模块-Packaging and Sharing a Module" class="md-nav__link">
+      打包和共享模块-Packaging and Sharing a Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Writing-a-widget/" title="写一个小工具-Writing a Widget" class="md-nav__link">
+      写一个小工具-Writing a Widget
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-types-from-code/" title="从代码创建类型-Creating Types from code" class="md-nav__link">
+      从代码创建类型-Creating Types from code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-1-n-and-n-n-relations/" title="创建1-N和N-N关系-Creating 1-N and N-N Relations" class="md-nav__link">
+      创建1-N和N-N关系-Creating 1-N and N-N Relations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manifest-files/" title="模块和主题的清单文件-Manifest Files for Modules and Themes" class="md-nav__link">
+      模块和主题的清单文件-Manifest Files for Modules and Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Processing-client-side-assets/" title="处理客户端资产-Processing Client-Side Assets" class="md-nav__link">
+      处理客户端资产-Processing Client-Side Assets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Caching/" title="高速缓存-Caching" class="md-nav__link">
+      高速缓存-Caching
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-custom-settings/" title="自定义网站设置-Custom Site Settings" class="md-nav__link">
+      自定义网站设置-Custom Site Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../WebApi-In-Orchard/" title="在Orchard的Web Api-Web Api in Orchard" class="md-nav__link">
+      在Orchard的Web Api-Web Api in Orchard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      模块入门课程-Getting Started with Modules Course
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        模块入门课程-Getting Started with Modules Course
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules/" title="模块入门-Getting Started with Modules" class="md-nav__link">
+      模块入门-Getting Started with Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-for-a-lesson/" title="设置课程-Setting up for a lesson" class="md-nav__link">
+      设置课程-Setting up for a lesson
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-1/" title="第1部分：构建静态小部件-Part 1: Build a Static Widget" class="md-nav__link">
+      第1部分：构建静态小部件-Part 1: Build a Static Widget
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-2/" title="第2部分：让小工具动态化-Part 2: Make the Widget Dynamic" class="md-nav__link">
+      第2部分：让小工具动态化-Part 2: Make the Widget Dynamic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-3/" title="第3部分：使用Orchard API-Part 3: Using the Orchard API" class="md-nav__link">
+      第3部分：使用Orchard API-Part 3: Using the Orchard API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-4/" title="第4部分：应用最佳实践-Part 4: Applying Best Practices" class="md-nav__link">
+      第4部分：应用最佳实践-Part 4: Applying Best Practices
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      使用数据-Working with Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        使用数据-Working with Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-data-access/" title="了解数据访问-Understanding Data Access" class="md-nav__link">
+      了解数据访问-Understanding Data Access
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-content-handlers/" title="了解内容处理程序-Understanding Content Handlers" class="md-nav__link">
+      了解内容处理程序-Understanding Content Handlers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      创造主题-Creating Themes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        创造主题-Creating Themes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Writing-a-new-theme/" title="写一个新主题 Writing a New Theme-" class="md-nav__link">
+      写一个新主题 Writing a New Theme-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Anatomy-of-a-theme/" title="主题剖析 The Anatomy of a Theme-" class="md-nav__link">
+      主题剖析 The Anatomy of a Theme-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-placement-info/" title="了解placement.info文件 Understanding the placement.info File-" class="md-nav__link">
+      了解placement.info文件 Understanding the placement.info File-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Accessing-and-rendering-shapes/" title="访问和渲染形状 Accessing and Rendering Shapes-" class="md-nav__link">
+      访问和渲染形状 Accessing and Rendering Shapes-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Alternates/" title="候补 Alternates-" class="md-nav__link">
+      候补 Alternates-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Template-file-syntax-guide/" title="模板文件语法指南- Template File Syntax Guide" class="md-nav__link">
+      模板文件语法指南- Template File Syntax Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Processing-client-side-assets/" title="处理客户端资产- Processing Client-Side Assets" class="md-nav__link">
+      处理客户端资产- Processing Client-Side Assets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Packaging-and-sharing-themes/" title="包装和共享主题- Packaging and Sharing Themes" class="md-nav__link">
+      包装和共享主题- Packaging and Sharing Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../UI-guidelines-for-theme-authors/" title="主题作者的UI指南- UI Guidelines for Theme Authors" class="md-nav__link">
+      主题作者的UI指南- UI Guidelines for Theme Authors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Customizing-Orchard-using-Designer-Helper-Tools/" title="使用Designer Helper工具自定义Orchard- Customizing Orchard Using Designer Helper Tools" class="md-nav__link">
+      使用Designer Helper工具自定义Orchard- Customizing Orchard Using Designer Helper Tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      开发人员工具和指南- Developer Tools and Guidelines
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        开发人员工具和指南- Developer Tools and Guidelines
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Common-Issues/" title="常见问题- Common Issues" class="md-nav__link">
+      常见问题- Common Issues
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Developer-FAQ/" title="开发常见问题- Developer FAQ" class="md-nav__link">
+      开发常见问题- Developer FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-a-source-enlistment/" title="设置源登记- Setting Up a Source Enlistment" class="md-nav__link">
+      设置源登记- Setting Up a Source Enlistment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Building-and-deploying-Orchard-from-a-source-code-drop/" title="构建和部署Orchard -Building and deploying Orchard" class="md-nav__link">
+      构建和部署Orchard -Building and deploying Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Source-code-organization/" title="源代码组织- Source Code Organization" class="md-nav__link">
+      源代码组织- Source Code Organization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-dependencies-and-libraries/" title="依赖关系和图书馆- Dependencies and Libraries" class="md-nav__link">
+      依赖关系和图书馆- Dependencies and Libraries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Code-conventions/" title="代码约定- Code Conventions" class="md-nav__link">
+      代码约定- Code Conventions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Visual-Studio-extensions-and-snippets/" title="Visual Studio扩展和片段- Visual Studio Extensions and Snippets" class="md-nav__link">
+      Visual Studio扩展和片段- Visual Studio Extensions and Snippets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Continuous-integration/" title="持续集成- Continuous Integration" class="md-nav__link">
+      持续集成- Continuous Integration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Merging-Pull-Requests/" title="合并拉请求- Merging Pull Requests" class="md-nav__link">
+      合并拉请求- Merging Pull Requests
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      其他主题 Additional Topics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        其他主题 Additional Topics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-module-loader-and-dynamic-compilation/" title="Orchard动态编译 Orchard Dynamic Compilation" class="md-nav__link">
+      Orchard动态编译 Orchard Dynamic Compilation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Configuring-email/" title="配置Email Configuring Email" class="md-nav__link">
+      配置Email Configuring Email
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      参与进来-Getting Involved
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        参与进来-Getting Involved
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-documentation/" title="贡献文档-Contributing Documentation" class="md-nav__link">
+      贡献文档-Contributing Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Documentation-Style-Guidelines/" title="文档样式指南-Documentation Style Guidelines" class="md-nav__link">
+      文档样式指南-Documentation Style Guidelines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-patches/" title="贡献补丁-Contributing Patches" class="md-nav__link">
+      贡献补丁-Contributing Patches
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Contributors/" title="贡献者-Contributors" class="md-nav__link">
+      贡献者-Contributors
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+    
+    <label class="md-nav__link" for="nav-16">
+      发行说明-Release Notes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-16">
+        发行说明-Release Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-10-2.Release-Notes/" title="Orchard 1.10.2" class="md-nav__link">
+      Orchard 1.10.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-10-1.Release-Notes/" title="Orchard 1.10.1" class="md-nav__link">
+      Orchard 1.10.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-10.Release-Notes/" title="Orchard 1.10" class="md-nav__link">
+      Orchard 1.10
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9-3.Release-Notes/" title="Orchard 1.9.3" class="md-nav__link">
+      Orchard 1.9.3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9-2.Release-Notes/" title="Orchard 1.9.2" class="md-nav__link">
+      Orchard 1.9.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9-1.Release-Notes/" title="Orchard 1.9.1" class="md-nav__link">
+      Orchard 1.9.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9.Release-Notes/" title="Orchard 1.9" class="md-nav__link">
+      Orchard 1.9
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-8-2.release-notes/" title="Orchard 1.8.2" class="md-nav__link">
+      Orchard 1.8.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-8-1.Release-Notes/" title="Orchard 1.8.1" class="md-nav__link">
+      Orchard 1.8.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-8-Release-Notes/" title="Orchard 1.8" class="md-nav__link">
+      Orchard 1.8
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-7-2-Release-Notes/" title="Orchard 1.7.2" class="md-nav__link">
+      Orchard 1.7.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-7-1-Release-Notes/" title="Orchard 1.7.1" class="md-nav__link">
+      Orchard 1.7.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-7-Release-Notes/" title="Orchard 1.7" class="md-nav__link">
+      Orchard 1.7
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-6-Release-Notes/" title="Orchard 1.6" class="md-nav__link">
+      Orchard 1.6
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-5-Release-Notes/" title="Orchard 1.5" class="md-nav__link">
+      Orchard 1.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-4-Release-Notes/" title="Orchard 1.4" class="md-nav__link">
+      Orchard 1.4
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+    
+    <label class="md-nav__link" for="nav-17">
+      待办事项- Todos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-17">
+        待办事项- Todos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Documentation-plan/" title="文件计划- Documentation plan" class="md-nav__link">
+      文件计划- Documentation plan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Suggestions-for-New-Topics/" title="对新主题的建议- Suggestions for New Topics" class="md-nav__link">
+      对新主题的建议- Suggestions for New Topics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploying-to-production/" title="将Orchard从开发部署到生产服务器- Deploying Orchard from Development to Production Servers" class="md-nav__link">
+      将Orchard从开发部署到生产服务器- Deploying Orchard from Development to Production Servers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Configuring-shared-hosting/" title="在共享主机环境中配置Orchard- Configuring Orchard in Shared Hosting Environments" class="md-nav__link">
+      在共享主机环境中配置Orchard- Configuring Orchard in Shared Hosting Environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-custom-admin-pages/" title="添加自定义管理面板页面- Adding Custom Admin Panel Pages" class="md-nav__link">
+      添加自定义管理面板页面- Adding Custom Admin Panel Pages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../UI-guidelines-for-module-authors/" title="模块作者的UI指南-UI Guidelines for Module Authors" class="md-nav__link">
+      模块作者的UI指南-UI Guidelines for Module Authors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Exposing-and-handling-events/" title="揭露和处理事件-Exposing and Handling Events" class="md-nav__link">
+      揭露和处理事件-Exposing and Handling Events
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Localizing-modules/" title="本地化模块-Localizing Modules" class="md-nav__link">
+      本地化模块-Localizing Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-different-view-engines/" title="在主题中使用不同的视图引擎-Using Different View Engines in Themes" class="md-nav__link">
+      在主题中使用不同的视图引擎-Using Different View Engines in Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-code-to-themes/" title="将代码添加到主题-Adding Code to a Theme" class="md-nav__link">
+      将代码添加到主题-Adding Code to a Theme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Troubleshooting/" title="排除常见问题-Troubleshooting Common Issues" class="md-nav__link">
+      排除常见问题-Troubleshooting Common Issues
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Filing-bugs/" title="归档错误-Filing Bugs" class="md-nav__link">
+      归档错误-Filing Bugs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Community-resources/" title="Orchard社区资源-Orchard Community Resources" class="md-nav__link">
+      Orchard社区资源-Orchard Community Resources
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-involved-in-forums/" title="参与论坛-Getting Involved in Forums" class="md-nav__link">
+      参与论坛-Getting Involved in Forums
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../module-startup-code/" title="在哪里放置模块的启动代码-Where to put Startup Code for Module" class="md-nav__link">
+      在哪里放置模块的启动代码-Where to put Startup Code for Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Template-files-and-their-locations/" title="模板文件-Template files" class="md-nav__link">
+      模板文件-Template files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Testplan/" title="测试计划-Test plan" class="md-nav__link">
+      测试计划-Test plan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../test/" title="测试-Test" class="md-nav__link">
+      测试-Test
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-18" type="checkbox" id="nav-18">
+    
+    <label class="md-nav__link" for="nav-18">
+      补丁-Patches
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-18">
+        补丁-Patches
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Security-Researcher-Acknowledgments/" title="安全研究员致谢-Security Researcher Acknowledgments" class="md-nav__link">
+      安全研究员致谢-Security Researcher Acknowledgments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Patch-20150630/" title="补丁20150630-Patch 20150630" class="md-nav__link">
+      补丁20150630-Patch 20150630
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Patch-20150519/" title="补丁20150519-Patch 20150519" class="md-nav__link">
+      补丁20150519-Patch 20150519
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Patch-4-30-2013/" title="补丁20130430-Patch 20130430" class="md-nav__link">
+      补丁20130430-Patch 20130430
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-TV/" title="教程视频-Tutorial Videos" class="md-nav__link">
+      教程视频-Tutorial Videos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-20" type="checkbox" id="nav-20">
+    
+    <label class="md-nav__link" for="nav-20">
+      档案-Archives
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-20">
+        档案-Archives
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Walkthroughs/" title="演练和UI样机-Walkthroughs and UI Mockups" class="md-nav__link">
+      演练和UI样机-Walkthroughs and UI Mockups
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Archived-specs/" title="存档的规格-Archived Specs" class="md-nav__link">
+      存档的规格-Archived Specs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setup/" title="建立-Setup" class="md-nav__link">
+      建立-Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Blogs/" title="博客-Blogs" class="md-nav__link">
+      博客-Blogs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Comments/" title="评论-Comments" class="md-nav__link">
+      评论-Comments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Content-types/" title="内容类型-Content types" class="md-nav__link">
+      内容类型-Content types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Definitions/" title="定义-Definitions" class="md-nav__link">
+      定义-Definitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Fundamentals-doctype/" title="HTML doctype-HTML doctype" class="md-nav__link">
+      HTML doctype-HTML doctype
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Linkback/" title="Linkbacks：Pingbacks，Refbacks和Trackbacks-Linkbacks: Pingbacks, Refbacks and Trackbacks" class="md-nav__link">
+      Linkbacks：Pingbacks，Refbacks和Trackbacks-Linkbacks: Pingbacks, Refbacks and Trackbacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Media-management/" title="媒体管理-Media management" class="md-nav__link">
+      媒体管理-Media management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Navigation/" title="导航-Navigation" class="md-nav__link">
+      导航-Navigation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pages-editing/" title="页面编辑-Page editing" class="md-nav__link">
+      页面编辑-Page editing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pages/" title="页面管理和发布-Page management and publishing" class="md-nav__link">
+      页面管理和发布-Page management and publishing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pages-publishing/" title="页面发布工作流程-Page publishing workflow" class="md-nav__link">
+      页面发布工作流程-Page publishing workflow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Rss-atom/" title="RSS和Atom提要-RSS and Atom feeds" class="md-nav__link">
+      RSS和Atom提要-RSS and Atom feeds
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Slugs/" title="蛞蝓-Slugs" class="md-nav__link">
+      蛞蝓-Slugs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Templates/" title="页面模板和语法-Page templates and syntax" class="md-nav__link">
+      页面模板和语法-Page templates and syntax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tags/" title="标签-Tags" class="md-nav__link">
+      标签-Tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Themes/" title="主题-Themes" class="md-nav__link">
+      主题-Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Themes-includes/" title="主题包括-Theme includes" class="md-nav__link">
+      主题包括-Theme includes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Users/" title="用户，角色和权限-Users, roles and permissions" class="md-nav__link">
+      用户，角色和权限-Users, roles and permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Widgets/" title="小工具-Widgets" class="md-nav__link">
+      小工具-Widgets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Xml-Rpc/" title="XML-RPC和Live Writer-XML-RPC and Live Writer" class="md-nav__link">
+      XML-RPC和Live Writer-XML-RPC and Live Writer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-lists/" title="创建内容项列表-Creating lists of content items" class="md-nav__link">
+      创建内容项列表-Creating lists of content items
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A-few-interesting-extensibility-points/" title="可扩展性点-Extensibility points" class="md-nav__link">
+      可扩展性点-Extensibility points
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Add-Custom-Settings-to-your-Theme/" title="将自定义设置添加到主题-Add Custom Settings to your Theme" class="md-nav__link">
+      将自定义设置添加到主题-Add Custom Settings to your Theme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-Custom-Settings-pre-1.8/" title="1.8之前添加自定义设置-Add Custom Settings pre 1.8" class="md-nav__link">
+      1.8之前添加自定义设置-Add Custom Settings pre 1.8
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-admin-menu-items/" title="添加管理菜单项-Adding admin menu items" class="md-nav__link">
+      添加管理菜单项-Adding admin menu items
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Automation-test-guidance/" title="自动化测试指导-Automation test guidance" class="md-nav__link">
+      自动化测试指导-Automation test guidance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Bug-bash-1-18-2010/" title="Bug bash 1-18-2010-Bug bash 1-18-2010" class="md-nav__link">
+      Bug bash 1-18-2010-Bug bash 1-18-2010
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Content-Picker/" title="内容选择器-Content Picker" class="md-nav__link">
+      内容选择器-Content Picker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Custom-permissions/" title="自定义权限-Custom permissions" class="md-nav__link">
+      自定义权限-Custom permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Import-Export/" title="进出口-Import Export" class="md-nav__link">
+      进出口-Import Export
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-Orchard-Using-Web-PI/" title="使用Web PI安装Orchard-Installing Orchard Using Web PI" class="md-nav__link">
+      使用Web PI安装Orchard-Installing Orchard Using Web PI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-Markup-Guidelines/" title="Orchard标记指南-Orchard Markup Guidelines" class="md-nav__link">
+      Orchard标记指南-Orchard Markup Guidelines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/OrchardCMS/OrchardDoc/edit/master/docs/Documentation/How-Orchard-works.markdown" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <p>Building a Web CMS (Content Management System) is unlike building a regular web application: it is more like building an <em>application container</em>. When designing such a system, it is necessary to build extensibility as a first-class feature. This can be a challenge as the very open type of architecture that's necessary to allow for great extensibility may compromise the usability of the application: everything in the system needs to be composable with unknown future modules, including at the user interface level. Orchestrating all those little parts that don't know about each other into a coherent whole is what Orchard is all about.</p>
+<p><font color=#0099ff size=4 face="黑体">构建Web CMS（内容管理系统）与构建常规Web应用程序不同：它更像是构建一个_application container_。在设计这样的系统时，有必要将可扩展性构建为一流的特性。这可能是一个挑战，因为非常开放的架构类型允许很大的可扩展性可能会损害应用程序的可用性：系统中的所有内容都需要与未知的未来模块组合，包括在用户界面级别。将所有那些彼此不了解的小部分编排成一个连贯的整体是Orchard的意义所在。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>This document explains the architectural choices we made in Orchard and how they are solving that particular problem of getting both flexibility and a good user experience.</p>
+<p><font color=#0099ff size=4 face="黑体">本文档解释了我们在Orchard中所做的架构选择，以及它们如何解决获得灵活性和良好用户体验的特定问题。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h1 id="architecture">Architecture</h1>
+<h1 id="_1"><font color=#0099ff size=4 face="黑体">建筑</font></h1>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<table cellspacing="2" cellpadding="2" border="1" style="width:100%">
+
+ <font color=#0099ff size=4 face="黑体"><table cellspacing =“2”cellpadding =“2”border =“1”style =“width：100％”></font> 
+
+
+<tr>
+
+ <font color=#0099ff size=4 face="黑体"><TR></font> 
+
+
+<td colspan="4" align="center">Modules
+
+ <font color=#0099ff size=4 face="黑体"><td colspan =“4”align =“center”>模块</font> 
+
+
+</tr><tr>
+
+ <font color=#0099ff size=4 face="黑体"></ TR> <TR></font> 
+
+
+<td colspan="4" align="center">Core
+
+ <font color=#0099ff size=4 face="黑体"><td colspan =“4”align =“center”>核心</font> 
+
+
+</tr><tr>
+
+ <font color=#0099ff size=4 face="黑体"></ TR> <TR></font> 
+
+
+<td colspan="4" align="center">Orchard Framework
+
+ <font color=#0099ff size=4 face="黑体"><td colspan =“4”align =“center”> Orchard Framework</font> 
+
+
+</tr><tr>
+
+ <font color=#0099ff size=4 face="黑体"></ TR> <TR></font> 
+
+
+<td align="center" style="width:25%">ASP.NET MVC
+
+ <font color=#0099ff size=4 face="黑体"><td align =“center”style =“width：25％”> ASP.NET MVC</font> 
+
+
+<td align="center" style="width:25%">NHibernate
+
+ <font color=#0099ff size=4 face="黑体"><td align =“center”style =“width：25％”> NHibernate</font> 
+
+
+<td align="center" style="width:25%">Autofac
+
+ <font color=#0099ff size=4 face="黑体"><td align =“center”style =“width：25％”> Autofac</font> 
+
+
+<td align="center" style="width:25%">Castle
+
+ <font color=#0099ff size=4 face="黑体"><td align =“center”style =“width：25％”>城堡</font> 
+
+
+</tr><tr>
+
+ <font color=#0099ff size=4 face="黑体"></ TR> <TR></font> 
+
+
+<td colspan="2" align="center">.NET
+
+ <font color=#0099ff size=4 face="黑体"><td colspan =“2”align =“center”> .NET</font> 
+
+
+<td colspan="2" align="center">ASP.NET
+
+ <font color=#0099ff size=4 face="黑体"><td colspan =“2”align =“center”> ASP.NET</font> 
+
+
+</tr><tr>
+
+ <font color=#0099ff size=4 face="黑体"></ TR> <TR></font> 
+
+
+<td colspan="4" align="center">IIS or Windows Azure
+
+ <font color=#0099ff size=4 face="黑体"><td colspan =“4”align =“center”> IIS或Windows Azure</font> 
+
+
+</tr>
+
+ <font color=#0099ff size=4 face="黑体"></ TR></font> 
+
+
+</table>
+
+ <font color=#0099ff size=4 face="黑体"></ TABLE></font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+# Orchard Foundations
+
+# <font color=#0099ff size=4 face="黑体">果园基金会</font> #
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The Orchard CMS is built on existing frameworks and libraries. Here are a few of the most fundamental ones:
+
+ <font color=#0099ff size=4 face="黑体">Orchard CMS基于现有框架和库构建。以下是一些最基本的内容：</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+- [ASP.NET MVC](http://www.asp.net/mvc): ASP.NET MVC is a modern Web development framework that encourages separation of concerns.
+
+- <font color=#0099ff size=4 face="黑体">[ASP.NET MVC]（http://www.asp.net/mvc）：ASP.NET MVC是一个现代Web开发框架，鼓励关注点分离。</font> 
+
+
+- [NHibernate](http://nhforge.org/): NHibernate is an object-relational mapping tool. It handles the persistence of the Orchard content items to the database and considerably simplifies the data model by removing altogether the concern of persistence from module development. You can see examples of that by looking at the source code of any core content type, for example _Pages_.
+
+- <font color=#0099ff size=4 face="黑体">[NHibernate]（http://nhforge.org/）：NHibernate是一个对象关系映射工具。它处理Orchard内容项对数据库的持久性，并通过完全消除模块开发持久性的关注来大大简化数据模型。您可以通过查看任何核心内容类型的源代码来查看示例，例如_Pages_。</font> 
+
+
+- [Autofac](https://github.com/autofac/Autofac): Autofac is an [IoC container](http://en.wikipedia.org/wiki/Inversion_of_control). Orchard makes heavy use of dependency injection. Creating an injectable Orchard dependency is as simple as writing a class that implements `IDependency` or a more specialized interface that itself derives from `IDependency` (a marker interface), and consuming the dependency is as simple as taking a constructor parameter of the right type. The scope and lifetime of the injected dependency will be managed by the Orchard framework. You can see examples of that by looking at the source code for `IAuthorizationService`, `RolesBasedAuthorizationService` and `XmlRpcHandler`.
+
+- <font color=#0099ff size=4 face="黑体">[Autofac]（https://github.com/autofac/Autofac）：Autofac是[IoC容器]（http://en.wikipedia.org/wiki/Inversion_of_control）。 Orchard大量使用依赖注入。创建一个可注入的Orchard依赖就像编写一个实现`IDependency`的类或一个更专业的接口本身派生自`IDependency`（一个标记接口）一样简单，并且使用依赖就像获取右边的构造函数参数一样简单。类型。注入依赖项的范围和生命周期将由Orchard框架管理。您可以通过查看“IAuthorizationService”，“RolesBasedAuthorizationService”和“XmlRpcHandler”的源代码来查看示例。</font> 
+
+
+- [Castle Dynamic Proxy](http://www.castleproject.org/projects/dynamicproxy/): we use Castle for dynamic proxy generation.
+
+- <font color=#0099ff size=4 face="黑体">[Castle Dynamic Proxy]（http://www.castleproject.org/projects/dynamicproxy/）：我们使用Castle进行动态代理生成。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The Orchard application and framework are built on top of these foundational frameworks as additional layers of abstraction. They are in many ways implementation details and no knowledge of NHibernate, Castle, or Autofac should be required to work with Orchard.
+
+ <font color=#0099ff size=4 face="黑体">Orchard应用程序和框架构建在这些基础框架之上，作为额外的抽象层。它们在很多方面都是实现细节，并且不需要NHibernate，Castle或Autofac的知识来与Orchard一起工作。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+# Orchard Framework
+
+# <font color=#0099ff size=4 face="黑体">果园框架</font> #
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The Orchard framework is the deepest layer of Orchard. It contains the engine of the application or at least the parts that couldn't be isolated into modules. Those are typically things that even the most fundamental modules will have to rely on. You can think of it as the base class library for Orchard.
+
+ <font color=#0099ff size=4 face="黑体">Orchard框架是Orchard的最深层。它包含应用程序的引擎或至少包含无法隔离到模块中的部分。这些通常是最基本的模块必须依赖的东西。您可以将其视为Orchard的基类库。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Booting Up Orchard
+
+## <font color=#0099ff size=4 face="黑体">启动果园</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+When an Orchard web application spins up, an Orchard `Host` gets created. A host is a singleton at the app domain level.
+
+ <font color=#0099ff size=4 face="黑体">当Orchard Web应用程序旋转时，会创建一个Orchard`Host`。主机是应用程序域级别的单身人士。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Next, the host will get the `Shell` for the current tenant using the `ShellContextFactory`. Tenants are instances of the application that are isolated as far as users can tell, but that are running within the same appdomain, improving the site density. The shell is a singleton at the tenant level and could actually be said to represent the tenant. It's the object that will effectively provide the tenant-level isolation while keeping the module programming model agnostic about multi-tenancy.
+
+ <font color=#0099ff size=4 face="黑体">接下来，主机将使用`ShellContextFactory`获取当前租户的`Shell`。租户是应用程序的实例，就用户而言是孤立的，但它们在同一个应用程序域中运行，从而提高了站点密度。外壳是租户级别的单身人士，实际上可以说代表租户。它的目标是有效地提供租户级隔离，同时保持模块编程模型不受多租户的影响。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The shell, once created, will get the list of available extensions from the `ExtensionManager`. Extensions are modules and themes. The default implementation is scanning the modules and themes directories for extensions.
+
+ <font color=#0099ff size=4 face="黑体">shell一旦创建，将从`ExtensionManager`获取可用扩展名列表。扩展是模块和主题。默认实现是扫描模块和主题目录以获取扩展。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+At the same time, the shell will get the list of settings for the tenant from the `ShellSettingsManager`. The default implementation gets the settings from the appropriate subfolder of `App_Data` but alternative implementations can get those from different places. For example, we have an Azure implementation that is using blob storage instead because `App_Data` is not reliably writable in that environment.
+
+ <font color=#0099ff size=4 face="黑体">同时，shell将从`ShellSettingsManager`获取租户的设置列表。默认实现从“App_Data”的相应子文件夹中获取设置，但是替代实现可以从不同的位置获取这些设置。例如，我们有一个使用blob存储的Azure实现，因为`App_Data`在该环境中不可靠。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The shell then gets the `CompositionStrategy` object and uses it to prepare the IoC container from the list of available extensions for the current host and from the settings for the current tenant. The result of this is not an IoC container for the shell, it is a `ShellBlueprint`, which is a list of dependency, controller and record blueprints.
+
+ <font color=#0099ff size=4 face="黑体">然后shell获取`CompositionStrategy`对象，并使用它从当前主机的可用扩展列表和当前租户的设置中准备IoC容器。结果不是shell的IoC容器，它是一个`ShellBlueprint`，它是依赖，控制器和记录蓝图的列表。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The list of `ShellSettings` (that are per-tenant) and the `ShellBluePrint` are then thrown into `ShellContainerFactory.CreateContainer` to get an `ILifetimeScope`, which is basically enabling the IoC container to be scoped at the tenant level so that modules can get injected dependencies that are scoped for the current tenant without having to do anything specific.
+
+ <font color=#0099ff size=4 face="黑体">然后将`ShellSettings`列表（即per-tenant）和`ShellBluePrint`列入`ShellContainerFactory.CreateContainer`以获得`ILifetimeScope`，这基本上使IoC容器能够在租户级别进行作用，以便模块可以获取为当前租户确定范围的注入依赖项，而无需执行任何特定操作。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Dependency Injection
+
+## <font color=#0099ff size=4 face="黑体">依赖注入</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The standard way of creating injectable dependencies in Orchard is to create an interface that derives from `IDependency` or one of its derived interfaces and then to implement that interface. On the consuming side, you can take a parameter of the interface type in your constructor. The application framework will discover all dependencies and will take care of instantiating and injecting instances as needed.
+
+ <font color=#0099ff size=4 face="黑体">在Orchard中创建可注入依赖项的标准方法是创建一个从“IDependency”或其派生接口派生的接口，然后实现该接口。在消费方面，您可以在构造函数中获取接口类型的参数。应用程序框架将发现所有依赖项，并将根据需要负责实例化和注入实例。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+There are three different possible scopes for dependencies, and choosing one is done by deriving from the right interface:
+
+ <font color=#0099ff size=4 face="黑体">依赖关系有三种不同的可能范围，选择一种范围是通过从正确的接口派生来完成的：</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+- _Request_: a dependency instance is created for each new HTTP request and is destroyed once the request has been processed. Use this by deriving your interface from `IDependency`. The object should be reasonably cheap to create.
+
+- <font color=#0099ff size=4 face="黑体">_Request_：为每个新的HTTP请求创建一个依赖项实例，并在处理完请求后销毁。通过从`IDependency`派生您的接口来使用它。该对象应该相当便宜创建。</font> 
+
+
+- _Object_: a new instance is created every single time an object takes a dependency on the interface. Instances are never shared. Use this by deriving from `ITransientDependency`. The objects must be extremely cheap to create.
+
+- <font color=#0099ff size=4 face="黑体">_Object_：每次对象对接口具有依赖关系时，都会创建一个新实例。实例永远不会共享。通过从`ITransientDependency`派生来使用它。创建对象必须非常便宜。</font> 
+
+
+- _Shell_: only one instance is created per shell/tenant. Use this by deriving from `ISingletonDependency`. Only use this for objects that must maintain a common state for the lifetime of the shell.
+
+- <font color=#0099ff size=4 face="黑体">_Shell_：每个shell / tenant只创建一个实例。通过从`ISingletonDependency`派生来使用它。仅用于必须在shell的生命周期内保持公共状态的对象。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+### Replacing Existing Dependencies
+
+## <font color=#0099ff size=4 face="黑体">替换现有的依赖项</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+It is possible to replace existing dependencies by decorating your class with the `OrchardSuppressDependency` attribute, that takes the fully-qualified type name to replace as an argument.
+
+ <font color=#0099ff size=4 face="黑体">可以通过使用`OrchardSuppressDependency`属性来修改类来替换现有的依赖项，该属性将完全限定的类型名称替换为参数。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+### Ordering Dependencies
+
+## <font color=#0099ff size=4 face="黑体">订购依赖关系</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Some dependencies are not unique but rather are parts of a list. For example, handlers are all active at the same time. In some cases you will want to modify the order in which such dependencies get consumed. This can be done by modifying the manifest for the module, using the `Priority` property of the feature. Here is an example of this:
+
+ <font color=#0099ff size=4 face="黑体">某些依赖项不是唯一的，而是列表的一部分。例如，处理程序同时处于活动状态。在某些情况下，您需要修改此类依赖项的使用顺序。这可以通过使用功能的“Priority”属性修改模块的清单来完成。这是一个例子：</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+
+
+    Features:
+
+        Orchard.Widgets.PageLayerHinting:
+
+            Name: Page Layer Hinting
+
+            Description: ...
+
+            Dependencies: Orchard.Widgets
+
+            Category: Widget
+
+            Priority: -1
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## ASP.NET MVC
+
+## <font color=#0099ff size=4 face="黑体">ASP.NET MVC</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Orchard is built on ASP.NET MVC but in order to add things like theming and tenant isolation, it needs to introduce an additional layer of indirection that will present on the ASP.NET MVC side the concepts that it expects and that will on the Orchard side split things on the level of Orchard concepts.
+
+ <font color=#0099ff size=4 face="黑体">Orchard是基于ASP.NET MVC构建的，但是为了添加主题和租户隔离之类的东西，它需要引入一个额外的间接层，它将在ASP.NET MVC端提供它所期望的概念以及它在Orchard上的概念在乌节概念层面上分裂的东西。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+For example, when a specific view is requested, our `LayoutAwareViewEngine` kicks in. Strictly speaking, it's not a new view engine as it is not concerned with actual rendering, but it contains the logic to find the right view depending on the current theme and then it delegates the rendering work to actual view engines.
+
+ <font color=#0099ff size=4 face="黑体">例如，当请求特定视图时，我们的`LayoutAwareViewEngine`就会启动。严格来说，它不是新的视图引擎，因为它不关心实际渲染，但它包含根据当前主题查找正确视图的逻辑然后它将渲染工作委托给实际的视图引擎。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Similarly, we have route providers, model binders and controller factories whose work is to act as a single entry point for ASP.NET MVC and to dispatch the calls to the properly scoped objects underneath.
+
+ <font color=#0099ff size=4 face="黑体">类似地，我们有路由提供程序，模型绑定程序和控制器工厂，它们的工作是充当ASP.NET MVC的单个入口点，并将调用分派给下面的正确范围的对象。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+In the case of routes, we can have `n` providers of routes (typically coming from modules) and one route publisher that will be what talks to ASP.NET MVC. The same thing goes for model binders and controller factories.
+
+ <font color=#0099ff size=4 face="黑体">在路由的情况下，我们可以有`n`路由提供者（通常来自模块）和一个路由发布者，它将与ASP.NET MVC进行对话。模型粘合剂和控制器工厂也是如此。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Content Type System
+
+## <font color=#0099ff size=4 face="黑体">内容类型系统</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Contents in Orchard are managed under an actual type system that is in some ways richer and more dynamic than the underlying .NET type system, in order to provide the flexibility that is necessary in a Web CMS: types must be composed on the fly at runtime and reflect the concerns of content management.
+
+ <font color=#0099ff size=4 face="黑体">Orchard中的内容在实际类型系统下进行管理，该系统在某些方面比底层.NET类型系统更丰富，更动态，以便提供Web CMS中必需的灵活性：类型必须在运行时动态组合并反映内容管理的关注点。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+### Types, Parts, and Fields
+
+## <font color=#0099ff size=4 face="黑体">类型，部件和字段</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Orchard can handle arbitrary content types, including some that are dynamically created by the site administrator in a code-free manner. Those _content types_ are aggregations of _content parts_ that each deal with a particular concern. The reason for that is that many concerns span more than one content type.
+
+ <font color=#0099ff size=4 face="黑体">Orchard可以处理任意内容类型，包括由站点管理员以无代码方式动态创建的内容类型。那些_content types_是_content parts_的聚合，每个都处理一个特定的问题。原因是许多问题涉及多种内容类型。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+For example, a blog post, a product and a video clip might all have a routable address, comments and tags. For that reason, the routable address, comments and tags are each treated in Orchard as a separate content part. This way, the comment management module needs to be developed only once, and can be applied to arbitrary content types, including those that the author of the commenting module did not know about.
+
+ <font color=#0099ff size=4 face="黑体">例如，博客文章，产品和视频剪辑可能都有可路由的地址，评论和标签。出于这个原因，可路由的地址，注释和标签在Orchard中作为单独的内容部分处理。这样，评论管理模块只需要开发一次，并且可以应用于任意内容类型，包括评论模块的作者不知道的内容类型。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Parts themselves can have _properties_ and _content fields_. Content fields are also reusable in the same way that parts are: a specific field type will be typically used by several part and content types. The difference between parts and fields resides in the scale at which they operate and in their semantics.
+
+ <font color=#0099ff size=4 face="黑体">零件本身可以有_properties_和_content fields_。内容字段也可以与部件相同的方式重复使用：特定字段类型通常由多个部件和内容类型使用。部件和字段之间的区别在于它们的操作规模和语义。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Fields are a finer grain than parts. For example, a field type might describe a phone number or a coordinate, whereas a part would typically describe a whole concern such as commenting or tagging.
+
+ <font color=#0099ff size=4 face="黑体">田地比零件更精细。例如，字段类型可能描述电话号码或坐标，而部分通常会描述整个问题，例如评论或标记。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+But the important difference here is semantics: you want to write a part if it implements an **is a** relationship, and you would write a field if it implements a **has a** relationship.
+
+ <font color=#0099ff size=4 face="黑体">但是这里的重要区别是语义：如果它实现**是一个**关系，你想编写一个部分，如果它实现一个**有一个**关系，你会写一个字段。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+For example, a shirt **is a** product and it **has a** SKU and a price. You wouldn't say that a shirt has a product or that a shirt is a price or a SKU.
+
+ <font color=#0099ff size=4 face="黑体">例如，衬衫**是**产品，** **具有** SKU和价格。你不会说衬衫有产品或衬衫是价格还是SKU。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+From that you know that the _Shirt_ content type will be made of a _Product_ part, and that the _Product_ part will be made from a _Money_ field named "price" and a _String_ field named SKU.
+
+ <font color=#0099ff size=4 face="黑体">由此您知道_Shirt_内容类型将由_Product_部分组成，_Product_部分将由名为“price”的_Money_字段和名为SKU的_String_字段组成。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Another difference is that you have only one part of a given type per content type, which makes sense in light of the "is a" relationship, whereas a part can have any number of fields of a given type. Another way of saying that is that fields on a part are a dictionary of strings to values of the field's type, whereas the content type is a list of part types (without names).
+
+ <font color=#0099ff size=4 face="黑体">另一个区别是每个内容类型只有一个给定类型的一部分，这根据“是一个”关系是有意义的，而一个部分可以有给定类型的任意数量的字段。另一种说法是，部分字段是字符串字典，字段类型的值，而内容类型是部分类型列表（没有名称）。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+This gives another way of choosing between part and field: if you think people would want more than one instance of your object per content type, it needs to be a field.
+
+ <font color=#0099ff size=4 face="黑体">这提供了另一种在部分和字段之间进行选择的方法：如果您认为人们每个内容类型需要多个对象实例，则它需要是一个字段。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+### Anatomy of a Content Type
+
+## <font color=#0099ff size=4 face="黑体">内容类型的剖析</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+A _content type_, as we've seen, is built from _content parts_. Content parts, code-wise, are typically associated with:
+
+ <font color=#0099ff size=4 face="黑体">正如我们所见，_content type_是从_content parts_构建的。代码方面的内容部分通常与以下内容相关联：</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+- a Record, which is a POCO representation of the part's data
+
+- <font color=#0099ff size=4 face="黑体">记录，是部件数据的POCO表示</font> 
+
+
+- a model class that is the actual part and that derives from `ContentPart<T>`, where `T` is the record type
+
+- <font color=#0099ff size=4 face="黑体">一个模型类，它是实际的部分，派生自`ContentPart <T>`，其中`T`是记录类型</font> 
+
+
+- a repository. The repository does not need to be implemented by the module author as Orchard will be able to just use a generic one.
+
+- <font color=#0099ff size=4 face="黑体">存储库。存储库不需要由模块作者实现，因为Orchard将只能使用通用存储库。</font> 
+
+
+- handlers. Handlers implement `IContentHandler` and are a set of event handlers such as `OnCreated` or `OnSaved`. Basically, they hook onto the content item's lifecycle to perform a number of tasks. They can also participate in the actual composition of the content items from their constructors. There is a `Filters` collection on the base `ContentHandler` that enables the handler to add common behavior to the content type.  
+
+- <font color=#0099ff size=4 face="黑体">处理程序。处理程序实现`IContentHandler`并且是一组事件处理程序，例如`OnCreated`或`OnSaved`。基本上，他们挂钩内容项的生命周期来执行许多任务。他们还可以参与构造者的内容项的实际组成。在基础`ContentHandler`上有一个`Filters`集合，它使处理程序能够为内容类型添加常见行为。</font> 
+
+
+  For example, Orchard provides a `StorageFilter` that makes it very easy to declare how persistence of a content part should be handled: just do `Filters.Add(StorageFilter.For(myPartRepository));` and Orchard will take care of persisting to the database the data from `myPartRepository`.  
+
+   <font color=#0099ff size=4 face="黑体">例如，Orchard提供了一个`StorageFilter`，它可以很容易地声明应该如何处理内容部分的持久性：只需执行`Filters.Add（StorageFilter.For（myPartRepository））;`和Orchard将保持持久化数据库来自`myPartRepository`的数据。</font> 
+
+
+  Another example of a filter is the `ActivatingFilter` that is in charge of doing the actual welding of parts onto a type: calling `Filters.Add(new ActivatingFilter<BodyAspect>(BlogPostDriver.ContentType.Name));` adds the body content part to blog posts.
+
+   <font color=#0099ff size=4 face="黑体">过滤器的另一个例子是`ActivatingFilter`，它负责将部件实际焊接到一个类型上：调用`Filters.Add（new ActivatingFilter <BodyAspect>（BlogPostDriver.ContentType.Name））;`添加正文内容博客文章的一部分。</font> 
+
+
+- drivers. Drivers are friendlier, more specialized handlers (and as a consequence less flexible) and are associated with a specific content part type (they derive from `ContentPartDriver<T>` where `T` is a content part type). Handlers on the other hand do not have to be specific to a content part type. Drivers can be seen as controllers for a specific part. They typically build shapes to be rendered by the theme engine.
+
+- <font color=#0099ff size=4 face="黑体">驱动程序。驱动程序是更友好，更专业的处理程序（因此更不灵活）并且与特定内容部件类型相关联（它们来自`ContentPartDriver <T>`其中`T`是内容部件类型）。另一方面，处理程序不必特定于内容部件类型。可以将驱动程序视为特定部件的控制器。它们通常构建由主题引擎呈现的形状。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Content Manager
+
+## <font color=#0099ff size=4 face="黑体">内容管理者</font> ##
+
+
+All contents are accessed in Orchard through the `ContentManager` object, which is how it becomes possible to use contents of a type you don't know in advance.
+
+ <font color=#0099ff size=4 face="黑体">所有内容都通过`ContentManager`对象在Orchard中访问，这就是如何使用您事先不知道的类型的内容。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+`ContentManager` has methods to query the content store, to version contents and to manage their publication status.
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Transactions
+
+## <font color=#0099ff size=4 face="黑体">交易</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Orchard automatically creates a transaction for each HTTP request. That means that all operations that happen during a request are part of an "ambient" transaction. If code during that request aborts that transaction, all data operations will be rolled back. If the transaction is never explicitly cancelled on the other hand, all operations get committed at the end of the request without an explicit commit.
+
+ <font color=#0099ff size=4 face="黑体">Orchard自动为每个HTTP请求创建一个事务。这意味着请求期间发生的所有操作都是“环境”事务的一部分。如果该请求期间的代码中止该事务，则将回滚所有数据操作。如果事务从未明确取消，则所有操作都会在请求结束时提交，而不会显式提交。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Request Lifecycle
+
+## <font color=#0099ff size=4 face="黑体">请求生命周期</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+In this section, we'll take the example of a request for a specific blog post.
+
+ <font color=#0099ff size=4 face="黑体">在本节中，我们将以特定博客帖子的请求为例。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+When a request comes in for a specific blog post, the application first looks at the available routes that have been contributed by the various modules and finds the blog module's matching route. The route can then resolve the request to the blog post controller's item action, which will look up the post from the content manager. The action then gets a Page Object Model (POM) from the content manager (by calling `BuildDisplay`) based on the main object for that request, the post that was retrieved from the content manager.
+
+ <font color=#0099ff size=4 face="黑体">当针对特定博客帖子发出请求时，应用程序首先查看各个模块提供的可用路由，并查找博客模块的匹配路由。然后，路由可以将请求解析为博客帖子控制器的项目操作，该操作将从内容管理器中查找帖子。然后，该操作从内容管理器（通过调用`BuildDisplay`）获取基于该请求的主对象（从内容管理器检索的帖子）的页面对象模型（POM）。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+A blog post has its own controller, but that is not the case for all content types. For example, dynamic content types will be served by the more generic `ItemController` from the Core `Routable` part. The `Display` action of the `ItemController` does almost the same thing that the blog post controller was doing: it gets the content item from the content manager by slug and then builds the POM from the results.
+
+ <font color=#0099ff size=4 face="黑体">博客文章有自己的控制器，但并非所有内容类型都是如此。例如，动态内容类型将由Core`Routable`部分中更通用的`ItemController`提供。 `ItemController`的`Display`动作几乎与博客文章控制器正在做的事情相同：它通过slug从内容管理器获取内容项，然后从结果中构建POM。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The layout view engine will then resolve the right view depending on the current theme and using the model's type together with Orchard conventions on view naming.
+
+ <font color=#0099ff size=4 face="黑体">然后，布局视图引擎将根据当前主题解析右视图，并在视图命名上使用模型的类型和Orchard约定。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Within the view, more dynamic shape creation can happen, such as zone definitions.
+
+ <font color=#0099ff size=4 face="黑体">在视图中，可以发生更多动态形状创建，例如区域定义。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The actual rendering is done by the theme engine that is going to find the right template or shape method to render each of the shapes it encounters in the POM, in order of appearance and recursively.
+
+ <font color=#0099ff size=4 face="黑体">实际渲染由主题引擎完成，主题引擎将按照外观和递归的顺序找到正确的模板或形状方法，以呈现它在POM中遇到的每个形状。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Widgets
+
+## <font color=#0099ff size=4 face="黑体">小工具</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Widgets are content types that have the `Widget` content part and the `widget` stereotype. Like any other content type, they are composed of parts and fields. That means that they can be edited using the same edition and rendering logic as other content types. They also share the same building blocks, which means that any existing content part can potentially be reused as part of a widget almost for free.
+
+ <font color=#0099ff size=4 face="黑体">窗口小部件是具有“窗口小部件”内容部分和“窗口小部件”构造型的内容类型。与任何其他内容类型一样，它们由部分和字段组成。这意味着可以使用与其他内容类型相同的版本和渲染逻辑来编辑它们。它们也共享相同的构建块，这意味着任何现有的内容部分都可以作为窗口小部件的一部分重新使用，几乎是免费的。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Widgets are added to pages through _widget layers_. Layers are sets of widgets. They have a name, a rule that determines what pages of the site they should appear on, and a list of widgets and associated zone placement and ordering, and settings.
+
+ <font color=#0099ff size=4 face="黑体">窗口小部件通过_widget layers_添加到页面。图层是一组小部件。它们有一个名称，一个规则，用于确定它们应显示在哪个页面上，以及一个窗口小部件列表以及相关的区域放置和排序以及设置。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The rules attached to each of the layers are expressed with IronRuby expressions. Those expressions can use any of the `IRuleProvider` implementations in the application. Orchard ships with two out of the box implementations: "url" and "authenticated".
+
+ <font color=#0099ff size=4 face="黑体">附加到每个层的规则用IronRuby表达式表示。这些表达式可以使用应用程序中的任何`IRuleProvider`实现。 Orchard附带两个开箱即用的实现：“url”和“authenticated”。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Site Settings
+
+## <font color=#0099ff size=4 face="黑体">网站设置</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+A site in Orchard is a content item, which makes it possible for modules to weld additional parts. This is how modules can contribute site settings.
+
+ <font color=#0099ff size=4 face="黑体">Orchard中的站点是一个内容项，使模块可以焊接其他部件。这就是模块可以提供站点设置的方式。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Site settings are per tenant.
+
+ <font color=#0099ff size=4 face="黑体">网站设置是每个租户。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Event Bus
+
+## <font color=#0099ff size=4 face="黑体">活动巴士</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Orchard and its modules expose extensibility points by creating interfaces for dependencies, implementations of which can then get injected.
+
+ <font color=#0099ff size=4 face="黑体">Orchard及其模块通过为依赖项创建接口来公开可扩展性点，然后可以实现其实现。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Plugging into an extensibility point is done either by implementing its interface, or by implementing an interface that has the same name and the same methods. In other words, Orchard does not require strictly strongly typed interface correspondence, which enables plug-ins to extend an extensibility point without taking a dependency on the assembly where it's defined.
+
+ <font color=#0099ff size=4 face="黑体">插入扩展点可以通过实现其接口，也可以通过实现具有相同名称和相同方法的接口来完成。换句话说，Orchard不需要严格强类型的接口通信，这使插件能够扩展可扩展点而不依赖于定义它的程序集。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+This is just one implementation of the Orchard event bus. When an extensibility point calls into injected implementations, a message gets published on the event bus. One of the objects listening to the event bus dispatches the messages to the methods in classes that derive from an interface appropriately named.
+
+ <font color=#0099ff size=4 face="黑体">这只是Orchard事件总线的一个实现。当可扩展点调用注入的实现时，将在事件总线上发布消息。侦听事件总线的对象之一将消息调度到类中的方法，这些类派生自适当命名的接口。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Commands
+
+## <font color=#0099ff size=4 face="黑体">命令</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Many actions on an Orchard site can be performed from the command line as well as from the admin UI. These commands are exposed by the methods of classes implementing `ICommandHandler` that are decorated with a `CommandName` attribute.
+
+ <font color=#0099ff size=4 face="黑体">可以从命令行以及管理UI执行Orchard站点上的许多操作。这些命令由实现`ICommandHandler`的类的方法公开，这些类使用`CommandName`属性进行修饰。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The Orchard command line tool discovers available commands at runtime by simulating the web site environment and inspecting the assemblies using reflection. The environment in which the commands run is as close as possible to the actual running site.
+
+ <font color=#0099ff size=4 face="黑体">Orchard命令行工具通过模拟Web站点环境并使用反射检查程序集，在运行时发现可用命令。命令运行的环境尽可能接近实际运行的站点。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Search and Indexing
+
+## <font color=#0099ff size=4 face="黑体">搜索和索引</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Search and indexing are implemented using Lucene by default, although that default implementation could be replaced with another indexing engine.
+
+ <font color=#0099ff size=4 face="黑体">默认情况下，使用Lucene实现搜索和索引，但默认实现可以替换为另一个索引引擎。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Caching
+
+## <font color=#0099ff size=4 face="黑体">高速缓存</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The cache in Orchard relies on the ASP.NET cache, but we expose a helper API that can be used through a dependency of type `ICache`, by calling the `Get` method. `Get` takes a key and a function that can be used to generate the cache entry's value if the cache doesn't already contain the requested entry.
+
+ <font color=#0099ff size=4 face="黑体">Orchard中的缓存依赖于ASP.NET缓存，但我们通过调用`Get`方法公开了一个可以通过类型`ICache`的依赖项使用的辅助API。如果缓存尚未包含所请求的条目，则“Get”接受一个键和一个可用于生成缓存条目值的函数。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The main advantage of using the Orchard API for caching is that it works per tenant transparently.
+
+ <font color=#0099ff size=4 face="黑体">使用Orchard API进行缓存的主要优点是它可以透明地为每个租户工作。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## File Systems
+
+## <font color=#0099ff size=4 face="黑体">文件系统</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The file system in Orchard is abstracted so that storage can be directed to the physical file system or to an alternate storage such as Azure blob storage, depending on the environment. The `Media` module is an example of a module which uses that abstracted file system.
+
+ <font color=#0099ff size=4 face="黑体">Orchard中的文件系统是抽象的，因此可以将存储定向到物理文件系统或Azure blob存储等备用存储，具体取决于环境。 “Media”模块是使用该抽象文件系统的模块的示例。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Users and Roles
+
+## <font color=#0099ff size=4 face="黑体">用户和角色</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Users in Orchard are content items (albeit not routable ones) which makes it easy for a profile module for example to extend them with additional fields.
+
+ <font color=#0099ff size=4 face="黑体">Orchard中的用户是内容项（尽管不是可路由的），这使得配置文件模块可以轻松地使用其他字段扩展它们。</font> 
+
+
+Roles are a content part that gets welded onto users.
+
+ <font color=#0099ff size=4 face="黑体">角色是一个内容部分，可以焊接到用户身上。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Permissions
+
+## <font color=#0099ff size=4 face="黑体">权限</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Every module can expose a set of permissions as well as how those permissions should be granted by default to Orchard's default roles.
+
+ <font color=#0099ff size=4 face="黑体">每个模块都可以公开一组权限，以及默认情况下如何将这些权限授予Orchard的默认角色。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Tasks
+
+## <font color=#0099ff size=4 face="黑体">任务</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Modules can schedule tasks by calling `CreateTask` on a dependency of type `IScheduledTaskManager`. The task can then be executed by implementing `IScheduledTaskHandler`. The `Process` method can examine the task type name and decide whether to handle it.
+
+ <font color=#0099ff size=4 face="黑体">模块可以通过在类型为“IScheduledTaskManager”的依赖项上调用“CreateTask”来调度任务。然后可以通过实现`IScheduledTaskHandler`来执行该任务。 `Process`方法可以检查任务类型名称并决定是否处理它。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Tasks are run on a separate thread that comes from the ASP.NET thread pool.
+
+ <font color=#0099ff size=4 face="黑体">任务在来自ASP.NET线程池的单独线程上运行。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Notifications
+
+## <font color=#0099ff size=4 face="黑体">通知</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Modules can surface messages to the admin UI by getting a dependency on `INotifier` and calling one of its methods. Multiple notifications can be created as part of any request.
+
+ <font color=#0099ff size=4 face="黑体">模块可以通过获取对“INotifier”的依赖并调用其中一个方法来向管理UI显示消息。可以在任何请求中创建多个通知。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Localization
+
+## <font color=#0099ff size=4 face="黑体">本土化</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Localization _of the application and its modules_ is done by wrapping string resources in a call to the T method: `@T("This string can be localized")`. See [Using the localization helpers](Using-the-localization-helpers) for more details and guidelines. Orchard's resource manager can load localized resource strings from `.po` files located in specific places in the application.
+
+ <font color=#0099ff size=4 face="黑体">应用程序及其modules_的本地化_是通过在调用T方法时包装字符串资源来完成的：`@T（“这个字符串可以被本地化”）`。有关详细信息和指南，请参阅[使用本地化帮助程序]（使用本地化帮助程序）。 Orchard的资源管理器可以从位于应用程序中特定位置的`.po`文件加载本地化资源字符串。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+_Content item_ localization is done through a different mechanism: localized versions of a content item are physically separate content items that are linked together by a special part.
+
+ <font color=#0099ff size=4 face="黑体">_Content item_本地化是通过不同的机制完成的：内容项的本地化版本是物理上独立的内容项，由特殊部分链接在一起。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The current culture to use is determined by the culture manager. The default implementation returns the culture that has been configured in site settings, but an alternate implementation could get it from the user profile or from the browser's settings.
+
+ <font color=#0099ff size=4 face="黑体">目前使用的文化由文化经理决定。默认实现返回已在站点设置中配置的区域性，但是备用实现可以从用户配置文件或浏览器的设置中获取。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+## Logging
+
+## <font color=#0099ff size=4 face="黑体">记录</font> ##
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Logging is done through a dependency of type `ILogger`. Different implementations can send the log entries to various storage types. Orchard comes with an implementation that uses [Castle.Core.Logging](https://github.com/castleproject/Windsor/blob/master/docs/logging-facility.md) for logging.
+
+ <font color=#0099ff size=4 face="黑体">记录是通过类型`ILogger`的依赖项完成的。不同的实现可以将日志条目发送到各种存储类型。 Orchard附带了一个使用[Castle.Core.Logging]（https://github.com/castleproject/Windsor/blob/master/docs/logging-facility.md）进行日志记录的实现。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+# Orchard Core
+
+# <font color=#0099ff size=4 face="黑体">果园核心</font> #
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The `Orchard.Core` assembly contains a set of modules that are necessary for Orchard to run. Other modules can safely take dependencies on these modules that will always be available.
+
+ <font color=#0099ff size=4 face="黑体">`Orchard.Core`程序集包含一组Orchard运行所必需的模块。其他模块可以安全地依赖于始终可用的这些模块。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Examples of core modules are `Feeds`, `Navigation` or `Dashboard`.
+
+ <font color=#0099ff size=4 face="黑体">核心模块的示例是“Feeds”，“Navigation”或“Dashboard”。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+# Modules
+
+# <font color=#0099ff size=4 face="黑体">模块</font> #
+
+
+The default distribution of Orchard comes with a number of built-in modules such as blogging or pages, but third party modules are being built as well.
+
+ <font color=#0099ff size=4 face="黑体">Orchard的默认发行版附带了许多内置模块，如博客或页面，但也正在构建第三方模块。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+A module is just an ASP.NET MVC area with a `Module.txt` file that is extending Orchard.
+
+ <font color=#0099ff size=4 face="黑体">模块只是一个ASP.NET MVC区域，其中包含一个扩展Orchard的`Module.txt`文件。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+A module typically contains event handlers, content types and their default rendering templates as well as some admin UI.
+
+ <font color=#0099ff size=4 face="黑体">模块通常包含事件处理程序，内容类型及其默认呈现模板以及一些管理UI。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Modules can be dynamically compiled from source code every time a change is made to their `.csproj` file or to one of the files that the csproj file references. This enables a "notepad" style of development that does not require explicit compilation by the developer or even the use of an IDE such as Visual Studio.
+
+ <font color=#0099ff size=4 face="黑体">每次对`.csproj`文件或csproj文件引用的文件之一进行更改时，可以从源代码动态编译模块。这使得“记事本”开发风格不需要开发人员进行显式编译，甚至不需要使用IDE等IDE。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Modules must be placed in the `Modules` folder (e.g. `Orchard.Web/Modules/MyModule`) and the folder name *must* match the name of the compiled DLL produced by the project.  So, if you have a custom module project called `My.Custom.Module.csproj` and it compiles to `My.Custom.Module.dll`, then the module root folder must be named `My.Custom.Module`. [`~/Modules/My.Custom.Module/`]. There is support for defining [Custom Folders](Orchard-module-loader-and-dynamic-compilation#custom-folders).
+
+ <font color=#0099ff size=4 face="黑体">模块必须放在`Modules`文件夹中（例如`Orchard.Web / Modules / MyModule`），文件夹名*必须*与项目生成的编译DLL的名称相匹配。因此，如果您有一个名为“My.Custom.Module.csproj”的自定义模块项目并且它编译为“My.Custom.Module.dll”，那么模块根文件夹必须命名为“My.Custom.Module”。 [`〜/模块/ My.Custom.Module /`]。支持定义[自定义文件夹]（Orchard-module-loader-and-dynamic-compilation＃custom-folders）。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+# Themes
+
+# <font color=#0099ff size=4 face="黑体">主题</font> #
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+It is a basic design principle in Orchard that all the HTML that it produces can be replaced from themes, including markup produced by modules. Conventions define what files must go where in the theme's file hierarchy.
+
+ <font color=#0099ff size=4 face="黑体">Orchard的一个基本设计原则是它生成的所有HTML都可以从主题中替换，包括模块生成的标记。约定定义了主题文件层次结构中必须包含的文件。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The whole rendering mechanism in Orchard is based on _shapes_. The theme engine's job is to find the current theme and, given that theme, determine what the best way to render each shape is. Each shape can have a default rendering that may be defined by a module as a template in the _views_ folder or as a shape method in code. That default rendering may be overridden by the current theme. The theme does that by having its own version of a template for that shape or its own shape method for that shape.
+
+ <font color=#0099ff size=4 face="黑体">Orchard中的整个渲染机制基于_shapes_。主题引擎的工作是找到当前主题，并根据该主题确定渲染每个形状的最佳方式。每个形状都可以具有默认渲染，可以将模块定义为_views_文件夹中的模板，也可以定义为代码中的形状方法。当前主题可以覆盖默认渲染。主题是通过为该形状创建自己的模板版本或者为该形状创建自己的形状方法。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Themes can have a parent, which enables child themes to be specializations or adaptations of a parent theme. Orchard comes with a base theme called the _Theme Machine_ that has been designed to make it easy to use as a parent theme.
+
+ <font color=#0099ff size=4 face="黑体">主题可以具有父级，父级可以使子主题成为父主题的特化或修改。 Orchard附带一个名为_Theme Machine_的基本主题，旨在使其易于用作父主题。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+Themes can contain code in much the same way modules do: they can have their own `.csproj` file and benefit from dynamic compilation. This enables themes to define shape methods, but also to expose admin UI for any settings they may have.
+
+ <font color=#0099ff size=4 face="黑体">主题可以包含与模块大致相同的代码：它们可以拥有自己的`.csproj`文件，并从动态编译中受益。这使主题可以定义形状方法，但也可以显示管理UI以获取它们可能具有的任何设置。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+The selection of the current theme is done by classes implementing `IThemeSelector`, which returns a theme name and a priority for any request. This allows many selectors to contribute to the choice of the theme. Orchard comes with four implementations of `IThemeSelector`:
+
+ <font color=#0099ff size=4 face="黑体">当前主题的选择由实现`IThemeSelector`的类完成，该类返回主题名称和任何请求的优先级。这允许许多选择器为主题的选择做出贡献。 Orchard附带了四个`IThemeSelector`实现：</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+- `SiteThemeSelector` selects the theme that is currently configured for the tenant or site with a low priority.
+
+- <font color=#0099ff size=4 face="黑体">`SiteThemeSelector`选择当前为租户或具有低优先级的站点配置的主题。</font> 
+
+
+- `AdminThemeSelector` takes over and returns the admin theme with a high priority whenever the current URL is an admin URL.
+
+- <font color=#0099ff size=4 face="黑体">只要当前URL是管理URL，“AdminThemeSelector”就会接管并返回具有高优先级的管理主题。</font> 
+
+
+- `PreviewThemeSelector` overrides the site's current theme with the theme being previewed if the current user is the one that initiated the theme preview.
+
+- <font color=#0099ff size=4 face="黑体">如果当前用户是启动主题预览的用户，则“PreviewThemeSelector”会覆盖网站的当前主题，并预览主题。</font> 
+
+
+- `SafeModeThemeSelector` is the only selector available when the application is in "safe mode", which happens typically during setup. It has a very low priority.
+
+- <font color=#0099ff size=4 face="黑体">当应用程序处于“安全模式”时，“SafeModeThemeSelector”是唯一可用的选择器，通常在安装过程中发生。它的优先级很低。</font> 
+
+
+
+
+
+ <font color=#0099ff size=4 face="黑体"></font> 
+
+
+An example of a theme selector might be one that promotes a mobile theme when the user agent is recognized to belong to a mobile device.
+
+ <font color=#0099ff size=4 face="黑体">主题选择器的示例可以是当用户代理被识别为属于移动设备时促销移动主题的示例。</font>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../First-steps-into-Orchard/" title="进入Orchard的第一步-First Steps into Orchard" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                进入Orchard的第一步-First Steps into Orchard
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Using-the-localization-helpers/" title="使用本地化提供程序-Using the Localization Providers" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                使用本地化提供程序-Using the Localization Providers
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright <a href="http://orchardproject.net">Orchard Project</a>.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.e72fd936.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../search/main.js"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-20757794-1","orchardproject.net"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>

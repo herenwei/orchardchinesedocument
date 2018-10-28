@@ -1,0 +1,3586 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../..">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>主题作者的UI指南- UI Guidelines for Theme Authors - Orchard 中文文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../#general-guidelines" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Orchard 中文文档" class="md-header-nav__button md-logo">
+          
+            <img src="../../images/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Orchard 中文文档
+              </span>
+              <span class="md-header-nav__topic">
+                主题作者的UI指南- UI Guidelines for Theme Authors
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/OrchardCMS/OrchardDoc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Orchard 中文文档" class="md-nav__button md-logo">
+      
+        <img src="../../images/logo.png" width="48" height="48">
+      
+    </a>
+    Orchard 中文文档
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/OrchardCMS/OrchardDoc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="主页-Home" class="md-nav__link">
+      主页-Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      入门-Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        入门-Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-Orchard/" title="安装Orchard-Installing Orchard" class="md-nav__link">
+      安装Orchard-Installing Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manually-installing-Orchard-zip-file/" title="手动安装Orchard-Manually Installing Orchard" class="md-nav__link">
+      手动安装Orchard-Manually Installing Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Working-with-Orchard-in-WebMatrix/" title="在WebMatrix中与Orchard合作-Working with Orchard in WebMatrix" class="md-nav__link">
+      在WebMatrix中与Orchard合作-Working with Orchard in WebMatrix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-around-the-dashboard/" title="绕过仪表板-Getting Around the Dashboard" class="md-nav__link">
+      绕过仪表板-Getting Around the Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started/" title="建立你的第一个Orchard网站-Building Your First Orchard Site" class="md-nav__link">
+      建立你的第一个Orchard网站-Building Your First Orchard Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Navigation-and-menus/" title="导航和菜单-Navigation and Menus" class="md-nav__link">
+      导航和菜单-Navigation and Menus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-a-Blog-to-Your-Site/" title="添加博客到您的网站-Adding a Blog to Your Site" class="md-nav__link">
+      添加博客到您的网站-Adding a Blog to Your Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-Pages-to-Your-Site/" title="向您的网站添加页面-Adding Pages to Your Site" class="md-nav__link">
+      向您的网站添加页面-Adding Pages to Your Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-and-managing-media-content/" title="添加和管理媒体内容-Adding and Managing Media Content" class="md-nav__link">
+      添加和管理媒体内容-Adding and Managing Media Content
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Managing-widgets/" title="管理小部件-Managing Widgets" class="md-nav__link">
+      管理小部件-Managing Widgets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Organizing-content-with-tags/" title="使用标签组织内容-Organizing Content Using Tags" class="md-nav__link">
+      使用标签组织内容-Organizing Content Using Tags
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      关于该项目-About the Project
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        关于该项目-About the Project
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic-Orchard-Concepts/" title="Orchard概念定义-Orchard Concept Definitions" class="md-nav__link">
+      Orchard概念定义-Orchard Concept Definitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Builtin-Features/" title="内置模块和功能-Built-in modules and features" class="md-nav__link">
+      内置模块和功能-Built-in modules and features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Feature-roadmap/" title="功能路线图-Feature roadmap" class="md-nav__link">
+      功能路线图-Feature roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Frequently-asked-questions/" title="经常问的问题-Frequently Asked Questions" class="md-nav__link">
+      经常问的问题-Frequently Asked Questions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      创作网站-Authoring Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        创作网站-Authoring Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Blogging-with-LiveWriter/" title="使用LiveWriter进行博客-Blogging with LiveWriter" class="md-nav__link">
+      使用LiveWriter进行博客-Blogging with LiveWriter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-global-ready-applications/" title="创建全球就绪应用程序-Creating Global-Ready Applications" class="md-nav__link">
+      创建全球就绪应用程序-Creating Global-Ready Applications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Search-and-indexing/" title="搜索和索引-Search and Indexing" class="md-nav__link">
+      搜索和索引-Search and Indexing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Saving-scheduling-and-publishing-drafts/" title="发布草稿-Publishing Drafts" class="md-nav__link">
+      发布草稿-Publishing Drafts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-custom-content-types/" title="创建自定义内容类型-Creating Custom Content Types" class="md-nav__link">
+      创建自定义内容类型-Creating Custom Content Types
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      自定义网站-Customizing Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        自定义网站-Customizing Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Previewing-and-applying-a-theme/" title="预览和应用主题-Previewing and Applying a Theme" class="md-nav__link">
+      预览和应用主题-Previewing and Applying a Theme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-themes/" title="安装主题-Installing Themes" class="md-nav__link">
+      安装主题-Installing Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Customizing-the-default-theme/" title="定制主题-Customizing Themes" class="md-nav__link">
+      定制主题-Customizing Themes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      使用Orchard画廊-Using the Orchard Gallery
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        使用Orchard画廊-Using the Orchard Gallery
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Gallery-overview/" title="图库概述-Gallery Overview" class="md-nav__link">
+      图库概述-Gallery Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-modules-and-themes-from-the-gallery/" title="安装模块和主题-Installing Modules and Themes" class="md-nav__link">
+      安装模块和主题-Installing Modules and Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Browsing-the-gallery-web-site/" title="浏览图库网站-Browsing the Gallery Web Site" class="md-nav__link">
+      浏览图库网站-Browsing the Gallery Web Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-a-module-or-theme-to-the-gallery/" title="贡献到画廊-Contributing to the Gallery" class="md-nav__link">
+      贡献到画廊-Contributing to the Gallery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Module-gallery-feeds/" title="注册其他图库供稿-Registering Additional Gallery Feeds" class="md-nav__link">
+      注册其他图库供稿-Registering Additional Gallery Feeds
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      管理网站-Managing Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        管理网站-Managing Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Enabling-and-disabling-features/" title="启用和禁用功能-Enabling and Disabling Features" class="md-nav__link">
+      启用和禁用功能-Enabling and Disabling Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-the-command-line-interface/" title="使用命令行界面-Using the Command-Line Interface" class="md-nav__link">
+      使用命令行界面-Using the Command-Line Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-and-upgrading-modules/" title="安装和升级模块-Installing and Upgrading Modules" class="md-nav__link">
+      安装和升级模块-Installing and Upgrading Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Modifying-site-settings/" title="修改站点设置-Modifying Site Settings" class="md-nav__link">
+      修改站点设置-Modifying Site Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Moderating-comments/" title="审核评论-Moderating Comments" class="md-nav__link">
+      审核评论-Moderating Comments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Managing-users-and-roles/" title="管理用户和角色-Managing Users and Roles" class="md-nav__link">
+      管理用户和角色-Managing Users and Roles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-permissions/" title="了解权限-Understanding Permissions" class="md-nav__link">
+      了解权限-Understanding Permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Making-a-Web-Site-Recipe/" title="制作网站食谱-Making a Website Recipe" class="md-nav__link">
+      制作网站食谱-Making a Website Recipe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-an-image-gallery/" title="创建图库-Creating an Image Gallery" class="md-nav__link">
+      创建图库-Creating an Image Gallery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Workflows/" title="工作流程-Workflows" class="md-nav__link">
+      工作流程-Workflows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Projection/" title="投影-Projection" class="md-nav__link">
+      投影-Projection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-Custom-Forms/" title="创建自定义表单-Create Custom Forms" class="md-nav__link">
+      创建自定义表单-Create Custom Forms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-Dynamic-Forms/" title="创建动态表单-Create Dynamic Forms" class="md-nav__link">
+      创建动态表单-Create Dynamic Forms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Rules-to-conditionally-display-content/" title="使用规则有条件地显示内容-Using Rules to conditionally display content" class="md-nav__link">
+      使用规则有条件地显示内容-Using Rules to conditionally display content
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      托管和部署网站-Hosting and Deploying Websites
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        托管和部署网站-Hosting and Deploying Websites
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Upgrading-a-site-to-a-new-version-of-Orchard/" title="将站点升级到新版本-Upgrading a Site to a New Version" class="md-nav__link">
+      将站点升级到新版本-Upgrading a Site to a New Version
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/" title="优化服务器性能-Optimizing Server Performance" class="md-nav__link">
+      优化服务器性能-Optimizing Server Performance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/" title="Orchard 1.7.1中Windows Azure的新增功能-What's New for Windows Azure in Orchard 1.7.1" class="md-nav__link">
+      Orchard 1.7.1中Windows Azure的新增功能-What's New for Windows Azure in Orchard 1.7.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploying-Orchard-to-Windows-Azure/" title="将Orchard部署到Windows Azure-Deploying Orchard to Windows Azure" class="md-nav__link">
+      将Orchard部署到Windows Azure-Deploying Orchard to Windows Azure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Windows-Azure-Blob-Storage/" title="使用Windows Azure Blob存储-Using Windows Azure Blob Storage" class="md-nav__link">
+      使用Windows Azure Blob存储-Using Windows Azure Blob Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Windows-Azure-Cache/" title="使用Windows Azure缓存-Using Windows Azure Cache" class="md-nav__link">
+      使用Windows Azure缓存-Using Windows Azure Cache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Running-Orchard-on-Mono/" title="在单声道上运行Orchard-Running Orchard on Mono" class="md-nav__link">
+      在单声道上运行Orchard-Running Orchard on Mono
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-a-multi-tenant-Orchard-site/" title="建立多租户Orchard网站-Setting Up a Multi-Tenant Orchard Site" class="md-nav__link">
+      建立多租户Orchard网站-Setting Up a Multi-Tenant Orchard Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-a-machine-key/" title="设置机器密钥-Setting Up a Machine Key" class="md-nav__link">
+      设置机器密钥-Setting Up a Machine Key
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      扩展Orchard-Extending Orchard
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        扩展Orchard-Extending Orchard
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../First-steps-into-Orchard/" title="进入Orchard的第一步-First Steps into Orchard" class="md-nav__link">
+      进入Orchard的第一步-First Steps into Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../How-Orchard-works/" title="Orchard如何运作-How Orchard Works" class="md-nav__link">
+      Orchard如何运作-How Orchard Works
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-the-localization-helpers/" title="使用本地化提供程序-Using the Localization Providers" class="md-nav__link">
+      使用本地化提供程序-Using the Localization Providers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Command-line-scaffolding/" title="命令行代码生成-Command-Line Code Generation" class="md-nav__link">
+      命令行代码生成-Command-Line Code Generation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Walkthrough-Writing-An-Orchard-Module/" title="编写Orchard模块-Writing an Orchard Module" class="md-nav__link">
+      编写Orchard模块-Writing an Orchard Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Building-a-hello-world-module/" title="构建Hello World模块-Building a Hello World Module" class="md-nav__link">
+      构建Hello World模块-Building a Hello World Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-a-module-with-a-simple-text-editor/" title="使用简单文本编辑器创建模块-Creating a Module with a Simple Text Editor" class="md-nav__link">
+      使用简单文本编辑器创建模块-Creating a Module with a Simple Text Editor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Writing-a-content-part/" title="编写内容部分-Writing a Content Part" class="md-nav__link">
+      编写内容部分-Writing a Content Part
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-a-custom-field-type/" title="编写内容字段-Writing a Content Field" class="md-nav__link">
+      编写内容字段-Writing a Content Field
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Packaging-and-sharing-a-module/" title="打包和共享模块-Packaging and Sharing a Module" class="md-nav__link">
+      打包和共享模块-Packaging and Sharing a Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Writing-a-widget/" title="写一个小工具-Writing a Widget" class="md-nav__link">
+      写一个小工具-Writing a Widget
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-types-from-code/" title="从代码创建类型-Creating Types from code" class="md-nav__link">
+      从代码创建类型-Creating Types from code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-1-n-and-n-n-relations/" title="创建1-N和N-N关系-Creating 1-N and N-N Relations" class="md-nav__link">
+      创建1-N和N-N关系-Creating 1-N and N-N Relations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manifest-files/" title="模块和主题的清单文件-Manifest Files for Modules and Themes" class="md-nav__link">
+      模块和主题的清单文件-Manifest Files for Modules and Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Processing-client-side-assets/" title="处理客户端资产-Processing Client-Side Assets" class="md-nav__link">
+      处理客户端资产-Processing Client-Side Assets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Caching/" title="高速缓存-Caching" class="md-nav__link">
+      高速缓存-Caching
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-custom-settings/" title="自定义网站设置-Custom Site Settings" class="md-nav__link">
+      自定义网站设置-Custom Site Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../WebApi-In-Orchard/" title="在Orchard的Web Api-Web Api in Orchard" class="md-nav__link">
+      在Orchard的Web Api-Web Api in Orchard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      模块入门课程-Getting Started with Modules Course
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        模块入门课程-Getting Started with Modules Course
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules/" title="模块入门-Getting Started with Modules" class="md-nav__link">
+      模块入门-Getting Started with Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-for-a-lesson/" title="设置课程-Setting up for a lesson" class="md-nav__link">
+      设置课程-Setting up for a lesson
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-1/" title="第1部分：构建静态小部件-Part 1: Build a Static Widget" class="md-nav__link">
+      第1部分：构建静态小部件-Part 1: Build a Static Widget
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-2/" title="第2部分：让小工具动态化-Part 2: Make the Widget Dynamic" class="md-nav__link">
+      第2部分：让小工具动态化-Part 2: Make the Widget Dynamic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-3/" title="第3部分：使用Orchard API-Part 3: Using the Orchard API" class="md-nav__link">
+      第3部分：使用Orchard API-Part 3: Using the Orchard API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-with-Modules-Part-4/" title="第4部分：应用最佳实践-Part 4: Applying Best Practices" class="md-nav__link">
+      第4部分：应用最佳实践-Part 4: Applying Best Practices
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      使用数据-Working with Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        使用数据-Working with Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-data-access/" title="了解数据访问-Understanding Data Access" class="md-nav__link">
+      了解数据访问-Understanding Data Access
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-content-handlers/" title="了解内容处理程序-Understanding Content Handlers" class="md-nav__link">
+      了解内容处理程序-Understanding Content Handlers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12" checked>
+    
+    <label class="md-nav__link" for="nav-12">
+      创造主题-Creating Themes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        创造主题-Creating Themes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Writing-a-new-theme/" title="写一个新主题 Writing a New Theme-" class="md-nav__link">
+      写一个新主题 Writing a New Theme-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Anatomy-of-a-theme/" title="主题剖析 The Anatomy of a Theme-" class="md-nav__link">
+      主题剖析 The Anatomy of a Theme-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Understanding-placement-info/" title="了解placement.info文件 Understanding the placement.info File-" class="md-nav__link">
+      了解placement.info文件 Understanding the placement.info File-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Accessing-and-rendering-shapes/" title="访问和渲染形状 Accessing and Rendering Shapes-" class="md-nav__link">
+      访问和渲染形状 Accessing and Rendering Shapes-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Alternates/" title="候补 Alternates-" class="md-nav__link">
+      候补 Alternates-
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Template-file-syntax-guide/" title="模板文件语法指南- Template File Syntax Guide" class="md-nav__link">
+      模板文件语法指南- Template File Syntax Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Processing-client-side-assets/" title="处理客户端资产- Processing Client-Side Assets" class="md-nav__link">
+      处理客户端资产- Processing Client-Side Assets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Packaging-and-sharing-themes/" title="包装和共享主题- Packaging and Sharing Themes" class="md-nav__link">
+      包装和共享主题- Packaging and Sharing Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="主题作者的UI指南- UI Guidelines for Theme Authors" class="md-nav__link md-nav__link--active">
+      主题作者的UI指南- UI Guidelines for Theme Authors
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Customizing-Orchard-using-Designer-Helper-Tools/" title="使用Designer Helper工具自定义Orchard- Customizing Orchard Using Designer Helper Tools" class="md-nav__link">
+      使用Designer Helper工具自定义Orchard- Customizing Orchard Using Designer Helper Tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      开发人员工具和指南- Developer Tools and Guidelines
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        开发人员工具和指南- Developer Tools and Guidelines
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Common-Issues/" title="常见问题- Common Issues" class="md-nav__link">
+      常见问题- Common Issues
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Developer-FAQ/" title="开发常见问题- Developer FAQ" class="md-nav__link">
+      开发常见问题- Developer FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-a-source-enlistment/" title="设置源登记- Setting Up a Source Enlistment" class="md-nav__link">
+      设置源登记- Setting Up a Source Enlistment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Building-and-deploying-Orchard-from-a-source-code-drop/" title="构建和部署Orchard -Building and deploying Orchard" class="md-nav__link">
+      构建和部署Orchard -Building and deploying Orchard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Source-code-organization/" title="源代码组织- Source Code Organization" class="md-nav__link">
+      源代码组织- Source Code Organization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-dependencies-and-libraries/" title="依赖关系和图书馆- Dependencies and Libraries" class="md-nav__link">
+      依赖关系和图书馆- Dependencies and Libraries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Code-conventions/" title="代码约定- Code Conventions" class="md-nav__link">
+      代码约定- Code Conventions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Visual-Studio-extensions-and-snippets/" title="Visual Studio扩展和片段- Visual Studio Extensions and Snippets" class="md-nav__link">
+      Visual Studio扩展和片段- Visual Studio Extensions and Snippets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Continuous-integration/" title="持续集成- Continuous Integration" class="md-nav__link">
+      持续集成- Continuous Integration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Merging-Pull-Requests/" title="合并拉请求- Merging Pull Requests" class="md-nav__link">
+      合并拉请求- Merging Pull Requests
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      其他主题 Additional Topics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        其他主题 Additional Topics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-module-loader-and-dynamic-compilation/" title="Orchard动态编译 Orchard Dynamic Compilation" class="md-nav__link">
+      Orchard动态编译 Orchard Dynamic Compilation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Configuring-email/" title="配置Email Configuring Email" class="md-nav__link">
+      配置Email Configuring Email
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      参与进来-Getting Involved
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        参与进来-Getting Involved
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-documentation/" title="贡献文档-Contributing Documentation" class="md-nav__link">
+      贡献文档-Contributing Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Documentation-Style-Guidelines/" title="文档样式指南-Documentation Style Guidelines" class="md-nav__link">
+      文档样式指南-Documentation Style Guidelines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-patches/" title="贡献补丁-Contributing Patches" class="md-nav__link">
+      贡献补丁-Contributing Patches
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Contributors/" title="贡献者-Contributors" class="md-nav__link">
+      贡献者-Contributors
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+    
+    <label class="md-nav__link" for="nav-16">
+      发行说明-Release Notes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-16">
+        发行说明-Release Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-10-2.Release-Notes/" title="Orchard 1.10.2" class="md-nav__link">
+      Orchard 1.10.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-10-1.Release-Notes/" title="Orchard 1.10.1" class="md-nav__link">
+      Orchard 1.10.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-10.Release-Notes/" title="Orchard 1.10" class="md-nav__link">
+      Orchard 1.10
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9-3.Release-Notes/" title="Orchard 1.9.3" class="md-nav__link">
+      Orchard 1.9.3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9-2.Release-Notes/" title="Orchard 1.9.2" class="md-nav__link">
+      Orchard 1.9.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9-1.Release-Notes/" title="Orchard 1.9.1" class="md-nav__link">
+      Orchard 1.9.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-9.Release-Notes/" title="Orchard 1.9" class="md-nav__link">
+      Orchard 1.9
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-8-2.release-notes/" title="Orchard 1.8.2" class="md-nav__link">
+      Orchard 1.8.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-8-1.Release-Notes/" title="Orchard 1.8.1" class="md-nav__link">
+      Orchard 1.8.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-8-Release-Notes/" title="Orchard 1.8" class="md-nav__link">
+      Orchard 1.8
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-7-2-Release-Notes/" title="Orchard 1.7.2" class="md-nav__link">
+      Orchard 1.7.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-7-1-Release-Notes/" title="Orchard 1.7.1" class="md-nav__link">
+      Orchard 1.7.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-7-Release-Notes/" title="Orchard 1.7" class="md-nav__link">
+      Orchard 1.7
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-6-Release-Notes/" title="Orchard 1.6" class="md-nav__link">
+      Orchard 1.6
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-5-Release-Notes/" title="Orchard 1.5" class="md-nav__link">
+      Orchard 1.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-1-4-Release-Notes/" title="Orchard 1.4" class="md-nav__link">
+      Orchard 1.4
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+    
+    <label class="md-nav__link" for="nav-17">
+      待办事项- Todos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-17">
+        待办事项- Todos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Documentation-plan/" title="文件计划- Documentation plan" class="md-nav__link">
+      文件计划- Documentation plan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Suggestions-for-New-Topics/" title="对新主题的建议- Suggestions for New Topics" class="md-nav__link">
+      对新主题的建议- Suggestions for New Topics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploying-to-production/" title="将Orchard从开发部署到生产服务器- Deploying Orchard from Development to Production Servers" class="md-nav__link">
+      将Orchard从开发部署到生产服务器- Deploying Orchard from Development to Production Servers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Configuring-shared-hosting/" title="在共享主机环境中配置Orchard- Configuring Orchard in Shared Hosting Environments" class="md-nav__link">
+      在共享主机环境中配置Orchard- Configuring Orchard in Shared Hosting Environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-custom-admin-pages/" title="添加自定义管理面板页面- Adding Custom Admin Panel Pages" class="md-nav__link">
+      添加自定义管理面板页面- Adding Custom Admin Panel Pages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../UI-guidelines-for-module-authors/" title="模块作者的UI指南-UI Guidelines for Module Authors" class="md-nav__link">
+      模块作者的UI指南-UI Guidelines for Module Authors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Exposing-and-handling-events/" title="揭露和处理事件-Exposing and Handling Events" class="md-nav__link">
+      揭露和处理事件-Exposing and Handling Events
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Localizing-modules/" title="本地化模块-Localizing Modules" class="md-nav__link">
+      本地化模块-Localizing Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-different-view-engines/" title="在主题中使用不同的视图引擎-Using Different View Engines in Themes" class="md-nav__link">
+      在主题中使用不同的视图引擎-Using Different View Engines in Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-code-to-themes/" title="将代码添加到主题-Adding Code to a Theme" class="md-nav__link">
+      将代码添加到主题-Adding Code to a Theme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Troubleshooting/" title="排除常见问题-Troubleshooting Common Issues" class="md-nav__link">
+      排除常见问题-Troubleshooting Common Issues
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Filing-bugs/" title="归档错误-Filing Bugs" class="md-nav__link">
+      归档错误-Filing Bugs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Community-resources/" title="Orchard社区资源-Orchard Community Resources" class="md-nav__link">
+      Orchard社区资源-Orchard Community Resources
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-involved-in-forums/" title="参与论坛-Getting Involved in Forums" class="md-nav__link">
+      参与论坛-Getting Involved in Forums
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../module-startup-code/" title="在哪里放置模块的启动代码-Where to put Startup Code for Module" class="md-nav__link">
+      在哪里放置模块的启动代码-Where to put Startup Code for Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Template-files-and-their-locations/" title="模板文件-Template files" class="md-nav__link">
+      模板文件-Template files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Testplan/" title="测试计划-Test plan" class="md-nav__link">
+      测试计划-Test plan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../test/" title="测试-Test" class="md-nav__link">
+      测试-Test
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-18" type="checkbox" id="nav-18">
+    
+    <label class="md-nav__link" for="nav-18">
+      补丁-Patches
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-18">
+        补丁-Patches
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Security-Researcher-Acknowledgments/" title="安全研究员致谢-Security Researcher Acknowledgments" class="md-nav__link">
+      安全研究员致谢-Security Researcher Acknowledgments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Patch-20150630/" title="补丁20150630-Patch 20150630" class="md-nav__link">
+      补丁20150630-Patch 20150630
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Patch-20150519/" title="补丁20150519-Patch 20150519" class="md-nav__link">
+      补丁20150519-Patch 20150519
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Patch-4-30-2013/" title="补丁20130430-Patch 20130430" class="md-nav__link">
+      补丁20130430-Patch 20130430
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-TV/" title="教程视频-Tutorial Videos" class="md-nav__link">
+      教程视频-Tutorial Videos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-20" type="checkbox" id="nav-20">
+    
+    <label class="md-nav__link" for="nav-20">
+      档案-Archives
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-20">
+        档案-Archives
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Walkthroughs/" title="演练和UI样机-Walkthroughs and UI Mockups" class="md-nav__link">
+      演练和UI样机-Walkthroughs and UI Mockups
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Archived-specs/" title="存档的规格-Archived Specs" class="md-nav__link">
+      存档的规格-Archived Specs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setup/" title="建立-Setup" class="md-nav__link">
+      建立-Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Blogs/" title="博客-Blogs" class="md-nav__link">
+      博客-Blogs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Comments/" title="评论-Comments" class="md-nav__link">
+      评论-Comments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Content-types/" title="内容类型-Content types" class="md-nav__link">
+      内容类型-Content types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Definitions/" title="定义-Definitions" class="md-nav__link">
+      定义-Definitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Fundamentals-doctype/" title="HTML doctype-HTML doctype" class="md-nav__link">
+      HTML doctype-HTML doctype
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Linkback/" title="Linkbacks：Pingbacks，Refbacks和Trackbacks-Linkbacks: Pingbacks, Refbacks and Trackbacks" class="md-nav__link">
+      Linkbacks：Pingbacks，Refbacks和Trackbacks-Linkbacks: Pingbacks, Refbacks and Trackbacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Media-management/" title="媒体管理-Media management" class="md-nav__link">
+      媒体管理-Media management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Navigation/" title="导航-Navigation" class="md-nav__link">
+      导航-Navigation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pages-editing/" title="页面编辑-Page editing" class="md-nav__link">
+      页面编辑-Page editing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pages/" title="页面管理和发布-Page management and publishing" class="md-nav__link">
+      页面管理和发布-Page management and publishing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pages-publishing/" title="页面发布工作流程-Page publishing workflow" class="md-nav__link">
+      页面发布工作流程-Page publishing workflow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Rss-atom/" title="RSS和Atom提要-RSS and Atom feeds" class="md-nav__link">
+      RSS和Atom提要-RSS and Atom feeds
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Slugs/" title="蛞蝓-Slugs" class="md-nav__link">
+      蛞蝓-Slugs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Templates/" title="页面模板和语法-Page templates and syntax" class="md-nav__link">
+      页面模板和语法-Page templates and syntax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tags/" title="标签-Tags" class="md-nav__link">
+      标签-Tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Themes/" title="主题-Themes" class="md-nav__link">
+      主题-Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Themes-includes/" title="主题包括-Theme includes" class="md-nav__link">
+      主题包括-Theme includes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Users/" title="用户，角色和权限-Users, roles and permissions" class="md-nav__link">
+      用户，角色和权限-Users, roles and permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Widgets/" title="小工具-Widgets" class="md-nav__link">
+      小工具-Widgets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Xml-Rpc/" title="XML-RPC和Live Writer-XML-RPC and Live Writer" class="md-nav__link">
+      XML-RPC和Live Writer-XML-RPC and Live Writer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-lists/" title="创建内容项列表-Creating lists of content items" class="md-nav__link">
+      创建内容项列表-Creating lists of content items
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A-few-interesting-extensibility-points/" title="可扩展性点-Extensibility points" class="md-nav__link">
+      可扩展性点-Extensibility points
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Add-Custom-Settings-to-your-Theme/" title="将自定义设置添加到主题-Add Custom Settings to your Theme" class="md-nav__link">
+      将自定义设置添加到主题-Add Custom Settings to your Theme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-Custom-Settings-pre-1.8/" title="1.8之前添加自定义设置-Add Custom Settings pre 1.8" class="md-nav__link">
+      1.8之前添加自定义设置-Add Custom Settings pre 1.8
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Adding-admin-menu-items/" title="添加管理菜单项-Adding admin menu items" class="md-nav__link">
+      添加管理菜单项-Adding admin menu items
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Automation-test-guidance/" title="自动化测试指导-Automation test guidance" class="md-nav__link">
+      自动化测试指导-Automation test guidance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Bug-bash-1-18-2010/" title="Bug bash 1-18-2010-Bug bash 1-18-2010" class="md-nav__link">
+      Bug bash 1-18-2010-Bug bash 1-18-2010
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Content-Picker/" title="内容选择器-Content Picker" class="md-nav__link">
+      内容选择器-Content Picker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Custom-permissions/" title="自定义权限-Custom permissions" class="md-nav__link">
+      自定义权限-Custom permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Import-Export/" title="进出口-Import Export" class="md-nav__link">
+      进出口-Import Export
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Installing-Orchard-Using-Web-PI/" title="使用Web PI安装Orchard-Installing Orchard Using Web PI" class="md-nav__link">
+      使用Web PI安装Orchard-Installing Orchard Using Web PI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Orchard-Markup-Guidelines/" title="Orchard标记指南-Orchard Markup Guidelines" class="md-nav__link">
+      Orchard标记指南-Orchard Markup Guidelines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/OrchardCMS/OrchardDoc/edit/master/docs/Documentation/UI-guidelines-for-theme-authors.markdown" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <blockquote>
+<p>This topic was updated for the Orchard 1.0 release.</p>
+<p><font color=#0099ff size=4 face="黑体">本主题已针对Orchard 1.0版本进行了更新。</font> </p>
+</blockquote>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>This article presents recommendations for coding and formatting HTML markup and CSS that will help you keep your themes organized.</p>
+<p><font color=#0099ff size=4 face="黑体">本文介绍了对HTML标记和CSS进行编码和格式化的建议，这些建议将帮助您保持主题的有序性。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h1 id="general-guidelines">General Guidelines</h1>
+<h1 id="_1"><font color=#0099ff size=4 face="黑体">一般准则</font></h1>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>This section contains guidelines for a number of design topics, such as browser testing, file names, HTML elements, JavaScript and images.</p>
+<p><font color=#0099ff size=4 face="黑体">本节包含许多设计主题的指南，例如浏览器测试，文件名，HTML元素，JavaScript和图像。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="browser-testing">Browser Testing</h2>
+<h2 id="_2"><font color=#0099ff size=4 face="黑体">浏览器测试</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>You should test all templates using the latest versions of the following browsers. For older versions of browsers, such as Internet Explorer 6, you should ensure that your site and templates remain functional, but don't attempt to resolve rendering issue that do not affect the user's ability to consume the content. </p>
+<p><font color=#0099ff size=4 face="黑体">您应该使用以下浏览器的最新版本测试所有模板。对于旧版本的浏览器（如Internet Explorer 6），应确保您的站点和模板保持正常运行，但不要尝试解决不影响用户使用内容的渲染问题。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p>Microsoft Internet Explorer</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">Microsoft Internet Explorer</font> *</p>
+</li>
+<li>
+<p>Google Chrome</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">谷歌浏览器</font> *</p>
+</li>
+<li>
+<p>Mozilla Firefox</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">火狐浏览器</font> *</p>
+</li>
+<li>
+<p>Apple Safari</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">Apple Safari</font> *</p>
+</li>
+<li>
+<p>Opera</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">歌剧</font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="file-names">File Names</h2>
+<h2 id="_3"><font color=#0099ff size=4 face="黑体">文件名</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The following lists file naming rules followed by the Orchard development team.</p>
+<p><font color=#0099ff size=4 face="黑体">以下列出了Orchard开发团队遵循的文件命名规则。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p>Include files use an underscore (_) as a prefix</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">包含文件使用下划线（_）作为前缀</font> *</p>
+</li>
+<li>
+<p><em>.cshtml</em>, <em>.vbhtml</em>, HTML, and CSS files should be named using camel casing.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">应使用驼峰套管命名_.cshtml <em>，</em>。vbhtml_，HTML和CSS文件。</font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="html-doctype-directive">HTML doctype Directive</h2>
+<h2 id="html-doctype"><font color=#0099ff size=4 face="黑体">HTML doctype指令</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Use the HTML5 <code>doctype</code> declaration, because it lets you use HTML5 markup but is also compatible with existing markup that complies to HTML 4.01 and XHTML.</p>
+<p><font color=#0099ff size=4 face="黑体">使用HTML5<code>doctype</code>声明，因为它允许您使用HTML5标记，但也兼容符合HTML 4.01和XHTML的现有标记。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>&lt;!DOCTYPE html&gt;
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="html-elements">HTML Elements</h2>
+<h2 id="html"><font color=#0099ff size=4 face="黑体">HTML元素</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Orchard assumes the use of HTML5. Although you are not required to use HTML5, it is a strong recommendation. One reason is that templates from different modules and parent themes might be used on a single page, where there is only one <code>doctype</code> declaration. </p>
+<p><font color=#0099ff size=4 face="黑体">Orchard假定使用HTML5。虽然您不需要使用HTML5，但这是一个强烈的建议。一个原因是来自不同模块和父主题的模板可能在单个页面上使用，其中只有一个<code>doctype</code>声明。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The following tables lists some commonly used HTML5 elements that provide for better structure in web pages than earlier versions of HTML did. For more information about HTML5, see the W3C article <a href="http://dev.w3.org/html5/html4-differences/">HTML5 difference from HTML4</a>.</p>
+<p><font color=#0099ff size=4 face="黑体">下表列出了一些常用的HTML5元素，这些元素提供了比早期版本的HTML更好的网页结构。有关HTML5的更多信息，请参阅W3C文章[HTML5与HTML4的区别]（http://dev.w3.org/html5/html4-differences/）。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p><code>&lt;section&gt;</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>&lt;节&gt;</code></font> *</p>
+</li>
+<li>
+<p><code>&lt;article&gt;</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>&lt;文章&gt;</code></font> *</p>
+</li>
+<li>
+<p><code>&lt;aside&gt;</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>&lt;预留&gt;</code></font> *</p>
+</li>
+<li>
+<p><code>&lt;hgroup&gt;</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>&lt;hgroup&gt;</code></font> *</p>
+</li>
+<li>
+<p><code>&lt;header&gt;</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>&lt;报头&gt;</code></font> *</p>
+</li>
+<li>
+<p><code>&lt;footer&gt;</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>&lt;页脚&gt;</code></font> *</p>
+</li>
+<li>
+<p><code>&lt;nav&gt;</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>&lt;NAV&gt;</code></font> *</p>
+</li>
+<li>
+<p><code>&lt;figure&gt;</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>&lt;图&gt;</code></font> *</p>
+</li>
+<li>
+<p><code>&lt;figcaption&gt;</code></p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体"><code>&lt;figcaption&gt;</code></font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Example:</p>
+<p><font color=#0099ff size=4 face="黑体">例：</font> </p>
+<pre><code>&lt;figure&gt;
+
+      &lt;video src="tgif.vid"&gt;&lt;/video&gt;
+
+      &lt;figcaption&gt;Example&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>If you are using any of these new elements, in order to avoid breaking script libraries in older versions of Internet Explorer, we recommend that you use the workaround described in <a href="http://blogs.msdn.com/b/ie/archive/2010/06/10/same-markup-explaining-quot-jscript-version-quot-and-styling-new-html5-elements.aspx">Styling New HTML5 Elements</a>.</p>
+<p><font color=#0099ff size=4 face="黑体">如果您使用这些新元素中的任何一个，为了避免破坏旧版Internet Explorer中的脚本库，我们建议您使用[样式化新HTML5元素]中描述的解决方法（http://blogs.msdn.com/ b /即/存档/ 2010/06/10 /相同的标记-说明-QUOT-JScript的版本-QUOT和造型新-HTML5-elements.aspx）。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="javascript-and-jquery">JavaScript and jQuery</h2>
+<h2 id="javascriptjquery"><font color=#0099ff size=4 face="黑体">JavaScript和jQuery</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Your web pages should work even if JavaScript is disabled in the browser. Scripts should be used only to enhance the experience of the page, which is referred to as <em>progressive enhancement</em>. For more information, see <a href="http://www.alistapart.com/articles/progressiveenhancementwithjavascript/">Progressive Enhancement with JavaScript</a>.</p>
+<p><font color=#0099ff size=4 face="黑体">即使在浏览器中禁用了JavaScript，您的网页也应该有效。脚本应该仅用于增强页面的体验，这被称为_progressive enhancement_。有关更多信息，请参阅[使用JavaScript进行渐进增强]（http://www.alistapart.com/articles/progressiveenhancementwithjavascript/）。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Orchard has jQuery built in. The Orchard team has standardized on jQuery as its JavaScript framework. </p>
+<p><font color=#0099ff size=4 face="黑体">Orchard内置了jQuery.Orchard团队将jQuery标准化为JavaScript框架。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="images">Images</h2>
+<h2 id="_4"><font color=#0099ff size=4 face="黑体">图片</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Use the appropriate image format for the scenario, as described in the following list:</p>
+<p><font color=#0099ff size=4 face="黑体">对场景使用适当的图像格式，如以下列表中所述：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p>Photos and gradients should use the <em>jpeg</em> format.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">照片和渐变应使用_jpeg_格式。</font> *</p>
+</li>
+<li>
+<p>Graphical elements should use the <em>png</em> format.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">图形元素应使用_png_格式。</font> *</p>
+</li>
+<li>
+<p>Use alpha transparency via the <em>24-bit png</em> format.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">通过_24位png_格式使用alpha透明度。</font> *</p>
+</li>
+<li>
+<p>Use sprites where possible to improve load time and to reduce the number of requests made to the server.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">尽可能使用精灵来缩短加载时间并减少对服务器的请求数量。</font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>For more information about sprites, see <a href="http://www.alistapart.com/articles/sprites">CSS Sprites: Image Slicing's Kiss of Death</a>.</p>
+<p><font color=#0099ff size=4 face="黑体">有关精灵的更多信息，请参阅[CSS Sprites：图像切片的死亡之吻]（http://www.alistapart.com/articles/sprites）。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="accessibility">Accessibility</h2>
+<h2 id="_5"><font color=#0099ff size=4 face="黑体">无障碍</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Your HTML and CSS templates should pass the accessibility tests provided by <a href="http://wave.webaim.org/">Wave the web accessibility evaluation tool</a>. Your templates should satisfy the requirements of WCAG 2.0 level AA.</p>
+<p><font color=#0099ff size=4 face="黑体">您的HTML和CSS模板应通过[Wave the web accessibility evaluation tool]（http://wave.webaim.org/）提供的辅助功能测试。您的模板应满足WCAG 2.0级AA的要求。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="markup-validation">Markup Validation</h2>
+<h2 id="_6"><font color=#0099ff size=4 face="黑体">标记验证</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>We recommend that you always strive for standards compliance. Ensure that your templates pass validation by using the <a href="http://validator.w3.org/">W3C Markup Validation Service</a>.</p>
+<p><font color=#0099ff size=4 face="黑体">我们建议您始终致力于符合标准。使用[W3C标记验证服务]（http://validator.w3.org/）确保模板通过验证。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h1 id="css-organization">CSS Organization</h1>
+<h1 id="css"><font color=#0099ff size=4 face="黑体">CSS组织</font></h1>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>To allow users to easily find and read styles for modification, we recommend that you standardize on a structure and coding format. The organizational structure that is introduced in this section is used by the Orchard team.</p>
+<p><font color=#0099ff size=4 face="黑体">为了使用户能够轻松查找和读取样式以进行修改，我们建议您对结构和编码格式进行标准化。 Orchard团队使用本节中介绍的组织结构。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>To help you abide by the CSS standards, keep the following guidelines in mind:</p>
+<p><font color=#0099ff size=4 face="黑体">为帮助您遵守CSS标准，请牢记以下准则：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p>Do not use workarounds like conditional <code>if</code> statements in stylesheets. </p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">不要在样式表中使用类似条件<code>if</code>语句的变通办法。</font> *</p>
+</li>
+<li>
+<p>CSS markup should be valid CSS 2.1 or higher. You can also use optional progressively enhanced CSS 3 markup.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">CSS标记应该是有效的CSS 2.1或更高版本。您还可以使用可选的逐步增强的CSS 3标记。</font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="css-format-rules">CSS Format Rules</h2>
+<h2 id="css_1"><font color=#0099ff size=4 face="黑体">CSS格式规则</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The following list contains guidelines for formatting CSS markup.</p>
+<p><font color=#0099ff size=4 face="黑体">以下列表包含格式化CSS标记的准则。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p>Use four spaces instead of tabs for indentation. (This is the default setting in Visual Studio.)</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">使用四个空格而不是制表符进行缩进。 （这是Visual Studio中的默认设置。）</font> *</p>
+</li>
+<li>
+<p>Use a hyphen (-) between words in selectors.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">在选择器中的单词之间使用连字符（ - ）。</font> *</p>
+</li>
+<li>
+<p>Remove unused CSS selections (except for reset styles).</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">删除未使用的CSS选择（重置样式除外）。</font> *</p>
+</li>
+<li>
+<p>Use lowercase for color definitions.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">使用小写字母表示颜色定义。</font> *</p>
+</li>
+<li>
+<p>Use shorthand notation where possible, such as for color codes; use collapsed properties when practical.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">尽可能使用简写表示法，例如颜色代码;实际使用折叠属性。</font> *</p>
+</li>
+<li>
+<p>Use IDs instead of classes where possible. Using IDs for template elements makes it easy to identify the important selectors in CSS and HTML.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">尽可能使用ID而不是类。使用模板元素的ID可以轻松识别CSS和HTML中的重要选择器。</font> *</p>
+</li>
+<li>
+<p>Use one line per property definition.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">每个属性定义使用一行。</font> *</p>
+</li>
+<li>
+<p>Use "tab-nested" selectors. For more information, see <a href="http://net.tutsplus.com/tutorials/html-css-techniques/css-diy-organization/">CSS DIY Organization</a>.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">使用“tab-nested”选择器。有关更多信息，请参阅[CSS DIY组织]（http://net.tutsplus.com/tutorials/html-css-techniques/css-diy-organization/）。</font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="css-file-structure">CSS File Structure</h2>
+<h2 id="css_2"><font color=#0099ff size=4 face="黑体">CSS文件结构</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The recommended CSS structure was partly adapted from suggestions provided by Dan Cederholm of SimpleBits. This structure resides in the Style.css file. The file comprises the following sections:</p>
+<p><font color=#0099ff size=4 face="黑体">推荐的CSS结构部分改编自SimpleBits的Dan Cederholm提供的建议。此结构驻留在Style.css文件中。该文件包含以下部分：</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ol>
+<li><strong>Info</strong> - A commented section for the theme that the style is associated with, the author, website, and any copyright information. </li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">1. <strong>信息</strong>  - 与风格相关的主题，作者，网站和任何版权信息的评论部分。</font> </p>
+<ol>
+<li><strong>Color Palette</strong> - A commented section that defines the overall color scheme for the theme. It provides a single place to define colors and makes it easy for users to find, replace, and modify color definitions. </li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">2. <strong>调色板</strong>  - 一个注释部分，定义主题的整体颜色方案。它提供了一个定义颜色的位置，使用户可以轻松查找，替换和修改颜色定义。</font> </p>
+<ol>
+<li><strong>Reset</strong> - Definitions that are used to normalize settings across browsers. </li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">3. <strong>重置</strong>  - 用于规范浏览器设置的定义。</font> </p>
+<ol>
+<li><strong>Clearing Floats</strong> - Definitions that are used to clear parent items that contain children that float. </li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">4. <strong>清除浮动</strong>  - 用于清除包含浮动子项的父项的定义。</font> </p>
+<ol>
+<li><strong>Typography</strong> - (Optional) Contains CSS code or a reference to a typography reset framework (such as YUI Fonts) that normalizes font sizes across browsers.  </li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">5. <strong>排版</strong>  - （可选）包含CSS代码或对排版重置框架（如YUI字体）的引用，用于规范浏览器的字体大小。</font> </p>
+<ol>
+<li><strong>General</strong> - Definitions for global HTML elements such as <code>&lt;body&gt;</code>, headings, links, and any other elements where you want to apply a different style and override the reset. This can include styles for elements like <code>&lt;ul&gt;</code>, <code>&lt;p&gt;</code>, etc. </li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">6. <strong>常规</strong>  - 全局HTML元素的定义，例如<code>&lt;body&gt;</code>，标题，链接以及要应用不同样式并覆盖重置的任何其他元素。这可以包括像<code>&lt;ul&gt;</code>，<code>&lt;p&gt;</code>等元素的样式。</font> </p>
+<ol>
+<li><strong>Structure</strong> - Layout definitions for major structural components of your templates, such as containers, headers, footers, etc. This section can be subdivided with comments into sections such as navigation, header, etc. </li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">7. <strong>结构</strong>  - 模板的主要结构组件的布局定义，例如容器，页眉，页脚等。此部分可以通过注释细分为导航，页眉等部分。</font> </p>
+<ol>
+<li><strong>Main</strong> - Main styles related to your theme. This can contain definitions for blog posts, tags, etc. </li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">8. <strong>主要</strong>  - 与您的主题相关的主要风格。这可以包含博客文章，标签等的定义。</font> </p>
+<ol>
+<li><strong>Secondary</strong> - Secondary styles related to your theme for things like stylized text, errors, etc. </li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">9. <strong>次要</strong>  - 与您的主题相关的次要样式，例如程式化文本，错误等。</font> </p>
+<ol>
+<li><strong>Forms</strong> - All styling related to form items.</li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">10. <strong>表格</strong>  - 与表格项目相关的所有样式。</font> </p>
+<ol>
+<li><strong>Misc</strong> - Miscellaneous definitions that are needed to render the look of your template. </li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">11. <strong>杂项</strong>  - 呈现模板外观所需的其他定义。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The following example shows this structure applied to a CSS file.</p>
+<p><font color=#0099ff size=4 face="黑体">以下示例显示了应用于CSS文件的此结构。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<pre><code>/*
+
+Theme: My Sample Theme
+
+Author:
+
+Copyright:
+
+*/
+
+
+
+/* Colors Palette
+
+Background: #fff
+
+Text: #434343
+
+Main Accent: #999
+
+Links: #443444
+
+*/
+
+
+
+/* Reset
+
+***************************************************************/
+
+YOUR CSS RESET CODE GOES HERE
+
+
+
+/* Clearing Float
+
+***************************************************************/
+
+group:after {
+
+    content: ".";
+
+    display: block;
+
+    height: 0;
+
+    clear: both;
+
+    visibility: hidden;
+
+}
+
+
+
+.group {display: inline-block;}  /* for IE/Mac */
+
+
+
+/* Typography (Optional)
+
+***************************************************************/
+
+@import url(http://yui.yahooapis.com/2.8.1/build/fonts/fonts-min.css);
+
+
+
+
+
+/* General
+
+***************************************************************/
+
+body {}
+
+
+
+a {}
+
+a:link {}
+
+a:hover{}
+
+a:visited{}
+
+
+
+h1,h2,h3,h4,h5,h6 {}
+
+
+
+/* Structure
+
+***************************************************************/
+
+#container {}
+
+
+
+#header {}
+
+       #logo {}
+
+
+
+#footer {}
+
+
+
+/* Main
+
+***************************************************************/
+
+
+
+/* Secondary
+
+***************************************************************/
+
+
+
+/* Forms
+
+***************************************************************/
+
+
+
+/* Misc
+
+***************************************************************/
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="css-reset">CSS Reset</h2>
+<h2 id="css_3"><font color=#0099ff size=4 face="黑体">CSS重置</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>You should always use a reset to normalize styling between browsers and then apply default markup manually. For more information about resets, see <a href="http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/">Reset Reloaded</a>. You can optionally use a reset library. </p>
+<p><font color=#0099ff size=4 face="黑体">您应始终使用重置来规范浏览器之间的样式，然后手动应用默认标记。有关重置的更多信息，请参阅[重置重置]（http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/）。您可以选择使用重置库。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><strong>To reset a global style</strong></p>
+<p><strong> <font color=#0099ff size=4 face="黑体">重置全局样式</strong></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ol>
+<li>Apply the reset.</li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">1.应用重置。</font> </p>
+<ol>
+<li>Apply a default style to any global element (defined in the general section).</li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">2.将默认样式应用于任何全局元素（在常规部分中定义）。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Example:    </p>
+<p><font color=#0099ff size=4 face="黑体">例：</font> </p>
+<pre><code>p {
+
+   padding: 0 10px;
+
+   line-height: 150%;
+
+}
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="typography">Typography</h2>
+<h2 id="_7"><font color=#0099ff size=4 face="黑体">活版印刷</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Use relative font sizes and set a default base size to ensure consistent font sizes across browsers, and to allow browser users to increase font size to enhance readability. However, remember that relative sizes are cumulative. For example, if you set the size of div tags to <code>2em</code>, then you then embed a <code>&lt;div&gt;</code> element inside another <code>&lt;div&gt;</code> element and another inside that, you'll end up with an effective setting of <code>8em</code> for the innermost <code>&lt;div&gt;</code> element.</p>
+<p><font color=#0099ff size=4 face="黑体">使用相对字体大小并设置默认基本大小以确保跨浏览器的字体大小一致，并允许浏览器用户增加字体大小以增强可读性。但请记住，相对大小是累积的。例如，如果你将div标签的大小设置为<code>2em</code>，那么你然后在另一个<code>&lt;div&gt;</code>元素中嵌入一个<code>&lt;div&gt;</code>元素而在另一个里面嵌入一个<code>&lt;div&gt;</code>元素，你最终会得到一个有效的设置<code>8em</code>用于最里面的<code>&lt;div&gt;</code>元素。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>The following list shows the methods by which you can enhance readability.</p>
+<p><font color=#0099ff size=4 face="黑体">以下列表显示了可以增强可读性的方法。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p>(Method 1) Use ems and set the base font size on the <code>&lt;body&gt;</code> element. The default size for medium text in all modern browsers is <code>16px</code>. First, reduce this size for the entire document by setting font size in the <code>&lt;body&gt;</code> element to 62.5%. You can then think in pixels but still set sizes in terms of ems: 1em is 10px, 0.8em is 8px, 1.6em is 16px, etc. For more information, see <a href="http://clagnut.com/blog/348/">How to size text using ems</a>.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">（方法1）使用ems并在<code>&lt;body&gt;</code>元素上设置基本字体大小。所有现代浏览器中媒体文本的默认大小为“16px”。首先，通过将<code>&lt;body&gt;</code>元素中的字体大小设置为62.5％来减小整个文档的大小。然后你可以用像素来思考，但仍然用ems来设置大小：1em是10px，0.8em是8px，1.6em是16px等。有关更多信息，请参阅[如何使用ems调整文本大小]（http：// clagnut .COM /博客/ 348 /）。</font> *</p>
+</li>
+<li>
+<p>(Method 2) Use a framework reset such as <a href="http://developer.yahoo.com/yui/fonts/">YUI 2 Fonts CSS</a>.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">（方法2）使用框架重置，例如[YUI 2 Fonts CSS]（http://developer.yahoo.com/yui/fonts/）。</font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="clearing-floats">Clearing Floats</h2>
+<h2 id="_8"><font color=#0099ff size=4 face="黑体">清除浮动</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>There are two methods you can use to clear floats without adding markup.</p>
+<p><font color=#0099ff size=4 face="黑体">您可以使用两种方法清除浮动而不添加标记。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ul>
+<li>
+<p>(Method 1) Us the <em>position if everything</em> method with semantic modification as suggested by <a href="http://simplebits.com/">SimpleBits</a>. This method involves applying a <code>clear</code> property to any parent element that contains items that you want to float.<br /><br />The SimpleBits modification changes the class name to <code>group</code>, which adds semantic value because you often float related items as a group.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">（方法1）使用[SimpleBits]（http://simplebits.com/）建议的_position if everything_方法进行语义修改。此方法涉及将<code>clear</code>属性应用于包含要浮动的项的任何父元素。<br /> <br /> SimpleBits修改将类名更改为<code>group</code>，这会添加语义值，因为您经常浮动相关项目作为一个组。</font> *</p>
+</li>
+<li>
+<p>(Method 2) Apply the <code>overflow:auto</code> property to the parent container.<br /><br />Certain combinations of margin and padding can force internal scrollbars. If you can't tweak things to remove the scrollbars, you can try using <code>overflow:hidden</code>, which has virtually the same effect without the scrollbars. The only drawback of <code>hidden</code> seems to be that some images are cropped if they're placed lower in the page.</p>
+</li>
+<li>
+<p><font color=#0099ff size=4 face="黑体">（方法2）将<code>overflow：auto</code>属性应用于父容器。<br /> <br />边距和填充的某些组合可以强制内部滚动条。如果您无法调整内容以删除滚动条，您可以尝试使用<code>overflow：hidden</code>，它在没有滚动条的情况下几乎具有相同的效果。 “隐藏”的唯一缺点似乎是，如果某些图像在页面中放置较低，则会被裁剪。</font> *</p>
+</li>
+</ul>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="forms">Forms</h2>
+<h2 id="_9"><font color=#0099ff size=4 face="黑体">形式</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Mark up form elements using the "ordered-list" method. This method describes form elements as a sequential list of inputs that the user needs to fill in. It provides both semantic meaning and order to the form, which aids accessibility. When forms are rendered without style sheets, they are clearly labeled in sequential order and have a count associated with them. The ordered list provides additional information for some screen readers that announce the number of list items when they first encounter the list.</p>
+<p><font color=#0099ff size=4 face="黑体">使用“ordered-list”方法标记表单元素。此方法将表单元素描述为用户需要填写的输入的顺序列表。它为表单提供语义含义和顺序，这有助于可访问性。在没有样式表的情况下呈现表单时，它们会按顺序清晰标记并具有与之关联的计数。有序列表为某些屏幕阅读器提供了附加信息，这些屏幕阅读器在首次遇到列表时会公布列表项的数量。</font> </p>
+<pre><code>&lt;fieldset&gt;
+
+  &lt;legend&gt;Delivery Details&lt;/legend&gt;
+
+  &lt;ol&gt;
+
+    &lt;li&gt;
+
+      &lt;label for="name"&gt;Name&lt;em&gt;*&lt;/em&gt;&lt;/label&gt;
+
+      &lt;input id="name" /&gt;
+
+    &lt;/li&gt;
+
+    &lt;li&gt;
+
+      &lt;label for="address1"&gt;Address&lt;em&gt;*&lt;/em&gt;&lt;/label&gt;
+
+      &lt;input id="address1" /&gt;
+
+    &lt;/li&gt;
+
+    &lt;li&gt;
+
+      &lt;label for="town-city"&gt;Town/City&lt;/label&gt;
+
+      &lt;input id="town-city" /&gt;
+
+    &lt;/li&gt;
+
+    &lt;li&gt;
+
+      &lt;fieldset&gt;
+
+        &lt;legend&gt;Is this address also your invoice address?&lt;em&gt;*&lt;/em&gt;&lt;/legend&gt;
+
+        &lt;label&gt;&lt;input type="radio" name="invoice-address" /&gt; Yes&lt;/label&gt;
+
+        &lt;label&gt;&lt;input type="radio" name="invoice-address" /&gt; No&lt;/label&gt;
+
+      &lt;/fieldset&gt;
+
+    &lt;/li&gt;
+
+  &lt;/ol&gt;
+
+&lt;/fieldset&gt;
+</code></pre>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="progressive-enhancements">Progressive Enhancements</h2>
+<h2 id="_10"><font color=#0099ff size=4 face="黑体">渐进增强</font></h2>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>Base your designs on modern browsers that implement up-to-date patterns, but without handicapping the experience of older browsers. If you feel it is important to the design, use known CSS techniques such as sliding door to achieve the desired effect.</p>
+<p><font color=#0099ff size=4 face="黑体">将您的设计基于实现最新模式的现代浏览器，但不会妨碍旧浏览器的体验。如果您觉得它对设计很重要，请使用已知的CSS技术（如滑动门）来达到预期效果。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<ol>
+<li>Border radius</li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">1.边界半径</font> </p>
+<ol>
+<li>Multiple background images </li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">2.多个背景图像</font> </p>
+<ol>
+<li>Gradient </li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">3.渐变</font> </p>
+<ol>
+<li>Transparency (RGBA and opacity)</li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">4.透明度（RGBA和不透明度）</font> </p>
+<ol>
+<li>Shadows </li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">5.阴影</font> </p>
+<ol>
+<li>Text-Shadows</li>
+</ol>
+<p><font color=#0099ff size=4 face="黑体">6.文字阴影</font> </p>
+<p><font color=#0099ff size=4 face="黑体"></font> </p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Packaging-and-sharing-themes/" title="包装和共享主题- Packaging and Sharing Themes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                包装和共享主题- Packaging and Sharing Themes
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Customizing-Orchard-using-Designer-Helper-Tools/" title="使用Designer Helper工具自定义Orchard- Customizing Orchard Using Designer Helper Tools" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                使用Designer Helper工具自定义Orchard- Customizing Orchard Using Designer Helper Tools
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright <a href="http://orchardproject.net">Orchard Project</a>.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.e72fd936.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../search/main.js"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-20757794-1","orchardproject.net"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>
