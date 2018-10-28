@@ -10,3 +10,5 @@ https://herenwei.github.io/orchardchinesedocument/
 
 Markdown文档来源：
 https://github.com/OrchardCMS/OrchardDoc
+
+** 如果官方文档有更新，可以自动重新发布
