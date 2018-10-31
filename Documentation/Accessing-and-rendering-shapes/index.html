@@ -169,7 +169,7 @@
   
 
 
-  <a href="https://github.com/OrchardCMS/OrchardDoc/" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/herenwei/orchardchinesedocument/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -218,7 +218,7 @@
   
 
 
-  <a href="https://github.com/OrchardCMS/OrchardDoc/" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/herenwei/orchardchinesedocument/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -2841,7 +2841,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/OrchardCMS/OrchardDoc/edit/master/docs/Documentation/Accessing-and-rendering-shapes.markdown" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/herenwei/orchardchinesedocument/edit/master/docs/Documentation/Accessing-and-rendering-shapes.markdown" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                 <p>A <em>shape</em> is a dynamic data model.</p>
@@ -2926,10 +2926,8 @@
 <p>The <code>ContentShape</code> method helps you create the shape and return it in a <code>ContentShapeResult</code> object.</p>
 <p><font color=#0099ff size=4 face="黑体"><code>ContentShape</code>方法可以帮助您创建形状并将其返回到<code>ContentShapeResult</code>对象中。</font> </p>
 <p><font color=#0099ff size=4 face="黑体"></font> </p>
-<p>Although the <code>ContentShape</code> method is overloaded, the most typical use is to pass it two</p>
-<p><font color=#0099ff size=4 face="黑体">尽管<code>ContentShape</code>方法过载，但最典型的用法是将其传递两次</font> </p>
-<p>parameters -- the shape type and a dynamic function expression that defines the shape.</p>
-<p><font color=#0099ff size=4 face="黑体">parameters  - 形状类型和定义形状的动态函数表达式。</font> </p>
+<p>Although the <code>ContentShape</code> method is overloaded, the most typical use is to pass it two parameters -- the shape type and a dynamic function expression that defines the shape.</p>
+<p><font color=#0099ff size=4 face="黑体">虽然<code>ContentShape</code>方法是重载的，但最典型的用法是传递两个参数 - 形状类型和定义形状的动态函数表达式。</font> </p>
 <p>The shape type names the shape and binds the shape to the template that will be used to render it.</p>
 <p><font color=#0099ff size=4 face="黑体">形状类型命名形状并将形状绑定到将用于渲染它的模板。</font> </p>
 <p>The naming conventions for shape types are discussed later in</p>
@@ -3067,7 +3065,7 @@ namespace Maps.Drivers
 <p><code>Views/EditorTemplates/Parts/Map.cshtml</code></p>
 <p><font color=#0099ff size=4 face="黑体"></font> </p>
 <p>The <code>Model</code> property takes the name of the part's model file, but without the file-name extension.</p>
-<p><font color=#0099ff size=4 face="黑体"><code>Model</code>属性采用零件模型文件的名称，但没有文件扩展名。</font> </p>
+<p><font color=#0099ff size=4 face="黑体"><code>Model</code>属性采用Part的模型文件的名称，但没有文件扩展名。</font> </p>
 <p><font color=#0099ff size=4 face="黑体"></font> </p>
 <h1 id="naming-shapes-and-templates">Naming Shapes and Templates</h1>
 <h1 id="_3"><font color=#0099ff size=4 face="黑体">命名形状和模板</font></h1>
@@ -3075,68 +3073,39 @@ namespace Maps.Drivers
 <p>As noted, the name given to a shape type binds the shape to the template that will be used to render the shape.</p>
 <p><font color=#0099ff size=4 face="黑体">如上所述，赋予形状类型的名称将形状绑定到将用于渲染形状的模板。</font> </p>
 <p>For example, suppose you create a part named <code>Map</code> that displays a map for the specified longitude and latitude.</p>
-<p><font color=#0099ff size=4 face="黑体">例如，假设您创建了一个名为“Map”的零件，该零件显示指定经度和纬度的地图。</font> </p>
+<p><font color=#0099ff size=4 face="黑体">例如，假设您创建了一个名为“Map”的part，该part显示指定经度和纬度的地图。</font> </p>
 <p>The name of the shape type might be <code>Parts_Map</code>. By convention, all part shapes begin with <code>Parts_</code> followed by the name of the part (in this case <code>Map</code>). Given this name (<code>Parts_Map</code>), Orchard looks for a template in your module at the following path: </p>
-<p><font color=#0099ff size=4 face="黑体">形状类型的名称可能是<code>Parts_Map</code>。按照惯例，所有零件形状都以<code>Parts_</code>开头，后跟零件名称（在本例中为<code>Map</code>）。给定此名称（<code>Parts_Map</code>），Orchard在以下路径中查找模块中的模板：</font> </p>
+<p><font color=#0099ff size=4 face="黑体">形状类型的名称可能是<code>Parts_Map</code>。按照惯例，所有part形状都以<code>Parts_</code>开头，后跟part名称（在本例中为<code>Map</code>）。给定此名称（<code>Parts_Map</code>），Orchard在以下路径中查找模块中的模板：</font> </p>
 <p><font color=#0099ff size=4 face="黑体"></font> </p>
 <p><code>views/parts/Map.cshtml</code></p>
 <p><font color=#0099ff size=4 face="黑体"></font> </p>
 <p>The following table summarizes the conventions that are used to name shape types and templates.</p>
 <p><font color=#0099ff size=4 face="黑体">下表总结了用于命名形状类型和模板的约定。</font> </p>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
 <p>Applied To             | Shape Naming Convention                                | Shape Type Example                             | Template Example</p>
-<p><font color=#0099ff size=4 face="黑体">适用于|形状命名惯例|形状类型示例|模板示例</font> </p>
 <p>---------------------- | ------------------------------------------------------ | -----------------------------------------------| --------------------------------------------</p>
-<ul>
-<li><font color=#0099ff size=4 face="黑体">| -------------------------------------------------- ---- | ----------------------------------------------- | --------------------------------------------</font> </li>
-</ul>
 <p>Content shapes         | <code>Content__[ContentType]</code>                               | <code>Content__BlogPost</code>                            | <code>Content-BlogPost</code></p>
-<p><font color=#0099ff size=4 face="黑体">内容形状| <code>Content __ [ContentType]</code>| <code>Content__BlogPost</code> | <code>内容BlogPost</code></font> </p>
 <p>Content shapes         | <code>Content__[Id]</code>                                        | <code>Content__42</code>                                  | <code>Content-42</code></p>
-<p><font color=#0099ff size=4 face="黑体">内容形状| <code>内容__ [Id]</code>| <code>Content__42</code> | <code>内容42</code></font> </p>
 <p>Content shapes         | <code>Content__[DisplayType]</code>                               | <code>Content__Summary</code>                             | <code>Content.Summary</code></p>
-<p><font color=#0099ff size=4 face="黑体">内容形状| <code>Content __ [DisplayType]</code>| <code>Content__Summary</code> | <code>Content.Summary</code></font> </p>
 <p>Content shapes         | <code>Content_[DisplayType]__[ContentType]</code>                 | <code>Content_Summary__BlogPost</code>                    | <code>Content-BlogPost.Summary</code></p>
-<p><font color=#0099ff size=4 face="黑体">内容形状| <code>Content_ [DisplayType] __ [ContentType]</code>| <code>Content_Summary__BlogPost</code> | <code>内容BlogPost.Summary</code></font> </p>
 <p>Content shapes         | <code>Content_[DisplayType]__[Id]</code>                          | <code>Content_Summary__42</code>                          | <code>Content-42.Summary</code></p>
-<p><font color=#0099ff size=4 face="黑体">内容形状| <code>Content_ [DisplayType] __ [Id]</code>| <code>Content_Summary__42</code> | <code>内容42.Summary</code></font> </p>
 <p>Content.Edit shapes    | <code>Content_Edit__[DisplayType]</code>                          | <code>Content_Edit__Page</code>                           | <code>Content-Page.Edit</code></p>
-<p><font color=#0099ff size=4 face="黑体">Content.Edit形状| <code>Content_Edit __ [DisplayType]</code>| <code>Content_Edit__Page</code> | <code>内容Page.Edit</code></font> </p>
 <p>Content Part templates | <code>[ShapeType]__[Id]</code>                                    | <code>Parts_Common_Metadata__42</code>                    | <code>Parts/Common.Metadata-42</code></p>
-<p><font color=#0099ff size=4 face="黑体">内容部分模板| <code>[ShapeType] __ [Id]</code>| <code>Parts_Common_Metadata__42</code> | <code>件/ Common.Metadata-42</code></font> </p>
 <p>Content Part templates | <code>[ShapeType]__[ContentType]</code>                           | <code>Parts_Common_Metadata__BlogPost</code>              | <code>Parts/Common.Metadata-BlogPost</code></p>
-<p><font color=#0099ff size=4 face="黑体">内容部分模板| <code>[ShapeType] __ [ContentType]</code>| <code>Parts_Common_Metadata__BlogPost</code> | <code>件/ Common.Metadata-BlogPost</code></font> </p>
 <p>Field templates        | <code>[ShapeType]__[FieldName]</code>                             | <code>Fields_Common_Text__Teaser</code>                   | <code>Fields/Common.Text-Teaser</code></p>
-<p><font color=#0099ff size=4 face="黑体">字段模板| <code>[ShapeType] __ [FieldName]</code>| <code>Fields_Common_Text__Teaser</code> | <code>字段/ Common.Text-Teaser</code></font> </p>
 <p>Field templates        | <code>[ShapeType]__[PartName]</code>                              | <code>Fields_Common_Text__TeaserPart</code>               | <code>Fileds/Common.Text-TeaserPart</code></p>
-<p><font color=#0099ff size=4 face="黑体">字段模板| <code>[ShapeType] __ [PartName]</code>| <code>Fields_Common_Text__TeaserPart</code> | <code>的Fileds / Common.Text-TeaserPart</code></font> </p>
 <p>Field templates        | <code>[ShapeType]__[ContentType]__[PartName]</code>               | <code>Fields_Common_Text__Blog__TeaserPart</code>         | <code>Fields/Common.Text-Blog-TeaserPart</code></p>
-<p><font color=#0099ff size=4 face="黑体">字段模板| <code>[ShapeType] __ [ContentType] __ [PartName]</code>| <code>Fields_Common_Text__Blog__TeaserPart</code> | <code>字段/ Common.Text  - 博客 -  TeaserPart</code></font> </p>
 <p>Field templates        | <code>[ShapeType]__[PartName]__[FieldName]</code>                 | <code>Fields_Common_Text__TeaserPart__Teaser</code>       | <code>Fields/Common.Text-TeaserPart-Teaser</code></p>
-<p><font color=#0099ff size=4 face="黑体">字段模板| <code>[ShapeType] __ [PartName] __ [FieldName]</code>| <code>Fields_Common_Text__TeaserPart__Teaser</code> | <code>字段/ Common.Text-TeaserPart-Teaser</code></font> </p>
 <p>Field templates        | <code>[ShapeType]__[ContentType]__[FieldName]</code>              | <code>Fields_Common_Text__Blog__Teaser</code>             | <code>Fields/Common.Text-Blog-Teaser</code></p>
-<p><font color=#0099ff size=4 face="黑体">字段模板| <code>[ShapeType] __ [ContentType] __ [FieldName]</code>| <code>Fields_Common_Text__Blog__Teaser</code> | <code>字段/ Common.Text  - 博客 -  Teaser</code></font> </p>
 <p>Field templates        | <code>[ShapeType]__[ContentType]__[PartName]__[FieldName]</code>  | <code>Fields_Common_Text__Blog__TeaserPart__Teaser</code> | <code>Fields/Common.Text-Blog-TeaserPart-Teaser</code></p>
-<p><font color=#0099ff size=4 face="黑体">字段模板| <code>[ShapeType] __ [ContentType] __ [PartName] __ [FieldName]</code>| <code>Fields_Common_Text__Blog__TeaserPart__Teaser</code> | <code>字段/ Common.Text  - 博客 -  TeaserPart-Teaser</code></font> </p>
 <p>LocalMenu              | <code>LocalMenu__[MenuName]</code>                                | <code>LocalMenu__main</code>                              | <code>LocalMenu-main</code></p>
-<p><font color=#0099ff size=4 face="黑体">LocalMenu | <code>LocalMenu __ [MenuName]</code>| <code>LocalMenu__main</code> | <code>LocalMenu-main</code></font> </p>
 <p>LocalMenuItem          | <code>LocalMenuItem__[MenuName]</code>                            | <code>LocalMenuItem__main</code>                          | <code>LocalMenuItem-main</code></p>
-<p><font color=#0099ff size=4 face="黑体">LocalMenuItem | <code>LocalMenuItem __ [MenuName]</code>| <code>LocalMenuItem__main</code> | <code>LocalMenuItem-main</code></font> </p>
 <p>Menu                   | <code>Menu__[MenuName]</code>                                     | <code>Menu__main</code>                                   | <code>Menu-main</code></p>
-<p><font color=#0099ff size=4 face="黑体">菜单| <code>菜单__ [MenuName]</code>| <code>Menu__main</code> | <code>菜单，main</code></font> </p>
 <p>MenuItem               | <code>MenuItem__[MenuName]</code>                                 | <code>MenuItem__main</code>                               | <code>MenuItem-main</code></p>
-<p><font color=#0099ff size=4 face="黑体">MenuItem | <code>MenuItem __ [MenuName]</code>| <code>MenuItem__main</code> | '菜单项，main`</font> </p>
 <p>Resource               | <code>Resource__[FileName]</code>                                 | <code>Resource__flower.gif</code>                         | <code>Resource-flower.gif</code></p>
-<p><font color=#0099ff size=4 face="黑体">资源| <code>资源__ [FileName]</code>| <code>Resource__flower.gif</code> | <code>资源，flower.gif</code></font> </p>
 <p>Style                  | <code>Style__[FileName]</code>                                    | <code>Style__site.css</code>                              | <code>Style-site.css</code></p>
-<p><font color=#0099ff size=4 face="黑体">风格| <code>Style __ [FileName]</code>| <code>Style__site.css</code> | <code>风格，site.css</code></font> </p>
 <p>Widget                 | <code>Widget__[ContentType]</code>                                | <code>Widget__HtmlWidget</code>                           | <code>Widget-HtmlWidget</code></p>
-<p><font color=#0099ff size=4 face="黑体">小工具| <code>Widget __ [ContentType]</code>| <code>Widget__HtmlWidget</code> | <code>小部件，HtmlWidget</code></font> </p>
 <p>Widget                 | <code>Widget__[ZoneName]</code>                                   | <code>Widget__AsideSecond</code>                          | <code>Widget-AsideSecond</code></p>
-<p><font color=#0099ff size=4 face="黑体">小工具| <code>Widget __ [ZoneName]</code>| <code>Widget__AsideSecond</code> | <code>小部件，AsideSecond</code></font> </p>
 <p>Zone                   | <code>Zone__[ZoneName]</code>                                     | <code>Zone__AsideSecond</code>                            | <code>Zone-AsideSecond</code></p>
-<p><font color=#0099ff size=4 face="黑体">区域| <code>Zone __ [ZoneName]</code>| <code>Zone__AsideSecond</code> | <code>区，AsideSecond</code></font> </p>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
 <p>You should put your templates in the project according to the following rules:</p>
 <p><font color=#0099ff size=4 face="黑体">您应该根据以下规则将模板放入项目中：</font> </p>
 <p><font color=#0099ff size=4 face="黑体"></font> </p>
@@ -3166,10 +3135,8 @@ namespace Maps.Drivers
 <p><font color=#0099ff size=4 face="黑体"><code>EditorTemplate</code>形状模板位于<code>Views / EditorTemplates / &lt;templatename&gt;</code>文件夹中。</font> *</p>
 </li>
 </ul>
-<p>For example, an <code>EditorTemplate</code> with a template name of <code>Parts/Routable.RoutePart</code> has its template</p>
-<p><font color=#0099ff size=4 face="黑体">例如，模板名称为“Parts / Routable.RoutePart”的<code>EditorTemplate</code>具有其模板</font> </p>
-<p>at <code>Views/EditorTemplates/Parts/Routable.RoutePart.cshtml</code>.</p>
-<p><font color=#0099ff size=4 face="黑体">在<code>Views / EditorTemplates / Parts / Routable.RoutePart.cshtml</code>。</font> </p>
+<p>For example, an <code>EditorTemplate</code> with a template name of <code>Parts/Routable.RoutePart</code> has its template at <code>Views/EditorTemplates/Parts/Routable.RoutePart.cshtml</code>.</p>
+<p><font color=#0099ff size=4 face="黑体">例如，模板名称为“Parts/Routable.RoutePart”的<code>EditorTemplate</code>的模板位于<code>Views/EditorTemplates/Parts/Routable.RoutePart.cshtml</code>。</font> </p>
 <ul>
 <li>
 <p>All other shape templates are in the <code>Views</code> folder.</p>
@@ -3178,32 +3145,27 @@ namespace Maps.Drivers
 <p><font color=#0099ff size=4 face="黑体">所有其他形状模板都在<code>Views</code>文件夹中。</font> *</p>
 </li>
 </ul>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 </div>
 <p><font color=#0099ff size=4 face="黑体">！注意</font> </p>
 <pre><code>The template extension can be any extension supported by an active view engine, such as `.cshtml`, `.vbhtml`, or `.ascx`.
+&lt;font color=#0099ff size=4 face="黑体"&gt;模板扩展可以是活动视图引擎支持的任何扩展，例如`.cshtml`，`.vbhtml`或`.ascx`。&lt;/font&gt;
 </code></pre>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
 <h2 id="from-template-file-name-to-shape-name">From Template File Name to Shape Name</h2>
 <h2 id="_4"><font color=#0099ff size=4 face="黑体">从模板文件名到形状名称</font></h2>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
 <p>More generally, the rules to map from a template file name to the corresponding shape name are the following:</p>
 <p><font color=#0099ff size=4 face="黑体">更一般地，从模板文件名映射到相应形状名称的规则如下：</font> </p>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
 <ul>
 <li>
 <p>Dot (<code>.</code>) and backslash (<code>\</code>) change to underscore (<code>_</code>).</p>
 </li>
 <li>
-<p><font color=#0099ff size=4 face="黑体">Dot（<code>.</code>）和反斜杠（<code>\\</code>）变为下划线（<code>_</code>）。</font> *</p>
+<p><font color=#0099ff size=4 face="黑体">Dot（<code>.</code>）和反斜杠（<code>\</code>）变为下划线（<code>_</code>）。</font> *</p>
 </li>
 </ul>
-<p>Note that this does not mean that an <code>example.cshtml</code> file in a <code>myviews</code> subdirectory of <code>Views</code></p>
-<p><font color=#0099ff size=4 face="黑体">请注意，这并不意味着<code>views</code>的<code>myviews</code>子目录中的<code>example.cshtml</code>文件</font> </p>
-<p>is equivalent to a <code>myviews</code>example.chtml<code>file in</code>Views_.</p>
-<p><font color=#0099ff size=4 face="黑体">相当于<code>Views_中的</code>myviews<code>example.chtml</code>文件。</font> </p>
+<p>Note that this does not mean that an <code>example.cshtml</code> file in a <code>myviews</code> subdirectory of <code>Views</code> is equivalent to a <code>myviews</code>example.chtml<code>file in</code>Views_.</p>
+<p><font color=#0099ff size=4 face="黑体">请注意，这并不意味着<code>Views</code>的<code>myviews</code>子目录中的<code>example.cshtml</code>文件等同于<code>Views_中的</code>myviews<code>example.chtml</code>文件。（译者注：不等于 Views_myviews_example.cshtml？）</font> </p>
 <p>The shape templates must still be in the expected directory (see above).</p>
 <p><font color=#0099ff size=4 face="黑体">形状模板仍必须位于预期目录中（参见上文）。</font> </p>
 <ul>
@@ -3214,19 +3176,14 @@ namespace Maps.Drivers
 <p><font color=#0099ff size=4 face="黑体">连字符（<code>-</code>）变为双下划线（<code>__</code>）。</font> *</p>
 </li>
 </ul>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
 <p>For example, <code>Views/Hello.World.cshtml</code> will be used to render a shape named <code>Hello_World</code>,</p>
 <p><font color=#0099ff size=4 face="黑体">例如，<code>Views / Hello.World.cshtml</code>将用于渲染名为<code>Hello_World</code>的形状，</font> </p>
 <p>and <code>Views/Hello.World-85.cshtml</code> will be used to render a shape named <code>Hello_World__85</code>.</p>
 <p><font color=#0099ff size=4 face="黑体">和<code>Views / Hello.World-85.cshtml</code>将用于渲染名为<code>Hello_World__85</code>的形状。</font> </p>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
 <h2 id="alternate-shape-rendering">Alternate Shape Rendering</h2>
-<h2 id="_5"><font color=#0099ff size=4 face="黑体">替代形状渲染</font></h2>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
-<p>As noted, an HTML widget in the <code>AsideSecond</code> zone (for example) could be rendered</p>
-<p><font color=#0099ff size=4 face="黑体">如上所述，可以呈现“AsideSecond”区域（例如）中的HTML小部件</font> </p>
-<p>by a <code>widget.cshtml</code> template, by a <code>widget-htmlwidget.cshtml</code> template,</p>
-<p><font color=#0099ff size=4 face="黑体">通过<code>widget.cshtml</code>模板，通过<code>widget-htmlwidget.cshtml</code>模板，</font> </p>
+<h2 id="part"><font color=#0099ff size=4 face="黑体">part形状渲染</font></h2>
+<p>As noted, an HTML widget in the <code>AsideSecond</code> zone (for example) could be rendered by a <code>widget.cshtml</code> template, by a <code>widget-htmlwidget.cshtml</code> template,</p>
+<p><font color=#0099ff size=4 face="黑体">如上所述，<code>AsideSecond</code>区域中的HTML小部件（例如）可以通过<code>widget.cshtml</code>模板，<code>widget-htmlwidget.cshtml</code>模板呈现，</font> </p>
 <p>or by a <code>widget-asidesecond.cshtml</code> if they exist in the current theme.</p>
 <p><font color=#0099ff size=4 face="黑体">或者通过<code>widget-asidesecond.cshtml</code>，如果它们存在于当前主题中。</font> </p>
 <p>When various possibilities exist to render the same content,</p>
@@ -3235,53 +3192,46 @@ namespace Maps.Drivers
 <p><font color=#0099ff size=4 face="黑体">这些被称为形状的_alternates_，</font> </p>
 <p>and they enable rich template overriding scenarios.</p>
 <p><font color=#0099ff size=4 face="黑体">并且它们启用了丰富的模板覆盖方案。</font> </p>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
 <p>Alternates form a group that corresponds to the same shape if they differ only by a double-underscore suffix.</p>
-<p><font color=#0099ff size=4 face="黑体">如果它们仅由双下划线后缀不同，则替代形成对应于相同形状的组。</font> </p>
+<p><font color=#0099ff size=4 face="黑体">如果它们仅由双下划线后缀不同，则part形成对应于相同形状的组。</font> </p>
 <p>For example, <code>Hello_World</code>, <code>Hello_World__85</code>, and <code>Hello_World__DarkBlue</code> are an alternate group</p>
 <p><font color=#0099ff size=4 face="黑体">例如，<code>Hello_World</code>，<code>Hello_World__85</code>和<code>Hello_World__DarkBlue</code>是备用组</font> </p>
 <p>for a <code>Hello_World</code> shape. <code>Hello_World_Summary</code>, conversely, does not belong to that group</p>
-<p><font color=#0099ff size=4 face="黑体">为'Hello_World<code>形状。相反，</code>Hello_World_Summary`不属于该组</font> </p>
+<p><font color=#0099ff size=4 face="黑体">为<code>Hello_World</code>形状。相反，<code>Hello_World_Summary</code>不属于该组</font> </p>
 <p>and would correspond to a <code>Hello_World_Shape</code> shape, not to a <code>Hello_World</code> shape.</p>
 <p><font color=#0099ff size=4 face="黑体">并且对应于“Hello_World_Shape”形状，而不是“Hello_World”形状。</font> </p>
 <p>(Notice the difference between "<code>__</code>" and "<code>_</code>".)</p>
 <p><font color=#0099ff size=4 face="黑体">（注意“__”和“_”之间的区别。）</font> </p>
 <p><font color=#0099ff size=4 face="黑体"></font> </p>
 <h2 id="which-alternate-will-be-rendered">Which Alternate Will Be Rendered?</h2>
-<h2 id="_6"><font color=#0099ff size=4 face="黑体">哪些替代会被渲染？</font></h2>
+<h2 id="part_1"><font color=#0099ff size=4 face="黑体">哪些part会被渲染？</font></h2>
 <p><font color=#0099ff size=4 face="黑体"></font> </p>
 <p>Even if it has alternates, a shape is always created with the base name, such as <code>Hello_World</code>.</p>
-<p><font color=#0099ff size=4 face="黑体">即使它具有替换，也始终使用基本名称创建形状，例如“Hello_World”。</font> </p>
+<p><font color=#0099ff size=4 face="黑体">即使它具有alternates，也始终使用基本名称创建形状，例如“Hello_World”。</font> </p>
 <p>Alternates give additional template name options to the theme developer beyond the default</p>
-<p><font color=#0099ff size=4 face="黑体">替代为主题开发人员提供超出默认值的其他模板名称选项</font> </p>
+<p><font color=#0099ff size=4 face="黑体">part为主题开发人员提供超出默认值的其他模板名称选项</font> </p>
 <p>(such as <code>hello.world.cshtml</code>).</p>
 <p><font color=#0099ff size=4 face="黑体">（例如<code>hello.world.cshtml</code>）。</font> </p>
 <p>The system will choose the most specialized template available among the alternates,</p>
-<p><font color=#0099ff size=4 face="黑体">系统将选择替代品中最专业的模板，</font> </p>
+<p><font color=#0099ff size=4 face="黑体">系统将选择part品中最专业的模板，</font> </p>
 <p>so <code>hello.world-orange.cshtml</code> will be preferred to <code>hello.world.cshtml</code> if it exists.</p>
 <p><font color=#0099ff size=4 face="黑体">所以<code>hello.world-orange.cshtml</code>将优先于<code>hello.world.cshtml</code>（如果存在）。</font> </p>
 <p><font color=#0099ff size=4 face="黑体"></font> </p>
 <h2 id="built-in-content-item-alternates">Built-In Content Item Alternates</h2>
-<h2 id="_7"><font color=#0099ff size=4 face="黑体">内置内容项替代</font></h2>
+<h2 id="part_2"><font color=#0099ff size=4 face="黑体">内置内容项part</font></h2>
 <p><font color=#0099ff size=4 face="黑体"></font> </p>
 <p>The table above shows possible template names for content items.</p>
 <p><font color=#0099ff size=4 face="黑体">上表显示了内容项的可能模板名称。</font> </p>
-<p>It should now be clear that the shape name is built from <code>Content</code></p>
-<p><font color=#0099ff size=4 face="黑体">现在应该很清楚，形状名称是由“内容”构建的</font> </p>
-<p>and the display type (for example <code>Content_Summary</code>).</p>
-<p><font color=#0099ff size=4 face="黑体">和显示类型（例如<code>Content_Summary</code>）。</font> </p>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p>It should now be clear that the shape name is built from <code>Content</code> and the display type (for example <code>Content_Summary</code>).</p>
+<p><font color=#0099ff size=4 face="黑体">现在应该很清楚，形状名称是由<code>Content</code>和显示类型（例如<code>Content_Summary</code>）构建的。</font> </p>
 <p>The system also automatically adds the content type and the content ID as alternates</p>
-<p><font color=#0099ff size=4 face="黑体">系统还会自动添加内容类型和内容ID作为替代</font> </p>
+<p><font color=#0099ff size=4 face="黑体">系统还会自动添加内容类型和内容ID作为part</font> </p>
 <p>(for example <code>Content_Summary__Page</code> and <code>Content_Summary__42</code>).</p>
 <p><font color=#0099ff size=4 face="黑体">（例如<code>Content_Summary__Page</code>和<code>Content_Summary__42</code>）。</font> </p>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
 <p>For more information about how to use alternates, see <a href="Alternates">Alternates</a>.</p>
-<p><font color=#0099ff size=4 face="黑体">有关如何使用替代项的更多信息，请参阅[替代]（替代）。</font> </p>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体">有关如何使用part项的更多信息，请参阅[part]（part）。</font> </p>
 <h1 id="rendering-shapes-using-templates">Rendering Shapes Using Templates</h1>
-<h1 id="_8"><font color=#0099ff size=4 face="黑体">使用模板渲染形状</font></h1>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h1 id="_5"><font color=#0099ff size=4 face="黑体">使用模板渲染形状</font></h1>
 <p>A shape template is a fragment of markup that is used to render the shape.</p>
 <p><font color=#0099ff size=4 face="黑体">形状模板是用于渲染形状的标记片段。</font> </p>
 <p>The default view engine in Orchard is the Razor view engine.</p>
@@ -3290,10 +3240,8 @@ namespace Maps.Drivers
 <p><font color=#0099ff size=4 face="黑体">因此，形状模板默认使用Razor语法。</font> </p>
 <p>For an introduction to Razor syntax, see <a href="Template-file-syntax-guide">Template File Syntax Guide</a>.</p>
 <p><font color=#0099ff size=4 face="黑体">有关Razor语法的介绍，请参阅[模板文件语法指南]（模板文件语法指南）。</font> </p>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
 <p>The following example shows a template for displaying a <code>Map</code> part as an image. </p>
 <p><font color=#0099ff size=4 face="黑体">以下示例显示了用于将“Map”部分显示为图像的模板。</font> </p>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
 <pre><code>&lt;img alt="Location" border="1" src="http://maps.google.com/maps/api/staticmap?
 
      &amp;zoom=14
@@ -3304,92 +3252,62 @@ namespace Maps.Drivers
 
      &amp;sensor=false" /&gt;
 </code></pre>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
-<p>This example shows an <code>img</code> element in which the <code>src</code> attribute contains a URL</p>
-<p><font color=#0099ff size=4 face="黑体">这个例子显示了一个<code>img</code>元素，其中<code>src</code>属性包含一个URL</font> </p>
-<p>and a set of parameters passed as query-string values.</p>
-<p><font color=#0099ff size=4 face="黑体">以及作为查询字符串值传递的一组参数。</font> </p>
+<p>This example shows an <code>img</code> element in which the <code>src</code> attribute contains a URL and a set of parameters passed as query-string values.</p>
+<p><font color=#0099ff size=4 face="黑体">这个例子显示了一个<code>img</code>元素，其中<code>src</code>属性包含一个URL和一组作为查询字符串值传递的参数。</font> </p>
 <p>In this query string, <code>@Model</code> represents the shape that was passed into the template.</p>
-<p><font color=#0099ff size=4 face="黑体">在此查询字符串中，“@ Model”表示传递给模板的形状。</font> </p>
+<p><font color=#0099ff size=4 face="黑体">在此查询字符串中，“@Model”表示传递给模板的形状。</font> </p>
 <p>Therefore, <code>@Model.Latitude</code> is the <code>Latitude</code> property of the shape,</p>
-<p><font color=#0099ff size=4 face="黑体">因此，<code>@ Model.Latitude</code>是形状的'Latitude`属性，</font> </p>
+<p><font color=#0099ff size=4 face="黑体">因此，<code>@Model.Latitude</code>是形状的'Latitude`属性，</font> </p>
 <p>and <code>@Model.Longitude</code> is the <code>Longitude</code> property of the shape.</p>
-<p><font color=#0099ff size=4 face="黑体">和<code>@ Model.Longitude</code>是形状的“经度”属性。</font> </p>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<p><font color=#0099ff size=4 face="黑体">和<code>@Model.Longitude</code>是形状的“经度”属性。</font> </p>
 <p>The following example shows the template for the editor.</p>
 <p><font color=#0099ff size=4 face="黑体">以下示例显示了编辑器的模板。</font> </p>
 <p>This template enables the user to enter values for the latitude and longitude.</p>
 <p><font color=#0099ff size=4 face="黑体">此模板允许用户输入纬度和经度的值。</font> </p>
 <pre><code>@model Maps.Models.MapPart
-</code></pre>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
-<pre><code>&lt;fieldset&gt;
+
+
+&lt;fieldset&gt;
 
     &lt;legend&gt;Map Fields&lt;/legend&gt;
 
-
-
     &lt;div class="editor-label"&gt;
-
         @Html.LabelFor(model =&gt; model.Longitude)
-
     &lt;/div&gt;
-
     &lt;div class="editor-field"&gt;
-
         @Html.TextBoxFor(model =&gt; model.Latitude)
-
         @Html.ValidationMessageFor(model =&gt; model.Latitude)
-
     &lt;/div&gt;
-
-
 
     &lt;div class="editor-label"&gt;
-
         @Html.LabelFor(model =&gt; model.Longitude)
-
     &lt;/div&gt;
-
     &lt;div class="editor-field"&gt;
-
         @Html.TextBoxFor(model =&gt; model.Longitude)
-
         @Html.ValidationMessageFor(model =&gt; model.Longitude)
-
     &lt;/div&gt;
-
 &lt;/fieldset&gt;
 </code></pre>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
 <p>The <code>@Html.LabelFor</code> expressions create labels using the name of the shape properties.</p>
 <p><font color=#0099ff size=4 face="黑体"><code>@Html.LabelFor</code>表达式使用形状属性的名称创建标签。</font> </p>
 <p>The <code>@Html.TextBoxFor</code> expressions create text boxes where users enter values for the shape properties.</p>
 <p><font color=#0099ff size=4 face="黑体"><code>@Html.TextBoxFor</code>表达式创建文本框，用户可在其中输入形状属性的值。</font> </p>
 <p>The <code>@Html.ValidationMessageFor</code> expressions create messages that are displayed if users enter an invalid value.</p>
 <p><font color=#0099ff size=4 face="黑体"><code>@ H​​tml.ValidationMessageFor</code>表达式创建在用户输入无效值时显示的消息。</font> </p>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
 <h2 id="wrappers">Wrappers</h2>
-<h2 id="_9"><font color=#0099ff size=4 face="黑体">包装</font></h2>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h2 id="_6"><font color=#0099ff size=4 face="黑体">包装</font></h2>
 <p>Wrappers let you customize the rendering of a shape by adding markup around the shape.</p>
 <p><font color=#0099ff size=4 face="黑体">Wrappers允许您通过在形状周围添加标记来自定义形状的渲染。</font> </p>
-<p>For example, <code>Document.cshtml</code> is a wrapper for the <code>Layout</code> shape, because it specifies</p>
-<p><font color=#0099ff size=4 face="黑体">例如，<code>Document.cshtml</code>是<code>Layout</code>形状的包装器，因为它指定了</font> </p>
-<p>the markup code that  surrounds the <code>Layout</code> shape.</p>
-<p><font color=#0099ff size=4 face="黑体">围绕“布局”形状的标记代码。</font> </p>
+<p>For example, <code>Document.cshtml</code> is a wrapper for the <code>Layout</code> shape, because it specifies the markup code that  surrounds the <code>Layout</code> shape.</p>
+<p><font color=#0099ff size=4 face="黑体">例如，<code>Document.cshtml</code>是<code>Layout</code>形状的包装器，因为它指定了围绕<code>Layout</code>形状的标记代码。</font> </p>
 <p>For more information about the relationship between <code>Document</code> and <code>Layout</code>,</p>
 <p><font color=#0099ff size=4 face="黑体">有关“Document”和“Layout”之间关系的更多信息，</font> </p>
 <p>see <a href="Template-file-syntax-guide">Template File Syntax Guide</a>.</p>
 <p><font color=#0099ff size=4 face="黑体">请参阅[模板文件语法指南]（模板文件语法指南）。</font> </p>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
 <p>Typically, you add a wrapper file to the <code>Views</code> folder of  your theme.</p>
 <p><font color=#0099ff size=4 face="黑体">通常，您将包装器文件添加到主题的<code>Views</code>文件夹中。</font> </p>
-<p>For example, to add a wrapper for <code>Widget</code>, you add a <code>Widget.Wrapper.cshtml</code> file to</p>
-<p><font color=#0099ff size=4 face="黑体">例如，要为<code>Widget</code>添加一个包装器，您需要添加一个<code>Widget.Wrapper.cshtml</code>文件</font> </p>
-<p>the <code>Views</code> folder of your theme.</p>
-<p><font color=#0099ff size=4 face="黑体">你主题的<code>Views</code>文件夹。</font> </p>
+<p>For example, to add a wrapper for <code>Widget</code>, you add a <code>Widget.Wrapper.cshtml</code> file to the <code>Views</code> folder of your theme.</p>
+<p><font color=#0099ff size=4 face="黑体">例如，要为<code>Widget</code>添加一个包装器，可以将<code>Widget.Wrapper.cshtml</code>文件添加到主题的<code>Views</code>文件夹中。</font> </p>
 <p>If you enable the <strong>Shape Tracing</strong> feature, you'll see the available wrapper names for a shape.</p>
 <p><font color=#0099ff size=4 face="黑体">如果启用<strong>形状跟踪</strong>功能，您将看到形状的可用包装名称。</font> </p>
 <p>You can also specify a wrapper in the <code>Placement.info</code> file.</p>
@@ -3398,10 +3316,8 @@ namespace Maps.Drivers
 <p><font color=#0099ff size=4 face="黑体">有关如何指定包装器的更多信息，</font> </p>
 <p>see <a href="Understanding-placement-info">Understanding the Placement.info File</a>.</p>
 <p><font color=#0099ff size=4 face="黑体">请参阅[了解Placement.info文件]（了解-position-info）。</font> </p>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
 <h1 id="creating-a-shape-method">Creating a Shape Method</h1>
-<h1 id="_10"><font color=#0099ff size=4 face="黑体">创建形状方法</font></h1>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
+<h1 id="_7"><font color=#0099ff size=4 face="黑体">创建形状方法</font></h1>
 <p>Another way to create and render a shape is to create a method that both defines and renders the shape.</p>
 <p><font color=#0099ff size=4 face="黑体">创建和渲染形状的另一种方法是创建一个定义和渲染形状的方法。</font> </p>
 <p>The method must be marked with the <code>Shape</code> attribute (the <code>Orchard.DisplayManagement.ShapeAttribute</code> class).</p>
@@ -3410,65 +3326,37 @@ namespace Maps.Drivers
 <p><font color=#0099ff size=4 face="黑体">该方法返回一个<code>IHtmlString</code>对象，而不是使用模板;</font> </p>
 <p>the returned object contains the markup that renders the shape. </p>
 <p><font color=#0099ff size=4 face="黑体">返回的对象包含呈现形状的标记。</font> </p>
-<p><font color=#0099ff size=4 face="黑体"></font> </p>
 <p>The following example shows the <code>DateTimeRelative</code> shape.</p>
 <p><font color=#0099ff size=4 face="黑体">以下示例显示了<code>DateTimeRelative</code>形状。</font> </p>
 <p>This shape takes a <code>DateTime</code> value in the past and returns a string that relates the value to the current time.</p>
 <p><font color=#0099ff size=4 face="黑体">此形状过去采用“DateTime”值，并返回一个字符串，该值将值与当前时间相关联。</font> </p>
 <pre><code>public class DateTimeShapes : IDependency {
-
     private readonly IClock _clock;
 
-
-
     public DateTimeShapes(IClock clock) {
-
         _clock = clock;
-
         T = NullLocalizer.Instance;
-
     }
-
-
 
     public Localizer T { get; set; }
 
-
-
     [Shape]
-
     public IHtmlString DateTimeRelative(HtmlHelper Html, DateTime dateTimeUtc) {
-
         var time = _clock.UtcNow - dateTimeUtc;
 
-
-
         if (time.TotalDays &gt; 7)
-
             return Html.DateTime(dateTimeUtc, T("'on' MMM d yyyy 'at' h:mm tt"));
-
         if (time.TotalHours &gt; 24)
-
             return T.Plural("1 day ago", "{0} days ago", time.Days);
-
         if (time.TotalMinutes &gt; 60)
-
             return T.Plural("1 hour ago", "{0} hours ago", time.Hours);
-
         if (time.TotalSeconds &gt; 60)
-
             return T.Plural("1 minute ago", "{0} minutes ago", time.Minutes);
-
         if (time.TotalSeconds &gt; 10)
-
             return T.Plural("1 second ago", "{0} seconds ago", time.Seconds);
 
-
-
         return T("a moment ago");
-
     }
-
 }
 </code></pre>
                 
